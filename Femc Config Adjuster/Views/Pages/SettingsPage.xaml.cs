@@ -1,23 +1,19 @@
-﻿// This Source Code Form is subject to the terms of the MIT License.
-// If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
-// Copyright (C) Leszek Pomianowski and WPF UI Contributors.
-// All Rights Reserved.
-
-using Femc_Config_Adjuster.ViewModels.Pages;
+﻿using Femc_Config_Adjuster.ViewModels.Pages;
+using Microsoft.Win32;
 using Wpf.Ui.Controls;
 
 namespace Femc_Config_Adjuster.Views.Pages
 {
-	public partial class SettingsPage : INavigableView<SettingsViewModel>
-	{
-		public SettingsViewModel ViewModel { get; }
+    public partial class SettingsPage : INavigableView<SettingsViewModel>
+    {
+        public SettingsViewModel ViewModel { get; }
 
-		public SettingsPage(SettingsViewModel viewModel)
-		{
-			ViewModel = viewModel;
-			DataContext = this;
+        public SettingsPage(SettingsViewModel viewModel)
+        {
+            ViewModel = viewModel;
+            DataContext = this;
 
-			InitializeComponent();
-		}
-	}
+            InitializeComponent();
+        }
+    }
 }
