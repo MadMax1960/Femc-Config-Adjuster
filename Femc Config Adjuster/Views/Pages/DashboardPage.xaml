@@ -31,8 +31,8 @@
     Grid.Column="0"
     Width="150"
     VerticalAlignment="Center"
-    ItemsSource="{Binding Options}"
-    SelectedItem="{Binding SelectedOption, Mode=TwoWay}"
+    ItemsSource="{Binding OptionsInit}"
+    SelectedItem="{Binding SelectedOptionInit, Mode=TwoWay}"
 
             />
 
@@ -41,7 +41,7 @@
     Grid.Column="1"
     Margin="12,0,0,0"
     VerticalAlignment="Center"
-    Text="{Binding SelectedOptionName, Mode=OneWay}" />
+    Text="{Binding SelectedOptionNameInit, Mode=OneWay}" />
 
 
     </Grid>

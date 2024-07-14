@@ -1,6 +1,8 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 using System.Text.Json;
+using System.Windows.Controls;
 using Femc_Config_Adjuster.Helpers;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages
@@ -8,32 +10,40 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 	public partial class DashboardViewModel : ObservableObject
 	{
 		private Config _config;
-		private string _selectedOption;
-		private string _selectedOptionName;
+		private string _selectedOptionInit;
+		private string _selectedOptionNameInit;
 
 		// Define Options array
-		public string[] Options { get; } = { "Bustup", "Aoa", "LevelUp" };
-
-		// Define SelectedOption property
-		public string SelectedOption
+		public string[] OptionsInit { get; } = { "Bustup", "AOA", "AOAText", "LevelUp" };
+		Dictionary<string, string> OptionSuffix =
+			 new Dictionary<string, string>(){
+			 {"Bustup", "True"},
+			 {"AOA", "True"},
+			 {"AOAText", ""},
+			 {"LevelUp","True"}
+		};
+			                   
+        // Define SelectedOption property
+        public string SelectedOptionInit
 		{
-			get => _selectedOption;
+			get => _selectedOptionInit;
 			set
 			{
-				_selectedOption = value;
-				OnPropertyChanged(nameof(SelectedOption));
+				_selectedOptionInit = value;
+
+				OnPropertyChanged(nameof(SelectedOptionInit));
 				DisplaySelectedOptionName();
 			}
 		}
 
 		// Define SelectedOptionName property
-		public string SelectedOptionName
+		public string SelectedOptionNameInit
 		{
-			get => _selectedOptionName;
+			get => _selectedOptionNameInit;
 			set
 			{
-				_selectedOptionName = value;
-				OnPropertyChanged(nameof(SelectedOptionName));
+				_selectedOptionNameInit = value;
+				OnPropertyChanged(nameof(SelectedOptionNameInit));
 			}
 		}
 
@@ -80,11 +90,11 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 				var root = jsonDocument.RootElement;
 
 				// Adjust path and property name as per your JSON structure
-				SelectedOptionName = root.GetProperty($"{SelectedOption}True").GetString();
+				SelectedOptionNameInit = root.GetProperty($"{SelectedOptionInit}" + OptionSuffix[SelectedOptionInit]).GetString();
 			}
 			catch (Exception ex)
 			{
-				SelectedOptionName = $"Error: {ex.Message}";
+				SelectedOptionNameInit = $"Error: {ex.Message}";
 			}
 		}
 	}
