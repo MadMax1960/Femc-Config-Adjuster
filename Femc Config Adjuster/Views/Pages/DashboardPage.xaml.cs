@@ -1,18 +1,18 @@
-﻿using Femc_Config_Adjuster.ViewModels.Pages;
-using Wpf.Ui.Controls;
+﻿using System.Windows.Controls;
+using Femc_Config_Adjuster.ViewModels.Pages;
 
 namespace Femc_Config_Adjuster.Views.Pages
 {
-	public partial class DashboardPage : INavigableView<DashboardViewModel>
+	public partial class DashboardPage : Page
 	{
 		public DashboardViewModel ViewModel { get; }
 
 		public DashboardPage(DashboardViewModel viewModel)
 		{
 			ViewModel = viewModel;
-			DataContext = this;
+			DataContext = ViewModel; // Set DataContext to ViewModel
 
-			InitializeComponent();
+			InitializeComponent(); // Ensure InitializeComponent method is called
 		}
 	}
 }

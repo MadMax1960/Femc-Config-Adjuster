@@ -7,8 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="DashboardPage"
-    d:DataContext="{d:DesignInstance local:DashboardPage,
-                                     IsDesignTimeCreatable=False}"
+    d:DataContext="{d:DesignInstance local:DashboardPage, IsDesignTimeCreatable=False}"
     d:DesignHeight="450"
     d:DesignWidth="800"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
@@ -26,28 +25,24 @@
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
 
-        <ui:Button
-            Grid.Row="0"
-            Grid.Column="0"
-            Command="{Binding ViewModel.CounterIncrementCommand, Mode=OneWay}"
-            Content="Click me!"
-            Icon="Fluent24" />
-        <TextBlock
-            Grid.Row="0"
-            Grid.Column="1"
-            Margin="12,0,0,0"
-            VerticalAlignment="Center"
-            Text="{Binding ViewModel.Counter, Mode=OneWay}" />
+        <!-- Dropdown box for options -->
+        <ComboBox
+    Grid.Row="0"
+    Grid.Column="0"
+    Width="150"
+    VerticalAlignment="Center"
+    ItemsSource="{Binding Options}"
+    SelectedItem="{Binding SelectedOption, Mode=TwoWay}"
 
-        <!-- Display JSON Content -->
-        <TextBox
-            Grid.Row="1"
-            Grid.ColumnSpan="2"
-            Margin="12,12,12,0"
-            Text="{Binding ViewModel.JsonContent, Mode=OneWay}"
-            VerticalScrollBarVisibility="Auto"
-            HorizontalScrollBarVisibility="Auto"
-            TextWrapping="Wrap"
-            IsReadOnly="True" />
+            />
+
+        <TextBlock
+    Grid.Row="0"
+    Grid.Column="1"
+    Margin="12,0,0,0"
+    VerticalAlignment="Center"
+    Text="{Binding SelectedOptionName, Mode=OneWay}" />
+
+
     </Grid>
 </Page>
