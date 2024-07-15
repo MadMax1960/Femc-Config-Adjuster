@@ -5,14 +5,11 @@ namespace Femc_Config_Adjuster.Views.Pages
 {
 	public partial class DashboardPage : Page
 	{
-		public DashboardViewModel ViewModel { get; }
-
-		public DashboardPage(DashboardViewModel viewModel)
+        public DashboardPage()
 		{
-			ViewModel = viewModel;
-			DataContext = ViewModel; // Set DataContext to ViewModel
-
+            DataContext = new DashboardViewModel(this); // Set DataContext to ViewModel
 			InitializeComponent(); // Ensure InitializeComponent method is called
 		}
-	}
+
+    }
 }

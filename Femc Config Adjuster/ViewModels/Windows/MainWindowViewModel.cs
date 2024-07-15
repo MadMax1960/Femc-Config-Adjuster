@@ -27,8 +27,14 @@ namespace Femc_Config_Adjuster.ViewModels.Windows
 				Content = "Data",
 				Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
 				TargetPageType = typeof(Views.Pages.DataPage)
-			}
-		};
+			},
+            new NavigationViewItem()
+            {
+                Content = "Addons",
+                Icon = new SymbolIcon { Symbol = SymbolRegular.Library16 },
+                TargetPageType = typeof(Views.Pages.AddonsPage)
+            }
+        };
 
 		[ObservableProperty]
 		private ObservableCollection<object> _footerMenuItems = new()
