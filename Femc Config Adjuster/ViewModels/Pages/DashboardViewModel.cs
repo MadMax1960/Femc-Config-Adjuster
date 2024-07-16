@@ -11,6 +11,7 @@ using System.Windows.Controls;
 using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Femc_Config_Adjuster.Helpers;
@@ -28,10 +29,10 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 		private string _selectedOptionChoose;
 		private string _selectedOptionInit;
 		private string _selectedOptionNameInit;
-		private ICommand _buttonPressCommand;
 
-		// Define Options array
-		public string[] OptionsInit { get; } = { "Bustup", "AOA", "AOAText", "LevelUp", "Shard", "Cutin" };
+
+        // Define Options array
+        public string[] OptionsInit { get; } = { "Bustup", "AOA", "AOAText", "LevelUp", "Shard", "Cutin" };
 		public ObservableCollection<string> optionchoose { get; } = new ObservableCollection<string> { "Please select a Category to Continue" };
 
 		Dictionary<string, Tuple<string, List<string>>> OptionComboSuffix =
@@ -54,6 +55,33 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 			{"ShardTrue",""},
 			{"CutinTrue",""}
 		};
+
+		Dictionary<string, Tuple<string,string>> multimediadict = new Dictionary<string, Tuple<string,string>>()
+		{
+			{"BustupEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupNeptune",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupBetina",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupAnniversary",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupJustBlue",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupSav",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupDoodled",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupRonaldReagan",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"BustupElyAlt",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOAEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOAChrysanthie",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOAFernando",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOAMonica",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOARonaldReagan",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOATextDontLookBack",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"AOATextSorryBoutThat",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"LevelUpEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"LevelUpEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"ShardEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"ShardEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"Cutinberrycha",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+            {"CutinElyandPatmandx",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+        };
 
 		// Define SelectedOption property
 		public string SelectedOptionInit
@@ -90,8 +118,9 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 				}
 			}
 		}
+        
 
-		private bool CheckOptionExistance(string opt)
+        private bool CheckOptionExistance(string opt)
 		{
 			foreach (KeyValuePair<string, Tuple<string, List<string>>> item in OptionComboSuffix)
 			{
@@ -123,8 +152,6 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 			LoadJsonFile();
 			_mainWindow = mainWindow;
 			GenValRam();
-			// Set the default selected option to "Bustup"
-			SelectedOptionInit = "Bustup";
 		}
 
 		private void LoadConfig()
@@ -206,7 +233,9 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 					_mainWindow.ChangeValue.SelectedIndex = _mainWindow.ChangeValue.Items.IndexOf(valram[(SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1).ToString()]);
 				}
 				SelectedOptionNameInit = valram[SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1];
-			}
+				SelectedOptionNameInit = multimediadict[SelectedOptionInit + SelectedOptionChoose].Item1;
+                _mainWindow.descimage.Source = new BitmapImage(new Uri(multimediadict[SelectedOptionInit + SelectedOptionChoose].Item2));
+            }
 			catch (Exception ex)
 			{
 				// Left Blank Temporarily while I figure out a more refined way of showing error messages
