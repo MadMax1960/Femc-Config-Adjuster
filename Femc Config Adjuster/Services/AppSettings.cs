@@ -12,10 +12,10 @@ namespace Femc_Config_Adjuster.Helpers
 		public static Config LoadConfig(string filePath)
 		{
 			if (!File.Exists(filePath))
-				return new Config();
+				return new Config { JsonFilePath = filePath };
 
 			var json = File.ReadAllText(filePath);
-			return JsonSerializer.Deserialize<Config>(json);
+			return JsonSerializer.Deserialize<Config>(json) ?? new Config { JsonFilePath = filePath };
 		}
 
 		// Method to save config to JSON file
@@ -34,10 +34,11 @@ namespace Femc_Config_Adjuster.Helpers
 				case "jsonfilepath":
 					this.JsonFilePath = propertyValue;
 					break;
-				// Add more cases as needed for other properties
+				// Might need more cases here, but easy to add
 				default:
 					throw new ArgumentException($"Property '{propertyName}' not found.");
 			}
+			SaveConfig(JsonFilePath); // Saves config after updating the property
 		}
 	}
 }
