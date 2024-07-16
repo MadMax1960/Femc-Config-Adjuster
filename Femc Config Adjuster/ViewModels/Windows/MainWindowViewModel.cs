@@ -18,22 +18,16 @@ namespace Femc_Config_Adjuster.ViewModels.Windows
 		{
 			new NavigationViewItem()
 			{
-				Content = "Home",
-				Icon = new SymbolIcon { Symbol = SymbolRegular.Home24 },
+				Content = "2D",
+				Icon = new SymbolIcon { Symbol = SymbolRegular.PaintBrush16 },
 				TargetPageType = typeof(Views.Pages.DashboardPage)
 			},
 			new NavigationViewItem()
 			{
-				Content = "Data",
-				Icon = new SymbolIcon { Symbol = SymbolRegular.DataHistogram24 },
+				Content = "Music",
+				Icon = new SymbolIcon { Symbol = SymbolRegular.MusicNote120 },
 				TargetPageType = typeof(Views.Pages.DataPage)
-			},
-            new NavigationViewItem()
-            {
-                Content = "Addons",
-                Icon = new SymbolIcon { Symbol = SymbolRegular.Library16 },
-                TargetPageType = typeof(Views.Pages.AddonsPage)
-            }
+			}
         };
 
 		[ObservableProperty]
