@@ -38,7 +38,7 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 		Dictionary<string, Tuple<string, List<string>>> OptionComboSuffix =
 			 new Dictionary<string, Tuple<string, List<string>>>(){
              //Entry format {"Option Name", new Tuple<string, List<string>>("Suffix in json file, [Enter all possible options in this list])}
-             {"Bustup",new Tuple<string, List<string>>("True",["Neptune","Ely","Esa","Betina","Anniversary","JustBlue","Sav","Doodled","RonaldReagan","ElyAlt"])},
+             {"Bustup",new Tuple<string, List<string>>("True",["Neptune","Ely","Esa","Betina","Anniversary","JustBlue","Sav","Doodled","RonaldReagan","ElyAlt", "Yuunagi"])},
 			 {"AOA", new Tuple<string,List<string>>("True",["Ely","Chrysanthie","Fernando","Monica","RonaldReagan"])},
 			 {"AOAText", new Tuple<string, List<string>>("",["DontLookBack","SorryBoutThat"])},
 			 {"LevelUp", new Tuple<string, List<string>>("True",["Esa","Ely"])},
@@ -68,7 +68,8 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
             {"BustupDoodled",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupRonaldReagan",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupElyAlt",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-            {"AOAEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+			{"BustupYuunagi",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+			{"AOAEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"AOAChrysanthie",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"AOAFernando",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"AOAMonica",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
