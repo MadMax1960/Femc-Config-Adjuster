@@ -28,11 +28,11 @@
 
         <!-- Dropdown box for options -->
         <ComboBox
-             x:Name="OG"
+            x:Name="CategoryValue"
     Grid.Row="1"
     Grid.Column="0"
     VerticalAlignment="Top"
-    ItemsSource="{Binding OptionsInit}"
+    ItemsSource="{Binding OptionsInit, Mode=OneWay,UpdateSourceTrigger=PropertyChanged}"
     SelectedItem="{Binding SelectedOptionInit, Mode=TwoWay}" Margin="10,26,2,0" Height="37"
 
             />
@@ -43,16 +43,13 @@
     Text="{Binding SelectedOptionNameInit, Mode=OneWay}" Grid.Column="2" Grid.RowSpan="2" Height="19" />
         <ComboBox
             x:Name="ChangeValue"
-            ItemsSource="{Binding optionchoose,
-                                                Mode=OneWay,
-                                                UpdateSourceTrigger=PropertyChanged}"
+            ItemsSource="{Binding optionchoose}"
             SelectedItem="{Binding SelectedOptionChoose, Mode=TwoWay}" Margin="6,26,430,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Grid.Column="2"
 
             />
         <ui:TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Options:" VerticalAlignment="Top" Height="16" Width="45"/>
         <ui:TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Current Value of Option:" VerticalAlignment="Top" Grid.Column="2"/>
-        <ui:Image x:Name="img1" Grid.Column="2" HorizontalAlignment="Left" Margin="510,5,0,0" VerticalAlignment="Top" Stretch="Fill" Source="{Binding selurl, IsAsync=False, Mode=OneWay, UpdateSourceTrigger=PropertyChanged}" RenderOptions.BitmapScalingMode="HighQuality" Grid.Row="1" Height="132" Width="118" RenderTransformOrigin="0.507,-0.701"/>
-        <ui:Button x:Name="save" Content="Apply and Save" Grid.Column="2" Margin="238,26,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Click="Save_Click"/>
+        <ui:Button x:Name="save" Content="Apply and Save" Grid.Column="2" Margin="207,26,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Click="Save_Click"/>
 
 
     </Grid>

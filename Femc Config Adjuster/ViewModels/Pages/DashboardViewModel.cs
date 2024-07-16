@@ -12,45 +12,27 @@ using System.Windows.Data;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Navigation;
+using System.Windows.Shapes;
 using Femc_Config_Adjuster.Helpers;
 using Femc_Config_Adjuster.Views.Pages;
 using Femc_Config_Adjuster.Views.Windows;
 using Wpf.Ui.Controls;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages
 {
     public partial class DashboardViewModel : ObservableObject
 	{
-		string urllocal = "https://raw.githubusercontent.com/MadMax1960/Femc-Config-Adjuster/master/pc007_08_top01_ShC.png";
         private DashboardPage _mainWindow;
         private Config _config;
 		private string _selectedOptionChoose;
 		private string _selectedOptionInit;
 		private string _selectedOptionNameInit;
         private ICommand _buttonPressCommand;
-        //public ObservableCollection<string> Url = new ObservableCollection<string> { "https://raw.githubusercontent.com/MadMax1960/Femc-Config-Adjuster/master/pc007_08_top01_ShC.png" };
-        public ObservableCollection<Uri> selurl=new ObservableCollection<Uri> { new Uri("https://raw.githubusercontent.com/MadMax1960/Femc-Config-Adjuster/master/pc007_08_top01_ShC.png",UriKind.Absolute)};
-        public Uri Url
-        {
-            get
-            {
-                return new Uri(urllocal, UriKind.Absolute);
-            }
-        }
-
-        public ICommand ButtonPressCommand
-        {
-            get => _buttonPressCommand;
-            set
-            {
-                _buttonPressCommand = value;
-                OnPropertyChanged();
-            }
-        }
 
         // Define Options array
         public string[] OptionsInit { get; } = { "Bustup", "AOA", "AOAText", "LevelUp", "Shard", "Cutin"};
-		public ObservableCollection<string> optionchoose { get; } = new ObservableCollection<string> {"Hello"};
+		public ObservableCollection<string> optionchoose { get; } = new ObservableCollection<string> {"Please select a Category to Continue"};
 
         Dictionary<string, Tuple<string, List<string>>> OptionComboSuffix =
 			 new Dictionary<string,Tuple<string,List<string>>>(){
@@ -88,8 +70,7 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
         public void OnSaveButtonPress()
         {
             // Handle button press
-            GenValRam();
-			SelectedOptionNameInit = _config.JsonFilePath;
+            WriteValRam();
         }
 
         public string SelectedOptionChoose
@@ -104,7 +85,8 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 					if (CheckOptionExistance(SelectedOptionChoose))
 					{
 							valram[(SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1).ToString()] = SelectedOptionChoose;
-					}
+                            SelectedOptionNameInit = valram[SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1];
+                    }
 				}
 			}
 		}
@@ -112,7 +94,7 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 			private bool CheckOptionExistance(string opt) { 
 			foreach(KeyValuePair<string, Tuple<string, List<string>>> item in OptionComboSuffix)
 			{
-                foreach (var iteminlist in OptionComboSuffix[SelectedOptionInit].Item2)
+                foreach (var iteminlist in OptionComboSuffix[item.Key].Item2)
                 {
 					if (iteminlist == opt)
 					{
@@ -177,7 +159,15 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
                 var jsonDocument = JsonDocument.Parse(JsonContent);
                 var root = jsonDocument.RootElement;
                 string SelectedOptionInConf = root.GetProperty(item.Key).GetString();
-                valram[item.Key] = SelectedOptionInConf;
+				if (CheckOptionExistance(SelectedOptionInConf))
+				{
+                    valram[item.Key] = SelectedOptionInConf;
+                }
+				else
+				{
+					string suffrem = item.Key.Replace("True", "");
+					valram[item.Key] = OptionComboSuffix[suffrem].Item2[1];
+				}
             }
 		}
 
@@ -189,22 +179,29 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
             {
                 jsonObject[item.Key.ToString()] = item.Value.ToString();
             }
-			jsonObject["AOATrue"] = "TestVal";
             string modifiedJsonString = jsonObject.ToJsonString(new JsonSerializerOptions { WriteIndented = true });
             File.WriteAllText(_config.JsonFilePath, modifiedJsonString);
+            MessageBox.Show("Game added and JSON data saved!");
         }
 
         private void UpdateSelectionCombo()
 		{
 			try
 			{
-                selurl = new ObservableCollection<Uri> { new Uri("https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", UriKind.Absolute) };
                 optionchoose.Clear();
 				foreach (var item in OptionComboSuffix[SelectedOptionInit].Item2)
 				{
 					optionchoose.Add(item);
 				}
-                _mainWindow.ChangeValue.SelectedIndex = _mainWindow.ChangeValue.Items.IndexOf(valram[(SelectedOptionInit+OptionComboSuffix[SelectedOptionInit].Item1).ToString()]);
+				if(SelectedOptionInit is null)
+				{
+					optionchoose.Add("Generation of Options failed. Please contact Mudkip for help");
+                    _mainWindow.ChangeValue.SelectedIndex = _mainWindow.ChangeValue.Items.IndexOf("Generation of Options failed. Please contact Mudkip for help");
+                }
+				else
+				{
+                    _mainWindow.ChangeValue.SelectedIndex = _mainWindow.ChangeValue.Items.IndexOf(valram[(SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1).ToString()]);
+                }
 				SelectedOptionNameInit = valram[SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1];
             }
 			catch (Exception ex)
