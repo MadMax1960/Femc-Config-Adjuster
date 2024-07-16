@@ -58,9 +58,9 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 
 		Dictionary<string, Tuple<string,string>> multimediadict = new Dictionary<string, Tuple<string,string>>()
 		{
-			{"BustupEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-            {"BustupNeptune",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-            {"BustupEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+			{"BustupEly",new Tuple<string, string>("This was made by @Ely", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_305.png?raw=true")},
+            {"BustupNeptune",new Tuple<string, string>("This was made by @Neptune", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_304.png?raw=true")},
+            {"BustupEsa",new Tuple<string, string>("This was made by Esa", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_306.png?raw=true")},
             {"BustupBetina",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupAnniversary",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupJustBlue",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
