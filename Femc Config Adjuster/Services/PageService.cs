@@ -3,6 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using System.Windows;
 using Wpf.Ui;
 
 namespace Femc_Config_Adjuster.Services

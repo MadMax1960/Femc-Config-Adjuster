@@ -4,6 +4,7 @@
 // All Rights Reserved.
 
 using Femc_Config_Adjuster.ViewModels.Windows;
+using System.Windows;
 using Wpf.Ui;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;

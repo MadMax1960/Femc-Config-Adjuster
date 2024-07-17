@@ -1,10 +1,10 @@
-﻿using System.Windows.Controls;
+﻿using System.Windows;
+using System.Windows.Controls;
 using Femc_Config_Adjuster.ViewModels.Pages;
-using Wpf.Ui.Controls;
 
 namespace Femc_Config_Adjuster.Views.Pages
 {
-	public partial class DashboardPage : Page
+    public partial class DashboardPage : Page
 	{
         public DashboardPage()
 		{

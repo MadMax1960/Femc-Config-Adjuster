@@ -3,6 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using CommunityToolkit.Mvvm.ComponentModel;
 using Femc_Config_Adjuster.Models;
 using System.Windows.Media;
 using Wpf.Ui.Controls;
