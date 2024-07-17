@@ -58,7 +58,7 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 
 		Dictionary<string, Tuple<string,string>> multimediadict = new Dictionary<string, Tuple<string,string>>()
 		{
-			{"BustupEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+			{"BustupEly",new Tuple<string, string>("Dummy Description: \n Hi", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupNeptune",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
             {"BustupBetina",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},

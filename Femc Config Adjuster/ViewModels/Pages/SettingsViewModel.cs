@@ -13,9 +13,10 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 		private bool _isInitialized = false;
 
 		[ObservableProperty]
-		private string _appVersion = string.Empty;
+		private string _appVersion = "1.0.0";
+        public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases";
 
-		[ObservableProperty]
+        [ObservableProperty]
 		private ApplicationTheme _currentTheme = ApplicationTheme.Unknown;
 
 		[ObservableProperty]
