@@ -40,18 +40,17 @@
         <TextBlock
     Margin="10,225,-193,0"
     VerticalAlignment="Top"
-    Text="{Binding SelectedOptionNameInit, Mode=OneWay}" Grid.RowSpan="2" Height="215" Grid.ColumnSpan="3" />
+    Text="{Binding SelectedOptionNameInit, Mode=OneWay}" Grid.RowSpan="2" Height="187" Grid.ColumnSpan="3" />
         <ComboBox
             x:Name="ChangeValue"
             ItemsSource="{Binding optionchoose}"
-            SelectedItem="{Binding SelectedOptionChoose, Mode=TwoWay}" Margin="6,26,64,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Grid.Column="2"
+            SelectedItem="{Binding SelectedOptionChoose, Mode=TwoWay}" Margin="6,26,-48,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Grid.Column="2"
 
             />
         <ui:TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Options:" VerticalAlignment="Top" Height="16" Width="45"/>
         <ui:TextBlock HorizontalAlignment="Left" Margin="10,5,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Current Value of Option:" VerticalAlignment="Top" Grid.Column="2"/>
         <ui:Button x:Name="save" Content="Apply and Save" Margin="10,68,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Click="Save_Click"/>
+        <ui:Button x:Name="social" Content="View Author's Social Page" Margin="10,110,0,0" Grid.Row="1" VerticalAlignment="Top" Height="37" Click="Social_Click" Visibility="Hidden"/>
         <Image x:Name="descimage" Grid.Column="2" Height="450" Margin="78,86,-596,0" Grid.RowSpan="2" VerticalAlignment="Top" Stretch="UniformToFill"/>
-
-
     </Grid>
 </Page>

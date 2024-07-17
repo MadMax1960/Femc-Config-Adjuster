@@ -29,9 +29,10 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 		private string _selectedOptionChoose;
 		private string _selectedOptionInit;
 		private string _selectedOptionNameInit;
+		private Uri socialurl = new Uri("https://raw.githubusercontent.com/MadMax1960/Femc-Config-Adjuster/master/ui/Cutin/ElyandPatmandx.jpg", UriKind.Absolute);
 
-		// Define Options array
-		public string[] OptionsInit { get; } = { "Bustup", "AOA", "AOAText", "LevelUp", "Shard", "Cutin" };
+        // Define Options array
+        public string[] OptionsInit { get; } = { "Bustup", "AOA", "AOAText", "LevelUp", "Shard", "Cutin" };
 		public ObservableCollection<string> optionchoose { get; } = new ObservableCollection<string> { "Please select a Category to Continue" };
 
 		Dictionary<string, Tuple<string, List<string>>> OptionComboSuffix =
@@ -55,32 +56,33 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 			{"CutinTrue",""}
 		};
 
-		Dictionary<string, Tuple<string, string>> multimediadict = new Dictionary<string, Tuple<string, string>>()
+		Dictionary<string, Tuple<string, string, string>> multimediadict = new Dictionary<string, Tuple<string, string, string>>()
 		{
-			{"BustupEly",new Tuple<string, string>("This was made by @Ely", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_305.png?raw=true")},
-			{"BustupNeptune",new Tuple<string, string>("This was made by @Neptune_NPN013", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_304.png?raw=true")},
-			{"BustupEsa",new Tuple<string, string>("This was made by @EsaBlythe", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_306.png?raw=true")},
-			{"BustupBetina",new Tuple<string, string>("This was made by @Betina_Mascenon", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/betina.png?raw=true")},
-			{"BustupAnniversary",new Tuple<string, string>("Official P25 Art edited by @EsaBlythe", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/anniversary.png?raw=true")},
-			{"BustupJustBlue",new Tuple<string, string>("This was made by justblueowo", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/just%20blue.png?raw=true")},
-			{"BustupSav",new Tuple<string, string>("This was made by @fugoluv3r", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/sav.png?raw=true")},
-			{"BustupDoodled",new Tuple<string, string>("This was made by @NotDoodled", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/doodled.png?raw=true")},
-			{"BustupRonaldReagan",new Tuple<string, string>("This was made by @CatboyRonReagan", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/ronaldreagen.png?raw=true")},
-			{"BustupElyAlt",new Tuple<string, string>("This was made by Ely", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/elyalt.png?raw=true")},
-			{"BustupYuunagi",new Tuple<string, string>("This was made by Yuunagi", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Yuunagi.png?raw=true")},
-			{"AOAEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"AOAChrysanthie",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"AOAFernando",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"AOAMonica",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"AOARonaldReagan",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"AOATextDontLookBack",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"AOATextSorryBoutThat",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"LevelUpEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"LevelUpEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"ShardEsa",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"ShardEly",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"Cutinberrycha",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
-			{"CutinElyandPatmandx",new Tuple<string, string>("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png")},
+			//{Category+Author, new Tuple<string, string, string>("Description","Image URL", "Social Page URL (LEAVE BLANK IF NONE)")}
+			{"BustupEly",new Tuple<string, string, string>("This was made by @Ely", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_305.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupNeptune",new Tuple< string, string, string >("This was made by @Neptune_NPN013", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_304.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupEsa",new Tuple< string, string, string >("This was made by @EsaBlythe", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Screenshot_306.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupBetina",new Tuple<string, string, string>("This was made by @Betina_Mascenon", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/betina.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupAnniversary",new Tuple< string, string, string >("Official P25 Art edited by @EsaBlythe", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/anniversary.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupJustBlue",new Tuple< string, string, string >("This was made by justblueowo", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/just%20blue.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupSav",new Tuple< string, string, string >("This was made by @fugoluv3r", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/sav.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupDoodled",new Tuple< string, string, string >("This was made by @NotDoodled", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/doodled.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupRonaldReagan",new Tuple< string, string, string >("This was made by @CatboyRonReagan", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/ronaldreagen.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupElyAlt",new Tuple< string, string, string >("This was made by Ely", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/elyalt.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"BustupYuunagi",new Tuple< string, string, string >("This was made by Yuunagi", "https://github.com/MadMax1960/Femc-Config-Adjuster/blob/master/ui/bustup/Yuunagi.png?raw=true", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOAEly",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOAChrysanthie",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOAFernando",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOAMonica",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOARonaldReagan",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOATextDontLookBack",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"AOATextSorryBoutThat",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"LevelUpEsa",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"LevelUpEly",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"ShardEsa",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"ShardEly",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
+			{"Cutinberrycha",new Tuple< string, string, string >("Dummy Description", "https://raw.githubusercontent.com/MadMax1960/Femc-Reloaded-Project/main/img/readmelogo.png","")},
+			{"CutinElyandPatmandx",new Tuple< string, string, string >("This Cutin was made by @Ely and @PatManDx", "https://raw.githubusercontent.com/MadMax1960/Femc-Config-Adjuster/master/ui/Cutin/ElyandPatmandx.jpg", "https://github.com/MadMax1960/Femc-Reloaded-Project")},
 		};
 
 		// Define SelectedOption property
@@ -101,7 +103,13 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 			WriteValRam();
 		}
 
-		public string SelectedOptionChoose
+        public void OnSocialButtonPress()
+        {
+			// Handle button press
+            Process.Start(new ProcessStartInfo(socialurl.AbsoluteUri) { UseShellExecute = true });
+        }
+
+        public string SelectedOptionChoose
 		{
 			get => _selectedOptionChoose;
 			set
@@ -221,7 +229,16 @@ namespace Femc_Config_Adjuster.ViewModels.Pages
 						valram[SelectedOptionInit + OptionComboSuffix[SelectedOptionInit].Item1] = SelectedOptionChoose;
 						SelectedOptionNameInit = multimediadict[SelectedOptionInit + SelectedOptionChoose].Item1;
 						_mainWindow.descimage.Source = new BitmapImage(new Uri(multimediadict[SelectedOptionInit + SelectedOptionChoose].Item2));
-					}
+						if((multimediadict[SelectedOptionInit + SelectedOptionChoose].Item3 == "")){
+							_mainWindow.social.Visibility = Visibility.Hidden;
+
+                        }
+						else
+						{
+							_mainWindow.social.Visibility = Visibility.Visible;
+                            socialurl = new Uri(multimediadict[SelectedOptionInit + SelectedOptionChoose].Item3, UriKind.Absolute);
+                        }
+                    }
 				}
 			}
 			catch (Exception ex)

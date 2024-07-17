@@ -17,5 +17,15 @@ namespace Femc_Config_Adjuster.Views.Pages
             var viewModel = DataContext as DashboardViewModel;
             viewModel?.OnSaveButtonPress();
         }
+        private void Social_Click(object sender, RoutedEventArgs e)
+        {
+            var viewModel = DataContext as DashboardViewModel;
+            viewModel?.OnSocialButtonPress();
+        }
+
+        private void MediaElement_SourceChanged(object sender, SourceChangedEventArgs e)
+        {
+
+        }
     }
 }
