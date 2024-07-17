@@ -13,6 +13,11 @@ public class ConfigService
         this.AutoInit();
     }
 
+    public void SaveConfig()
+    {
+        this.modContext?.ModConfig?.Save();
+    }
+
     private void AutoInit()
     {
         // Get Reloaded dir from environment.
