@@ -89,7 +89,7 @@
                                     FontWeight="Bold"
                                     Text="{Binding Name}"
                                     TextWrapping="Wrap" />
-                                <TextBlock Text="{Binding Authors, Converter={StaticResource StringsToCommaList}}" TextWrapping="Wrap" />
+                                <TextBlock Text="{Binding Authors, Converter={StaticResource AuthorListToString}}" TextWrapping="Wrap" />
                             </StackPanel>
                         </Border>
                     </Grid>
