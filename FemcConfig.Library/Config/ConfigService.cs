@@ -17,6 +17,7 @@ public class ConfigService
         [
             new(this.modContext)
             {
+                InternalName = "nightmusic_time_mosq",
                 Name = "Time (Night Version)",
                 Authors = [ new("Mosq") ],
                 Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
@@ -24,13 +25,15 @@ public class ConfigService
             },
             new(this.modContext)
             {
+                InternalName = "nightmusic_default_atlus",
                 Name = "Color Your Night (Reload)",
-                Authors = [ new("Atlus"), new("John Atlus"), new("Frank Reynolds") ],
+                Authors = [ new("Atlus", "https://atlus.com/"), new("John Atlus"), new("Frank Reynolds") ],
                 Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.ColorYourNightReload,
                 IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.ColorYourNightReload,
             },
             new(this.modContext)
             {
+                InternalName = "nightmusic_midnight_mineformer",
                 Name = "Midnight Reverie",
                 Authors = [ new("Mineformer") ],
                 Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,

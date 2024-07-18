@@ -21,6 +21,12 @@ public class ModOption : ObservableObject
     }
 
     /// <summary>
+    /// The internal name used to find local files.
+    /// Maybe something like: APP_FOLDER/assets/INTERNAL_NAME/image.png
+    /// </summary>
+    public required string InternalName { get; init; }
+
+    /// <summary>
     /// Name of option.
     /// </summary>
     public required string Name { get; init; }
