@@ -1,5 +1,6 @@
 ﻿using FemcConfig.Library.Common;
 using FemcConfig.Library.Config.Models;
+using FemcConfig.Library.Config.Options;
 using FemcConfig.Library.Utils;
 
 namespace FemcConfig.Library.Config;
@@ -11,12 +12,39 @@ public class ConfigService
     public ConfigService()
     {
         this.AutoInit();
+
+        this.BoolSettings =
+        [
+            new(this.modContext)
+            {
+                Name = "Time (Night Version)",
+                Authors = [ new("Mosq") ],
+                Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
+                IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
+            },
+            new(this.modContext)
+            {
+                Name = "Color Your Night (Reload)",
+                Authors = [ new("Atlus"), new("John Atlus"), new("Frank Reynolds") ],
+                Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.ColorYourNightReload,
+                IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.ColorYourNightReload,
+            },
+            new(this.modContext)
+            {
+                Name = "Midnight Reverie",
+                Authors = [ new("Mineformer") ],
+                Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,
+                IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,
+            },
+        ];
     }
 
     public void SaveConfig()
     {
         this.modContext?.ModConfig?.Save();
     }
+
+    public List<ModOption> BoolSettings { get; set; }
 
     private void AutoInit()
     {

@@ -1,7 +1,7 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using FemcConfig.Library.Config;
-using FemcConfig.Library.Config.Settings;
+using FemcConfig.Library.Config.Options;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages;
 
@@ -14,7 +14,7 @@ public partial class DashboardViewModel : ObservableObject
         this.configService = configService;
     }
 
-    public List<ModSetting> Booleans => this.configService.BoolSettings;
+    public List<ModOption> Booleans => this.configService.BoolSettings;
 
 
     [RelayCommand]
