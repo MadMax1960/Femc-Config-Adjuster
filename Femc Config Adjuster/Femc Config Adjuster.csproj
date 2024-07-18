@@ -17,17 +17,29 @@
   <ItemGroup>
     <PackageReference Include="WPF-UI" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
-    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2 "/>
+    <PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2 " />
   </ItemGroup>
 
   <ItemGroup>
     <None Remove="Assets\wpfui-icon-256.png" />
     <None Remove="Assets\wpfui-icon-1024.png" />
+    <None Remove="Assets\Yuunagi.webp" />
+    <None Remove="Resources\220825.gif" />
+    <None Remove="Resources\sav.webp" />
+    <None Remove="Resources\test.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FemcConfig.Library\FemcConfig.Library.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Resource Include="Assets\wpfui-icon-256.png" />
     <Resource Include="Assets\wpfui-icon-1024.png" />
+    <Resource Include="Assets\220825.gif" />
+    <Resource Include="Assets\sav.webp" />
+    <Resource Include="Assets\test.png" />
+    <Resource Include="Assets\Yuunagi.webp" />
   </ItemGroup>
 
 </Project>
