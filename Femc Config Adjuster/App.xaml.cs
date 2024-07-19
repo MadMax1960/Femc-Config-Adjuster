@@ -8,11 +8,13 @@ using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
 using Femc_Config_Adjuster.Views.Pages;
 using Femc_Config_Adjuster.Views.Windows;
+using FemcConfig.Library.Config;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.IO;
 using System.Reflection;
+using System.Windows;
 using System.Windows.Threading;
 using Wpf.Ui;
 
@@ -57,6 +59,9 @@ namespace Femc_Config_Adjuster
 				services.AddSingleton<DataViewModel>();
 				services.AddSingleton<SettingsPage>();
 				services.AddSingleton<SettingsViewModel>();
+
+				// Library.
+				services.AddSingleton<AppService>();
 			}).Build();
 
 		/// <summary>

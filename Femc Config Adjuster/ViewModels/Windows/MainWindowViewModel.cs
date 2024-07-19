@@ -3,6 +3,7 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using CommunityToolkit.Mvvm.ComponentModel;
 using System.Collections.ObjectModel;
 using Wpf.Ui.Controls;
 
@@ -11,7 +12,7 @@ namespace Femc_Config_Adjuster.ViewModels.Windows
 	public partial class MainWindowViewModel : ObservableObject
 	{
 		[ObservableProperty]
-		private string _applicationTitle = "WPF UI - Femc_Config_Adjuster";
+		private string _applicationTitle = "FEMC Config";
 
 		[ObservableProperty]
 		private ObservableCollection<object> _menuItems = new()
