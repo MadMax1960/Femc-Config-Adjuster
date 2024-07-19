@@ -1,53 +1,25 @@
 ﻿using FemcConfig.Library.Common;
 using FemcConfig.Library.Config.Models;
-using FemcConfig.Library.Config.Options;
 using FemcConfig.Library.Utils;
 
 namespace FemcConfig.Library.Config;
 
-public class ConfigService
+public class AppService
 {
-    private ModContext? modContext;
+    private AppContext? appContext;
 
-    public ConfigService()
+    public AppService()
     {
         this.AutoInit();
-
-        this.BoolSettings =
-        [
-            new(this.modContext)
-            {
-                InternalName = "nightmusic_time_mosq",
-                Name = "Time (Night Version)",
-                Authors = [ new("Mosq") ],
-                Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
-            },
-            new(this.modContext)
-            {
-                InternalName = "nightmusic_default_atlus",
-                Name = "Color Your Night (Reload)",
-                Authors = [ new("Atlus", "https://atlus.com/"), new("John Atlus"), new("Frank Reynolds") ],
-                Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.ColorYourNightReload,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.ColorYourNightReload,
-            },
-            new(this.modContext)
-            {
-                InternalName = "nightmusic_midnight_mineformer",
-                Name = "Midnight Reverie",
-                Authors = [ new("Mineformer") ],
-                Enable = (ctx) => ctx.ModConfig.NightMusic = ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.NightMusic == ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,
-            },
-        ];
     }
 
     public void SaveConfig()
     {
-        this.modContext?.ModConfig?.Save();
+        this.appContext?.ModConfig?.Save();
     }
 
-    public List<ModOption> BoolSettings { get; set; }
+    public AppContext GetContext()
+        => this.appContext ?? throw new Exception("App context not set.");
 
     private void AutoInit()
     {
@@ -96,7 +68,7 @@ public class ConfigService
         }
 
         // Setup mod context.
-        this.modContext = new()
+        this.appContext = new()
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
