@@ -7,6 +7,6 @@ public class ConfigServiceTest
     [Fact]
     void ConfigService_Init()
     {
-        var config = new ConfigService();
+        var config = new AppService();
     }
 }
