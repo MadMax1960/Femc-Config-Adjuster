@@ -7,14 +7,14 @@ namespace FemcConfig.Library.Config.Options;
 /// </summary>
 public class ModOption : ObservableObject
 {
-    private readonly ModContext modContext;
+    private readonly AppContext ctx;
 
-    public ModOption(ModContext ctx)
+    public ModOption(AppContext ctx)
     {
-        modContext = ctx;
+        this.ctx = ctx;
 
         // Update IsEnabled state when mod config changes.
-        modContext.ModConfig.PropertyChanged += (sender, args) =>
+        this.ctx.ModConfig.Settings.PropertyChanged += (sender, args) =>
         {
             OnPropertyChanged(nameof(IsEnabled));
         };
@@ -39,35 +39,35 @@ public class ModOption : ObservableObject
     /// <summary>
     /// Authors of option.
     /// </summary>
-    public Author[] Authors { get; init; } = [];
+    public Author[]? Authors { get; init; } = null;
 
     /// <summary>
     /// Func that determines if the option is enabled.
     /// </summary>
-    public required Func<ModContext, bool> IsEnabledFunc { get; init; }
+    public required Func<AppContext, bool> IsEnabledFunc { get; init; }
 
     /// <summary>
     /// Enable action, typically just sets a value in the config.
     /// </summary>
-    public required Action<ModContext> Enable { get; init; }
+    public required Action<AppContext> Enable { get; init; }
 
     /// <summary>
     /// Disable action, maybe useful for more advanced options?
     /// </summary>
-    public Action<ModContext>? Disable { get; init; }
+    public Action<AppContext>? Disable { get; init; }
 
     public bool IsEnabled
     {
-        get => IsEnabledFunc(modContext);
+        get => IsEnabledFunc(this.ctx);
         set
         {
             if (value)
             {
-                Enable(modContext);
+                Enable(this.ctx);
             }
             else
             {
-                Disable?.Invoke(modContext);
+                Disable?.Invoke(this.ctx);
             }
         }
     }
