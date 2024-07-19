@@ -53,6 +53,7 @@ public class ExampleSection : ISection
             {
                 InternalName = "example",
                 Name = "Bool Option",
+                Authors = [Author.Missing],
 
                 // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ModConfig.Settings.EnableBustup = true,

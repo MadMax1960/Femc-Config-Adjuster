@@ -29,7 +29,7 @@ public class ModOption : ObservableObject
     /// <summary>
     /// Name of option.
     /// </summary>
-    public required string Name { get; init; }
+    public string? Name { get; init; }
 
     /// <summary>
     /// Description of option.
@@ -39,7 +39,7 @@ public class ModOption : ObservableObject
     /// <summary>
     /// Authors of option.
     /// </summary>
-    public Author[]? Authors { get; init; } = null;
+    public required Author[] Authors { get; init; }
 
     /// <summary>
     /// Func that determines if the option is enabled.

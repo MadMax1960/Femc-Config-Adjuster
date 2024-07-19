@@ -84,18 +84,17 @@
                                 <SolidColorBrush Opacity="0.85" Color="{DynamicResource ControlOnImageFillColorTertiary}" />
                             </Border.Background>
                             <StackPanel>
-                                <TextBlock
-                                    FontWeight="Bold"
-                                    Text="{Binding Name}"
-                                    TextWrapping="Wrap">
+                                <TextBlock FontWeight="Bold" TextWrapping="Wrap">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
                                             <Style.Setters>
+                                                <Setter Property="Text" Value="{Binding Name}" />
                                                 <Setter Property="FontSize" Value="16" />
                                             </Style.Setters>
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding Authors}" Value="{x:Null}">
+                                                <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
                                                     <Setter Property="FontSize" Value="20" />
+                                                    <Setter Property="Text" Value="{Binding Authors, Converter={StaticResource AuthorListToString}}" />
                                                 </DataTrigger>
                                             </Style.Triggers>
                                         </Style>
@@ -105,7 +104,7 @@
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
                                             <Style.Triggers>
-                                                <DataTrigger Binding="{Binding Authors}" Value="{x:Null}">
+                                                <DataTrigger Binding="{Binding Name}" Value="{x:Null}">
                                                     <Setter Property="Visibility" Value="Collapsed" />
                                                 </DataTrigger>
                                             </Style.Triggers>
