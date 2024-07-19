@@ -12,7 +12,7 @@ namespace Femc_Config_Adjuster.ViewModels.Windows
 	public partial class MainWindowViewModel : ObservableObject
 	{
 		[ObservableProperty]
-		private string _applicationTitle = "WPF UI - Femc_Config_Adjuster";
+		private string _applicationTitle = "FEMC Config";
 
 		[ObservableProperty]
 		private ObservableCollection<object> _menuItems = new()
