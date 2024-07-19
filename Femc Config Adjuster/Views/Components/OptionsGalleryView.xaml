@@ -10,18 +10,18 @@
     d:DesignWidth="800"
     mc:Ignorable="d">
 
-    <ui:VirtualizingItemsControl ItemsSource="{Binding}">
-        <ui:VirtualizingItemsControl.ItemsPanel>
+    <ItemsControl ItemsSource="{Binding}">
+        <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
                 <ui:VirtualizingWrapPanel SpacingMode="StartAndEndOnly" />
             </ItemsPanelTemplate>
-        </ui:VirtualizingItemsControl.ItemsPanel>
-        <ui:VirtualizingItemsControl.ItemTemplate>
+        </ItemsControl.ItemsPanel>
+        <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <Border
                     Width="345"
                     Height="194"
-                    Margin="2"
+                    Margin="8"
                     Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
                     BorderThickness="2">
                     <Border.Style>
@@ -47,7 +47,7 @@
                             HorizontalAlignment="Center"
                             VerticalAlignment="Center"
                             RenderOptions.BitmapScalingMode="Fant"
-                            Source="/Assets/Yuunagi.webp"
+                            Source="{Binding Converter={StaticResource OptionImageConverter}}"
                             Stretch="UniformToFill" />
                         <Border Grid.RowSpan="2">
                             <Border.Style>
@@ -79,22 +79,44 @@
                                 IsChecked="{Binding IsEnabled}" />
                         </Border>
 
-                        <Border Grid.Row="2" Padding="8,4">
+                        <Border Grid.Row="1" Padding="8,4">
                             <Border.Background>
                                 <SolidColorBrush Opacity="0.85" Color="{DynamicResource ControlOnImageFillColorTertiary}" />
                             </Border.Background>
                             <StackPanel>
                                 <TextBlock
-                                    FontSize="16"
                                     FontWeight="Bold"
                                     Text="{Binding Name}"
-                                    TextWrapping="Wrap" />
-                                <TextBlock Text="{Binding Authors, Converter={StaticResource AuthorListToString}}" TextWrapping="Wrap" />
+                                    TextWrapping="Wrap">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Setters>
+                                                <Setter Property="FontSize" Value="16" />
+                                            </Style.Setters>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Authors}" Value="{x:Null}">
+                                                    <Setter Property="FontSize" Value="20" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
+                                <TextBlock Text="{Binding Authors, Converter={StaticResource AuthorListToString}}" TextWrapping="Wrap">
+                                    <TextBlock.Style>
+                                        <Style TargetType="TextBlock">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Authors}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </TextBlock.Style>
+                                </TextBlock>
                             </StackPanel>
                         </Border>
                     </Grid>
                 </Border>
             </DataTemplate>
-        </ui:VirtualizingItemsControl.ItemTemplate>
-    </ui:VirtualizingItemsControl>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
 </UserControl>
