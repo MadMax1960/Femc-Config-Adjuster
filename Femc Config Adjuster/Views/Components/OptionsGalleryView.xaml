@@ -38,8 +38,8 @@
                     </Border.Style>
                     <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="*" />
                             <RowDefinition Height="auto" />
+                            <RowDefinition Height="*" />
                         </Grid.RowDefinitions>
 
                         <Image
@@ -69,17 +69,23 @@
                         <Border
                             Grid.RowSpan="2"
                             HorizontalAlignment="Right"
-                            VerticalAlignment="Top">
+                            VerticalAlignment="Bottom"
+                            CornerRadius="4 0 0 4">
                             <Border.Background>
                                 <SolidColorBrush Opacity="0.85" Color="{DynamicResource ControlOnImageFillColorTertiary}" />
                             </Border.Background>
-                            <CheckBox
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                IsChecked="{Binding IsEnabled}" />
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock
+                                    Margin="8"
+                                    VerticalAlignment="Center"
+                                    FontSize="14"
+                                    FontWeight="SemiBold"
+                                    Text="Enabled" />
+                                <CheckBox IsChecked="{Binding IsEnabled}" />
+                            </StackPanel>
                         </Border>
 
-                        <Border Grid.Row="1" Padding="8,4">
+                        <Border Padding="8,4">
                             <Border.Background>
                                 <SolidColorBrush Opacity="0.85" Color="{DynamicResource ControlOnImageFillColorTertiary}" />
                             </Border.Background>
