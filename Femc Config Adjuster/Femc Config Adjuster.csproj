@@ -36,10 +36,11 @@
   <ItemGroup>
     <Resource Include="Assets\wpfui-icon-256.png" />
     <Resource Include="Assets\wpfui-icon-1024.png" />
-    <Resource Include="Assets\220825.gif" />
-    <Resource Include="Assets\sav.webp" />
-    <Resource Include="Assets\test.png" />
-    <Resource Include="Assets\Yuunagi.webp" />
   </ItemGroup>
 
+	<ItemGroup>
+		<Content Include="Resources\**">
+			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
 </Project>

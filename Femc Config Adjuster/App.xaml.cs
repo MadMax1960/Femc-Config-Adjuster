@@ -61,7 +61,7 @@ namespace Femc_Config_Adjuster
 				services.AddSingleton<SettingsViewModel>();
 
 				// Library.
-				services.AddSingleton<ConfigService>();
+				services.AddSingleton<AppService>();
 			}).Build();
 
 		/// <summary>
