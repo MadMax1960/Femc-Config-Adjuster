@@ -15,5 +15,8 @@ public record Author(string Name, string? Url = null)
     public static readonly Author Ronald = new("Ronald Reagan");
     public static readonly Author Yuunagi = new("Yuunagi");
     public static readonly Author Berrycha = new("berrycha");
-    public static readonly Author PatMandDX = new("PatMandDX");
+    public static readonly Author PatMandDX = new("PatManDX");
+    public static readonly Author Chrysanthie = new("Chrysanthie");
+    public static readonly Author Fernando = new("Fernando");
+    public static readonly Author Monica = new("Monica");
 };

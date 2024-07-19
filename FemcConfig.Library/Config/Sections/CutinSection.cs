@@ -29,14 +29,14 @@ public class CutinSection : ISection
         [
             new ModOption(ctx)
             {
-                InternalName = "cutin_berrycha",
+                InternalName = "cutin_berry",
                 Authors = [Author.Berrycha],
                 Enable = ctx => ctx.ModConfig.Settings.CutinTrue = Models.ReloadedModConfig.CutinType.berrycha,
                 IsEnabledFunc = ctx => ctx.ModConfig.Settings.CutinTrue == Models.ReloadedModConfig.CutinType.berrycha,
             },
             new ModOption(ctx)
             {
-                InternalName = "cutin_ely_pat",
+                InternalName = "cutin_elypat",
                 Authors = [Author.Ely, Author.PatMandDX],
                 Enable = ctx => ctx.ModConfig.Settings.CutinTrue = Models.ReloadedModConfig.CutinType.ElyandPatmandx,
                 IsEnabledFunc = ctx => ctx.ModConfig.Settings.CutinTrue == Models.ReloadedModConfig.CutinType.ElyandPatmandx,
