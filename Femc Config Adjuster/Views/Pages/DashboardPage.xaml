@@ -18,10 +18,18 @@
     mc:Ignorable="d">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto" />
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
-        <femc:OptionsGalleryView Grid.Row="1" DataContext="{Binding Booleans}" />
+        <ItemsControl ItemsSource="{Binding Sections}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock
+                            FontSize="32"
+                            FontWeight="SemiBold"
+                            Text="{Binding Name}" />
+                        <femc:OptionsGalleryView DataContext="{Binding Options}" />
+                    </StackPanel>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+        </ItemsControl>
     </Grid>
 </Page>
