@@ -3,11 +3,11 @@
 namespace Femc_Config_Adjuster.Views.Components;
 
 /// <summary>
-/// Interaction logic for OptionsGalleryView.xaml
+/// Interaction logic for OptionsGallery.xaml
 /// </summary>
-public partial class OptionsGalleryView : UserControl
+public partial class OptionsGallery : UserControl
 {
-    public OptionsGalleryView()
+    public OptionsGallery()
     {
         InitializeComponent();
     }

@@ -5,13 +5,13 @@ using System.Windows.Controls;
 namespace Femc_Config_Adjuster.Views.Pages.Categories;
 
 /// <summary>
-/// Interaction logic for Category_3D.xaml
+/// Interaction logic for CategoryView.xaml
 /// </summary>
-public partial class Category_3D : Page
+public partial class CategoryView : UserControl
 {
-    public Category_3D(ISection[] sections)
+    public CategoryView(string name, ISection[] sections)
     {
         InitializeComponent();
-        this.DataContext = new CategoryViewModel(sections.Where(x => x.Category == SectionCategory.ThreeD).ToArray());
+        this.DataContext = new CategoryViewModel(name, sections);
     }
 }
