@@ -19,4 +19,7 @@ public record Author(string Name, string? Url = null)
     public static readonly Author Chrysanthie = new("Chrysanthie");
     public static readonly Author Fernando = new("Fernando");
     public static readonly Author Monica = new("Monica");
+    public static readonly Author Mosq = new("Mosq");
+    public static readonly Author Atlus = new("Atlus");
+    public static readonly Author Mudkip = new("MadMax1960");
 };
