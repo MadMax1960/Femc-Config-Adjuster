@@ -6,9 +6,9 @@
 using Femc_Config_Adjuster.Services;
 using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
-using Femc_Config_Adjuster.Views.Pages;
 using Femc_Config_Adjuster.Views.Windows;
 using FemcConfig.Library.Config;
+using FemcConfig.Library.Config.Sections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -20,10 +20,10 @@ using Wpf.Ui;
 
 namespace Femc_Config_Adjuster
 {
-	/// <summary>
-	/// Interaction logic for App.xaml
-	/// </summary>
-	public partial class App
+    /// <summary>
+    /// Interaction logic for App.xaml
+    /// </summary>
+    public partial class App
 	{
 		// The.NET Generic Host provides dependency injection, configuration, logging, and other services.
 		// https://docs.microsoft.com/dotnet/core/extensions/generic-host
@@ -32,7 +32,7 @@ namespace Femc_Config_Adjuster
 		// https://docs.microsoft.com/dotnet/core/extensions/logging
 		private static readonly IHost _host = Host
 			.CreateDefaultBuilder()
-			.ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)); })
+			.ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)!); })
 			.ConfigureServices((context, services) =>
 			{
 				services.AddHostedService<ApplicationHostService>();
@@ -53,16 +53,42 @@ namespace Femc_Config_Adjuster
 				services.AddSingleton<INavigationWindow, MainWindow>();
 				services.AddSingleton<MainWindowViewModel>();
 
-				services.AddSingleton<DashboardPage>();
-				services.AddSingleton<DashboardViewModel>();
-				services.AddSingleton<DataPage>();
-				services.AddSingleton<DataViewModel>();
-				services.AddSingleton<SettingsPage>();
+				// Auto-register pages.
+				var types = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.IsClass);
+				foreach (var type in types)
+				{
+					if (type.Namespace?.StartsWith("Femc_Config_Adjuster.Views.Pages") == true)
+					{
+						services.AddSingleton(type);
+					}
+				}
+
 				services.AddSingleton<SettingsViewModel>();
 
-				// Library.
-				services.AddSingleton<AppService>();
-			}).Build();
+                // FEMC config library.
+                services.AddSingleton<AppService>();
+
+                // Register setting sections.
+				services.AddSingleton(s =>
+                {
+					var app = s.GetRequiredService<AppService>();
+
+                    var sectionType = typeof(ISection);
+                    var sectionTypes = AppDomain.CurrentDomain.GetAssemblies()
+                        .SelectMany(x => x.GetTypes())
+                        .Where(x => sectionType.IsAssignableFrom(x) && x.IsClass)
+                        .ToArray();
+
+                    var sections = new List<ISection>();
+                    foreach (var section in sectionTypes)
+                    {
+                        var instance = (ISection)Activator.CreateInstance(section, app)!;
+                        sections.Add(instance);
+                    }
+
+					return sections.ToArray();
+				});
+            }).Build();
 
 		/// <summary>
 		/// Gets registered service.
