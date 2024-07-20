@@ -6,6 +6,8 @@ public class Hair : ISection
 {
     public string Name { get; } = "Hair";
 
+    public string Description { get; } = "FEMC's hair model.";
+
     public SectionCategory Category { get; } = SectionCategory.ThreeD;
 
     public ModOption[] Options { get; }

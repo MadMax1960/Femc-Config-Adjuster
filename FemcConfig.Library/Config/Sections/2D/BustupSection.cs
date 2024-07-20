@@ -5,6 +5,7 @@ namespace FemcConfig.Library.Config.Sections;
 public class BustupSection : ISection
 {
     public string Name { get; } = "Bustup";
+    public string Description { get; } = "Player portrait used in textboxes.";
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

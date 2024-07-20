@@ -4,7 +4,9 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class DayInMusic_1 : ISection
 {
-    public string Name { get; } = "Daytime Music (School): April to August";
+    public string Name { get; } = "Daytime Music (School) 1";
+
+    public string Description { get; } = "Music used inside of school between April and August.";
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

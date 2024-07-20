@@ -9,6 +9,8 @@ public class CutinSection : ISection
     /// </summary>
     public string Name { get; } = "Cutin";
 
+    public string Description { get; } = "Animation that occasionally plays when attacking weaknesses or hitting criticals.";
+
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.
     /// </summary>

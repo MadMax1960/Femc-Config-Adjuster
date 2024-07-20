@@ -8,5 +8,7 @@ public interface ISection
 
     SectionCategory Category { get; }
 
+    public string Description { get; }
+
     ModOption[] Options { get; }
 }

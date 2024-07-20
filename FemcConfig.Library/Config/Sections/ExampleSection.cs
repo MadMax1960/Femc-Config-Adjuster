@@ -9,6 +9,8 @@ public class ExampleSection : ISection
     /// </summary>
     public string Name { get; } = "Section Name";
 
+    public string Description { get; } = "Example description.";
+
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.
     /// </summary>
