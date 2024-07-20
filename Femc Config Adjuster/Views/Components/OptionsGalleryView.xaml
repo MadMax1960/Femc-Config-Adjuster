@@ -19,7 +19,7 @@
         <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <Border
-                    Width="345"
+                    Width="342"
                     Height="194"
                     Margin="8"
                     Background="{DynamicResource CardBackgroundFillColorDefaultBrush}"
@@ -27,7 +27,7 @@
                     <Border.Style>
                         <Style TargetType="Border">
                             <Style.Setters>
-                                <Setter Property="BorderBrush" Value="{DynamicResource ControlStrokeColorSecondaryBrush}" />
+                                <Setter Property="BorderBrush" Value="{DynamicResource CardBackgroundFillColorDefaultBrush}" />
                             </Style.Setters>
                             <Style.Triggers>
                                 <DataTrigger Binding="{Binding IsEnabled}" Value="True">
