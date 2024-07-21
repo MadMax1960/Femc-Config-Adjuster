@@ -21,7 +21,7 @@
         <TextBlock
             Margin="0,8"
             FontSize="32"
-            FontWeight="Black"
+            FontWeight="SemiBold"
             Text="{Binding Name}" />
 
         <Grid Grid.Row="1">
@@ -37,8 +37,8 @@
             <StackPanel Grid.RowSpan="2">
                 <TextBlock
                     Grid.Column="0"
-                    FontSize="28"
-                    FontWeight="SemiBold"
+                    FontSize="24"
+                    FontWeight="Light"
                     Text="Settings" />
                 <ListView
                     Margin="8,4"
@@ -59,7 +59,7 @@
 
             <StackPanel Grid.Column="1">
                 <TextBlock
-                    FontSize="28"
+                    FontSize="24"
                     FontWeight="SemiBold"
                     Text="{Binding SelectedSection.Name}" />
                 <TextBlock Text="{Binding SelectedSection.Description}" />
@@ -67,7 +67,11 @@
             </StackPanel>
 
 
-            <Border Grid.Row="1" Grid.Column="1">
+            <Border
+                Grid.Row="1"
+                Grid.Column="1"
+                Background="{DynamicResource SubtleFillColorSecondaryBrush}"
+                CornerRadius="8">
                 <!--
                     Limit element to parent size so only options are scrollable.
                     NavigationView still causes weird issues with height not updating
@@ -75,8 +79,11 @@
                     
                     https://stackoverflow.com/a/25663419 by Contango & intotecho
                 -->
-                <ScrollViewer MaxHeight="{Binding Path=ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UIElement}}" Padding="16,0">
-                    <femc:OptionsGallery DataContext="{Binding SelectedSection.Options}" />
+                <ScrollViewer
+                    MaxHeight="{Binding Path=ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UIElement}}"
+                    Margin="8,0"
+                    Padding="0,0,16,0">
+                    <femc:OptionsGallery Margin="0,8" DataContext="{Binding SelectedSection.Options}" />
                 </ScrollViewer>
 
             </Border>
