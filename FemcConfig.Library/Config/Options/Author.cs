@@ -1,6 +1,6 @@
 ﻿namespace FemcConfig.Library.Config.Options;
 
-public record Author(string Name, string? Url = null)
+public record Author(string Name, string? Description = null, string? Url = null)
 {
     public static readonly Author Missing = new("Missing Author");
 
