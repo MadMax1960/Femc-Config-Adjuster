@@ -12,7 +12,7 @@ public class OptionImageConverter : IValueConverter
         var appDir = AppDomain.CurrentDomain.BaseDirectory;
         if (value is ModOption option)
         {
-            var imagePath = Path.Join(appDir, "resources", option.InternalName, "image.webp");
+            var imagePath = Path.Join(appDir, "resources", option.InternalName, "image_small.webp");
             if (File.Exists(imagePath))
             {
                 return imagePath;
