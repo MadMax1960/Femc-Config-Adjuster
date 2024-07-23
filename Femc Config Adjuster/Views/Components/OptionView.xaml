@@ -86,7 +86,7 @@
                                     </Setter.Value>
                                 </Setter>
                                 <Style.Triggers>
-                                    <DataTrigger Binding="{Binding UseAudioPreview}" Value="True">
+                                    <DataTrigger Binding="{Binding UseYoutubePreview}" Value="True">
                                         <Setter Property="Content">
                                             <Setter.Value>
                                                 <StackPanel Orientation="Horizontal">

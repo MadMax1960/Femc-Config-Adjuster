@@ -130,7 +130,7 @@
                     VerticalAlignment="Center"
                     FontSize="48"
                     FontWeight="Black"
-                    Text="Listen on Youtube"
+                    Text="Watch on Youtube"
                     Url="{Binding YoutubeUrl}" />
                 <Border.Style>
                     <Style TargetType="Border">
