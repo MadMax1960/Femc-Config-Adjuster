@@ -16,6 +16,7 @@
             <converters:StringsToCommaListConverter x:Key="StringsToCommaList" />
             <converters:AuthorListToString x:Key="AuthorListToString" />
             <converters:OptionImageConverter x:Key="OptionImageConverter" />
+            <converters:IsNullConverter x:Key="IsNullConverter" />
         </ResourceDictionary>
     </Application.Resources>
 </Application>
