@@ -21,7 +21,7 @@ internal static class ResourceUtils
         return Path.Join(AppDomain.CurrentDomain.BaseDirectory, "resources", "missing.png");
     }
 
-    public static string? GetOptionAudioPath(AppService app, ModOption option)
+    public static string? GetOptionAudioPath(ModOption option)
     {
         var audioPath = Path.Join(appDir, "resources", option.InternalName, "audio.hca");
         if (File.Exists(audioPath))

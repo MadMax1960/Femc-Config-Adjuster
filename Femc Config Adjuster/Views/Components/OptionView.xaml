@@ -68,11 +68,40 @@
                         Padding="8,0"
                         VerticalAlignment="Stretch"
                         Click="Button_Click"
-                        Content="Preview"
                         CornerRadius="0 4 4 0">
                         <ui:Button.Background>
                             <SolidColorBrush Opacity="0.85" Color="{DynamicResource ControlOnImageFillColorTertiary}" />
                         </ui:Button.Background>
+                        <ui:Button.Style>
+                            <Style BasedOn="{StaticResource {x:Type ui:Button}}" TargetType="ui:Button">
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock VerticalAlignment="Center" Text="Preview" />
+                                            <ui:SymbolIcon
+                                                Margin="4"
+                                                FontSize="20"
+                                                Symbol="Image16" />
+                                        </StackPanel>
+                                    </Setter.Value>
+                                </Setter>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding UseAudioPreview}" Value="False">
+                                        <Setter Property="Content">
+                                            <Setter.Value>
+                                                <StackPanel Orientation="Horizontal">
+                                                    <TextBlock VerticalAlignment="Center" Text="Listen" />
+                                                    <ui:SymbolIcon
+                                                        Margin="4"
+                                                        FontSize="20"
+                                                        Symbol="Headphones20" />
+                                                </StackPanel>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </ui:Button.Style>
                     </ui:Button>
                 </Border>
                 <Border Grid.Column="2" CornerRadius="4 0 0 4">
