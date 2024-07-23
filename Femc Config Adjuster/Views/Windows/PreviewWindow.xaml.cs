@@ -1,4 +1,5 @@
 ﻿using Femc_Config_Adjuster.ViewModels.Windows;
+using Microsoft.Web.WebView2.Wpf;
 using System.Windows;
 using Wpf.Ui.Controls;
 
@@ -33,9 +34,9 @@ public partial class PreviewWindow : FluentWindow
     {
         base.OnClosed(e);
 
-        if (this.webview.IsEnabled)
+        if (this.webviewControl.Content is WebView2 webview)
         {
-            this.webview.Dispose();
+            webview.Dispose();
         }
     }
 }

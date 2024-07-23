@@ -83,7 +83,17 @@
                                     FontSize="12"
                                     FontWeight="Bold"
                                     Text="{Binding Url}"
-                                    Url="{Binding Url}" />
+                                    Url="{Binding Url}">
+                                    <controls:Link.Style>
+                                        <Style TargetType="controls:Link">
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding Url}" Value="{x:Null}">
+                                                    <Setter Property="Visibility" Value="Collapsed" />
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </controls:Link.Style>
+                                </controls:Link>
                                 <TextBlock FontSize="12" TextWrapping="Wrap">
                                     <TextBlock.Style>
                                         <Style TargetType="TextBlock">
@@ -142,12 +152,25 @@
                     </Style>
                 </Border.Style>
             </Border>
-            <wv2:WebView2
-                x:Name="webview"
+
+            <ContentControl
+                x:Name="webviewControl"
                 Grid.RowSpan="2"
-                Grid.Column="1"
-                IsEnabled="{Binding UseWebView}"
-                Source="{Binding YoutubeEmbedUrl}" />
+                Grid.Column="1">
+                <ContentControl.Style>
+                    <Style TargetType="ContentControl">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding UseWebView}" Value="True">
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <wv2:WebView2 Source="{Binding YoutubeEmbedUrl}" />
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </ContentControl.Style>
+            </ContentControl>
         </Grid>
     </Grid>
 </ui:FluentWindow>
