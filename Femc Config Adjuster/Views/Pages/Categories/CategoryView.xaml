@@ -83,7 +83,7 @@
                     MaxHeight="{Binding Path=ActualHeight, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=UIElement}}"
                     Margin="8,0"
                     Padding="0,0,16,0">
-                    <femc:OptionsGallery Margin="0,8" DataContext="{Binding SelectedSection.Options}" />
+                    <femc:OptionsGalleryView Margin="0,8" DataContext="{Binding SelectedSection.OptionsGallery}" />
                 </ScrollViewer>
 
             </Border>
