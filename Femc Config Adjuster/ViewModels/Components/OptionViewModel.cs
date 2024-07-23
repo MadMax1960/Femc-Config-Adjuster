@@ -10,15 +10,12 @@ public partial class OptionViewModel : ObservableObject
     {
         this.Option = option;
         this.ThumbnailPath = ResourceUtils.GetOptionImagePath(option, false);
-        this.AudioPath = ResourceUtils.GetOptionAudioPath(option);
-        this.UseAudioPreview = this.AudioPath != null;
+        this.UseAudioPreview = ResourceUtils.GetOptionYoutubeUrl(option) != null;
     }
 
     public ModOption Option { get; }
 
     public string ThumbnailPath { get; }
-
-    public string? AudioPath { get; }
 
     public bool UseAudioPreview { get; }
 }

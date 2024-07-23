@@ -15,6 +15,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.2592.51" />
     <PackageReference Include="Microsoft.Xaml.Behaviors.Wpf" Version="1.1.122" />
     <PackageReference Include="WPF-UI" Version="3.0.0" />
     <PackageReference Include="Microsoft.Extensions.Hosting" Version="8.0.0" />
@@ -26,6 +27,8 @@
     <None Remove="Assets\wpfui-icon-1024.png" />
     <None Remove="Assets\Yuunagi.webp" />
     <None Remove="Resources\220825.gif" />
+    <None Remove="Resources\music_atlus_beclose\youtube.txt" />
+    <None Remove="Resources\music_mosq_time\youtube.txt" />
     <None Remove="Resources\sav.webp" />
     <None Remove="Resources\test.png" />
   </ItemGroup>

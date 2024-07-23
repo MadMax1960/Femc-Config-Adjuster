@@ -7,6 +7,7 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
     Title="{Binding Title}"
     Width="1000"
     Height="500"
@@ -120,6 +121,33 @@
                 VerticalAlignment="Center"
                 Source="{Binding ImagePath}"
                 Stretch="Uniform" />
+            <Border Grid.RowSpan="2" Grid.Column="1">
+                <Border.Background>
+                    <SolidColorBrush Opacity="0.85" Color="{DynamicResource ControlOnImageFillColorTertiary}" />
+                </Border.Background>
+                <controls:Link
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    FontSize="48"
+                    FontWeight="Black"
+                    Text="Listen on Youtube"
+                    Url="{Binding YoutubeUrl}" />
+                <Border.Style>
+                    <Style TargetType="Border">
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding YoutubeUrl, Converter={StaticResource IsNullConverter}}" Value="True">
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Border.Style>
+            </Border>
+            <wv2:WebView2
+                x:Name="webview"
+                Grid.RowSpan="2"
+                Grid.Column="1"
+                IsEnabled="{Binding UseWebView}"
+                Source="{Binding YoutubeEmbedUrl}" />
         </Grid>
     </Grid>
 </ui:FluentWindow>

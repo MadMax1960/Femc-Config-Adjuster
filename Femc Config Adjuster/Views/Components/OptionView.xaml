@@ -90,11 +90,11 @@
                                         <Setter Property="Content">
                                             <Setter.Value>
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock VerticalAlignment="Center" Text="Listen" />
+                                                    <TextBlock VerticalAlignment="Center" Text="Play" />
                                                     <ui:SymbolIcon
                                                         Margin="4"
                                                         FontSize="20"
-                                                        Symbol="Headphones20" />
+                                                        Symbol="Play12" />
                                                 </StackPanel>
                                             </Setter.Value>
                                         </Setter>

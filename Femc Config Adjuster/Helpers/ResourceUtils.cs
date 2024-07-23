@@ -21,12 +21,21 @@ internal static class ResourceUtils
         return Path.Join(AppDomain.CurrentDomain.BaseDirectory, "resources", "missing.png");
     }
 
-    public static string? GetOptionAudioPath(ModOption option)
+    public static string? GetOptionYoutubeUrl(ModOption option)
     {
-        var audioPath = Path.Join(appDir, "resources", option.InternalName, "audio.hca");
-        if (File.Exists(audioPath))
+        var youtubeFile = Path.Join(appDir, "resources", option.InternalName, "youtube.txt");
+        if (File.Exists(youtubeFile))
         {
-            return audioPath;
+            try
+            {
+                var youtubeUrl = File.ReadAllText(youtubeFile).Trim();
+                return youtubeUrl;
+
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
 
         return null;

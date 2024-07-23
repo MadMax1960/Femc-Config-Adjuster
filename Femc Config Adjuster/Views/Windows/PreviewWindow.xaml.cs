@@ -28,4 +28,14 @@ public partial class PreviewWindow : FluentWindow
     {
         this.Close();
     }
+
+    protected override void OnClosed(EventArgs e)
+    {
+        base.OnClosed(e);
+
+        if (this.webview.IsEnabled)
+        {
+            this.webview.Dispose();
+        }
+    }
 }
