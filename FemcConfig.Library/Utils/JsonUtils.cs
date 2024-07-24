@@ -13,31 +13,10 @@ public static class JsonUtils
         WriteIndented = true
     };
 
-    public static T DeserializeFile<T>(string file)
+    public static T DeserializeFile<T>(string file, string type="")
     {
         var obj = JsonSerializer.Deserialize<T>(File.ReadAllText(file), serializerOptions);
-        // If deserialization succeeds, return the object
-        if (obj != null)
-        {
-            return obj;
-        }
-        else
-        {
-            var defaultConfig = new ReloadedModConfig();
-            var defaultJson = JsonSerializer.Serialize(defaultConfig, serializerOptions);
-            // If deserialization fails, replace the file content with the default JSON string
-            File.WriteAllText(file, defaultJson);
-            // Deserialize the new file content
-            obj = JsonSerializer.Deserialize<T>(File.ReadAllText(file), serializerOptions);
-
-            // If deserialization of the default JSON string fails, throw an exception
-            if (obj == null)
-            {
-                throw new Exception($"Failed to deserialize default JSON string.\nDefault JSON String: {defaultJson}");
-            }
-
-            return obj;
-        }
+        return obj ?? throw new Exception("Json Serialisation Failed.");
     }
 
     public static void SerializeFile<T>(T obj, string file)

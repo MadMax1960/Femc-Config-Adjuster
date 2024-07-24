@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using FemcConfig.Library.Utils;
+using System.Text.Json;
 
 namespace FemcConfig.Library.Config.Models;
 
@@ -11,7 +12,17 @@ public class ModConfig : ObservableObject
     public ModConfig(string configFile)
     {
         this.configFile = configFile;
-        this.modConfig = JsonUtils.DeserializeFile<ReloadedModConfig>(configFile);
+        try
+        {
+            this.modConfig = JsonUtils.DeserializeFile<ReloadedModConfig>(configFile);
+        }
+        catch (Exception ex)
+        {
+            var defaultConfig = new ReloadedModConfig();
+            JsonUtils.SerializeFile(defaultConfig, configFile);
+            this.modConfig = defaultConfig;
+        }
+
         this.modConfig.PropertyChanged += (sender, args) =>
         {
             try
