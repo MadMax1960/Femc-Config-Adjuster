@@ -15,7 +15,11 @@ public partial class ReloadedModConfig : ObservableObject
     [ObservableProperty]
     private bool mosq = true;
 
-    // literally just a todo list for myself, seperate these into their own options because not everybody wants all the music from each person and bgme supports it fine
+    [Category("Music")]
+    [Description("Enable Mosq's battle music along with EidieK87's version of Pull the trigger?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    public bool mosqeidk = true;
 
     [Category("Music")]
     [Description("Enable Karma's battle music?")]
@@ -28,86 +32,7 @@ public partial class ReloadedModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool rock = true;
-    /*
-    [Category("Music")]
-    [Description("Enable Color your Night as the night music?")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool colnight = true;
-
-    [Category("Music")]
-    [Description("Enable Midnight Reverie as the night music?")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool midnight = true;
-
-    [Category("Music")]
-    [Description("Enable Time (Night Version) as the night music?")]
-    [DefaultValue(true)]
-[ObservableProperty]
-private bool femnight = true;
-
-    [Description("Enable When the moon's reaching out stars as the daytime music?")]
-    [Category("Music")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool moon = true;
-
-    [Category("Music")]
-    [Description("Enable Way of life as the daytime music?")]
-    [DefaultValue(true)]
-[ObservableProperty]
-private bool wayoflife = true;
-
-    [Category("Music")]
-    [Description("Enable Want to Be Close -Reload- as the daytime music inside the school (Phase 1)?")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool wantclose = true;
-
-    [Category("Music")]
-    [Description("Enable Time as the daytime music inside the school?")]
-    [DefaultValue(true)]
-[ObservableProperty]
-private bool timeschool = true;
-
-    [Category("Music")]
-    [Description("Enable Joy to be the music played during social link events?")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool joy = true;
-
-    [Category("Music")]
-    [Description("Enable Mosq's After School to be the music played during social link events?")]
-    [DefaultValue(true)]
-[ObservableProperty]
-private bool afterschool = true;
-
-    [Category("Music")]
-    [Description("Enable Changing Seasons as the daytime music inside the school?")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool seasons = true;
-
-    [Category("Music")]
-    [Description("Enable Sun as the daytime music inside the school?")]
-    [DefaultValue(true)]
-[ObservableProperty]
-private bool sun = true;
-
-    [Category("Music")]
-    [Description("Enable Soul Phrase as the music played during the battle with Nyx?")]
-    [DefaultValue(false)]
-[ObservableProperty]
-private bool soulpk = true;
-
-    [Category("Music")]
-    [Description("Enable Burn my dread as the music played during the battle with Nyx?")]
-    [DefaultValue(true)]
-[ObservableProperty]
-private bool bmd = true;
-    */
-
+ 
     [Description("Select the music that will be played at night when you are outside the dorm")]
     [Category("Music")]
     [DefaultValue(nightmusic1.TimeNightVersionByMosq)]
@@ -117,6 +42,7 @@ private bool bmd = true;
     public enum nightmusic1
     {
         TimeNightVersionByMosq,
+        TimeNightByMosqGabiVer,
         ColorYourNightReload,
         MidnightReverieByMineformer
     }
@@ -130,7 +56,8 @@ private bool bmd = true;
     public enum dayinmusic1
     {
         WantToBeCloseReload,
-        TimeByMosq
+        TimeByMosq,
+        TimeByMosqGabiVer
     }
 
     [Description("Select the music that will be played when you are inside the school (september onwards)")]

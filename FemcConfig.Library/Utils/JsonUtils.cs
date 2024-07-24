@@ -1,4 +1,5 @@
-﻿using System.Text.Json;
+﻿using FemcConfig.Library.Config.Models;
+using System.Text.Json;
 using System.Text.Json.Serialization;
 
 namespace FemcConfig.Library.Utils;
@@ -22,17 +23,17 @@ public static class JsonUtils
         }
         else
         {
-            string backupjsonstr = "string jsonbackup = \"{\\r\\n  \\\"mosq\\\": false,\\r\\n  \\\"mosqeidk\\\": true,\\r\\n  \\\"karma\\\": false,\\r\\n  \\\"rock\\\": false,\\r\\n  \\\"nighttrue1\\\": \\\"TimeNightByMosqGabiVer\\\",\\r\\n  \\\"dayintrue1\\\": \\\"TimeByMosqGabiVer\\\",\\r\\n  \\\"dayintrue2\\\": \\\"SunByMosq\\\",\\r\\n  \\\"dayouttrue1\\\": \\\"WayOfL";
-            // If deserialization fails, replace the file content with the stored string
-            File.WriteAllText(file,backupjsonstr);
-
+            var defaultConfig = new ReloadedModConfig();
+            var defaultJson = JsonSerializer.Serialize(defaultConfig, serializerOptions);
+            // If deserialization fails, replace the file content with the default JSON string
+            File.WriteAllText(file, defaultJson);
             // Deserialize the new file content
             obj = JsonSerializer.Deserialize<T>(File.ReadAllText(file), serializerOptions);
 
-            // If deserialization of the stored string fails, throw an exception
+            // If deserialization of the default JSON string fails, throw an exception
             if (obj == null)
             {
-                throw new Exception($"Failed to deserialize stored string.\nStored String: {backupjsonstr}");
+                throw new Exception($"Failed to deserialize default JSON string.\nDefault JSON String: {defaultJson}");
             }
 
             return obj;

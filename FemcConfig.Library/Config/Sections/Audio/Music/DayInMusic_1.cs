@@ -1,5 +1,4 @@
 ﻿using FemcConfig.Library.Config.Options;
-
 namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class DayInMusic_1 : ISection
