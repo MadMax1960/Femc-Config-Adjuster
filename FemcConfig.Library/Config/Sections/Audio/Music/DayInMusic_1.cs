@@ -26,6 +26,14 @@ public class DayInMusic_1 : ISection
             },
             new ModOption(ctx)
             {
+                InternalName = "music_gabi_time",
+                Name = "Time (GabiShy Remix)",
+                Authors = [Author.GabiShy, Author.Mosq],
+                Enable = ctx => ctx.ModConfig.Settings.Dayintrue1 = Models.ReloadedModConfig.dayinmusic1.TimeByMosqGabiVer,
+                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayintrue1 == Models.ReloadedModConfig.dayinmusic1.TimeByMosqGabiVer,
+            },
+            new ModOption(ctx)
+            {
                 InternalName = "music_atlus_beclose",
                 Name = "Want to Be Close (Reload)",
                 Authors = [Author.Atlus],

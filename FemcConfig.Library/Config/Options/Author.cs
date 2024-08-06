@@ -20,6 +20,7 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Fernando = new("Fernando", Url: "https://x.com/HolguinDev");
     public static readonly Author Monica = new("Monica", Url: "https://x.com/MonikArtZ");
     public static readonly Author Mosq = new("Mosq", Url: "https://x.com/MOSQmusic");
+    public static readonly Author GabiShy = new("GabiShy", Url: "https://www.youtube.com/@gabishy");
     public static readonly Author Atlus = new("Atlus", Url: "Atlus.com");
     public static readonly Author Mudkip = new("MadMax1960");
 };
