@@ -43,6 +43,7 @@ public partial class ReloadedModConfig : ObservableObject
     {
         TimeNightVersionByMosq,
         TimeNightByMosqGabiVer,
+        NightWanderer,
         ColorYourNightReload,
         MidnightReverieByMineformer
     }
@@ -88,14 +89,13 @@ public partial class ReloadedModConfig : ObservableObject
     [Category("Music")]
     [DefaultValue(finalmusic.BurnMyDreadReload)]
     [ObservableProperty]
-    private finalmusic finalmusictrue = finalmusic.BurnMyDreadReload;
+    public finalmusic finalmusictrue = finalmusic.BurnMyDreadReload;
 
     public enum finalmusic
     {
         BurnMyDreadReload,
         SoulPhraseByKarma
     }
-
     [Description("Select the music that will be played during social link events")]
     [Category("Music")]
     [DefaultValue(socialmusic.AfterSchoolByMosq)]
