@@ -108,6 +108,18 @@ public partial class ReloadedModConfig : ObservableObject
         AfterSchoolByMosq
     }
 
+    [Description("Select the music that will be played during some boss fights")]
+    [Category("MusicRyo")]
+    [DefaultValue(bossmusic.MasterOfShadowFateMixByMosq)]
+    [ObservableProperty]
+    private bossmusic bossmusictrue = bossmusic.MasterOfShadowFateMixByMosq;
+
+    public enum bossmusic
+    {
+        MasterOfShadowReload,
+        MasterOfShadowFateMixByMosq
+    }
+
     [Category("Voice")]
     [Description("Enable Gio's Gendered Audio?")]
     [DefaultValue(false)]
