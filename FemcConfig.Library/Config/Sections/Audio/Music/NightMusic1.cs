@@ -21,40 +21,40 @@ public class NightMusic_1 : ISection
                 InternalName = "music_mosq_nighttime",
                 Name = "Time -Night Version (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Nighttrue1 = Models.ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Nighttrue1 == Models.ReloadedModConfig.nightmusic1.TimeNightVersionByMosq,
+                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.TimeNightVersionByMosq,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.TimeNightVersionByMosq,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_gabi_nighttime",
                 Name = "Time -Night Version (GabiShy Remix)",
                 Authors = [Author.GabiShy, Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Nighttrue1 = Models.ReloadedModConfig.nightmusic1.TimeNightByMosqGabiVer,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Nighttrue1 == Models.ReloadedModConfig.nightmusic1.TimeNightByMosqGabiVer,
+                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.TimeNightByMosqGabiVer,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.TimeNightByMosqGabiVer,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mineformer_midnight",
                 Name = "Midnight Reverie",
                 Authors = [Author.Mineformer],
-                Enable = ctx => ctx.ModConfig.Settings.Nighttrue1 = Models.ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Nighttrue1 == Models.ReloadedModConfig.nightmusic1.MidnightReverieByMineformer,
+                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.MidnightReverieByMineformer,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.MidnightReverieByMineformer,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mosq_nightwanderer",
                 Name = "Night Wanderer",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Nighttrue1 = Models.ReloadedModConfig.nightmusic1.NightWanderer,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Nighttrue1 == Models.ReloadedModConfig.nightmusic1.NightWanderer,
+                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.NightWanderer,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.NightWanderer,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_color_your_night",
                 Name = "Color Your Night (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.ModConfig.Settings.Nighttrue1 = Models.ReloadedModConfig.nightmusic1.ColorYourNightReload,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Nighttrue1 == Models.ReloadedModConfig.nightmusic1.ColorYourNightReload,
+                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.ColorYourNightReload,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.ColorYourNightReload,
             },
         ];
     }

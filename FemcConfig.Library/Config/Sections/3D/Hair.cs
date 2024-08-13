@@ -22,16 +22,16 @@ public class Hair : ISection
                 InternalName = "hair_default",
                 Name = "Default",
                 Authors = [Author.Mudkip],
-                Enable = ctx => ctx.ModConfig.Settings.HairTrue = Models.ReloadedModConfig.HairType.MudkipsHair,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.HairTrue == Models.ReloadedModConfig.HairType.MudkipsHair,
+                Enable = ctx => ctx.FemcConfig.Settings.HairTrue = Models.FemcModConfig.HairType.MudkipsHair,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.HairTrue == Models.FemcModConfig.HairType.MudkipsHair,
             },
             new ModOption(ctx)
             {
                 InternalName = "hair_bean",
                 Name = "Kotone Bean",
                 Authors = [Author.Mudkip],
-                Enable = ctx => ctx.ModConfig.Settings.HairTrue = Models.ReloadedModConfig.HairType.KotoneBeanHair,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.HairTrue == Models.ReloadedModConfig.HairType.KotoneBeanHair,
+                Enable = ctx => ctx.FemcConfig.Settings.HairTrue = Models.FemcModConfig.HairType.KotoneBeanHair,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.HairTrue == Models.FemcModConfig.HairType.KotoneBeanHair,
             },
         ];
     }

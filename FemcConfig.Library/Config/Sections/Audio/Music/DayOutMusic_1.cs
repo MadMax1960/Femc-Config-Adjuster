@@ -21,16 +21,16 @@ public class DayOutMusic_1 : ISection
                 InternalName = "music_mosq_wayoflife",
                 Name = "Way of Life (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Dayouttrue1 = Models.ReloadedModConfig.dayoutmusic1.WayOfLifeByMosq,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayouttrue1 == Models.ReloadedModConfig.dayoutmusic1.WayOfLifeByMosq,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayouttrue1 = Models.FemcModConfig.dayoutmusic1.WayOfLifeByMosq,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayouttrue1 == Models.FemcModConfig.dayoutmusic1.WayOfLifeByMosq,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_whenthemoon",
                 Name = "When the Moon's Reaching Out Stars (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.ModConfig.Settings.Dayouttrue1 = Models.ReloadedModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayouttrue1 == Models.ReloadedModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayouttrue1 = Models.FemcModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayouttrue1 == Models.FemcModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,
             },
         ];
     }

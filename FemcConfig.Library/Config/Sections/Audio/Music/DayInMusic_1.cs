@@ -21,24 +21,24 @@ public class DayInMusic_1 : ISection
                 InternalName = "music_mosq_time",
                 Name = "Time (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Dayintrue1 = Models.ReloadedModConfig.dayinmusic1.TimeByMosq,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayintrue1 == Models.ReloadedModConfig.dayinmusic1.TimeByMosq,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue1 = Models.FemcModConfig.dayinmusic1.TimeByMosq,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue1 == Models.FemcModConfig.dayinmusic1.TimeByMosq,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_gabi_time",
                 Name = "Time (GabiShy Remix)",
                 Authors = [Author.GabiShy, Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Dayintrue1 = Models.ReloadedModConfig.dayinmusic1.TimeByMosqGabiVer,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayintrue1 == Models.ReloadedModConfig.dayinmusic1.TimeByMosqGabiVer,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue1 = Models.FemcModConfig.dayinmusic1.TimeByMosqGabiVer,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue1 == Models.FemcModConfig.dayinmusic1.TimeByMosqGabiVer,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_atlus_beclose",
                 Name = "Want to Be Close (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.ModConfig.Settings.Dayintrue1 = Models.ReloadedModConfig.dayinmusic1.WantToBeCloseReload,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayintrue1 == Models.ReloadedModConfig.dayinmusic1.WantToBeCloseReload,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue1 = Models.FemcModConfig.dayinmusic1.WantToBeCloseReload,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue1 == Models.FemcModConfig.dayinmusic1.WantToBeCloseReload,
             },
         ];
     }

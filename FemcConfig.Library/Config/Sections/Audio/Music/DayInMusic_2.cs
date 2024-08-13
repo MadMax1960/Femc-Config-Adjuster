@@ -21,16 +21,16 @@ public class DayInMusic_2 : ISection
                 InternalName = "music_mosq_sun",
                 Name = "Sun (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Dayintrue2 = Models.ReloadedModConfig.dayinmusic2.SunByMosq,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayintrue2 == Models.ReloadedModConfig.dayinmusic2.SunByMosq,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue2 = Models.FemcModConfig.dayinmusic2.SunByMosq,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue2 == Models.FemcModConfig.dayinmusic2.SunByMosq,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_atlus_seasons",
                 Name = "Changing Seasons (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.ModConfig.Settings.Dayintrue2 = Models.ReloadedModConfig.dayinmusic2.ChangingSeasonsReload,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Dayintrue2 == Models.ReloadedModConfig.dayinmusic2.ChangingSeasonsReload,
+                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue2 = Models.FemcModConfig.dayinmusic2.ChangingSeasonsReload,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue2 == Models.FemcModConfig.dayinmusic2.ChangingSeasonsReload,
             },
         ];
     }

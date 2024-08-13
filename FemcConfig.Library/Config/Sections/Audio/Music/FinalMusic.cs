@@ -21,16 +21,16 @@ public class FinalMusic : ISection
                 InternalName = "music_atlus_bmd",
                 Name = "Burn My Dread -Last Battle (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.ModConfig.Settings.Finalmusictrue = Models.ReloadedModConfig.finalmusic.BurnMyDreadReload,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Finalmusictrue == Models.ReloadedModConfig.finalmusic.BurnMyDreadReload,
+                Enable = ctx => ctx.FemcConfig.Settings.Finalmusictrue = Models.FemcModConfig.finalmusic.BurnMyDreadReload,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Finalmusictrue == Models.FemcModConfig.finalmusic.BurnMyDreadReload,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_karma_soul",
                 Name = "Soul Phrase -Final Battle",
                 Authors = [Author.Karma],
-                Enable = ctx => ctx.ModConfig.Settings.Finalmusictrue = Models.ReloadedModConfig.finalmusic.SoulPhraseByKarma,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Finalmusictrue == Models.ReloadedModConfig.finalmusic.SoulPhraseByKarma,
+                Enable = ctx => ctx.FemcConfig.Settings.Finalmusictrue = Models.FemcModConfig.finalmusic.SoulPhraseByKarma,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Finalmusictrue == Models.FemcModConfig.finalmusic.SoulPhraseByKarma,
             },
         ];
     }

@@ -21,16 +21,16 @@ public class SocialMusic : ISection
                 InternalName = "music_atlus_joy",
                 Name = "Joy (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.ModConfig.Settings.Socialmusictrue = Models.ReloadedModConfig.socialmusic.JoyReload,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Socialmusictrue == Models.ReloadedModConfig.socialmusic.JoyReload,
+                Enable = ctx => ctx.FemcConfig.Settings.Socialmusictrue = Models.FemcModConfig.socialmusic.JoyReload,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Socialmusictrue == Models.FemcModConfig.socialmusic.JoyReload,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mosq_afterschool",
                 Name = "After School",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.ModConfig.Settings.Socialmusictrue = Models.ReloadedModConfig.socialmusic.AfterSchoolByMosq,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.Socialmusictrue == Models.ReloadedModConfig.socialmusic.AfterSchoolByMosq, 
+                Enable = ctx => ctx.FemcConfig.Settings.Socialmusictrue = Models.FemcModConfig.socialmusic.AfterSchoolByMosq,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Socialmusictrue == Models.FemcModConfig.socialmusic.AfterSchoolByMosq, 
             }
         ];
     }

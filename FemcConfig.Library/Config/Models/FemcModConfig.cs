@@ -7,7 +7,7 @@ namespace FemcConfig.Library.Config.Models;
 /// Should match Config.cs from FEMC mod:
 /// https://github.com/MadMax1960/Femc-Reloaded-Project/blob/main/code/p3rpc.femc/p3rpc.femc/Config.cs
 /// </summary>
-public partial class ReloadedModConfig : ObservableObject
+public partial class FemcModConfig : ObservableObject
 {
     [Category("Music")]
     [Description("Enable Mosq's battle music?")]

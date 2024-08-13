@@ -15,7 +15,7 @@ public class AppService
 
     public void SaveConfig()
     {
-        this.appContext?.ModConfig?.Save();
+        this.appContext?.FemcConfig?.Save();
     }
 
     public AppContext GetContext()
@@ -72,7 +72,7 @@ public class AppService
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
-            ModConfig = new(femcConfigFile),
+            FemcConfig = new(femcConfigFile),
         };
     }
 }

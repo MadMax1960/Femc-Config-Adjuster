@@ -21,36 +21,36 @@ public class AOASection : ISection
             {
                 InternalName = "aoa_ely",
                 Authors = [Author.Ely],
-                Enable = (ctx) => ctx.ModConfig.Settings.AOATrue = Models.ReloadedModConfig.AOAType.Ely,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.Settings.AOATrue == Models.ReloadedModConfig.AOAType.Ely,
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Ely,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Ely,
             },
             new ModOption(ctx)
             {
                 InternalName = "aoa_fernando",
                 Authors = [Author.Fernando],
-                Enable = (ctx) => ctx.ModConfig.Settings.AOATrue = Models.ReloadedModConfig.AOAType.Fernando,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.Settings.AOATrue == Models.ReloadedModConfig.AOAType.Fernando,
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Fernando,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Fernando,
             },
             new ModOption(ctx)
             {
                 InternalName = "aoa_ronald",
                 Authors = [Author.Ronald],
-                Enable = (ctx) => ctx.ModConfig.Settings.AOATrue = Models.ReloadedModConfig.AOAType.RonaldReagan,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.Settings.AOATrue == Models.ReloadedModConfig.AOAType.RonaldReagan,
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.RonaldReagan,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.RonaldReagan,
             },
             new ModOption(ctx)
             {
                 InternalName = "aoa_monica",
                 Authors = [Author.Monica],
-                Enable = (ctx) => ctx.ModConfig.Settings.AOATrue = Models.ReloadedModConfig.AOAType.Monica,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.Settings.AOATrue == Models.ReloadedModConfig.AOAType.Monica,
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Monica,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Monica,
             },
             new ModOption(ctx)
             {
                 InternalName = "aoa_chrysanthie",
                 Authors = [Author.Chrysanthie],
-                Enable = (ctx) => ctx.ModConfig.Settings.AOATrue = Models.ReloadedModConfig.AOAType.Chrysanthie,
-                IsEnabledFunc = (ctx) => ctx.ModConfig.Settings.AOATrue == Models.ReloadedModConfig.AOAType.Chrysanthie,
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Chrysanthie,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Chrysanthie,
             },
         ];
     }

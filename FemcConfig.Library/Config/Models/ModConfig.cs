@@ -1,24 +1,26 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using FemcConfig.Library.Utils;
-using System.Text.Json;
+using System.ComponentModel;
 
 namespace FemcConfig.Library.Config.Models;
 
-public class ModConfig : ObservableObject
+public class ModConfig<TConfig> : ObservableObject
+    where TConfig : INotifyPropertyChanged, new()
 {
     private readonly string configFile;
-    private readonly ReloadedModConfig modConfig;
+    private readonly TConfig modConfig;
 
     public ModConfig(string configFile)
     {
         this.configFile = configFile;
+
         try
         {
-            this.modConfig = JsonUtils.DeserializeFile<ReloadedModConfig>(configFile);
+            this.modConfig = JsonUtils.DeserializeFile<TConfig>(configFile);
         }
-        catch (Exception ex)
+        catch (Exception)
         {
-            var defaultConfig = new ReloadedModConfig();
+            var defaultConfig = new TConfig();
             JsonUtils.SerializeFile(defaultConfig, configFile);
             this.modConfig = defaultConfig;
         }
@@ -37,7 +39,7 @@ public class ModConfig : ObservableObject
         };
     }
 
-    public ReloadedModConfig Settings => this.modConfig;
+    public TConfig Settings => this.modConfig;
 
     public void Save()
     {

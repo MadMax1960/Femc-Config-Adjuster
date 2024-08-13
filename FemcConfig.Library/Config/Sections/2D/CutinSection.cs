@@ -33,15 +33,15 @@ public class CutinSection : ISection
             {
                 InternalName = "cutin_berry",
                 Authors = [Author.Berrycha],
-                Enable = ctx => ctx.ModConfig.Settings.CutinTrue = Models.ReloadedModConfig.CutinType.berrycha,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.CutinTrue == Models.ReloadedModConfig.CutinType.berrycha,
+                Enable = ctx => ctx.FemcConfig.Settings.CutinTrue = Models.FemcModConfig.CutinType.berrycha,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.CutinTrue == Models.FemcModConfig.CutinType.berrycha,
             },
             new ModOption(ctx)
             {
                 InternalName = "cutin_elypat",
                 Authors = [Author.Ely, Author.PatMandDX],
-                Enable = ctx => ctx.ModConfig.Settings.CutinTrue = Models.ReloadedModConfig.CutinType.ElyandPatmandx,
-                IsEnabledFunc = ctx => ctx.ModConfig.Settings.CutinTrue == Models.ReloadedModConfig.CutinType.ElyandPatmandx,
+                Enable = ctx => ctx.FemcConfig.Settings.CutinTrue = Models.FemcModConfig.CutinType.ElyandPatmandx,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.CutinTrue == Models.FemcModConfig.CutinType.ElyandPatmandx,
             },
         ];
     }
