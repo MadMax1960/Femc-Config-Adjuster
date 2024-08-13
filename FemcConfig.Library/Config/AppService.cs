@@ -28,7 +28,7 @@ public class AppService
 
     public class EnabledModConfiguration
     {
-        public List<string> EnabledMods { get; set; }
+        public List<string>? EnabledMods { get; set; }
     }
 
     private void AutoInit()
@@ -84,7 +84,7 @@ public class AppService
                 var userConfigFile = Path.Join(configDir, "ModUserConfig.json");
                 var userConfig = JsonUtils.DeserializeFile<ReloadedModUserConfig>(userConfigFile);
 
-                if (userConfig.ModId == Constants.FEMC_MOD_ID)
+                if (userConfig.ModId == Constants.MOVIE_MOD_ID)
                 {
                     movieConfigFile = Path.Join(configDir, "Config.json");
                     break;
@@ -97,7 +97,7 @@ public class AppService
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
             FemcConfig = new(femcConfigFile),
-            MovieConfig=new(movieConfigFile)
+            MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null
         };
     }
 }

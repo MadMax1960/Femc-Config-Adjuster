@@ -10,17 +10,20 @@ namespace FemcConfig.Library.Config.Models;
 public partial class MovieModConfig : ObservableObject
 {
     [Description("View this movie on startup?")]
+    [Category("Intro")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool p3p = true;
 
     [Description("View this movie on startup?")]
     [DefaultValue(true)]
+    [Category("Intro")]
     [ObservableProperty]
     private bool p3pk = true;
 
     [Description("View this movie on startup?")]
     [DefaultValue(false)]
+    [Category("Intro")]
     [ObservableProperty]
     private bool soulmosq = true;
 }
