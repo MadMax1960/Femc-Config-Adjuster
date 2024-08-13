@@ -9,30 +9,60 @@ namespace FemcConfig.Library.Config.Models;
 /// </summary>
 public partial class FemcModConfig : ObservableObject
 {
-    [Category("Music")]
-    [Description("Enable Mosq's battle music?")]
+    [Category("Battle Music")]
+    [Description("Enable Karma's pull the trigger?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool karmaadv = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Mosq's pull the trigger?")]
     [DefaultValue(true)]
     [ObservableProperty]
-    private bool mosq = true;
+    private bool mosqadv = true;
 
-    [Category("Music")]
-    [Description("Enable Mosq's battle music along with EidieK87's version of Pull the trigger?")]
+    [Category("Battle Music")]
+    [Description("Enable EidieK87's pull the trigger?")]
     [DefaultValue(false)]
     [ObservableProperty]
-    public bool mosqeidk = true;
+    private bool eidadv = true;
 
-    [Category("Music")]
-    [Description("Enable Karma's battle music?")]
+    [Category("Battle Music")]
+    [Description("Enable Mosq's Wiping All Out?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool mosqnom = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Karma's Wiping All Out?")]
     [DefaultValue(false)]
     [ObservableProperty]
-    private bool karma = true;
+    private bool karmanom = true;
 
-    [Category("Music")]
-    [Description("Enable Stella and GillStudio's battle music?")]
+    [Category("Battle Music")]
+    [Description("Enable Stella and GillStudio's Wiping All Out?")]
     [DefaultValue(false)]
     [ObservableProperty]
-    private bool rock = true;
- 
+    private bool sgnom = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Stella and GillStudio's Danger Zone?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool sgdis = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Karma's Danger Zone?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool karmadis = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Mosq's Danger Zone?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool mosqdis = true;
+
     [Description("Select the music that will be played at night when you are outside the dorm")]
     [Category("Music")]
     [DefaultValue(nightmusic1.TimeNightVersionByMosq)]
