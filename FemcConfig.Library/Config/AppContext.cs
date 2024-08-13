@@ -11,6 +11,5 @@ public class AppContext
     public required string ModDir { get; init; }
 
     public required ModConfig<FemcModConfig> FemcConfig { get; init; }
-
-    //public ModConfig<MovieModConfig> MovieConfig { get; init; }
+    public ModConfig<MovieModConfig> MovieConfig { get; init; }
 }

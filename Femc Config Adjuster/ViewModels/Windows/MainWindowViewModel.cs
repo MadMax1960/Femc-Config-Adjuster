@@ -69,9 +69,7 @@ public partial class MainWindowViewModel : ObservableObject
     ];
     private static bool CheckModExistence(string id)
     {
-        var reloadedDir = Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json");
-        var appfile = JsonUtils.DeserializeFile<EnabledModConfiguration>(reloadedDir);
-        return appfile.EnabledMods.Contains(id) ? true : false;
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods.Contains(id) ? true : false;
     }
     public class EnabledModConfiguration
     {

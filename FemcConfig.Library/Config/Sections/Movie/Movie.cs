@@ -30,19 +30,6 @@ public class MovieSection : ISection
         this.Options =
         [
             // Example for a bool setting.
-            new ModOption(ctx)
-            {
-                InternalName = "example",
-                Name = "Bool Option",
-                Authors = [Author.Missing],
-
-                // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ModConfig.Settings.EnableBustup = true,
-                Disable = (ctx) => ctx.ModConfig.Settings.EnableBustup = false,
-
-                // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ModConfig.Settings.EnableBustup,
-            },
         ];
     }
 }
