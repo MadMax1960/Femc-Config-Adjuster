@@ -4,8 +4,16 @@
 // All Rights Reserved.
 
 using CommunityToolkit.Mvvm.ComponentModel;
+using FemcConfig.Library.Config;
+using FemcConfig.Library.Utils;
 using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq.Expressions;
+using System.Windows;
+using System.Windows.Automation;
 using Wpf.Ui.Controls;
+using FemcConfig.Library.Utils;
+using FemcConfig.Library.Config.Models;
 
 namespace Femc_Config_Adjuster.ViewModels.Windows;
 
@@ -51,5 +59,23 @@ public partial class MainWindowViewModel : ObservableObject
             Icon = new SymbolIcon { Symbol = SymbolRegular.Speaker216 },
             TargetPageType = typeof(Views.Pages.Categories.Category_Audio),
         },
+        new NavigationViewItem()
+        {
+            Content = "Movie",
+            Icon = new SymbolIcon { Symbol = SymbolRegular.MoviesAndTv16},
+            Visibility=(CheckModExistence("Persona_3_Reload_Intro_Movies")) ? Visibility.Visible :  Visibility.Collapsed,
+            TargetPageType = typeof(Views.Pages.Categories.Category_Movie),
+        },
     ];
+    private static bool CheckModExistence(string id)
+    {
+        var reloadedDir = Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json");
+        var appfile = JsonUtils.DeserializeFile<EnabledModConfiguration>(reloadedDir);
+        return appfile.EnabledMods.Contains(id) ? true : false;
+    }
+    public class EnabledModConfiguration
+    {
+        public List<string> EnabledMods { get; set; }
+    }
+
 }

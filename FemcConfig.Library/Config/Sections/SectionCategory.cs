@@ -6,4 +6,5 @@ public enum SectionCategory
     TwoD,
     ThreeD,
     Audio,
-}
+    Movie,
+};
