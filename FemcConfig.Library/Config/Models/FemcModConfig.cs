@@ -63,6 +63,30 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool mosqdis = true;
 
+    [Category("Battle Music")]
+    [Description("Enable Atlus's It's Going down now?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    public bool itgoingdown = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Atlus's Master of Tartarus -Reload-?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    public bool mastertar = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Atlus's Mass Destruction -Reload-?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool massdes = true;
+
+    [Category("Battle Music")]
+    [Description("Enable EidieK87's Danger Zone?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool eddis = true;
+
     [Description("Select the music that will be played at night when you are outside the dorm")]
     [Category("Music")]
     [DefaultValue(nightmusic1.TimeNightVersionByMosq)]
