@@ -21,16 +21,24 @@ public class DayInMusic_2 : ISection
                 InternalName = "music_mosq_sun",
                 Name = "Sun (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue2 = Models.FemcModConfig.dayinmusic2.SunByMosq,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue2 == Models.FemcModConfig.dayinmusic2.SunByMosq,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Sun = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Sun = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Sun,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_atlus_seasons",
                 Name = "Changing Seasons (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue2 = Models.FemcModConfig.dayinmusic2.ChangingSeasonsReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue2 == Models.FemcModConfig.dayinmusic2.ChangingSeasonsReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Seasons = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Seasons = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Seasons,
             },
         ];
     }

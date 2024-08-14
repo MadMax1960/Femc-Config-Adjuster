@@ -30,25 +30,25 @@ public class ExampleSection : ISection
         this.Options =
         [
             // Create a new option.
-            new ModOption(ctx)
-            {
+            //new ModOption(ctx)
+            //{
                 // Sets the name used to find extra files, like screenshots and audio.
-                InternalName = "example",
+                //InternalName = "example",
 
                 // Name displayed for option.
-                Name = "Enum Option",
+                //Name = "Enum Option",
 
                 // Add authors.
-                Authors = [new Author("Author w/o Link"), new Author("Author", "https://google.com")],
+                //Authors = [new Author("Author w/o Link"), new Author("Author", "https://google.com")],
 
                 // What to do when option is enabled.
                 // Usually just setting a value in the ModConfig.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.ColorYourNightReload,
+                //Enable = (ctx) => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.ColorYourNightReload,
 
                 // What determines if this option is enabled.
                 // For bools it's just getting the setting value. For enums, like above, it's the same line but == instead of =.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.ColorYourNightReload,
-            },
+                //IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.ColorYourNightReload,
+            //},
 
             // Example for a bool setting.
             new ModOption(ctx)

@@ -21,24 +21,36 @@ public class DayInMusic_1 : ISection
                 InternalName = "music_mosq_time",
                 Name = "Time (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue1 = Models.FemcModConfig.dayinmusic1.TimeByMosq,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue1 == Models.FemcModConfig.dayinmusic1.TimeByMosq,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Timeschool = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Timeschool = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Timeschool,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_gabi_time",
                 Name = "Time (GabiShy Remix)",
                 Authors = [Author.GabiShy, Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue1 = Models.FemcModConfig.dayinmusic1.TimeByMosqGabiVer,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue1 == Models.FemcModConfig.dayinmusic1.TimeByMosqGabiVer,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Gabitimeschool = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Gabitimeschool = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Gabitimeschool,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_atlus_beclose",
                 Name = "Want to Be Close (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayintrue1 = Models.FemcModConfig.dayinmusic1.WantToBeCloseReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayintrue1 == Models.FemcModConfig.dayinmusic1.WantToBeCloseReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Wantclose = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Wantclose = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Wantclose,
             },
         ];
     }

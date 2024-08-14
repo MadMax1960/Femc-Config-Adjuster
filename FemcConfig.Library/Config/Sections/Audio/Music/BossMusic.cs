@@ -21,16 +21,24 @@ public class BossMusic : ISection
                 InternalName = "music_atlus_ms",
                 Name = "Master Of Shadow Reload",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Bossmusictrue = Models.FemcModConfig.bossmusic.MasterOfShadowReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Bossmusictrue == Models.FemcModConfig.bossmusic.MasterOfShadowReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Bms = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Bms = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Bms,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mosq_ms",
                 Name = "Master Of Shadow Fate Mix",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Bossmusictrue = Models.FemcModConfig.bossmusic.MasterOfShadowFateMixByMosq,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Bossmusictrue == Models.FemcModConfig.bossmusic.MasterOfShadowFateMixByMosq,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Bmsf = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Bmsf = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Bmsf,
             },
         ];
     }

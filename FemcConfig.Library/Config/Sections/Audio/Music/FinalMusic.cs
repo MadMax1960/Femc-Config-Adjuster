@@ -21,16 +21,24 @@ public class FinalMusic : ISection
                 InternalName = "music_atlus_bmd",
                 Name = "Burn My Dread -Last Battle (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Finalmusictrue = Models.FemcModConfig.finalmusic.BurnMyDreadReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Finalmusictrue == Models.FemcModConfig.finalmusic.BurnMyDreadReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Bmd = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Bmd = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Bmd,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_karma_soul",
                 Name = "Soul Phrase -Final Battle",
                 Authors = [Author.Karma],
-                Enable = ctx => ctx.FemcConfig.Settings.Finalmusictrue = Models.FemcModConfig.finalmusic.SoulPhraseByKarma,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Finalmusictrue == Models.FemcModConfig.finalmusic.SoulPhraseByKarma,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Soulpk = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Soulpk = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Soulpk,
             },
         ];
     }

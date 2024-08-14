@@ -87,92 +87,113 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool eddis = true;
 
-    [Description("Select the music that will be played at night when you are outside the dorm")]
     [Category("Music")]
-    [DefaultValue(nightmusic1.TimeNightVersionByMosq)]
+    [Description("Enable Color your Night as the night music?")]
+    [DefaultValue(false)]
     [ObservableProperty]
-    private nightmusic1 nighttrue1 = nightmusic1.TimeNightVersionByMosq;
+    private bool colnight = true;
 
-    public enum nightmusic1
-    {
-        TimeNightVersionByMosq,
-        TimeNightByMosqGabiVer,
-        NightWanderer,
-        ColorYourNightReload,
-        MidnightReverieByMineformer
-    }
-
-    [Description("Select the music that will be played when you are inside the school (april to august)")]
     [Category("Music")]
-    [DefaultValue(dayinmusic1.TimeByMosq)]
+    [Description("Enable Midnight Reverie as the night music?")]
+    [DefaultValue(false)]
     [ObservableProperty]
-    private dayinmusic1 dayintrue1 = dayinmusic1.TimeByMosq;
+    private bool midnight = true;
 
-    public enum dayinmusic1
-    {
-        WantToBeCloseReload,
-        TimeByMosq,
-        TimeByMosqGabiVer
-    }
-
-    [Description("Select the music that will be played when you are inside the school (september onwards)")]
     [Category("Music")]
-    [DefaultValue(dayinmusic2.SunByMosq)]
+    [Description("Enable Time (Night Version) as the night music?")]
+    [DefaultValue(true)]
     [ObservableProperty]
-    private dayinmusic2 dayintrue2 = dayinmusic2.SunByMosq;
+    private bool femnight = true;
 
-    public enum dayinmusic2
-    {
-        ChangingSeasonsReload,
-        SunByMosq
-    }
-
-    [Description("Select the music that will be played when you are roaming around the island (april to august)")]
     [Category("Music")]
-    [DefaultValue(dayoutmusic1.WayOfLifeByMosq)]
+    [Description("Enable Time (Night Version GabiShy Remix) as the night music?")]
+    [DefaultValue(false)]
     [ObservableProperty]
-    private dayoutmusic1 dayouttrue1 = dayoutmusic1.WayOfLifeByMosq;
+    private bool gabifemnight = true;
 
-    public enum dayoutmusic1
-    {
-        WhenTheMoonsReachingOutStarsReload,
-        WayOfLifeByMosq
-    }
-
-    [Description("Select the music that will be played in the final battle with Nyx")]
     [Category("Music")]
-    [DefaultValue(finalmusic.BurnMyDreadReload)]
+    [Description("Enable Night Wanderer as the night music?")]
+    [DefaultValue(false)]
     [ObservableProperty]
-    public finalmusic finalmusictrue = finalmusic.BurnMyDreadReload;
+    private bool nightwand = true;
 
-    public enum finalmusic
-    {
-        BurnMyDreadReload,
-        SoulPhraseByKarma
-    }
-    [Description("Select the music that will be played during social link events")]
+    [Description("Enable When the moon's reaching out stars as the daytime music?")]
     [Category("Music")]
-    [DefaultValue(socialmusic.AfterSchoolByMosq)]
+    [DefaultValue(false)]
     [ObservableProperty]
-    private socialmusic socialmusictrue = socialmusic.AfterSchoolByMosq;
+    private bool moon = true;
 
-    public enum socialmusic
-    {
-        JoyReload,
-        AfterSchoolByMosq
-    }
-
-    [Description("Select the music that will be played during some boss fights")]
-    [Category("MusicRyo")]
-    [DefaultValue(bossmusic.MasterOfShadowFateMixByMosq)]
+    [Category("Music")]
+    [Description("Enable Way of life as the daytime music?")]
+    [DefaultValue(true)]
     [ObservableProperty]
-    private bossmusic bossmusictrue = bossmusic.MasterOfShadowFateMixByMosq;
+    private bool wayoflife = true;
 
-    public enum bossmusic
-    {
-        MasterOfShadowReload,
-        MasterOfShadowFateMixByMosq
-    }
+    [Category("Music")]
+    [Description("Enable Want to Be Close -Reload- as the daytime music inside the school (Phase 1)?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool wantclose = true;
+
+    [Category("Music")]
+    [Description("Enable Time as the daytime music inside the school?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool timeschool = true;
+
+    [Category("Music")]
+    [Description("Enable (Time GabiShy Remix) as the daytime music inside the school?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool gabitimeschool = true;
+
+    [Category("Music")]
+    [Description("Enable Joy to be the music played during social link events?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool joy = true;
+
+    [Category("Music")]
+    [Description("Enable Mosq's After School to be the music played during social link events?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool afterschool = true;
+
+    [Category("Music")]
+    [Description("Enable Changing Seasons as the daytime music inside the school?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool seasons = true;
+
+    [Category("Music")]
+    [Description("Enable Sun as the daytime music inside the school?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool sun = true;
+
+    [Category("Music")]
+    [Description("Enable Soul Phrase as the music played during the battle with Nyx?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool soulpk = true;
+
+    [Category("Music")]
+    [Description("Enable Burn my dread as the music played during the battle with Nyx?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool bmd = true;
+
+    [Category("Music")]
+    [Description("Enable Master of Shadow -Reload to be the music played during boss battles?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool bms = true;
+
+    [Category("Music")]
+    [Description("Enable Master of Shadow Fate Mix to be the music played during boss battles?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool bmsf = true;
 
     [Category("Voice")]
     [Description("Enable Gio's Gendered Audio?")]

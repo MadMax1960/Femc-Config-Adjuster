@@ -20,6 +20,7 @@ public class AOATextSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "aoatext_srry",
+                Name = "Sorry Bout that Bye Bye",
                 Authors = [Author.Femc],
                 Enable = (ctx) => ctx.FemcConfig.Settings.AOAText = Models.FemcModConfig.AOATextType.SorryBoutThat,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOAText == Models.FemcModConfig.AOATextType.SorryBoutThat,
@@ -27,6 +28,7 @@ public class AOATextSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "aoatext_dontlook",
+                Name="Don't Look Back",
                 Authors = [Author.Femc],
                 Enable = (ctx) => ctx.FemcConfig.Settings.AOAText = Models.FemcModConfig.AOATextType.DontLookBack,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOAText == Models.FemcModConfig.AOATextType.DontLookBack,

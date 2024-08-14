@@ -21,16 +21,24 @@ public class DayOutMusic_1 : ISection
                 InternalName = "music_mosq_wayoflife",
                 Name = "Way of Life (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayouttrue1 = Models.FemcModConfig.dayoutmusic1.WayOfLifeByMosq,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayouttrue1 == Models.FemcModConfig.dayoutmusic1.WayOfLifeByMosq,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Wayoflife = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Wayoflife = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Wayoflife,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_atlus_whenthemoon",
                 Name = "When the Moon's Reaching Out Stars (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Dayouttrue1 = Models.FemcModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Dayouttrue1 == Models.FemcModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Moon = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Moon = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Moon,
             },
         ];
     }

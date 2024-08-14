@@ -43,7 +43,7 @@ public class DisadvantageMusicSection : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Mastertar,
             },
-                       new ModOption(ctx)
+           new ModOption(ctx)
             {
                 InternalName = "music_mosq_dz",
                 Name = "Danger Zone -Reload-",
@@ -72,8 +72,8 @@ public class DisadvantageMusicSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "music_stella_dz",
-                Name = "Danger Zone (Stella and GillStudio remix)",
-                Authors = [Author.Karma],
+                Name = "Danger Zone (GillStudio remix)",
+                Authors = [Author.GillStudio],
 
                 // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.FemcConfig.Settings.Sgdis = true,
@@ -94,7 +94,7 @@ public class DisadvantageMusicSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Eddis,
-            },
+            }
         ];
     }
 }

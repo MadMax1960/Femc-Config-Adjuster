@@ -43,7 +43,7 @@ public class AdvantageMusicSection : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Itgoingdown,
             },
-                       new ModOption(ctx)
+           new ModOption(ctx)
             {
                 InternalName = "music_mosq_ptr",
                 Name = "Pull the Trigger -Reload-",
@@ -81,7 +81,7 @@ public class AdvantageMusicSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Eidadv,
-            },
+            }
         ];
     }
 }

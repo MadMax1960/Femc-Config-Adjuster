@@ -21,40 +21,60 @@ public class NightMusic_1 : ISection
                 InternalName = "music_mosq_nighttime",
                 Name = "Time -Night Version (Mosq Remix)",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.TimeNightVersionByMosq,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.TimeNightVersionByMosq,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Femnight = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Femnight = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Femnight,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_gabi_nighttime",
                 Name = "Time -Night Version (GabiShy Remix)",
                 Authors = [Author.GabiShy, Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.TimeNightByMosqGabiVer,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.TimeNightByMosqGabiVer,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Gabifemnight = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Gabifemnight = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Gabifemnight,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mineformer_midnight",
                 Name = "Midnight Reverie",
                 Authors = [Author.Mineformer],
-                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.MidnightReverieByMineformer,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.MidnightReverieByMineformer,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Midnight = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Midnight = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Midnight,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mosq_nightwanderer",
                 Name = "Night Wanderer",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.NightWanderer,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.NightWanderer,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Nightwand = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Nightwand = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Nightwand,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_atlus_color_your_night",
                 Name = "Color Your Night (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.ColorYourNightReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Nighttrue1 == Models.FemcModConfig.nightmusic1.ColorYourNightReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Colnight = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Colnight = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Colnight,
             },
         ];
     }

@@ -21,16 +21,24 @@ public class SocialMusic : ISection
                 InternalName = "music_atlus_joy",
                 Name = "Joy (Reload)",
                 Authors = [Author.Atlus],
-                Enable = ctx => ctx.FemcConfig.Settings.Socialmusictrue = Models.FemcModConfig.socialmusic.JoyReload,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Socialmusictrue == Models.FemcModConfig.socialmusic.JoyReload,
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Joy = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Joy = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Joy,
             },
             new ModOption(ctx)
             {
                 InternalName = "music_mosq_afterschool",
                 Name = "After School",
                 Authors = [Author.Mosq],
-                Enable = ctx => ctx.FemcConfig.Settings.Socialmusictrue = Models.FemcModConfig.socialmusic.AfterSchoolByMosq,
-                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.Socialmusictrue == Models.FemcModConfig.socialmusic.AfterSchoolByMosq, 
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.Afterschool = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.Afterschool = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Afterschool,
             }
         ];
     }
