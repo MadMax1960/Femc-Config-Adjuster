@@ -26,7 +26,7 @@ public class DayOutMusic_1 : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "music_whenthemoon",
+                InternalName = "music_atlus_whenthemoon",
                 Name = "When the Moon's Reaching Out Stars (Reload)",
                 Authors = [Author.Atlus],
                 Enable = ctx => ctx.FemcConfig.Settings.Dayouttrue1 = Models.FemcModConfig.dayoutmusic1.WhenTheMoonsReachingOutStarsReload,

@@ -2,7 +2,7 @@
 
 namespace FemcConfig.Library.Config.Sections;
 
-public class IntroMovieSection : ISection
+public class AdvantageMusicSection : ISection
 {
     /// <summary>
     /// Section name. Sets the text that appears on the side and title of page.
@@ -14,7 +14,7 @@ public class IntroMovieSection : ISection
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.
     /// </summary>
-    public SectionCategory Category { get; } = SectionCategory.Movie;
+    public SectionCategory Category { get; } = SectionCategory.Audio;
 
     /// <summary>
     /// Contains all the options that appear in the section.
@@ -22,7 +22,7 @@ public class IntroMovieSection : ISection
     /// </summary>
     public ModOption[] Options { get; }
 
-    public IntroMovieSection(AppService app)
+    public AdvantageMusicSection(AppService app)
     {
         var ctx = app.GetContext();
 
@@ -32,7 +32,7 @@ public class IntroMovieSection : ISection
             // Example for a bool setting.
            new ModOption(ctx)
             {
-                InternalName = "movie_P3P",
+                InternalName = "m",
                 Name = "Original Persona 3 Portable Intro",
                 Authors = [Author.Atlus],
 

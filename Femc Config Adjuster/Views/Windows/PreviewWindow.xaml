@@ -47,70 +47,72 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <StackPanel Margin="16,0">
-                <TextBlock
+            <ScrollViewer>
+                <StackPanel Margin="16,0">
+                    <TextBlock
                     Margin="0,8"
                     FontSize="20"
                     FontWeight="Bold"
                     TextWrapping="Wrap">
-                    <TextBlock.Style>
-                        <Style TargetType="TextBlock">
-                            <Style.Setters>
-                                <Setter Property="Text" Value="{Binding Option.Name}" />
-                            </Style.Setters>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding Option.Name}" Value="{x:Null}">
-                                    <Setter Property="Text" Value="{Binding Option.Authors, Converter={StaticResource AuthorListToString}}" />
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </TextBlock.Style>
-                </TextBlock>
-                <TextBlock
+                        <TextBlock.Style>
+                            <Style TargetType="TextBlock">
+                                <Style.Setters>
+                                    <Setter Property="Text" Value="{Binding Option.Name}" />
+                                </Style.Setters>
+                                <Style.Triggers>
+                                    <DataTrigger Binding="{Binding Option.Name}" Value="{x:Null}">
+                                        <Setter Property="Text" Value="{Binding Option.Authors, Converter={StaticResource AuthorListToString}}" />
+                                    </DataTrigger>
+                                </Style.Triggers>
+                            </Style>
+                        </TextBlock.Style>
+                    </TextBlock>
+                    <TextBlock
                     FontSize="16"
                     FontWeight="Light"
                     Text="Author(s)" />
-                <Separator Margin="0,4" />
-                <ItemsControl ItemsSource="{Binding Option.Authors}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <StackPanel Margin="0,0,0,8">
-                                <TextBlock
+                    <Separator Margin="0,4" />
+                    <ItemsControl ItemsSource="{Binding Option.Authors}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Margin="0,0,0,8">
+                                    <TextBlock
                                     FontSize="16"
                                     FontWeight="Bold"
                                     Text="{Binding Name}" />
-                                <controls:Link
+                                    <controls:Link
                                     FontSize="12"
                                     FontWeight="Bold"
                                     Text="{Binding Url}"
                                     Url="{Binding Url}">
-                                    <controls:Link.Style>
-                                        <Style TargetType="controls:Link">
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding Url}" Value="{x:Null}">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </controls:Link.Style>
-                                </controls:Link>
-                                <TextBlock FontSize="12" TextWrapping="Wrap">
-                                    <TextBlock.Style>
-                                        <Style TargetType="TextBlock">
-                                            <Setter Property="Text" Value="{Binding Description}" />
-                                            <Style.Triggers>
-                                                <DataTrigger Binding="{Binding Description}" Value="{x:Null}">
-                                                    <Setter Property="Visibility" Value="Collapsed" />
-                                                </DataTrigger>
-                                            </Style.Triggers>
-                                        </Style>
-                                    </TextBlock.Style>
-                                </TextBlock>
-                            </StackPanel>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </StackPanel>
+                                        <controls:Link.Style>
+                                            <Style TargetType="controls:Link">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Url}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </controls:Link.Style>
+                                    </controls:Link>
+                                    <TextBlock FontSize="12" TextWrapping="Wrap">
+                                        <TextBlock.Style>
+                                            <Style TargetType="TextBlock">
+                                                <Setter Property="Text" Value="{Binding Description}" />
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding Description}" Value="{x:Null}">
+                                                        <Setter Property="Visibility" Value="Collapsed" />
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </TextBlock.Style>
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+            </ScrollViewer>
             <StackPanel Grid.Row="1" Margin="8">
                 <Button
                     Margin="0,8"

@@ -50,7 +50,7 @@ public class NightMusic_1 : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "music_color_your_night",
+                InternalName = "music_atlus_color_your_night",
                 Name = "Color Your Night (Reload)",
                 Authors = [Author.Atlus],
                 Enable = ctx => ctx.FemcConfig.Settings.Nighttrue1 = Models.FemcModConfig.nightmusic1.ColorYourNightReload,

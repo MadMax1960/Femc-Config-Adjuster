@@ -30,4 +30,5 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author TTango = new("Tiny Tango", Url: "https://x.com/tango_tiny");
     public static readonly Author Karma = new("Karma");
     public static readonly Author TheBestAstroNOT = new("TheBestAstroNOT");
+    public static readonly Author Femc = new("The Femc Reloaded Mod Team", Url: "https://github.com/MadMax1960/Femc-Reloaded-Project");
 };
