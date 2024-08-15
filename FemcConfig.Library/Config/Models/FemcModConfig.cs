@@ -198,6 +198,7 @@ public partial class FemcModConfig : ObservableObject
     [Category("Voice")]
     [Description("Enable Gio's Gendered Audio?")]
     [DefaultValue(false)]
+    [ObservableProperty]
     private bool bluehairandpronounce = true;
 
     [ObservableProperty]

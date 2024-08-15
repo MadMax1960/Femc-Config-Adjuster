@@ -33,28 +33,31 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-
-            <StackPanel Grid.RowSpan="2">
+            <ScrollViewer Margin="0,0,0,10" Grid.RowSpan="2">
+                <StackPanel Grid.RowSpan="2">
                 <TextBlock
                     Grid.Column="0"
                     FontSize="24"
                     FontWeight="Light"
                     Text="Settings" />
-                <ListView
+                
+                    <ListView
                     Margin="8,4"
                     ItemsSource="{Binding Sections}"
                     ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                     SelectedItem="{Binding SelectedSection}">
-                    <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock
                                 Margin="8,4"
                                 Text="{Binding Name}"
                                 TextWrapping="Wrap" />
-                        </DataTemplate>
-                    </ListView.ItemTemplate>
-                </ListView>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                
             </StackPanel>
+            </ScrollViewer>
 
 
             <StackPanel Grid.Column="1">
