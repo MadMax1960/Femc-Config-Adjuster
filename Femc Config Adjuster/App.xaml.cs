@@ -12,11 +12,15 @@ using FemcConfig.Library.Config.Sections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.Diagnostics;
 using System.IO;
 using System.Reflection;
+using System.Security.Policy;
 using System.Windows;
+using System.Windows.Diagnostics;
 using System.Windows.Threading;
 using Wpf.Ui;
+using static System.Net.WebRequestMethods;
 
 namespace Femc_Config_Adjuster
 {
@@ -104,19 +108,102 @@ namespace Femc_Config_Adjuster
 		/// <summary>
 		/// Occurs when the application is loading.
 		/// </summary>
-		private void OnStartup(object sender, StartupEventArgs e)
+		private async void OnStartup(object sender, StartupEventArgs e)
 		{
-			_host.Start();
+			try
+			{
+				_host.Start();
+			}
+			catch(Exception ex)
+			{
+                HandleException(ex);
+            }
 		}
 
-		/// <summary>
-		/// Occurs when the application is closing.
-		/// </summary>
-		private async void OnExit(object sender, ExitEventArgs e)
+		private static void HandleException(Exception ex)
 		{
-			await _host.StopAsync();
+            string path=WriteCrashLog(ex);
+            MessageBox.Show("An error occurred: " + ex.Message + " Please create an issue on the github if this issue still persists after deleting ur config or restarting the app. ", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            try
+            {
+                // Start the default web browser with the specified URL
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = "https://github.com/MadMax1960/Femc-Reloaded-Project/issues",
+                    UseShellExecute = true
+                });
+				if(path!="Crash Log Write Failed")
+				{
+                    Process.Start(new ProcessStartInfo
+                    {
+                        FileName = path,
+                        UseShellExecute = true
+                    });
+                }
+            }
+            catch (Exception ex2)
+            {
+                Console.WriteLine($"Failed to open URL: {ex2.Message}");
+				Application.Current.Shutdown();
+            }
 
-			_host.Dispose();
+            // Close the application
+            Application.Current.Shutdown();
+        }
+		private static string WriteCrashLog(Exception ex)
+        {
+            // Get the path to the Roaming AppData directory
+            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+
+            // Define a folder for the crash logs
+            string logFolderPath = Path.Combine(appDataPath, "FemcConfigApp", "CrashLogs");
+
+            // Ensure the directory exists
+            Directory.CreateDirectory(logFolderPath);
+
+            // Define the log file path with a timestamp
+            string logFileName = $"CrashLog_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
+            string logFilePath = Path.Combine(logFolderPath, logFileName);
+
+            // Write the exception details to the log file
+            try
+            {
+                using (StreamWriter writer = new StreamWriter(logFilePath))
+                {
+                    writer.WriteLine("Crash Log - " + DateTime.Now);
+                    writer.WriteLine();
+                    writer.WriteLine("Exception Message:");
+                    writer.WriteLine(ex.Message);
+                    writer.WriteLine();
+                    writer.WriteLine("Stack Trace:");
+                    writer.WriteLine(ex.StackTrace);
+                }
+
+                Console.WriteLine($"Crash log written to: {logFilePath}");
+				return logFilePath;
+            }
+            catch (Exception logException)
+            {
+                // Handle any exceptions that occur while writing the log
+                Console.WriteLine("Failed to write crash log: " + logException.Message);
+				return "Crash Log Write Failed";
+            }
+        }
+        /// <summary>
+        /// Occurs when the application is closing.
+        /// </summary>
+        private async void OnExit(object sender, ExitEventArgs e)
+		{
+			try
+			{
+				await _host.StopAsync();
+
+				_host.Dispose();
+			}
+			catch (Exception ex)
+			{
+				HandleException(ex);
+			}
 		}
 
 		/// <summary>

@@ -62,7 +62,7 @@ public class AppService
         string? femcConfigFile = null;
         foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
         {
-            var userConfigFile = Path.Join(configDir, "ModUserConfig.json"); 
+            var userConfigFile = Path.Join(configDir, "ModUserConfig.json");
             var userConfig = JsonUtils.DeserializeFile<ReloadedModUserConfig>(userConfigFile);
 
             if (userConfig.ModId == Constants.FEMC_MOD_ID)

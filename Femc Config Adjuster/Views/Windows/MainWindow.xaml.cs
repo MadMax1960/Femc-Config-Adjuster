@@ -25,8 +25,7 @@ public partial class MainWindow : INavigationWindow
 		DataContext = this;
 
 		SystemThemeWatcher.Watch(this);
-
-		InitializeComponent();
+	    InitializeComponent();
 		SetPageService(pageService);
 
 		navigationService.SetNavigationControl(RootNavigation);
