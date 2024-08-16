@@ -94,6 +94,29 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Yuunagi,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Yuunagi,
             },
-        ];
+			new ModOption(ctx)
+			{
+				InternalName = "bustup_ghostedtoast",
+				Authors = [Author.GhostedToast],
+				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.ghostedtoast,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.ghostedtoast,
+			},
+			new ModOption(ctx)
+			{
+				InternalName = "bustup_axolotl",
+				Authors = [Author.Axolotl],
+				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.axolotl,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.axolotl,
+			},
+
+			new ModOption(ctx)
+			{
+				InternalName = "bustup_cielbell",
+				Authors = [Author.Cielbell],
+				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.cielbell,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.cielbell,
+			},
+
+		];
     }
 }

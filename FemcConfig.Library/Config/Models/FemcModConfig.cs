@@ -890,16 +890,17 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private AOAType _AOATrue = AOAType.Ely;
 
-    public enum AOAType
-    {
-        Ely,
-        Chrysanthie,
-        Fernando,
-        Monica,
-        RonaldReagan
-    }
+	public enum AOAType
+	{
+		Ely,
+		Chrysanthie,
+		Fernando,
+		Monica,
+		RonaldReagan,
+		esaadrien
+	}
 
-    [Description("The AOA Foreground Text.")]
+	[Description("The AOA Foreground Text.")]
     [Category("2D Options")]
     [DefaultValue(AOATextType.SorryBoutThat)]
     [ObservableProperty]
@@ -918,35 +919,39 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private BustupType _BustupTrue = BustupType.Neptune;
 
-    public enum BustupType
-    {
-        Neptune,
-        Ely,
-        Esa,
-        Betina,
-        Anniversary,
-        JustBlue,
-        Sav,
-        Doodled,
-        RonaldReagan,
-        ElyAlt,
-        Yuunagi,
-        cielbell
-    }
+	public enum BustupType
+	{
+		Neptune,
+		Ely,
+		Esa,
+		Betina,
+		Anniversary,
+		JustBlue,
+		Sav,
+		Doodled,
+		RonaldReagan,
+		ElyAlt,
+		Yuunagi,
+		cielbell,
+		axolotl,
+		ghostedtoast
+	}
 
-    [Description("The Glass Shard in that one menu when pausing.")]
+	[Description("The Glass Shard in that one menu when pausing.")]
     [Category("2D Options")]
     [DefaultValue(ShardType.Esa)]
     [ObservableProperty]
     private ShardType _ShardTrue = ShardType.Esa;
 
-    public enum ShardType
-    {
-        Esa,
-        Ely
-    }
+	public enum ShardType
+	{
+		Esa,
+		Ely,
+		ElyAlt,
+		Shiosakana
+	}
 
-    [Description("The Level Up :adachitrue:.")]
+	[Description("The Level Up :adachitrue:.")]
     [Category("2D Options")]
     [DefaultValue(LevelUpType.Esa)]
     [ObservableProperty]
@@ -958,7 +963,19 @@ public partial class FemcModConfig : ObservableObject
         Ely
     }
 
-    [Description("Cutin Movie")]
+	[DisplayName("Party Panel")]
+	[Description("The face icons in battle and pause menu")]
+	[Category("2D Options")]
+	[DefaultValue(PartyPanelType.Esa)]
+	public PartyPanelType PartyPanelTrue { get; set; } = PartyPanelType.Esa;
+
+	public enum PartyPanelType
+	{
+		Kris,
+		Esa
+	}
+
+	[Description("Cutin Movie")]
     [Category("2D Options")]
     [DefaultValue(CutinType.berrycha)]
     [ObservableProperty]
@@ -977,11 +994,6 @@ public partial class FemcModConfig : ObservableObject
 
     [Category("Fun Stuff")]
     [DefaultValue(false)]
-    [ObservableProperty]
-    private bool _FunnyAnims = false;
-
-    [Category("Fun Stuff")]
-    [DefaultValue(false)]
     private bool GregoryHouseRatPoisonDeliverySystem = false;
 
     [Description("Gives FemC Nagitanas for weapons")]
@@ -990,9 +1002,9 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool _NagiWeap = true;
 
-    [Description("THIS MIGHT BREAK SOME STUFF, ITS A TEST FOR PEOPLE WHO WANT TO, PLEASE GO IN EXPECTING ERRORS")]
-    [Category("3D Options")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool _TestSkeleton = false;
+	[DisplayName("Skirt, Face, Etc Fix")]
+	[Description("THIS MIGHT BREAK SOME STUFF, ITS A TEST FOR PEOPLE WHO WANT TO, PLEASE GO IN EXPECTING ERRORS")]
+	[Category("3D Options")]
+	[DefaultValue(true)]
+	public bool SkirtEtcFix { get; set; } = true;
 }

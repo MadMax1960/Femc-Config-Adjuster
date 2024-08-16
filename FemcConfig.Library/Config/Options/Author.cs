@@ -34,4 +34,10 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author EidieK87 = new("EidieK87", Url: "https://www.youtube.com/@kawaiie87");
     public static readonly Author GillStudio = new("GillStudio", Url: "https://www.youtube.com/@gillstudio");
     public static readonly Author Stella = new("Satella", Url: "https://www.youtube.com/@Satella");
+	public static readonly Author Kris = new("Kris", Url: "https://x.com/rabbitgirlkris");
+	public static readonly Author GhostedToast = new("GhostedToast");
+	public static readonly Author Axolotl = new("Axolotl");
+	public static readonly Author Cielbell = new("Cielbell", Url: "https://ciel-bell.tumblr.com/");
+	public static readonly Author esaadrien = new("Esa and Adrien", Description: "This was made by both Esa: https://x.com/EsaBlythe and Adrien: https://x.com/CatboyRonReagan");
+	public static readonly Author Shiosakana = new("Shiosakana", Url: "https://x.com/shiosakana1998");
 };

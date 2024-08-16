@@ -52,6 +52,13 @@ public class AOASection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Chrysanthie,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Chrysanthie,
             },
-        ];
+			new ModOption(ctx)
+			{
+				InternalName = "aoa_esaadrien",
+				Authors = [Author.esaadrien],
+				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.esaadrien,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.esaadrien,
+			},
+		];
     }
 }

@@ -33,6 +33,23 @@ public class GlassShardSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Esa,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Esa,
             },
-        ];
+			new ModOption(ctx)
+			{
+				InternalName = "shard_elyalt",
+				Name="Ely's Alt Glass Shards",
+				Authors = [Author.Ely],
+				Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.ElyAlt,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.ElyAlt,
+			},
+
+			new ModOption(ctx)
+			{
+				InternalName = "shard_Shiosakana",
+				Name="Shiosakana's Glass Shard",
+				Authors = [Author.Shiosakana],
+				Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Shiosakana,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Shiosakana,
+			},
+		];
     }
 }

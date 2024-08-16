@@ -19,8 +19,8 @@ if "%~1"=="" (
 REM Set the folder to the one dragged onto the script
 set "input_folder=%~1"
 
-REM Loop through all .webp files in the folder and its subfolders
-for /r "%input_folder%" %%f in (*.webp) do (
+REM Loop through all 'image.webp' files in the folder and its subfolders
+for /r "%input_folder%" %%f in (image.webp) do (
     set "input_file=%%f"
     set "output_file=%%~dpnf_small%%~xf"
     
