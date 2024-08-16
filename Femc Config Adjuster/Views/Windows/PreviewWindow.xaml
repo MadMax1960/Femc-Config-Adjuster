@@ -47,7 +47,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <ScrollViewer>
+            <ScrollViewer Margin="0,0,0,85" Grid.RowSpan="2">
                 <StackPanel Margin="16,0">
                     <TextBlock
                     Margin="0,8"
@@ -113,7 +113,7 @@
                     </ItemsControl>
                 </StackPanel>
             </ScrollViewer>
-            <StackPanel Grid.Row="1" Margin="8">
+            <StackPanel Grid.Row="1" Margin="8,62,8,8">
                 <Button
                     Margin="0,8"
                     HorizontalAlignment="Stretch"
@@ -125,7 +125,16 @@
                 <Button
                     HorizontalAlignment="Stretch"
                     Click="Button_Click_1"
+                    Margin="0,8"
                     Content="Close" />
+                <Button
+                    x:Name="addon"
+                    HorizontalAlignment="Stretch"
+                    BorderThickness="1"
+                    Click="Button_Click_2"
+                    Margin="0,8"
+                    Visibility="Visible"
+                    Content="Download Addon"/>
             </StackPanel>
             <ui:Image
                 Grid.RowSpan="2"

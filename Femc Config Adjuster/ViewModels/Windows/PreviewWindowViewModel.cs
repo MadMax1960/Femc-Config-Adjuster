@@ -1,5 +1,6 @@
 ﻿using Femc_Config_Adjuster.Helpers;
 using FemcConfig.Library.Config.Options;
+using System.Windows;
 
 namespace Femc_Config_Adjuster.ViewModels.Windows;
 
@@ -11,7 +12,7 @@ internal class PreviewWindowViewModel
         this.Title = option.Name ?? string.Join(", ", option.Authors.Select(x => x.Name));
         this.ImagePath = ResourceUtils.GetOptionImagePath(option, true);
         this.YoutubeUrl = ResourceUtils.GetOptionYoutubeUrl(option);
-
+        this.Category = option.Category;
         if (this.YoutubeUrl != null && Environment.OSVersion.Platform == PlatformID.Win32NT)
         {
             var youtubeId = this.YoutubeUrl.Split("watch?v=")[1];
@@ -31,4 +32,6 @@ internal class PreviewWindowViewModel
     public string? YoutubeEmbedUrl { get; }
 
     public bool UseWebView { get; }
+
+    public string? Category { get; }
 }

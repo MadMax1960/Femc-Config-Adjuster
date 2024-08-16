@@ -66,6 +66,12 @@ public partial class MainWindowViewModel : ObservableObject
             Visibility=(CheckModExistence("Persona_3_Reload_Intro_Movies")) ? Visibility.Visible :  Visibility.Collapsed,
             TargetPageType = typeof(Views.Pages.Categories.Category_Movie),
         },
+        new NavigationViewItem()
+        {
+            Content = "Addons",
+            Icon = new SymbolIcon { Symbol = SymbolRegular.Library28},
+            TargetPageType = typeof(Views.Pages.Categories.Category_Addon),
+        },
     ];
     private static bool CheckModExistence(string id)
     {

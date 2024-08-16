@@ -7,4 +7,5 @@ public enum SectionCategory
     ThreeD,
     Audio,
     Movie,
+    Addon
 };

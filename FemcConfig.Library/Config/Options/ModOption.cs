@@ -35,6 +35,11 @@ public class ModOption : ObservableObject
     /// Description of option.
     /// </summary>
     public string Description { get; init; } = string.Empty;
+    
+    /// <summary>
+    /// Category of option.
+    /// </summary>
+    public string Category { get; init; } = string.Empty;
 
     /// <summary>
     /// Authors of option.
