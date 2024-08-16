@@ -963,11 +963,11 @@ public partial class FemcModConfig : ObservableObject
         Ely
     }
 
-	[DisplayName("Party Panel")]
 	[Description("The face icons in battle and pause menu")]
 	[Category("2D Options")]
 	[DefaultValue(PartyPanelType.Esa)]
-	public PartyPanelType PartyPanelTrue { get; set; } = PartyPanelType.Esa;
+	[ObservableProperty]
+	private PartyPanelType _PartyPanelTrue = PartyPanelType.Esa;
 
 	public enum PartyPanelType
 	{
