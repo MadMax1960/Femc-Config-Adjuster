@@ -34,7 +34,7 @@
             Title="{Binding Title}"
             CloseWindowByDoubleClickOnIcon="True">
             <ui:TitleBar.Icon>
-                <ui:ImageIcon Source="pack://application:,,,/Assets/wpfui-icon-256.png" />
+                <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
             </ui:TitleBar.Icon>
         </ui:TitleBar>
 
@@ -47,13 +47,13 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <ScrollViewer>
+            <ScrollViewer Grid.RowSpan="2" Margin="0,0,0,85">
                 <StackPanel Margin="16,0">
                     <TextBlock
-                    Margin="0,8"
-                    FontSize="20"
-                    FontWeight="Bold"
-                    TextWrapping="Wrap">
+                        Margin="0,8"
+                        FontSize="20"
+                        FontWeight="Bold"
+                        TextWrapping="Wrap">
                         <TextBlock.Style>
                             <Style TargetType="TextBlock">
                                 <Style.Setters>
@@ -68,23 +68,23 @@
                         </TextBlock.Style>
                     </TextBlock>
                     <TextBlock
-                    FontSize="16"
-                    FontWeight="Light"
-                    Text="Author(s)" />
+                        FontSize="16"
+                        FontWeight="Light"
+                        Text="Author(s)" />
                     <Separator Margin="0,4" />
                     <ItemsControl ItemsSource="{Binding Option.Authors}">
                         <ItemsControl.ItemTemplate>
                             <DataTemplate>
                                 <StackPanel Margin="0,0,0,8">
                                     <TextBlock
-                                    FontSize="16"
-                                    FontWeight="Bold"
-                                    Text="{Binding Name}" />
+                                        FontSize="16"
+                                        FontWeight="Bold"
+                                        Text="{Binding Name}" />
                                     <controls:Link
-                                    FontSize="12"
-                                    FontWeight="Bold"
-                                    Text="{Binding Url}"
-                                    Url="{Binding Url}">
+                                        FontSize="12"
+                                        FontWeight="Bold"
+                                        Text="{Binding Url}"
+                                        Url="{Binding Url}">
                                         <controls:Link.Style>
                                             <Style TargetType="controls:Link">
                                                 <Style.Triggers>
@@ -113,7 +113,7 @@
                     </ItemsControl>
                 </StackPanel>
             </ScrollViewer>
-            <StackPanel Grid.Row="1" Margin="8">
+            <StackPanel Grid.Row="1" Margin="8,62,8,8">
                 <Button
                     Margin="0,8"
                     HorizontalAlignment="Stretch"
@@ -123,9 +123,18 @@
                     Content="Confirm"
                     Foreground="{DynamicResource AccentTextFillColorPrimaryBrush}" />
                 <Button
+                    Margin="0,8"
                     HorizontalAlignment="Stretch"
                     Click="Button_Click_1"
                     Content="Close" />
+                <Button
+                    x:Name="addon"
+                    Margin="0,8"
+                    HorizontalAlignment="Stretch"
+                    BorderThickness="1"
+                    Click="Button_Click_2"
+                    Content="Download Addon"
+                    Visibility="Visible" />
             </StackPanel>
             <ui:Image
                 Grid.RowSpan="2"

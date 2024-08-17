@@ -1,17 +1,17 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <ApplicationManifest>app.manifest</ApplicationManifest>
-    <ApplicationIcon>wpfui-icon.ico</ApplicationIcon>
+    <ApplicationIcon>Assets\logo.ico</ApplicationIcon>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <UseWPF>true</UseWPF>
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wpfui-icon.ico" />
+    <Resource Include="Assets\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,23 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Remove="Assets\wpfui-icon-256.png" />
-    <None Remove="Assets\wpfui-icon-1024.png" />
-    <None Remove="Assets\Yuunagi.webp" />
-    <None Remove="Resources\220825.gif" />
-    <None Remove="Resources\music_atlus_beclose\youtube.txt" />
-    <None Remove="Resources\music_mosq_time\youtube.txt" />
-    <None Remove="Resources\sav.webp" />
-    <None Remove="Resources\test.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\FemcConfig.Library\FemcConfig.Library.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="Assets\wpfui-icon-256.png" />
-    <Resource Include="Assets\wpfui-icon-1024.png" />
   </ItemGroup>
 
 	<ItemGroup>

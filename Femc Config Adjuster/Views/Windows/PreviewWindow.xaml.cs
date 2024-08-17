@@ -1,7 +1,13 @@
-﻿using Femc_Config_Adjuster.ViewModels.Windows;
+﻿using Femc_Config_Adjuster.ViewModels.Components;
+using Femc_Config_Adjuster.ViewModels.Windows;
+using FemcConfig.Library.Config.Models;
+using FemcConfig.Library.Config.Options;
 using Microsoft.Web.WebView2.Wpf;
+using System.IO;
 using System.Windows;
+using System.Windows.Media.Imaging;
 using Wpf.Ui.Controls;
+using MessageBox = System.Windows.MessageBox;
 
 namespace Femc_Config_Adjuster.Views.Windows;
 
@@ -30,6 +36,12 @@ public partial class PreviewWindow : FluentWindow
         this.Close();
     }
 
+    private async void Button_Click_2(object sender, RoutedEventArgs e)
+    {
+        //Mudkip this is the cue for u to add the actual installation of the mods
+        System.Windows.MessageBox.Show("Functionality to be added");
+    }
+
     protected override void OnClosed(EventArgs e)
     {
         base.OnClosed(e);
@@ -38,5 +50,5 @@ public partial class PreviewWindow : FluentWindow
         {
             webview.Dispose();
         }
-    }
+    }    
 }

@@ -18,6 +18,15 @@ public class ModOption : ObservableObject
         {
             OnPropertyChanged(nameof(IsEnabled));
         };
+
+        // Update IsEnabled state when mod config changes.
+        if (this.ctx.MovieConfig != null)
+        {
+            this.ctx.MovieConfig.Settings.PropertyChanged += (sender, args) =>
+            {
+                OnPropertyChanged(nameof(IsEnabled));
+            };
+        }
     }
 
     /// <summary>
@@ -35,6 +44,11 @@ public class ModOption : ObservableObject
     /// Description of option.
     /// </summary>
     public string Description { get; init; } = string.Empty;
+    
+    /// <summary>
+    /// Category of option.
+    /// </summary>
+    public string Category { get; init; } = string.Empty;
 
     /// <summary>
     /// Authors of option.

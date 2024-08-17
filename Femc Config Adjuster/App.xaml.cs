@@ -29,12 +29,14 @@ namespace Femc_Config_Adjuster
     /// </summary>
     public partial class App
 	{
-		// The.NET Generic Host provides dependency injection, configuration, logging, and other services.
-		// https://docs.microsoft.com/dotnet/core/extensions/generic-host
-		// https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
-		// https://docs.microsoft.com/dotnet/core/extensions/configuration
-		// https://docs.microsoft.com/dotnet/core/extensions/logging
-		private static readonly IHost _host = Host
+        // The.NET Generic Host provides dependency injection, configuration, logging, and other services.
+        // https://docs.microsoft.com/dotnet/core/extensions/generic-host
+        // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
+        // https://docs.microsoft.com/dotnet/core/extensions/configuration
+        // https://docs.microsoft.com/dotnet/core/extensions/logging
+        public const string APP_VERSION = "3.1.0";
+        public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Concursus/releases";
+        private static readonly IHost _host = Host
 			.CreateDefaultBuilder()
 			.ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)!); })
 			.ConfigureServices((context, services) =>

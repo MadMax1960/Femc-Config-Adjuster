@@ -34,7 +34,7 @@
             Title="{Binding ViewModel.ApplicationTitle}"
             CloseWindowByDoubleClickOnIcon="True">
             <ui:TitleBar.Icon>
-                <ui:ImageIcon Source="pack://application:,,,/Assets/wpfui-icon-256.png" />
+                <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
             </ui:TitleBar.Icon>
         </ui:TitleBar>
 
