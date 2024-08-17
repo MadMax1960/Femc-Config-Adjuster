@@ -35,8 +35,7 @@ public class ModManager
     public void ToggleMod(string modName)
     {
         // Load the JSON file
-        var json = File.ReadAllText(_jsonFilePath);
-        var config = JsonUtils.DeserializeFile<AppConfig>(json);
+        var config = JsonUtils.DeserializeFile<AppConfig>(_jsonFilePath);
 
         // Check if the mod is in the EnabledMods list
         if (config.EnabledMods.Contains(modName))
