@@ -57,15 +57,7 @@ public partial class MainWindowViewModel : ObservableObject
         {
             Content = "Audio",
             Icon = new SymbolIcon { Symbol = SymbolRegular.Speaker216 },
-			Visibility=(CheckModExistence("Persona_3_Reload_Intro_Movies")) ? Visibility.Visible :  Visibility.Collapsed,
 			TargetPageType = typeof(Views.Pages.Categories.Category_Audio),
-        },
-        new NavigationViewItem()
-        {
-            Content = "Movie",
-            Icon = new SymbolIcon { Symbol = SymbolRegular.MoviesAndTv16},
-            Visibility=(CheckModExistence("Persona_3_Reload_Intro_Movies")) ? Visibility.Visible :  Visibility.Collapsed,
-            TargetPageType = typeof(Views.Pages.Categories.Category_Movie),
         },
         new NavigationViewItem()
         {

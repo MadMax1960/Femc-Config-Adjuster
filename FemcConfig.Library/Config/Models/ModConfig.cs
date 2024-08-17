@@ -13,7 +13,6 @@ public class ModConfig<TConfig> : ObservableObject
     public ModConfig(string configFile)
     {
         this.configFile = configFile;
-
         try
         {
             this.modConfig = JsonUtils.DeserializeFile<TConfig>(configFile);

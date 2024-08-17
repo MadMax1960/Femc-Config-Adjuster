@@ -1,4 +1,6 @@
 ﻿using FemcConfig.Library.Config.Options;
+using FemcConfig.Library.Utils;
+using System.Xml;
 
 namespace FemcConfig.Library.Config.Sections;
 
@@ -14,7 +16,7 @@ public class IntroMovieSection : ISection
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.
     /// </summary>
-    public SectionCategory Category { get; } = SectionCategory.Movie;
+    public SectionCategory Category { get; } = (CheckModExistence("Persona_3_Reload_Intro_Movies")) ? SectionCategory.Addon : SectionCategory.Addon;
 
     /// <summary>
     /// Contains all the options that appear in the section.
@@ -30,6 +32,7 @@ public class IntroMovieSection : ISection
         this.Options =
         [
             // Example for a bool setting.
+            /*
            new ModOption(ctx)
             {
                 InternalName = "movie_P3P",
@@ -68,7 +71,33 @@ public class IntroMovieSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.Soulmosq,
+            },*/
+            //modmanager=new ModManager(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")),
+            new ModOption(ctx)
+            {
+                InternalName = "movie_SP",
+                Name = "Movie mod enabled?",
+                Authors = [Author.Mosq, Author.TheBestAstroNOT],
+               
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.AppConfig.Settings.EnabledMods.Add("Persona_3_Reload_Intro_Movies"),
+                Disable = (ctx) => ctx.AppConfig.Settings.EnabledMods.Remove("Persona_3_Reload_Intro_Movies"),
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.AppConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies"),
             },
         ];
     }
+
+    private static bool CheckModExistence(string id)
+    {
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
+    }
+
+    public class EnabledModConfiguration
+    {
+        public List<string>? EnabledMods { get; set; }
+    }
+
+    
 }

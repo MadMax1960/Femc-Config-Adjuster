@@ -27,6 +27,10 @@ public class ModOption : ObservableObject
                 OnPropertyChanged(nameof(IsEnabled));
             };
         }
+        this.ctx.AppConfig.Settings.PropertyChanged += (sender, args) =>
+        {
+            OnPropertyChanged(nameof(IsEnabled));
+        };
     }
 
     /// <summary>

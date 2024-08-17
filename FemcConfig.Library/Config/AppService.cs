@@ -23,7 +23,7 @@ public class AppService
 
     private static bool CheckModExistence(string id)
     {
-        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods.Contains(id) ? true : false;
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
     }
 
     public class EnabledModConfiguration
@@ -91,13 +91,15 @@ public class AppService
                 }
             }
         }
+
         // Setup mod context.
         this.appContext = new()
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
             FemcConfig = new(femcConfigFile),
-            MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null
+            MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null,
+            AppConfig = new(Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json"))
         };
     }
 }
