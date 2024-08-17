@@ -37,11 +37,11 @@ public class IntroMovieSection : ISection
                 Authors = [Author.Atlus],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.MovieConfig.Settings.P3p = true,
-                Disable = (ctx) => ctx.MovieConfig.Settings.P3p = false,
+                Enable = (ctx) => ctx.MovieConfig!.Settings.P3p = true,
+                Disable = (ctx) => ctx.MovieConfig!.Settings.P3p = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.MovieConfig.Settings.P3p,
+                IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.P3p,
             },
            new ModOption(ctx)
             {
@@ -50,11 +50,11 @@ public class IntroMovieSection : ISection
                 Authors = [Author.Neptune, Author.Merfie, Author.Mosq, Author.Jen, Author.TTango, Author.Zeonyph],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.MovieConfig.Settings.P3pk = true,
-                Disable = (ctx) => ctx.MovieConfig.Settings.P3pk = false,
+                Enable = (ctx) => ctx.MovieConfig!.Settings.P3pk = true,
+                Disable = (ctx) => ctx.MovieConfig!.Settings.P3pk = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.MovieConfig.Settings.P3pk,
+                IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.P3pk,
             },
             new ModOption(ctx)
             {
@@ -63,11 +63,11 @@ public class IntroMovieSection : ISection
                 Authors = [Author.Mosq, Author.TheBestAstroNOT],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.MovieConfig.Settings.Soulmosq = true,
-                Disable = (ctx) => ctx.MovieConfig.Settings.Soulmosq = false,
+                Enable = (ctx) => ctx.MovieConfig!.Settings.Soulmosq = true,
+                Disable = (ctx) => ctx.MovieConfig!.Settings.Soulmosq = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.MovieConfig.Settings.Soulmosq,
+                IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.Soulmosq,
             },
         ];
     }
