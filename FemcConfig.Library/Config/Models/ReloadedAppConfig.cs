@@ -1,49 +1,47 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Collections.ObjectModel;
 
-namespace FemcConfig.Library.Config.Models;
-public partial class ReloadedAppConfig : ObservableObject
+namespace FemcConfig.Library.Config.Models
 {
-    [ObservableProperty]
-    private string appId;
+    public partial class ReloadedAppConfig : ObservableObject
+    {
+        [ObservableProperty]
+        private string appId;
 
-    [ObservableProperty]
-    private string appName;
+        [ObservableProperty]
+        private string appName;
 
-    [ObservableProperty]
-    private string appLocation;
+        [ObservableProperty]
+        private string appLocation;
 
-    [ObservableProperty]
-    private string appArguments;
+        [ObservableProperty]
+        private string appArguments;
 
-    [ObservableProperty]
-    private string appIcon;
+        [ObservableProperty]
+        private string appIcon;
 
-    [ObservableProperty]
-    private bool autoInject;
+        [ObservableProperty]
+        private bool autoInject;
 
-    [ObservableProperty]
-    private List<string> enabledMods;
+        [ObservableProperty]
+        private ObservableCollection<string> enabledMods;  // Changed to ObservableCollection
 
-    [ObservableProperty]
-    private string workingDirectory;
+        [ObservableProperty]
+        private string workingDirectory;
 
-    [ObservableProperty]
-    private Dictionary<string, Dictionary<string, int>> pluginData;
+        [ObservableProperty]
+        private Dictionary<string, Dictionary<string, int>> pluginData;
 
-    [ObservableProperty]
-    private List<string> sortedMods;
+        [ObservableProperty]
+        private List<string> sortedMods;
 
-    [ObservableProperty]
-    private bool preserveDisabledModOrder;
+        [ObservableProperty]
+        private bool preserveDisabledModOrder;
 
-    [ObservableProperty]
-    private bool dontInject;
+        [ObservableProperty]
+        private bool dontInject;
 
-    [ObservableProperty]
-    private bool isMsStore;
+        [ObservableProperty]
+        private bool isMsStore;
+    }
 }

@@ -22,7 +22,7 @@ public static class JsonUtils
         File.WriteAllText(file, objText);
     }
 }
-
+/*
 public class ModManager
 {
     private readonly string _jsonFilePath;
@@ -71,4 +71,4 @@ public class AppConfig
     public bool PreserveDisabledModOrder { get; set; }
     public bool DontInject { get; set; }
     public bool IsMsStore { get; set; }
-}
+}*/

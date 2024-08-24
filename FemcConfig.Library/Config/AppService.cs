@@ -99,7 +99,7 @@ public class AppService
             ModDir = femcDir,
             FemcConfig = new(femcConfigFile),
             MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null,
-            AppConfig = new(Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json"))
+            ReloadedAppConfig = new(Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json"))
         };
     }
 }

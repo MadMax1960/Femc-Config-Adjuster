@@ -3,11 +3,13 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
+using Femc_Config_Adjuster.Models;
 using Femc_Config_Adjuster.Services;
 using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
 using Femc_Config_Adjuster.Views.Windows;
 using FemcConfig.Library.Config;
+using FemcConfig.Library.Config.Models;
 using FemcConfig.Library.Config.Sections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -114,7 +116,7 @@ namespace Femc_Config_Adjuster
 		{
 			try
 			{
-				_host.Start();
+                _host.Start();
 			}
 			catch(Exception ex)
 			{

@@ -81,11 +81,12 @@ public class IntroMovieSection : ISection
                 Authors = [Author.Mosq, Author.TheBestAstroNOT],
                
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => new ModManager(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).ToggleMod("Persona_3_Reload_Intro_Movies"),
-                Disable = (ctx) => new ModManager(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).ToggleMod("Persona_3_Reload_Intro_Movies"),
+                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Persona_3_Reload_Intro_Movies"),
+                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("Persona_3_Reload_Intro_Movies"),
+                //Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("Persona_3_Reload_Intro_Movies"),
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => JsonUtils.DeserializeFile<ReloadedAppConfig>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains("Persona_3_Reload_Intro_Movies")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies")
             },
         ];
     }

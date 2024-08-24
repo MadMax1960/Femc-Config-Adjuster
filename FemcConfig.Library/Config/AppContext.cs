@@ -14,5 +14,5 @@ public class AppContext
 
     public ModConfig<MovieModConfig>? MovieConfig { get; init; }
 
-    public required ModConfig<ReloadedAppConfig> AppConfig { get; init; }
+    public required ModConfig<ReloadedAppConfig> ReloadedAppConfig { get; init; }
 }
