@@ -2,6 +2,7 @@
 using Femc_Config_Adjuster.ViewModels.Windows;
 using FemcConfig.Library.Config.Models;
 using FemcConfig.Library.Config.Options;
+using FemcConfig.Library.Config.Sections;
 using Microsoft.Web.WebView2.Wpf;
 using System.IO;
 using System.Windows;
@@ -39,7 +40,13 @@ public partial class PreviewWindow : FluentWindow
     private async void Button_Click_2(object sender, RoutedEventArgs e)
     {
         //Mudkip this is the cue for u to add the actual installation of the mods
-        System.Windows.MessageBox.Show("Functionality to be added");
+        if (this.DataContext is PreviewWindowViewModel vm)
+        {
+            if (vm.Option.InternalName == "movieaddon")
+            {
+                System.Windows.MessageBox.Show("Execute installation of intro movies mod");
+            }
+        }
     }
 
     protected override void OnClosed(EventArgs e)

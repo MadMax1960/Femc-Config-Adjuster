@@ -10,7 +10,7 @@ namespace Femc_Config_Adjuster.ViewModels.Pages;
 
 public partial class SettingsViewModel : ObservableObject, INavigationAware
 {
-	private const string ConfigFilePath = "config.json";
+	public const string ConfigFilePath = "config.json";
 	private bool _isInitialized = false;
 
 	[ObservableProperty]
@@ -21,7 +21,7 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
 	private ApplicationTheme _currentTheme = ApplicationTheme.Unknown;
 
 	[ObservableProperty]
-	private string _jsonFilePath = string.Empty;
+	public string _jsonFilePath = string.Empty;
 
 	public ICommand SelectJsonFileCommand { get; }
 
@@ -55,7 +55,7 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
 			?? string.Empty;
 	}
 
-	private void SelectJsonFile()
+	public void SelectJsonFile()
 	{
 		var openFileDialog = new OpenFileDialog
 		{
