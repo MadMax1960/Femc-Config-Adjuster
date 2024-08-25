@@ -2,6 +2,7 @@
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
+using Femc_Config_Adjuster.Helpers;
 using Femc_Config_Adjuster.Services;
 using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
@@ -104,25 +105,25 @@ namespace Femc_Config_Adjuster
 			return _host.Services.GetService(typeof(T)) as T;
 		}
 
-        public static string SelectJson()
+        public static string SelectFolder()
         {
-            // Accessing the ConfigFilePath constant
+            var dialog = new OpenFolderDialog();
+            var result = dialog.ShowDialog();
 
-            // Creating an instance of SettingsViewModel to call the method
-            var settingsViewModel = new SettingsViewModel();
-
-            // Calling the SelectJsonFile method
-            settingsViewModel.SelectJsonFile();
-
-            // Optionally, you can access the JsonFilePath after calling SelectJsonFile
-            return settingsViewModel.JsonFilePath;
-
-            // Now you can use 'path' and 'selectedFilePath' as needed
+            // Show the dialog
+            if (result==true)
+                {
+                    // Return the selected folder path
+                    return dialog.FolderName;
+                }
+            return null;
         }
 
         /// <summary>
         /// Occurs when the application is loading.
         /// </summary>
+        /// 
+
         private async void OnStartup(object sender, StartupEventArgs e)
 		{
 			try
@@ -140,13 +141,13 @@ namespace Femc_Config_Adjuster
             string path=WriteCrashLog(ex);
             MessageBox.Show("An error occurred: " + ex.Message + " Please create an issue on GitHub if this issue still persists after deleting your config or restarting the app.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             MessageBoxResult result = MessageBoxResult.No;
-            if(ex.Message== "Failed to find FEMC config file.")
+            if(ex.Message== "Failed to find Reloaded II ENV variable.")
             {
-                result = MessageBox.Show("Would you like to select a config file manually?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                result = MessageBox.Show("Would you like to select the reloaded mods folder directly?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
                 if (result == MessageBoxResult.Yes)
                 {
                     // Code to open the GitHub issue page or perform another action
-                    string jsonpath = SelectJson();
+                    File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt"), SelectFolder());
                     MessageBox.Show("The application will now be restarted");
                     RestartApplication();
                 }

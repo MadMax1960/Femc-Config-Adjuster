@@ -6,7 +6,7 @@ public class IntroMovieSection : ISection
 {
     public string Name { get; } = "Intro Movies";
     public string Description { get; } = "Select which movies you want to be viewed on startup. Hint: You can select multiple of them to make it randomised!";
-    public SectionCategory Category { get; } = (CheckModExistence("Persona_3_Reload_Intro_Movies")) ? SectionCategory.Disabled : SectionCategory.Addon;
+    public SectionCategory Category { get; } = (CheckModExistence("Persona_3_Reload_Intro_Movies")) ? SectionCategory.Addon : SectionCategory.Disabled;
     public ModOption[] Options { get; }
     public IntroMovieSection(AppService app)
     {

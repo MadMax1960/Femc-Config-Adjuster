@@ -34,9 +34,16 @@ public class AppService
     private void AutoInit()
     {
         // Get Reloaded dir from environment.
-        var reloadedModsDir = Environment.GetEnvironmentVariable("RELOADEDIIMODS")
+        var reloadedModsDir = "";
+        Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp"));
+        var dirpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),"FemcConfigApp");
+        if (!File.Exists(Path.Combine(dirpath, "reloadpath.txt")))
+        {
+            reloadedModsDir = Environment.GetEnvironmentVariable("RELOADEDIIMODS")
             ?? throw new Exception("Failed to find Reloaded II ENV variable.");
-
+            File.WriteAllText(Path.Combine(dirpath, "reloadpath.txt"),reloadedModsDir);
+        }
+        reloadedModsDir = File.ReadAllText(Path.Combine(dirpath,"reloadpath.txt"));
         var reloadedDir = Path.GetDirectoryName(reloadedModsDir)!;
 
         // Verify FEMC mod install dir.
