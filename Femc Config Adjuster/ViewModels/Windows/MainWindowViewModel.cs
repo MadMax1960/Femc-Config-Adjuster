@@ -64,6 +64,7 @@ public partial class MainWindowViewModel : ObservableObject
             Content = "Addons",
             Icon = new SymbolIcon { Symbol = SymbolRegular.Library28},
             TargetPageType = typeof(Views.Pages.Categories.Category_Addon),
+            Visibility = Visibility.Collapsed,
         },
     ];
     private static bool CheckModExistence(string id)
