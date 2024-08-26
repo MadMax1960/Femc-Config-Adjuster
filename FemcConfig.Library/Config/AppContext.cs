@@ -13,4 +13,6 @@ public class AppContext
     public required ModConfig<FemcModConfig> FemcConfig { get; init; }
 
     public ModConfig<MovieModConfig>? MovieConfig { get; init; }
+
+    public required ModConfig<ReloadedAppConfig> ReloadedAppConfig { get; init; }
 }

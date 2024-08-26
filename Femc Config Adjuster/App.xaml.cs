@@ -2,7 +2,7 @@
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
-
+using Femc_Config_Adjuster.Helpers;
 using Femc_Config_Adjuster.Services;
 using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
@@ -12,15 +12,13 @@ using FemcConfig.Library.Config.Sections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Win32;
 using System.Diagnostics;
 using System.IO;
 using System.Reflection;
-using System.Security.Policy;
 using System.Windows;
-using System.Windows.Diagnostics;
 using System.Windows.Threading;
 using Wpf.Ui;
-using static System.Net.WebRequestMethods;
 
 namespace Femc_Config_Adjuster
 {
@@ -107,14 +105,30 @@ namespace Femc_Config_Adjuster
 			return _host.Services.GetService(typeof(T)) as T;
 		}
 
-		/// <summary>
-		/// Occurs when the application is loading.
-		/// </summary>
-		private async void OnStartup(object sender, StartupEventArgs e)
+        public static string SelectFolder()
+        {
+            var dialog = new OpenFolderDialog();
+            var result = dialog.ShowDialog();
+
+            // Show the dialog
+            if (result==true)
+                {
+                    // Return the selected folder path
+                    return dialog.FolderName;
+                }
+            return null;
+        }
+
+        /// <summary>
+        /// Occurs when the application is loading.
+        /// </summary>
+        /// 
+
+        private async void OnStartup(object sender, StartupEventArgs e)
 		{
 			try
 			{
-				_host.Start();
+                _host.Start();
 			}
 			catch(Exception ex)
 			{
@@ -125,34 +139,36 @@ namespace Femc_Config_Adjuster
 		private static void HandleException(Exception ex)
 		{
             string path=WriteCrashLog(ex);
-            MessageBox.Show("An error occurred: " + ex.Message + " Please create an issue on the github if this issue still persists after deleting ur config or restarting the app. ", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            try
+            MessageBox.Show("An error occurred: " + ex.Message + " Please create an issue on GitHub if this issue still persists after deleting your config or restarting the app.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            MessageBoxResult result = MessageBoxResult.No;
+            if(ex.Message== "Failed to find Reloaded II ENV variable.")
+            {
+                result = MessageBox.Show("Would you like to select the reloaded mods folder directly?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if (result == MessageBoxResult.Yes)
+                {
+                    // Code to open the GitHub issue page or perform another action
+                    File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt"), SelectFolder());
+                    MessageBox.Show("The application will now be restarted");
+                    RestartApplication();
+                }
+            }
+            if (result == MessageBoxResult.No)
             {
                 // Start the default web browser with the specified URL
-                Process.Start(new ProcessStartInfo
+                if (path != "Crash Log Write Failed")
                 {
-                    FileName = "https://github.com/MadMax1960/Femc-Reloaded-Project/issues",
-                    UseShellExecute = true
-                });
-				if(path!="Crash Log Write Failed")
-				{
                     Process.Start(new ProcessStartInfo
                     {
                         FileName = path,
                         UseShellExecute = true
                     });
                 }
+                // Close the application
+                Application.Current.Shutdown();
             }
-            catch (Exception ex2)
-            {
-                Console.WriteLine($"Failed to open URL: {ex2.Message}");
-				Application.Current.Shutdown();
-            }
-
-            // Close the application
-            Application.Current.Shutdown();
         }
-		private static string WriteCrashLog(Exception ex)
+
+        private static string WriteCrashLog(Exception ex)
         {
             // Get the path to the Roaming AppData directory
             string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
@@ -194,6 +210,51 @@ namespace Femc_Config_Adjuster
         /// <summary>
         /// Occurs when the application is closing.
         /// </summary>
+        /// 
+        public static void RestartApplication()
+        {
+            // Get the current application process
+            Process currentProcess = Process.GetCurrentProcess();
+
+            // Create a new process start info using the current process file name
+            ProcessStartInfo startInfo = new ProcessStartInfo
+            {
+                FileName = currentProcess.MainModule.FileName, // Path to the executable
+                Arguments = string.Join(" ", Environment.GetCommandLineArgs().Skip(1)) // Pass the current command-line arguments
+            };
+
+            // Start the new process
+            Process.Start(startInfo);
+
+            // Shut down the current application
+            Application.Current.Shutdown();
+        }
+        private void OpenJsonFileDialog()
+        {
+            // Create an OpenFileDialog
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            // Set filter for file extension and default file extension
+            openFileDialog.DefaultExt = ".json";
+            openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
+
+            // Display OpenFileDialog by calling ShowDialog method
+            Nullable<bool> result = openFileDialog.ShowDialog();
+
+            // Get the selected file name and display in a TextBox
+            // Load content of file in a TextBox
+            if (result == true)
+            {
+                // Open document
+                string filename = openFileDialog.FileName;
+                MessageBox.Show($"Selected file: {filename}");
+
+                // If you want to read the JSON file content
+                string jsonContent = System.IO.File.ReadAllText(filename);
+                // Do something with the JSON content
+            }
+        }
+
         private async void OnExit(object sender, ExitEventArgs e)
 		{
 			try

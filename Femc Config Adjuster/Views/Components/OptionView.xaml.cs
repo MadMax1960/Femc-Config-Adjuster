@@ -1,8 +1,10 @@
 ﻿using Femc_Config_Adjuster.ViewModels.Components;
 using Femc_Config_Adjuster.ViewModels.Windows;
 using Femc_Config_Adjuster.Views.Windows;
+using FemcConfig.Library.Config.Sections;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Documents;
 
 namespace Femc_Config_Adjuster.Views.Components;
 
@@ -24,7 +26,7 @@ public partial class OptionView : UserControl
             {
                 DataContext = new PreviewWindowViewModel(optionViewModel.Option),
             };
-            previewWindow.addon.Visibility= (new PreviewWindowViewModel(optionViewModel.Option).Category=="Addon") ? Visibility.Visible : Visibility.Collapsed;
+            previewWindow.addon.Visibility = (new PreviewWindowViewModel(optionViewModel.Option).Category=="Addon") ? Visibility.Visible : Visibility.Collapsed;
             previewWindow.ShowDialog();
         }
     }

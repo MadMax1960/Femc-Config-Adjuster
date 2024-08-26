@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using FemcConfig.Library.Config.Models;
 
 namespace FemcConfig.Library.Config.Options;
 
@@ -27,6 +28,10 @@ public class ModOption : ObservableObject
                 OnPropertyChanged(nameof(IsEnabled));
             };
         }
+        this.ctx.ReloadedAppConfig.Settings.EnabledMods.CollectionChanged += (sender, args) =>
+        {
+            OnPropertyChanged(nameof(IsEnabled));
+        };
     }
 
     /// <summary>

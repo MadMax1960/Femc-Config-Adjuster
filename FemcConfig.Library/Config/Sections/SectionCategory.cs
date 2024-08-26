@@ -3,9 +3,10 @@
 public enum SectionCategory
 {
     Example,
+    MainPage,
     TwoD,
     ThreeD,
     Audio,
-    Movie,
-    Addon
+    Addon,
+    Disabled /*Dummy category so i can disable a section*/,
 };

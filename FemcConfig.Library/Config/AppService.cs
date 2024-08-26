@@ -21,9 +21,9 @@ public class AppService
     public AppContext GetContext()
         => this.appContext ?? throw new Exception("App context not set.");
 
-    private static bool CheckModExistence(string id)
+    private static bool CheckModExistence(string id, string reloadedDIR)
     {
-        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods.Contains(id) ? true : false;
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(reloadedDIR, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
     }
 
     public class EnabledModConfiguration
@@ -34,9 +34,16 @@ public class AppService
     private void AutoInit()
     {
         // Get Reloaded dir from environment.
-        var reloadedModsDir = Environment.GetEnvironmentVariable("RELOADEDIIMODS")
+        var reloadedModsDir = "";
+        Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp"));
+        var dirpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),"FemcConfigApp");
+        if (!File.Exists(Path.Combine(dirpath, "reloadpath.txt")))
+        {
+            reloadedModsDir = Environment.GetEnvironmentVariable("RELOADEDIIMODS")
             ?? throw new Exception("Failed to find Reloaded II ENV variable.");
-
+            File.WriteAllText(Path.Combine(dirpath, "reloadpath.txt"),reloadedModsDir);
+        }
+        reloadedModsDir = File.ReadAllText(Path.Combine(dirpath,"reloadpath.txt"));
         var reloadedDir = Path.GetDirectoryName(reloadedModsDir)!;
 
         // Verify FEMC mod install dir.
@@ -71,13 +78,12 @@ public class AppService
                 break;
             }
         }
-
         if (femcConfigFile == null || File.Exists(femcConfigFile) == false)
         {
             throw new Exception("Failed to find FEMC config file.");
         }
         string? movieConfigFile = null;
-        if (CheckModExistence("Persona_3_Reload_Intro_Movies"))
+        if (CheckModExistence("Persona_3_Reload_Intro_Movies", reloadedDir))
         {
             foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
             {
@@ -91,13 +97,15 @@ public class AppService
                 }
             }
         }
+
         // Setup mod context.
         this.appContext = new()
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
             FemcConfig = new(femcConfigFile),
-            MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null
+            MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null,
+            ReloadedAppConfig = new(Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json"))
         };
     }
 }

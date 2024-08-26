@@ -1,31 +1,16 @@
-﻿using FemcConfig.Library.Config.Options;
-
+﻿using FemcConfig.Library.Config.Models;
+using FemcConfig.Library.Config.Options;
+using FemcConfig.Library.Utils;
 namespace FemcConfig.Library.Config.Sections;
-
 public class IntroMovieSection : ISection
 {
-    /// <summary>
-    /// Section name. Sets the text that appears on the side and title of page.
-    /// </summary>
     public string Name { get; } = "Intro Movies";
-
     public string Description { get; } = "Select which movies you want to be viewed on startup. Hint: You can select multiple of them to make it randomised!";
-
-    /// <summary>
-    /// Section category, such as 2D, 3D, Audio, etc.
-    /// </summary>
-    public SectionCategory Category { get; } = SectionCategory.Movie;
-
-    /// <summary>
-    /// Contains all the options that appear in the section.
-    /// Set it in the constructor below.
-    /// </summary>
+    public SectionCategory Category { get; } = (CheckModExistence("Persona_3_Reload_Intro_Movies", File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt")))) ? SectionCategory.Addon : SectionCategory.Disabled;
     public ModOption[] Options { get; }
-
     public IntroMovieSection(AppService app)
     {
         var ctx = app.GetContext();
-
         // Set all the options available.
         this.Options =
         [
@@ -68,7 +53,15 @@ public class IntroMovieSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.Soulmosq,
-            },
+            }
         ];
+    }
+    private static bool CheckModExistence(string id, string reload)
+    {
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(reload), "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
+    }
+    public class EnabledModConfiguration
+    {
+        public List<string>? EnabledMods { get; set; }
     }
 }

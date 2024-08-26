@@ -10,89 +10,58 @@ namespace Femc_Config_Adjuster.ViewModels.Pages;
 
 public partial class SettingsViewModel : ObservableObject, INavigationAware
 {
-	private const string ConfigFilePath = "config.json";
-	private bool _isInitialized = false;
+    private bool _isInitialized = false;
 
-	[ObservableProperty]
-	private string _appVersion = "1.0.0";
+    [ObservableProperty]
+    private string _appVersion = "1.0.0";
     public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases";
 
     [ObservableProperty]
-	private ApplicationTheme _currentTheme = ApplicationTheme.Unknown;
+    private ApplicationTheme _currentTheme = ApplicationTheme.Unknown;
 
-	[ObservableProperty]
-	private string _jsonFilePath = string.Empty;
+    public void OnNavigatedTo()
+    {
+        if (!_isInitialized)
+            InitializeViewModel();
+    }
 
-	public ICommand SelectJsonFileCommand { get; }
+    public void OnNavigatedFrom() { }
 
-	public SettingsViewModel()
-	{
-		SelectJsonFileCommand = new RelayCommand(SelectJsonFile);
+    private void InitializeViewModel()
+    {
+        CurrentTheme = ApplicationThemeManager.GetAppTheme();
+        AppVersion = $"1.0 - Initial Release";
+        _isInitialized = true;
+    }
 
-		var config = Config.LoadConfig(ConfigFilePath);
-		JsonFilePath = config.JsonFilePath;
-	}
+    private string GetAssemblyVersion()
+    {
+        return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version?.ToString()
+            ?? string.Empty;
+    }
 
-	public void OnNavigatedTo()
-	{
-		if (!_isInitialized)
-			InitializeViewModel();
-	}
+    [RelayCommand]
+    private void OnChangeTheme(string parameter)
+    {
+        switch (parameter)
+        {
+            case "theme_light":
+                if (CurrentTheme == ApplicationTheme.Light)
+                    break;
 
-	public void OnNavigatedFrom() { }
+                ApplicationThemeManager.Apply(ApplicationTheme.Light);
+                CurrentTheme = ApplicationTheme.Light;
 
-	private void InitializeViewModel()
-	{
-		CurrentTheme = ApplicationThemeManager.GetAppTheme();
-		AppVersion = $"0.1 - {GetAssemblyVersion()}";
+                break;
 
-		_isInitialized = true;
-	}
+            default:
+                if (CurrentTheme == ApplicationTheme.Dark)
+                    break;
 
-	private string GetAssemblyVersion()
-	{
-		return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version?.ToString()
-			?? string.Empty;
-	}
+                ApplicationThemeManager.Apply(ApplicationTheme.Dark);
+                CurrentTheme = ApplicationTheme.Dark;
 
-	private void SelectJsonFile()
-	{
-		var openFileDialog = new OpenFileDialog
-		{
-			Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*"
-		};
-
-		if (openFileDialog.ShowDialog() == true)
-		{
-			JsonFilePath = openFileDialog.FileName;
-
-			var config = new Config { JsonFilePath = JsonFilePath };
-			config.SaveConfig(ConfigFilePath);
-		}
-	}
-
-	[RelayCommand]
-	private void OnChangeTheme(string parameter)
-	{
-		switch (parameter)
-		{
-			case "theme_light":
-				if (CurrentTheme == ApplicationTheme.Light)
-					break;
-
-				ApplicationThemeManager.Apply(ApplicationTheme.Light);
-				CurrentTheme = ApplicationTheme.Light;
-
-				break;
-
-			default:
-				if (CurrentTheme == ApplicationTheme.Dark)
-					break;
-
-				ApplicationThemeManager.Apply(ApplicationTheme.Dark);
-				CurrentTheme = ApplicationTheme.Dark;
-
-				break;
-		}
-	}
+                break;
+        }
+    }
 }
