@@ -21,9 +21,9 @@ public class AppService
     public AppContext GetContext()
         => this.appContext ?? throw new Exception("App context not set.");
 
-    private static bool CheckModExistence(string id)
+    private static bool CheckModExistence(string id, string reloadedDIR)
     {
-        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(reloadedDIR, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
     }
 
     public class EnabledModConfiguration
@@ -78,13 +78,12 @@ public class AppService
                 break;
             }
         }
-        
         if (femcConfigFile == null || File.Exists(femcConfigFile) == false)
         {
             throw new Exception("Failed to find FEMC config file.");
         }
         string? movieConfigFile = null;
-        if (CheckModExistence("Persona_3_Reload_Intro_Movies"))
+        if (CheckModExistence("Persona_3_Reload_Intro_Movies", reloadedDir))
         {
             foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
             {

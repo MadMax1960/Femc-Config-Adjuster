@@ -6,7 +6,7 @@ public class IntroMovieSection : ISection
 {
     public string Name { get; } = "Intro Movies";
     public string Description { get; } = "Select which movies you want to be viewed on startup. Hint: You can select multiple of them to make it randomised!";
-    public SectionCategory Category { get; } = (CheckModExistence("Persona_3_Reload_Intro_Movies")) ? SectionCategory.Addon : SectionCategory.Disabled;
+    public SectionCategory Category { get; } = (CheckModExistence("Persona_3_Reload_Intro_Movies", File.ReadAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt")))) ? SectionCategory.Addon : SectionCategory.Disabled;
     public ModOption[] Options { get; }
     public IntroMovieSection(AppService app)
     {
@@ -56,9 +56,9 @@ public class IntroMovieSection : ISection
             }
         ];
     }
-    private static bool CheckModExistence(string id)
+    private static bool CheckModExistence(string id, string reload)
     {
-        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
+        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(reload), "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
     }
     public class EnabledModConfiguration
     {
