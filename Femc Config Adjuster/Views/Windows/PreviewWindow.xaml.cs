@@ -6,6 +6,7 @@ using FemcConfig.Library.Config.Sections;
 using Microsoft.Web.WebView2.Wpf;
 using System;
 using System.Diagnostics;
+using System.Diagnostics.Eventing.Reader;
 using System.IO;
 using System.Security.Policy;
 using System.Windows;
@@ -46,21 +47,39 @@ public partial class PreviewWindow : FluentWindow
         //Mudkip this is the cue for u to add the actual installation of the mods
         if (this.DataContext is PreviewWindowViewModel vm)
         {
-            if (vm.Option.InternalName == "movieaddon")
+            switch (vm.Option.InternalName)
             {
-                System.Windows.MessageBox.Show("Installation not supported yet");
-            }
-            else if(vm.Option.InternalName == "femcdepend")
-            {
-                MessageBox.Show("The app will now install the Femc Mod and its dependencies. After installation go to reloaded and try updating the femc mod.");
-                LaunchR2Protocol("r2:https://gamebanana.com/mods/495507");
-                LaunchR2Protocol("r2:https://gamebanana.com/mods/501833");
-                LaunchR2Protocol("r2:https://gamebanana.com/mods/500638");
-                LaunchR2Protocol("r2:https://gamebanana.com/mods/494020");
-                LaunchR2Protocol("r2:https://gamebanana.com/mods/495456");
-                LaunchR2Protocol("r2:https://gamebanana.com/mods/495458");
-                LaunchR2Protocol("r2: https://github.com/MadMax1960/Femc-Reloaded-Project/releases/latest");
-                LaunchR2Protocol("r2:https://github.com/AnimatedSwine37/UnrealEssentials/releases/latest");
+                case "femc":
+                    MessageBox.Show("The app will now install the Femc Mod. To install its depndencies go to the dependencies page in the addons category.");
+                    LaunchR2Protocol("r2: https://github.com/MadMax1960/Femc-Reloaded-Project/releases/latest");
+                    break;
+                case "ryo":
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/495507");
+                    break;
+                case "costume":
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/501833");
+                    break;
+                case "object":
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/500638");
+                    break;
+                case "p3re":
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/494020");
+                    break;
+                case "bgme":
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/495456");
+                    break;
+                case "battletheme":
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/495458");
+                    break;
+                case "ue":
+                    LaunchR2Protocol("r2:https://github.com/AnimatedSwine37/UnrealEssentials/releases/latest");
+                    break;
+                case "movieaddon":
+                    System.Windows.MessageBox.Show("Installation not supported yet");
+                    break;
+                default:
+                    System.Windows.MessageBox.Show("Installation not added yet");
+                    break;
             }
         }
     }

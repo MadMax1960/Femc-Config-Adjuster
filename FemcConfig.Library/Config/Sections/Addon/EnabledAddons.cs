@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections;
 public class EnabledAddonsSection : ISection
 {
     public string Name { get; } = "Addon Managment";
-    public string Description { get; } = "Use this page to enable or disable addons. If an addon is not installed but enabled then it will automatically be installed.";
+    public string Description { get; } = "Use this page to enable or disable addons. If an addon is not installed click on preview and then download addon.";
     public SectionCategory Category { get; } = SectionCategory.Addon;
     public ModOption[] Options { get; }
     public EnabledAddonsSection(AppService app)

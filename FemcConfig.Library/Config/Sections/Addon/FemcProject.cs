@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections;
 public class FemcProjectSection : ISection
 {
     public string Name { get; } = "Main Page";
-    public string Description { get; } = "Use this page manage the installation of the Femc Mod and its dependencies.";
+    public string Description { get; } = "Use this page manage the installation of the Femc Mod.";
     public SectionCategory Category { get; } = SectionCategory.MainPage;
     public ModOption[] Options { get; }
     public FemcProjectSection(AppService app)
@@ -14,7 +14,7 @@ public class FemcProjectSection : ISection
         [
             new ModOption(ctx)
             {
-                InternalName = "femcdepend",
+                InternalName = "femc",
                 Name = "Femc Reloaded Project",
                 Authors = [Author.Femc],
                 Category="Addon",

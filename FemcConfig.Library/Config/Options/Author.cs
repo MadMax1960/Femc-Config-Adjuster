@@ -3,8 +3,8 @@
 public record Author(string Name, string? Description = null, string? Url = null)
 {
     public static readonly Author Missing = new("Missing Author");
-
-	public static readonly Author Neptune = new("Neptune", Url: "https://x.com/Neptune_NPN013");
+    public static readonly Author Rena = new("Rena");
+    public static readonly Author Neptune = new("Neptune", Url: "https://x.com/Neptune_NPN013");
 	public static readonly Author Ely = new("Ely");
     public static readonly Author Esa = new("Esa", Url: "https://x.com/EsaBlythe");
     public static readonly Author Betina = new("Betina", Url: "https://x.com/Betina_Mascenon");
