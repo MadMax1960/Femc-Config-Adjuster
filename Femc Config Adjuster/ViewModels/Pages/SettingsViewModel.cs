@@ -11,9 +11,9 @@ namespace Femc_Config_Adjuster.ViewModels.Pages;
 public partial class SettingsViewModel : ObservableObject, INavigationAware
 {
     private bool _isInitialized = false;
-
+    
     [ObservableProperty]
-    private string _appVersion = "1.0.0";
+	private string _appVersion = "1.0.1";
     public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases";
 
     [ObservableProperty]
@@ -30,24 +30,19 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     private void InitializeViewModel()
     {
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
-        AppVersion = $"1.0 - Initial Release";
+        AppVersion = $"1.0.1 - Addons, Musics and Portable Release Compatibility Update";
         _isInitialized = true;
     }
 
-    private string GetAssemblyVersion()
-    {
-        return System.Reflection.Assembly.GetExecutingAssembly().GetName().Version?.ToString()
-            ?? string.Empty;
-    }
-
-    [RelayCommand]
-    private void OnChangeTheme(string parameter)
-    {
-        switch (parameter)
-        {
-            case "theme_light":
-                if (CurrentTheme == ApplicationTheme.Light)
-                    break;
+    
+	[RelayCommand]
+	private void OnChangeTheme(string parameter)
+	{
+		switch (parameter)
+		{
+			case "theme_light":
+				if (CurrentTheme == ApplicationTheme.Light)
+					break;
 
                 ApplicationThemeManager.Apply(ApplicationTheme.Light);
                 CurrentTheme = ApplicationTheme.Light;
