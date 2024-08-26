@@ -3,6 +3,7 @@
 public enum SectionCategory
 {
     Example,
+    MainPage,
     TwoD,
     ThreeD,
     Audio,

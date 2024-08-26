@@ -43,6 +43,12 @@ public partial class MainWindowViewModel : ObservableObject
     [
         new NavigationViewItem()
         {
+            Content = "Home",
+            Icon = new SymbolIcon { Symbol = SymbolRegular.Home16 },
+            TargetPageType = typeof(Views.Pages.Categories.Category_Main),
+        },
+        new NavigationViewItem()
+        {
             Content = "2D",
             Icon = new SymbolIcon { Symbol = SymbolRegular.PaintBrush16 },
             TargetPageType = typeof(Views.Pages.Categories.Category_2D),

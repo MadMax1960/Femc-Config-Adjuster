@@ -27,20 +27,6 @@ public class EnabledAddonsSection : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies")
             },
-            new ModOption(ctx)
-            {
-                InternalName = "femcdepend",
-                Name = "Femc Reloaded Project",
-                Authors = [Author.Femc],
-                Category="Addon",
-
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.femc"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("p3rpc.femc"),
-
-                // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("p3rpc.femc")
-            },
         ];
     }
 }
