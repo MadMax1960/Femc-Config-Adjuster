@@ -78,8 +78,7 @@ public partial class PreviewWindow : FluentWindow
                     System.Windows.MessageBox.Show("Installation not supported yet");
                     break;
                 case "colorarm":
-                    System.Windows.MessageBox.Show("armcolor");
-                    LaunchR2Protocol("r2:https://gamebanana.com/mods/525920");
+                    LaunchR2Protocol("r2:https://gamebanana.com/mmdl/1267402");
                     break;
                 default:
                     System.Windows.MessageBox.Show("Installation not added yet");
