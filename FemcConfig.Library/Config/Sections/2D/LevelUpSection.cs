@@ -20,7 +20,6 @@ public class LevelUpSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "level_ely",
-                Name = "Ely's Level Up Screen",
                 Authors = [Author.Ely],
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Ely,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.Ely,
@@ -28,7 +27,6 @@ public class LevelUpSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "level_esa",
-                Name="Esa's Level Up Screen",
                 Authors = [Author.Esa],
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Esa,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.Esa,

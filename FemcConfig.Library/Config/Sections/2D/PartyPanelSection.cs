@@ -20,7 +20,6 @@ public class PartyPanelSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "partypanel_kris",
-                Name = "Kris's Party Panel",
                 Authors = [Author.Kris],
                 Enable = (ctx) => ctx.FemcConfig.Settings.PartyPanelTrue = Models.FemcModConfig.PartyPanelType.Kris,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.PartyPanelTrue == Models.FemcModConfig.PartyPanelType.Kris,
@@ -28,7 +27,6 @@ public class PartyPanelSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "partypanel_esa",
-                Name="Esa's Party Panel",
                 Authors = [Author.Esa],
                 Enable = (ctx) => ctx.FemcConfig.Settings.PartyPanelTrue = Models.FemcModConfig.PartyPanelType.Esa,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.PartyPanelTrue == Models.FemcModConfig.PartyPanelType.Esa,

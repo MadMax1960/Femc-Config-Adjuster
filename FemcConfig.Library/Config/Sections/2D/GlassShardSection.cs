@@ -20,7 +20,6 @@ public class GlassShardSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "shard_ely",
-                Name = "Ely's Glass Shards",
                 Authors = [Author.Ely],
                 Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Ely,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Ely,
@@ -28,7 +27,6 @@ public class GlassShardSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "shard_esa",
-                Name="Esa's Glass Shards",
                 Authors = [Author.Esa],
                 Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Esa,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Esa,
@@ -36,7 +34,6 @@ public class GlassShardSection : ISection
 			new ModOption(ctx)
 			{
 				InternalName = "shard_elyalt",
-				Name="Ely's Alt Glass Shards",
 				Authors = [Author.Ely],
 				Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.ElyAlt,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.ElyAlt,
@@ -44,8 +41,7 @@ public class GlassShardSection : ISection
 
 			new ModOption(ctx)
 			{
-				InternalName = "shard_Shiosakana",
-				Name="Shiosakana's Glass Shard",
+				InternalName = "shard_shiosakana",
 				Authors = [Author.Shiosakana],
 				Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Shiosakana,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Shiosakana,
