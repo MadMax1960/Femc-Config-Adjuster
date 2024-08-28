@@ -38,16 +38,24 @@ public partial class PreviewWindow : FluentWindow
         {
             if (vm.Option.DownloadUrl != null)
             {
-                this.HandleDownloadUrl(vm.Option.DownloadUrl);
+                this.HandleDownloadUrl(vm.Option.DownloadUrl, (vm.Option.Protocol is not null) ? vm.Option.Protocol : "r2");
             }
         }
     }
 
-    private void HandleDownloadUrl(string url)
+    private void HandleDownloadUrl(string url, string protocol="r2")
     {
-        var uri = new Uri(url);
-        var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = url, UseShellExecute = true } };
-        proc.Start();
+        if (protocol == "r2")
+        {
+            url = "r2:" + url;
+            var uri = new Uri(url);
+            var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = url, UseShellExecute = true } };
+            proc.Start();
+        }
+        else if(protocol == "femcinstall")
+        {
+            //Future Femc Mod Installation Code here, currently still gonna be using the r2 method for the next update
+        }
     }
 
     protected override void OnClosed(EventArgs e)

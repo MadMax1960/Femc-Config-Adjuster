@@ -152,6 +152,19 @@ namespace Femc_Config_Adjuster
                     RestartApplication();
                 }
             }
+            else if (ex.Message == "Failed to find FEMC dir.")
+            {
+                result = MessageBox.Show("Would you like to clear the app cache (This might fix the errors if you recently changed the location of your reloaded directory)?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
+                if(result == MessageBoxResult.Yes)
+                {
+                    if (File.Exists(Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt")))
+                    {
+                        File.Delete(Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt"));
+                    }
+                    MessageBox.Show("The application will now be restarted");
+                    RestartApplication();
+                }
+            }
             if (result == MessageBoxResult.No)
             {
                 // Start the default web browser with the specified URL

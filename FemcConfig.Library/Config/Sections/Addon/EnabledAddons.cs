@@ -34,7 +34,7 @@ public class EnabledAddonsSection : ISection
                 Name = "Colorful Armbands",
                 Authors = [Author.Feonyx],
                 Category = "Addon",
-                DownloadUrl = "https://gamebanana.com/mods/525920",
+                DownloadUrl = "https://gamebanana.com/mmdl/1267402",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.colorfularmbands"),
