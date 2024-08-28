@@ -1,4 +1,5 @@
 ﻿using Femc_Config_Adjuster.ViewModels.Windows;
+using FemcConfig.Library.Config.Models;
 using Microsoft.Web.WebView2.Wpf;
 using System.Diagnostics;
 using System.Windows;
@@ -38,23 +39,30 @@ public partial class PreviewWindow : FluentWindow
         {
             if (vm.Option.DownloadUrl != null)
             {
-                this.HandleDownloadUrl(vm.Option.DownloadUrl, (vm.Option.Protocol is not null) ? vm.Option.Protocol : "r2");
+                this.HandleDownloadUrl(vm.Option.DownloadUrl, vm.Option.Downloader);
             }
         }
     }
 
-    private void HandleDownloadUrl(string url, string protocol="r2")
+    private void HandleDownloadUrl(string url, DownloadHandler handler)
     {
-        if (protocol == "r2")
+        if (handler == DownloadHandler.Reloaded)
         {
-            url = "r2:" + url;
-            var uri = new Uri(url);
+            var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = $"r2:{url}", UseShellExecute = true } };
+            proc.Start();
+        }
+        else if (handler == DownloadHandler.Browser)
+        {
             var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = url, UseShellExecute = true } };
             proc.Start();
         }
-        else if(protocol == "femcinstall")
+        
+        // TODO: Download and install through app directly.
+        else if (handler == DownloadHandler.Direct)
         {
-            //Future Femc Mod Installation Code here, currently still gonna be using the r2 method for the next update
+            //var uri = new Uri(url);
+            var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = url, UseShellExecute = true } };
+            proc.Start();
         }
     }
 

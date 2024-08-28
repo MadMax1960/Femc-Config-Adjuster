@@ -62,9 +62,9 @@ public class ModOption : ObservableObject
     public string? DownloadUrl { get; init; }
 
     /// <summary>
-    /// Protocol to be used for downloading addons, leave blank if you want to use the default R2 Protocol.
+    /// Download handler for download URL.
     /// </summary>
-    public string? Protocol { get; init; }
+    public DownloadHandler Downloader { get; init; } = DownloadHandler.Reloaded;
 
     /// <summary>
     /// Authors of option.
