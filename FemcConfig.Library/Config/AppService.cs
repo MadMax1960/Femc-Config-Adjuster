@@ -1,4 +1,5 @@
-﻿using FemcConfig.Library.Common;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using FemcConfig.Library.Common;
 using FemcConfig.Library.Config.Models;
 using FemcConfig.Library.Utils;
 
@@ -7,44 +8,41 @@ namespace FemcConfig.Library.Config;
 public class AppService
 {
     private AppContext? appContext;
+    private readonly SavableFile<AppData> appData;
 
     public AppService()
     {
-        this.AutoInit();
+        var appDataDir = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
+        this.AppDataDir = Path.Join(appDataDir, "FemcConfigAdjuster");
+        Directory.CreateDirectory(this.AppDataDir);
+
+        var appDataFile = Path.Join(this.AppDataDir, "femc.json");
+        this.appData = new(appDataFile);
+
+        try
+        {
+            this.AutoInit();
+        }
+        catch (Exception) { }
     }
 
-    public void SaveConfig()
-    {
-        this.appContext?.FemcConfig?.Save();
-    }
+    public string AppDataDir { get; }
 
     public AppContext GetContext()
         => this.appContext ?? throw new Exception("App context not set.");
 
-    private static bool CheckModExistence(string id, string reloadedDIR)
+    public void Initialize(string reloadedDir)
     {
-        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(reloadedDIR, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods!.Contains(id) ? true : false;
-    }
+        this.appData.Settings.ReloadedDir = reloadedDir;
 
-    public class EnabledModConfiguration
-    {
-        public List<string>? EnabledMods { get; set; }
-    }
-
-    private void AutoInit()
-    {
-        // Get Reloaded dir from environment.
-        var reloadedModsDir = "";
-        Directory.CreateDirectory(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp"));
-        var dirpath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData),"FemcConfigApp");
-        if (!File.Exists(Path.Combine(dirpath, "reloadpath.txt")))
+        var appConfigFile = Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json");
+        if (!File.Exists(appConfigFile))
         {
-            reloadedModsDir = Environment.GetEnvironmentVariable("RELOADEDIIMODS")
-            ?? throw new Exception("Failed to find Reloaded II ENV variable.");
-            File.WriteAllText(Path.Combine(dirpath, "reloadpath.txt"),reloadedModsDir);
+            throw new Exception("Failed to find Reloaded app config.");
         }
-        reloadedModsDir = File.ReadAllText(Path.Combine(dirpath,"reloadpath.txt"));
-        var reloadedDir = Path.GetDirectoryName(reloadedModsDir)!;
+
+        var appConfig = new SavableFile<ReloadedAppConfig>(appConfigFile);
+        var reloadedModsDir = Path.Join(reloadedDir, "Mods");
 
         // Verify FEMC mod install dir.
         // Manually search for FEMC DLL since folder name isn't constant.
@@ -61,11 +59,11 @@ public class AppService
 
         if (femcDir == null)
         {
-            throw new Exception("Failed to find FEMC dir.");
+            throw new Exception("Failed to find FEMC install.");
         }
 
         // Find FEMC mod config file.
-        var reloadedConfigsDir = Path.Join(reloadedDir, "user", "mods");
+        var reloadedConfigsDir = Path.Join(reloadedDir, "User", "Mods");
         string? femcConfigFile = null;
         foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
         {
@@ -78,12 +76,14 @@ public class AppService
                 break;
             }
         }
+
         if (femcConfigFile == null || File.Exists(femcConfigFile) == false)
         {
             throw new Exception("Failed to find FEMC config file.");
         }
+
         string? movieConfigFile = null;
-        if (CheckModExistence("Persona_3_Reload_Intro_Movies", reloadedDir))
+        if (appConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies"))
         {
             foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
             {
@@ -103,9 +103,31 @@ public class AppService
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
+            ReloadedAppConfig = appConfig,
             FemcConfig = new(femcConfigFile),
             MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null,
-            ReloadedAppConfig = new(Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json"))
         };
     }
+
+    // Automatically initialize by fetching Reloaded path from
+    // ENV var.
+    private void AutoInit()
+    {
+        if (this.appData.Settings.ReloadedDir != null)
+        {
+            this.Initialize(this.appData.Settings.ReloadedDir);
+        }
+
+        else if (Environment.GetEnvironmentVariable("RELOADEDIIMODS") is string reloadedModsDir)
+        {
+            var reloadedDir = Path.GetDirectoryName(reloadedModsDir)!;
+            this.Initialize(reloadedDir);
+        }
+    }
+}
+
+public partial class AppData : ObservableObject
+{
+    [ObservableProperty]
+    public string? reloadedDir;
 }

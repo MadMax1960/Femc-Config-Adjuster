@@ -116,7 +116,7 @@
             </ScrollViewer>
             <StackPanel Grid.Row="1" Margin="8">
                 <Button
-                    Margin="0,8"
+                    Margin="0,4"
                     HorizontalAlignment="Stretch"
                     BorderBrush="{DynamicResource AccentTextFillColorPrimaryBrush}"
                     BorderThickness="1"
@@ -124,7 +124,7 @@
                     Content="Confirm"
                     Foreground="{DynamicResource AccentTextFillColorPrimaryBrush}" />
                 <Button
-                    Margin="0,8"
+                    Margin="0,4"
                     HorizontalAlignment="Stretch"
                     BorderThickness="1"
                     Click="Button_Download"
@@ -143,7 +143,7 @@
                     </Button.Style>
                 </Button>
                 <Button
-                    Margin="0,8"
+                    Margin="0,4"
                     HorizontalAlignment="Stretch"
                     Click="Button_Close"
                     Content="Close" />

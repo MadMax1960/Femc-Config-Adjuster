@@ -4,7 +4,11 @@
 // All Rights Reserved.
 
 using Femc_Config_Adjuster.Views.Windows;
+using FemcConfig.Library.Config;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
+using System.IO;
 using System.Windows;
 using Wpf.Ui;
 
@@ -16,28 +20,62 @@ namespace Femc_Config_Adjuster.Services;
 public class ApplicationHostService : IHostedService
 {
 	private readonly IServiceProvider _serviceProvider;
+	private readonly AppService _app;
 
-	private INavigationWindow _navigationWindow;
+	private INavigationWindow? _navigationWindow;
 
 	public ApplicationHostService(IServiceProvider serviceProvider)
 	{
 		_serviceProvider = serviceProvider;
+		_app = _serviceProvider.GetRequiredService<AppService>();
+
+        this.SetupLogger();
 	}
 
-	/// <summary>
-	/// Triggered when the application host is ready to start the service.
-	/// </summary>
-	/// <param name="cancellationToken">Indicates that the start process has been aborted.</param>
-	public async Task StartAsync(CancellationToken cancellationToken)
+    private void SetupLogger()
+    {	
+		var logFile = Path.Join(_app.AppDataDir, "log.txt");
+		if (File.Exists(logFile))
+		{
+			File.Delete(logFile);
+		}
+
+        Log.Logger = new LoggerConfiguration()
+            .WriteTo.File(logFile)
+            .CreateLogger();
+    }
+
+    /// <summary>
+    /// Triggered when the application host is ready to start the service.
+    /// </summary>
+    /// <param name="cancellationToken">Indicates that the start process has been aborted.</param>
+    public async Task StartAsync(CancellationToken cancellationToken)
 	{
 		await HandleActivationAsync();
 	}
 
-	/// <summary>
-	/// Triggered when the application host is performing a graceful shutdown.
-	/// </summary>
-	/// <param name="cancellationToken">Indicates that the shutdown process should no longer be graceful.</param>
-	public async Task StopAsync(CancellationToken cancellationToken)
+    private void HandleInit()
+    {
+        try
+        {
+            // Verify context was set before
+            // starting main window.
+            _ = _app.GetContext();
+
+            this.OpenMainWindow();
+        }
+        catch (Exception)
+        {
+            var setupWindow = new SetupWindow(_app, this.OpenMainWindow);
+            setupWindow.Show();
+        }
+    }
+
+    /// <summary>
+    /// Triggered when the application host is performing a graceful shutdown.
+    /// </summary>
+    /// <param name="cancellationToken">Indicates that the shutdown process should no longer be graceful.</param>
+    public async Task StopAsync(CancellationToken cancellationToken)
 	{
 		await Task.CompletedTask;
 	}
@@ -49,14 +87,17 @@ public class ApplicationHostService : IHostedService
 	{
 		if (!Application.Current.Windows.OfType<MainWindow>().Any())
 		{
-			_navigationWindow = (
-				_serviceProvider.GetService(typeof(INavigationWindow)) as INavigationWindow
-			)!;
-			_navigationWindow!.ShowWindow();
-
-			_navigationWindow.Navigate(typeof(Views.Pages.Categories.Category_2D));
+			this.HandleInit();
 		}
 
 		await Task.CompletedTask;
 	}
+
+	private void OpenMainWindow()
+    {
+        _navigationWindow = _serviceProvider.GetRequiredService<INavigationWindow>();
+
+        _navigationWindow.ShowWindow();
+        _navigationWindow.Navigate(typeof(Views.Pages.Categories.Category_2D));
+    }
 }
