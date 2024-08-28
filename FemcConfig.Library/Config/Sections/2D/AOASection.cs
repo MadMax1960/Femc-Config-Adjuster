@@ -55,7 +55,7 @@ public class AOASection : ISection
 			new ModOption(ctx)
 			{
 				InternalName = "aoa_esaadrien",
-				Authors = [Author.esaadrien],
+				Authors = [Author.Esa, Author.Adrien],
 				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.esaadrien,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.esaadrien,
 			},

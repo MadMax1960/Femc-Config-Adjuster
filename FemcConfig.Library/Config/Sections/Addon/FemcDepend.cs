@@ -17,8 +17,8 @@ public class FemcDependSection : ISection
             {
                 InternalName = "ryo",
                 Name = "Ryo Framework",
-                Authors = [Author.Rena],
-                Category="Addon",
+                Authors = [Author.ZutomayoFan50],
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Ryo.Reloaded"),
@@ -31,8 +31,8 @@ public class FemcDependSection : ISection
             {
                 InternalName = "ue",
                 Name = "Unreal Essentials",
-                Authors = [Author.Femc],
-                Category="Addon",
+                Authors = [Author.AnimatedSwine37, Author.Rirurin],
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("UnrealEssentials"),
@@ -45,8 +45,8 @@ public class FemcDependSection : ISection
             {
                 InternalName = "costume",
                 Name = "Costume Framework",
-                Authors = [Author.Rena],
-                Category="Addon",
+                Authors = [Author.ZutomayoFan50],
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("P3R.CostumeFramework"),
@@ -59,10 +59,10 @@ public class FemcDependSection : ISection
             {
                 InternalName = "bgme",
                 Name = "BGME Framework for P3R",
-                Authors = [Author.Rena],
-                Category="Addon",
+                Authors = [Author.ZutomayoFan50],
+                Category = "Addon",
 
-               // When option is enabled set the bool setting to true.
+                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("BGME.Framework.P3R"),
                 Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("BGME.Framework.P3R"),
 
@@ -73,8 +73,8 @@ public class FemcDependSection : ISection
             {
                 InternalName = "battletheme",
                 Name = "BGME Battle Themes",
-                Authors = [Author.Rena],
-                Category="Addon",
+                Authors = [Author.ZutomayoFan50],
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("BGME.BattleThemes"),
@@ -87,8 +87,8 @@ public class FemcDependSection : ISection
             {
                 InternalName = "object",
                 Name = "Unreal Objects Emitter",
-                Authors = [Author.Femc],
-                Category="Addon",
+                Authors = [Author.ZutomayoFan50],
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Unreal.ObjectsEmitter.Reloaded"),
@@ -101,8 +101,8 @@ public class FemcDependSection : ISection
             {
                 InternalName = "p3re",
                 Name = "Persona 3 Reload Essentials",
-                Authors = [Author.Femc],
-                Category="Addon",
+                Authors = [Author.AnimatedSwine37, Author.Rirurin],
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.essentials"),

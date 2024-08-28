@@ -3,7 +3,7 @@
 public record Author(string Name, string? Description = null, string? Url = null)
 {
     public static readonly Author Missing = new("Missing Author");
-    public static readonly Author Rena = new("Rena");
+    public static readonly Author ZutomayoFan50 = new("zutomayofan50");
     public static readonly Author Neptune = new("Neptune", Url: "https://x.com/Neptune_NPN013");
 	public static readonly Author Ely = new("Ely");
     public static readonly Author Esa = new("Esa", Url: "https://x.com/EsaBlythe");
@@ -38,7 +38,9 @@ public record Author(string Name, string? Description = null, string? Url = null
 	public static readonly Author GhostedToast = new("GhostedToast");
 	public static readonly Author Axolotl = new("Axolotl");
 	public static readonly Author Cielbell = new("Cielbell", Url: "https://ciel-bell.tumblr.com/");
-	public static readonly Author esaadrien = new("Esa and Adrien", Description: "This was made by both Esa: https://x.com/EsaBlythe and Adrien: https://x.com/CatboyRonReagan");
+    public static readonly Author Adrien = new("Adrien");
 	public static readonly Author Shiosakana = new("Shiosakana", Url: "https://x.com/shiosakana1998");
     public static readonly Author Feonyx = new("Feonyx");
+    public static readonly Author AnimatedSwine37 = new("AnimatedSwine37");
+    public static readonly Author Rirurin = new("rirurin");
 };
