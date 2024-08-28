@@ -6,23 +6,24 @@ using System.ComponentModel;
 
 namespace FemcConfig.Library.Config.Models;
 
-public class ModConfig<TConfig> : ObservableObject
+public class SavableFile<TConfig> : ObservableObject
     where TConfig : INotifyPropertyChanged, new()
 {
-    private readonly string configFile;
+    private readonly string file;
     private readonly TConfig modConfig;
 
-    public ModConfig(string configFile)
+    public SavableFile(string file)
     {
-        this.configFile = configFile;
+        this.file = file;
+
         try
         {
-            this.modConfig = JsonUtils.DeserializeFile<TConfig>(configFile);
+            this.modConfig = JsonUtils.DeserializeFile<TConfig>(file);
         }
         catch (Exception)
         {
             var defaultConfig = new TConfig();
-            JsonUtils.SerializeFile(defaultConfig, configFile);
+            JsonUtils.SerializeFile(defaultConfig, file);
             this.modConfig = defaultConfig;
         }
 
@@ -38,6 +39,7 @@ public class ModConfig<TConfig> : ObservableObject
                 // TODO: Display error message.
             }
         };
+
         SubscribeToCollectionChanges(this.modConfig);
     }
 
@@ -71,11 +73,10 @@ public class ModConfig<TConfig> : ObservableObject
         }
     }
 
-
     public TConfig Settings => this.modConfig;
 
     public void Save()
     {
-        JsonUtils.SerializeFile(this.modConfig, this.configFile);
+        JsonUtils.SerializeFile(this.modConfig, this.file);
     }
 }
