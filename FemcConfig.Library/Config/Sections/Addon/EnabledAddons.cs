@@ -2,7 +2,7 @@
 namespace FemcConfig.Library.Config.Sections;
 public class EnabledAddonsSection : ISection
 {
-    public string Name { get; } = "Addon Managment";
+    public string Name { get; } = "Addons";
     public string Description { get; } = "Use this page to enable or disable addons. If an addon is not installed click on preview and then download addon.";
     public SectionCategory Category { get; } = SectionCategory.Addon;
     public ModOption[] Options { get; }
@@ -21,7 +21,7 @@ public class EnabledAddonsSection : ISection
                 Authors = [Author.Mosq, Author.TheBestAstroNOT, Author.Neptune],
                 Category = "Addon",
 
-               // When option is enabled set the bool setting to true.
+                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Persona_3_Reload_Intro_Movies"),
                 Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("Persona_3_Reload_Intro_Movies"),
 
@@ -36,7 +36,7 @@ public class EnabledAddonsSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://gamebanana.com/mmdl/1267402",
 
-               // When option is enabled set the bool setting to true.
+                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.colorfularmbands"),
                 Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("p3rpc.colorfularmbands"),
 

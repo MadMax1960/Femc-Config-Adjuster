@@ -24,7 +24,7 @@ namespace FemcConfig.Library.Config.Models
         private bool autoInject;
 
         [ObservableProperty]
-        private ObservableCollection<string> enabledMods;  // Changed to ObservableCollection
+        private ObservableCollection<string> enabledMods;
 
         [ObservableProperty]
         private string workingDirectory;
