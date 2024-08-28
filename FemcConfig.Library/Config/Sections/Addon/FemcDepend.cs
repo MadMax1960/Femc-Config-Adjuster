@@ -15,7 +15,7 @@ public class FemcDependSection : ISection
             // Example for a bool setting.
             new ModOption(ctx)
             {
-                InternalName = "ryo",
+                InternalName = "mod_dependency",
                 Name = "Ryo Framework",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
@@ -30,7 +30,7 @@ public class FemcDependSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "ue",
+                InternalName = "mod_dependency",
                 Name = "Unreal Essentials",
                 Authors = [Author.AnimatedSwine37, Author.Rirurin],
                 Category = "Addon",
@@ -45,7 +45,7 @@ public class FemcDependSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "costume",
+                InternalName = "mod_dependency",
                 Name = "Costume Framework",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
@@ -60,7 +60,7 @@ public class FemcDependSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "bgme",
+                InternalName = "mod_dependency",
                 Name = "BGME Framework for P3R",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
@@ -75,7 +75,7 @@ public class FemcDependSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "battletheme",
+                InternalName = "mod_dependency",
                 Name = "BGME Battle Themes",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
@@ -90,7 +90,7 @@ public class FemcDependSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "object",
+                InternalName = "mod_dependency",
                 Name = "Unreal Objects Emitter",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
@@ -105,7 +105,7 @@ public class FemcDependSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "p3re",
+                InternalName = "mod_dependency",
                 Name = "Persona 3 Reload Essentials",
                 Authors = [Author.AnimatedSwine37, Author.Rirurin],
                 Category = "Addon",
