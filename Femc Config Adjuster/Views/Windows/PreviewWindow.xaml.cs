@@ -49,7 +49,7 @@ public partial class PreviewWindow : FluentWindow
         {
             switch (vm.Option.InternalName)
             {
-                case "femc":
+                case "femcdepend":
                     MessageBox.Show("The app will now install the Femc Mod. To install its depndencies go to the dependencies page in the addons category.");
                     LaunchR2Protocol("r2: https://github.com/MadMax1960/Femc-Reloaded-Project/releases/latest");
                     break;
@@ -76,6 +76,10 @@ public partial class PreviewWindow : FluentWindow
                     break;
                 case "movieaddon":
                     System.Windows.MessageBox.Show("Installation not supported yet");
+                    break;
+                case "colorarm":
+                    System.Windows.MessageBox.Show("armcolor");
+                    LaunchR2Protocol("r2:https://gamebanana.com/mods/525920");
                     break;
                 default:
                     System.Windows.MessageBox.Show("Installation not added yet");

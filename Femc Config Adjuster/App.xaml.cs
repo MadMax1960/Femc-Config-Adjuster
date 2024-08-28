@@ -229,31 +229,6 @@ namespace Femc_Config_Adjuster
             // Shut down the current application
             Application.Current.Shutdown();
         }
-        private void OpenJsonFileDialog()
-        {
-            // Create an OpenFileDialog
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-
-            // Set filter for file extension and default file extension
-            openFileDialog.DefaultExt = ".json";
-            openFileDialog.Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*";
-
-            // Display OpenFileDialog by calling ShowDialog method
-            Nullable<bool> result = openFileDialog.ShowDialog();
-
-            // Get the selected file name and display in a TextBox
-            // Load content of file in a TextBox
-            if (result == true)
-            {
-                // Open document
-                string filename = openFileDialog.FileName;
-                MessageBox.Show($"Selected file: {filename}");
-
-                // If you want to read the JSON file content
-                string jsonContent = System.IO.File.ReadAllText(filename);
-                // Do something with the JSON content
-            }
-        }
 
         private async void OnExit(object sender, ExitEventArgs e)
 		{

@@ -27,6 +27,20 @@ public class EnabledAddonsSection : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies")
             },
+            new ModOption(ctx)
+            {
+                InternalName = "colorarm",
+                Name = "Colorful Armbands",
+                Authors = [Author.Feonyx],
+                Category="Addon",
+
+               // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.colorfularmbands"),
+                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("p3rpc.colorfularmbands"),
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("p3rpc.colorfularmbands")
+            }
         ];
     }
 }

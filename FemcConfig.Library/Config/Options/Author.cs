@@ -40,4 +40,5 @@ public record Author(string Name, string? Description = null, string? Url = null
 	public static readonly Author Cielbell = new("Cielbell", Url: "https://ciel-bell.tumblr.com/");
 	public static readonly Author esaadrien = new("Esa and Adrien", Description: "This was made by both Esa: https://x.com/EsaBlythe and Adrien: https://x.com/CatboyRonReagan");
 	public static readonly Author Shiosakana = new("Shiosakana", Url: "https://x.com/shiosakana1998");
+    public static readonly Author Feonyx = new("Feonyx");
 };

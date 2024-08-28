@@ -14,7 +14,7 @@ public class FemcProjectSection : ISection
         [
             new ModOption(ctx)
             {
-                InternalName = "femc",
+                InternalName = "femcdepend",
                 Name = "Femc Reloaded Project",
                 Authors = [Author.Femc],
                 Category="Addon",
