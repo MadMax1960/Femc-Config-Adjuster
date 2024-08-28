@@ -87,6 +87,18 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool eddis = true;
 
+    [Category("Battle Music")]
+    [Description("Enable Jen's It's Going down now?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool jenadv = true;
+
+    [Category("Music")]
+    [Description("Enable Way of life by Jen as the daytime music?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool wayOfLifeJen = true;
+
     [Category("Music")]
     [Description("Enable Color your Night as the night music?")]
     [DefaultValue(false)]
@@ -127,7 +139,7 @@ public partial class FemcModConfig : ObservableObject
     [Description("Enable Way of life as the daytime music?")]
     [DefaultValue(true)]
     [ObservableProperty]
-    private bool wayoflife = true;
+    private bool wayofLife = true;
 
     [Category("Music")]
     [Description("Enable Want to Be Close -Reload- as the daytime music inside the school (Phase 1)?")]

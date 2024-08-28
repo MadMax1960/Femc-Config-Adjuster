@@ -26,7 +26,7 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Mineformer = new("MineFormer", Url: "https://www.youtube.com/@mineformer_");
     public static readonly Author Merfie = new("Merfie", Url: "https://www.youtube.com/@merfie-el-mas-xoro-del-caserio");
     public static readonly Author Zeonyph = new("Zeonyph", Url: "https://x.com/ZeoNyph");
-    public static readonly Author Jen = new("Jen", Url: "https://www.youtube.com/channel/UCjQSQVa1-OgDmp4ypfdRbWQ");
+    public static readonly Author Jen = new("Jen", Url: "https://www.youtube.com/@xUnreachablee");
     public static readonly Author TTango = new("Tiny Tango", Url: "https://x.com/tango_tiny");
     public static readonly Author Karma = new("Karma", Url: "https://www.youtube.com/@glimpseofamemory2743");
     public static readonly Author TheBestAstroNOT = new("TheBestAstroNOT");
