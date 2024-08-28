@@ -51,7 +51,7 @@ public partial class PreviewWindow : FluentWindow
             {
                 case "femcdepend":
                     MessageBox.Show("The app will now install the Femc Mod. To install its depndencies go to the dependencies page in the addons category.");
-                    LaunchR2Protocol("r2: https://github.com/MadMax1960/Femc-Reloaded-Project/releases/latest");
+                    LaunchR2Protocol("r2:https://github.com/MadMax1960/Femc-Reloaded-Project/releases/latest");
                     break;
                 case "ryo":
                     LaunchR2Protocol("r2:https://gamebanana.com/mods/495507");
