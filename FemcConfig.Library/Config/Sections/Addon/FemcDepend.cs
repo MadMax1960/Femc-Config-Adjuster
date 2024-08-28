@@ -2,7 +2,7 @@
 namespace FemcConfig.Library.Config.Sections;
 public class FemcDependSection : ISection
 {
-    public string Name { get; } = "Dependency Managment";
+    public string Name { get; } = "Dependencies";
     public string Description { get; } = "Use this page to install and manage the dependencies used by the Femc Mod.";
     public SectionCategory Category { get; } = SectionCategory.Addon;
     public ModOption[] Options { get; }
@@ -21,12 +21,12 @@ public class FemcDependSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://gamebanana.com/mods/495507",
 
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Ryo.Reloaded"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("Ryo.Reloaded"),
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("Ryo.Reloaded")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("Ryo.Reloaded")
             },
             new ModOption(ctx)
             {
@@ -36,12 +36,12 @@ public class FemcDependSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://github.com/AnimatedSwine37/UnrealEssentials/releases/latest",
 
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("UnrealEssentials"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("UnrealEssentials"),
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("UnrealEssentials")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("UnrealEssentials")
             },
             new ModOption(ctx)
             {
@@ -51,12 +51,12 @@ public class FemcDependSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://gamebanana.com/mods/501833",
 
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("P3R.CostumeFramework"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("P3R.CostumeFramework"),
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("P3R.CostumeFramework")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("P3R.CostumeFramework")
             },
             new ModOption(ctx)
             {
@@ -67,11 +67,11 @@ public class FemcDependSection : ISection
                 DownloadUrl = "https://gamebanana.com/mods/495456",
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("BGME.Framework.P3R"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("BGME.Framework.P3R"),
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("BGME.Framework.P3R")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("BGME.Framework.P3R")
             },
             new ModOption(ctx)
             {
@@ -81,12 +81,12 @@ public class FemcDependSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://gamebanana.com/mods/495458",
 
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("BGME.BattleThemes"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("BGME.BattleThemes"),
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("BGME.BattleThemes")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("BGME.BattleThemes")
             },
             new ModOption(ctx)
             {
@@ -96,12 +96,12 @@ public class FemcDependSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://gamebanana.com/mods/500638",
 
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Unreal.ObjectsEmitter.Reloaded"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("Unreal.ObjectsEmitter.Reloaded"),
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("Unreal.ObjectsEmitter.Reloaded")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("Unreal.ObjectsEmitter.Reloaded")
             },
             new ModOption(ctx)
             {
@@ -111,12 +111,12 @@ public class FemcDependSection : ISection
                 Category = "Addon",
                 DownloadUrl = "https://gamebanana.com/mods/494020",
 
-               // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.essentials"),
-                Disable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Remove("p3rpc.essentials"),
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => { },
+                Disable = (ctx) => { },
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("p3rpc.essentials")
+                IsEnabledFunc = (ctx) => ctx.ReloadedAppConfig.Settings.SortedMods.Contains("p3rpc.essentials"),
             },
         ];
     }
