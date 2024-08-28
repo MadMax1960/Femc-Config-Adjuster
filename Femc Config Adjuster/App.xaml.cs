@@ -109,110 +109,11 @@ public partial class App
     {
         _host.Start();
     }
-        public static string SelectFolder()
-        {
-            var dialog = new OpenFolderDialog();
-            var result = dialog.ShowDialog();
-
-            // Show the dialog
-            if (result==true)
-                {
-                    // Return the selected folder path
-                    return dialog.FolderName;
-                }
-            return null;
-        }
 
         /// <summary>
         /// Occurs when the application is loading.
         /// </summary>
         /// 
-
-        private async void OnStartup(object sender, StartupEventArgs e)
-		{
-			try
-			{
-                _host.Start();
-			}
-			catch(Exception ex)
-			{
-                HandleException(ex);
-            }
-		}
-
-		private static void HandleException(Exception ex)
-		{
-            string path=WriteCrashLog(ex);
-            MessageBox.Show("An error occurred: " + ex.Message + " Please create an issue on GitHub if this issue still persists after deleting your config or restarting the app.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-            MessageBoxResult result = MessageBoxResult.No;
-            if(ex.Message== "Failed to find Reloaded II ENV variable.")
-            {
-                result = MessageBox.Show("Would you like to select the reloaded mods folder directly?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if (result == MessageBoxResult.Yes)
-                {
-                    // Code to open the GitHub issue page or perform another action
-                    File.WriteAllText(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt"), SelectFolder());
-                    MessageBox.Show("The application will now be restarted");
-                    RestartApplication();
-                }
-            }
-            else if (ex.Message == "Failed to find FEMC dir.")
-            {
-                result = MessageBox.Show("Would you like to clear the app cache (This might fix the errors if you recently changed the location of your reloaded directory)?", "", MessageBoxButton.YesNo, MessageBoxImage.Question);
-                if(result == MessageBoxResult.Yes)
-                {
-                    if (File.Exists(Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt")))
-                    {
-                        File.Delete(Path.Join(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "FemcConfigApp", "reloadpath.txt"));
-                    }
-                    MessageBox.Show("The application will now be restarted");
-                    RestartApplication();
-                }
-            }
-            if (result == MessageBoxResult.No)
-            {
-                // Start the default web browser with the specified URL
-                if (path != "Crash Log Write Failed")
-                {
-                    Process.Start(new ProcessStartInfo
-                    {
-                        FileName = path,
-                        UseShellExecute = true
-                    });
-                }
-                // Close the application
-                Application.Current.Shutdown();
-            }
-        }
-
-        private static string WriteCrashLog(Exception ex)
-        {
-            // Get the path to the Roaming AppData directory
-            string appDataPath = Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData);
-
-            // Define a folder for the crash logs
-            string logFolderPath = Path.Combine(appDataPath, "FemcConfigApp", "CrashLogs");
-
-            // Ensure the directory exists
-            Directory.CreateDirectory(logFolderPath);
-
-            // Define the log file path with a timestamp
-            string logFileName = $"CrashLog_{DateTime.Now:yyyyMMdd_HHmmss}.txt";
-            string logFilePath = Path.Combine(logFolderPath, logFileName);
-
-            // Write the exception details to the log file
-            try
-            {
-                using (StreamWriter writer = new StreamWriter(logFilePath))
-                {
-                    writer.WriteLine("Crash Log - " + DateTime.Now);
-                    writer.WriteLine();
-                    writer.WriteLine("Exception Message:");
-                    writer.WriteLine(ex.Message);
-                    writer.WriteLine();
-                    writer.WriteLine("Stack Trace:");
-                    writer.WriteLine(ex.StackTrace);
-                }
 
     /// <summary>
     /// Occurs when the application is closing.
