@@ -9,6 +9,7 @@ public class EnabledAddonsSection : ISection
     public EnabledAddonsSection(AppService app)
     {
         var ctx = app.GetContext();
+
         // Set all the options available.
         this.Options =
         [
@@ -18,7 +19,7 @@ public class EnabledAddonsSection : ISection
                 InternalName = "movieaddon",
                 Name = "Persona 3 Reload Intro Movies",
                 Authors = [Author.Mosq, Author.TheBestAstroNOT, Author.Neptune],
-                Category="Addon",
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Persona_3_Reload_Intro_Movies"),
@@ -32,7 +33,8 @@ public class EnabledAddonsSection : ISection
                 InternalName = "colorarm",
                 Name = "Colorful Armbands",
                 Authors = [Author.Feonyx],
-                Category="Addon",
+                Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/525920",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.colorfularmbands"),

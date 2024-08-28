@@ -19,6 +19,7 @@ public class FemcDependSection : ISection
                 Name = "Ryo Framework",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/495507",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Ryo.Reloaded"),
@@ -33,6 +34,7 @@ public class FemcDependSection : ISection
                 Name = "Unreal Essentials",
                 Authors = [Author.AnimatedSwine37, Author.Rirurin],
                 Category = "Addon",
+                DownloadUrl = "https://github.com/AnimatedSwine37/UnrealEssentials/releases/latest",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("UnrealEssentials"),
@@ -47,6 +49,7 @@ public class FemcDependSection : ISection
                 Name = "Costume Framework",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/501833",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("P3R.CostumeFramework"),
@@ -61,6 +64,7 @@ public class FemcDependSection : ISection
                 Name = "BGME Framework for P3R",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/495456",
 
                 // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("BGME.Framework.P3R"),
@@ -75,6 +79,7 @@ public class FemcDependSection : ISection
                 Name = "BGME Battle Themes",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/495458",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("BGME.BattleThemes"),
@@ -89,6 +94,7 @@ public class FemcDependSection : ISection
                 Name = "Unreal Objects Emitter",
                 Authors = [Author.ZutomayoFan50],
                 Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/500638",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Unreal.ObjectsEmitter.Reloaded"),
@@ -103,6 +109,7 @@ public class FemcDependSection : ISection
                 Name = "Persona 3 Reload Essentials",
                 Authors = [Author.AnimatedSwine37, Author.Rirurin],
                 Category = "Addon",
+                DownloadUrl = "https://gamebanana.com/mods/494020",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.essentials"),

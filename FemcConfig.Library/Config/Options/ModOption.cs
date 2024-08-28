@@ -57,6 +57,11 @@ public class ModOption : ObservableObject
     public string Category { get; init; } = string.Empty;
 
     /// <summary>
+    /// Download URL of option, if not included with FEMC.
+    /// </summary>
+    public string? DownloadUrl { get; init; }
+
+    /// <summary>
     /// Authors of option.
     /// </summary>
     public required Author[] Authors { get; init; }

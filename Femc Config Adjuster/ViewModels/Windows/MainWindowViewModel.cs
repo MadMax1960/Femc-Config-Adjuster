@@ -4,16 +4,8 @@
 // All Rights Reserved.
 
 using CommunityToolkit.Mvvm.ComponentModel;
-using FemcConfig.Library.Config;
-using FemcConfig.Library.Utils;
 using System.Collections.ObjectModel;
-using System.IO;
-using System.Linq.Expressions;
-using System.Windows;
-using System.Windows.Automation;
 using Wpf.Ui.Controls;
-using FemcConfig.Library.Utils;
-using FemcConfig.Library.Config.Models;
 
 namespace Femc_Config_Adjuster.ViewModels.Windows;
 
@@ -72,13 +64,4 @@ public partial class MainWindowViewModel : ObservableObject
             TargetPageType = typeof(Views.Pages.Categories.Category_Addon),
         },
     ];
-    private static bool CheckModExistence(string id)
-    {
-        return JsonUtils.DeserializeFile<EnabledModConfiguration>(Path.Join(Path.GetDirectoryName(Environment.GetEnvironmentVariable("RELOADEDIIMODS"))!, "Apps", "p3r.exe", "AppConfig.json")).EnabledMods.Contains(id) ? true : false;
-    }
-    public class EnabledModConfiguration
-    {
-        public List<string> EnabledMods { get; set; }
-    }
-
 }

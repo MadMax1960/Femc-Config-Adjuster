@@ -17,7 +17,7 @@ public class FemcProjectSection : ISection
                 InternalName = "femcdepend",
                 Name = "Femc Reloaded Project",
                 Authors = [Author.Femc],
-                Category="Addon",
+                Category = "Addon",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.femc"),

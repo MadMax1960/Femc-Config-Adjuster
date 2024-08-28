@@ -48,7 +48,7 @@
                 <RowDefinition Height="*" />
                 <RowDefinition Height="auto" />
             </Grid.RowDefinitions>
-            <ScrollViewer Grid.RowSpan="2" Margin="0,0,0,85">
+            <ScrollViewer>
                 <StackPanel Margin="16,0">
                     <TextBlock
                         Margin="0,8"
@@ -114,28 +114,39 @@
                     </ItemsControl>
                 </StackPanel>
             </ScrollViewer>
-            <StackPanel Grid.Row="1" Margin="8,62,8,8">
+            <StackPanel Grid.Row="1" Margin="8">
                 <Button
                     Margin="0,8"
                     HorizontalAlignment="Stretch"
                     BorderBrush="{DynamicResource AccentTextFillColorPrimaryBrush}"
                     BorderThickness="1"
-                    Click="Button_Click"
+                    Click="Button_Confirm"
                     Content="Confirm"
                     Foreground="{DynamicResource AccentTextFillColorPrimaryBrush}" />
                 <Button
                     Margin="0,8"
                     HorizontalAlignment="Stretch"
-                    Click="Button_Click_1"
-                    Content="Close" />
+                    BorderThickness="1"
+                    Click="Button_Download"
+                    Content="Download Addon">
+                    <Button.Style>
+                        <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
+                            <Style.Setters>
+                                <Setter Property="Visibility" Value="Collapsed" />
+                            </Style.Setters>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding Option.DownloadUrl, Converter={StaticResource IsNullConverter}}" Value="False">
+                                    <Setter Property="Visibility" Value="Visible" />
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
                 <Button
-                    x:Name="addon"
                     Margin="0,8"
                     HorizontalAlignment="Stretch"
-                    BorderThickness="1"
-                    Click="Button_Click_2"
-                    Content="Download Addon"
-                    Visibility="Visible" />
+                    Click="Button_Close"
+                    Content="Close" />
             </StackPanel>
             <ui:Image
                 Grid.RowSpan="2"

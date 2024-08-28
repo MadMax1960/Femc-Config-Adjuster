@@ -26,7 +26,7 @@ public partial class OptionView : UserControl
             {
                 DataContext = new PreviewWindowViewModel(optionViewModel.Option),
             };
-            previewWindow.addon.Visibility = (new PreviewWindowViewModel(optionViewModel.Option).Category=="Addon") ? Visibility.Visible : Visibility.Collapsed;
+
             previewWindow.ShowDialog();
         }
     }
