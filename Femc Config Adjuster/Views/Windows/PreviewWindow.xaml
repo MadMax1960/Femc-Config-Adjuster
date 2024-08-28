@@ -128,7 +128,7 @@
                     HorizontalAlignment="Stretch"
                     BorderThickness="1"
                     Click="Button_Download"
-                    Content="Download Addon">
+                    Content="Download">
                     <Button.Style>
                         <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
                             <Style.Setters>
