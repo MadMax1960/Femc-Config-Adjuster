@@ -12,11 +12,21 @@ public static class JsonUtils
         Converters = { new JsonStringEnumConverter() },
         WriteIndented = true
     };
+	public static T DeserializeFile<T>(string file)
+	{
+		byte[] fileBytes = File.ReadAllBytes(file);
 
-    public static T DeserializeFile<T>(string file)
-        => JsonSerializer.Deserialize<T>(File.ReadAllBytes(file), serializerOptions) ?? throw new Exception();
+		if (fileBytes.Length >= 3 && fileBytes[0] == 0xEF && fileBytes[1] == 0xBB && fileBytes[2] == 0xBF)
+		{
+			fileBytes = fileBytes[3..]; // Skip the BOM
+		}
 
-    public static void SerializeFile<T>(T obj, string file)
+		return JsonSerializer.Deserialize<T>(fileBytes, serializerOptions)
+			   ?? throw new Exception("Failed to deserialize JSON.");
+	}
+
+
+	public static void SerializeFile<T>(T obj, string file)
     {
         var objText = JsonSerializer.Serialize(obj, serializerOptions);
         File.WriteAllText(file, objText);
