@@ -11,6 +11,7 @@ using FemcConfig.Library.Config.Sections;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Serilog;
 using System.IO;
 using System.Reflection;
 using System.Windows;
@@ -110,11 +111,6 @@ public partial class App
         _host.Start();
     }
 
-        /// <summary>
-        /// Occurs when the application is loading.
-        /// </summary>
-        /// 
-
     /// <summary>
     /// Occurs when the application is closing.
     /// </summary>
@@ -130,6 +126,8 @@ public partial class App
 	private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
 	{
         // For more info see https://docs.microsoft.com/en-us/dotnet/api/system.windows.application.dispatcherunhandledexception?view=windowsdesktop-6.0
+        Log.Error(e.Exception, e.Exception.Message);
+
         var exceptionWin = new ExceptionWindow(e.Exception);
         exceptionWin.Show();
 	}
