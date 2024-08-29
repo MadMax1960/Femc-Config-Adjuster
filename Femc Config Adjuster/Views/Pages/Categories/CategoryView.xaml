@@ -33,30 +33,30 @@
                 <RowDefinition Height="auto" />
                 <RowDefinition Height="*" />
             </Grid.RowDefinitions>
-            <ScrollViewer Margin="0,0,0,10" Grid.RowSpan="2">
+            <ScrollViewer Grid.RowSpan="2" Margin="0,0,0,10">
                 <StackPanel Grid.RowSpan="2">
-                <TextBlock
-                    Grid.Column="0"
-                    FontSize="24"
-                    FontWeight="Light"
-                    Text="Settings" />
-                
-                    <ListView
-                    Margin="8,4"
-                    ItemsSource="{Binding Sections}"
-                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
-                    SelectedItem="{Binding SelectedSection}">
+                    <TextBlock
+                        Grid.Column="0"
+                        FontSize="24"
+                        FontWeight="Light"
+                        Text="Settings" />
+
+                    <ui:ListView
+                        Margin="8,4"
+                        ItemsSource="{Binding Sections}"
+                        ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                        SelectedItem="{Binding SelectedSection}">
                         <ListView.ItemTemplate>
                             <DataTemplate>
                                 <TextBlock
-                                Margin="8,4"
-                                Text="{Binding Name}"
-                                TextWrapping="Wrap" />
+                                    Margin="8,4"
+                                    Text="{Binding Name}"
+                                    TextWrapping="Wrap" />
                             </DataTemplate>
                         </ListView.ItemTemplate>
-                    </ListView>
-                
-            </StackPanel>
+                    </ui:ListView>
+
+                </StackPanel>
             </ScrollViewer>
 
 

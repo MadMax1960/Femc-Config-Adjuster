@@ -1,4 +1,4 @@
-﻿<Window
+﻿<ui:FluentWindow
     x:Class="Femc_Config_Adjuster.Views.Windows.SetupWindow"
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -7,27 +7,42 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     Title="FEMC Config Setup"
-    Width="400"
+    Width="500"
     Height="200"
+    ExtendsContentIntoTitleBar="True"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
     ResizeMode="NoResize"
+    WindowBackdropType="Mica"
+    WindowCornerPreference="Round"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
     <Grid Margin="8">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
 
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="FEMC Config Setup"
+            CloseWindowByDoubleClickOnIcon="True">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
+            </ui:TitleBar.Icon>
+        </ui:TitleBar>
+
         <TextBlock
+            Grid.Row="1"
             FontSize="20"
             FontWeight="SemiBold"
             Text="Reloaded II" />
-        <TextBlock Grid.Row="1" Text="Find and select your Reloaded II install (exe) to continue." />
+        <TextBlock Grid.Row="2" Text="Find and select your Reloaded II install (exe) to continue." />
         <Button
-            Grid.Row="2"
+            Grid.Row="3"
             HorizontalAlignment="Stretch"
             Click="Button_Click"
             Content="Select Reloaded II" />
     </Grid>
-</Window>
+</ui:FluentWindow>

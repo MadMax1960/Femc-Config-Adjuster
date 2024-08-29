@@ -2,19 +2,22 @@
 using Microsoft.Win32;
 using System.IO;
 using System.Windows;
+using Wpf.Ui.Appearance;
+using Wpf.Ui.Controls;
 
 namespace Femc_Config_Adjuster.Views.Windows;
 
 /// <summary>
 /// Interaction logic for SetupWindow.xaml
 /// </summary>
-public partial class SetupWindow : Window
+public partial class SetupWindow : FluentWindow
 {
     private readonly AppService _app;
     private readonly Action _finishSetup;
 
     public SetupWindow(AppService app, Action finishSetup)
     {
+        SystemThemeWatcher.Watch(this);
         InitializeComponent();
 
         _app = app;
