@@ -16,7 +16,7 @@ public class IntroMovieSection : ISection
     {
         var ctx = app.GetContext();
 
-        if (ctx.ReloadedAppConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies"))
+        if (ctx.ReloadedAppConfig.Settings.SortedMods.Contains("Persona_3_Reload_Intro_Movies"))
         {
             this.Category = SectionCategory.Addon;
         }
