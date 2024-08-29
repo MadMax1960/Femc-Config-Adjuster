@@ -33,14 +33,28 @@ public partial class SetupWindow : FluentWindow
         };
 
         var result = dialog.ShowDialog();
-        if (result == true)
+        if (result != true)
         {
-            var path = dialog.FileName;
-            var reloadedDir = Path.GetDirectoryName(path)!;
-            _app.Initialize(reloadedDir);
-            _finishSetup();
-
-            this.Close();
+            return;
         }
+
+
+        var path = dialog.FileName;
+        var reloadedDir = Path.GetDirectoryName(path)!;
+
+        try
+        {
+            _app.Initialize(reloadedDir);
+        }
+        catch (FemcNotFound)
+        {
+            var downloadWin = new DownloadWindow();
+            downloadWin.ShowDialog();
+
+            _app.Initialize(reloadedDir);
+        }
+
+        _finishSetup();
+        this.Close();
     }
 }

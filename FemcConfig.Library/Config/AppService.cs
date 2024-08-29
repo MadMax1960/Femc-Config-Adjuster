@@ -59,7 +59,7 @@ public class AppService
 
         if (femcDir == null)
         {
-            throw new Exception("Failed to find FEMC install.");
+            throw new FemcNotFound();
         }
 
         // Find FEMC mod config file.
@@ -123,6 +123,13 @@ public class AppService
             var reloadedDir = Path.GetDirectoryName(reloadedModsDir)!;
             this.Initialize(reloadedDir);
         }
+    }
+}
+
+public class FemcNotFound : Exception
+{
+    public FemcNotFound() : base("FEMC install was not found.")
+    {
     }
 }
 
