@@ -33,6 +33,14 @@ public class AOATextSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.AOAText = Models.FemcModConfig.AOATextType.DontLookBack,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOAText == Models.FemcModConfig.AOATextType.DontLookBack,
             },
-        ];
+			new ModOption(ctx)
+			{
+				InternalName = "aoatext_PerfectlyAccomplished",
+				Name="Don't Look Back",
+				Authors = [Author.Shiosakana],
+				Enable = (ctx) => ctx.FemcConfig.Settings.AOAText = Models.FemcModConfig.AOATextType.PerfectlyAccomplished,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOAText == Models.FemcModConfig.AOATextType.PerfectlyAccomplished,
+			},
+		];
     }
 }

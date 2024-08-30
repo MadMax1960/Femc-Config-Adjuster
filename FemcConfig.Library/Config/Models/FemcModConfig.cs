@@ -909,7 +909,10 @@ public partial class FemcModConfig : ObservableObject
 		Fernando,
 		Monica,
 		RonaldReagan,
-		esaadrien
+		esaadrien,
+		mekki,
+		shiosakana,
+		shiosakanaAlt
 	}
 
 	[Description("The AOA Foreground Text.")]
@@ -920,9 +923,10 @@ public partial class FemcModConfig : ObservableObject
 
     public enum AOATextType
     {
-        DontLookBack,
-        SorryBoutThat
-    }
+		DontLookBack,
+		SorryBoutThat,
+		PerfectlyAccomplished
+	}
 
 
     [Description("The Bustup.")]
@@ -946,7 +950,12 @@ public partial class FemcModConfig : ObservableObject
 		Yuunagi,
 		cielbell,
 		axolotl,
-		ghostedtoast
+		ghostedtoast,
+		Strelko,
+		gackt,
+		Jackie,
+		Lisa,
+		BetaFemcByMae
 	}
 
 	[Description("The Glass Shard in that one menu when pausing.")]

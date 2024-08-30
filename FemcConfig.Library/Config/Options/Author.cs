@@ -43,4 +43,10 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Feonyx = new("Feonyx");
     public static readonly Author AnimatedSwine37 = new("AnimatedSwine37");
     public static readonly Author Rirurin = new("rirurin");
+	public static readonly Author Strelko = new("Strelko", Url: "https://x.com/renko_040");
+	public static readonly Author Gacktenzo = new("Gacktenzo", Url: "https://x.com/gacktenzo");
+	public static readonly Author Mekki = new("Mekki");
+	public static readonly Author Jackie = new("Jackie");
+	public static readonly Author Lisa9388 = new("Lisa9388");
+	public static readonly Author Mae = new("Mae", Url: "https://x.com/stab3ry");
 };

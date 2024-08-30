@@ -59,6 +59,27 @@ public class AOASection : ISection
 				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.esaadrien,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.esaadrien,
 			},
+			new ModOption(ctx)
+			{
+				InternalName = "aoa_mekki",
+				Authors = [Author.Esa, Author.Mekki],
+				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.mekki,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.mekki,
+			},
+			new ModOption(ctx)
+			{
+				InternalName = "aoa_shiosakana",
+				Authors = [Author.Esa, Author.Shiosakana],
+				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.shiosakana,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.shiosakana,
+			},
+			new ModOption(ctx)
+			{
+				InternalName = "aoa_shiosakanaAlt",
+				Authors = [Author.Esa, Author.Shiosakana],
+				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.shiosakanaAlt,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.shiosakanaAlt,
+			},
 		];
     }
 }
