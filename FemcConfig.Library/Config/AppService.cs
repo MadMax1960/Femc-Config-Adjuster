@@ -83,23 +83,30 @@ public class AppService
         }
 
         string? movieConfigFile = null;
-        if (appConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies"))
-        {
-            foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
-            {
-                var userConfigFile = Path.Join(configDir, "ModUserConfig.json");
-                var userConfig = JsonUtils.DeserializeFile<ReloadedModUserConfig>(userConfigFile);
+		if (appConfig.Settings.EnabledMods.Contains("Persona_3_Reload_Intro_Movies"))
+		{
+			foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
+			{
+				var userConfigFile = Path.Join(configDir, "ModUserConfig.json");
 
-                if (userConfig.ModId == Constants.MOVIE_MOD_ID)
-                {
-                    movieConfigFile = Path.Join(configDir, "Config.json");
-                    break;
-                }
-            }
-        }
+				if (File.Exists(userConfigFile))
+				{
+					var userConfig = JsonUtils.DeserializeFile<ReloadedModUserConfig>(userConfigFile);
 
-        // Setup mod context.
-        this.appContext = new()
+					if (userConfig.ModId == Constants.MOVIE_MOD_ID)
+					{
+						movieConfigFile = Path.Join(configDir, "Config.json");
+						break;
+					}
+				}
+				else
+				{
+				}
+			}
+		}
+
+		// Setup mod context.
+		this.appContext = new()
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
