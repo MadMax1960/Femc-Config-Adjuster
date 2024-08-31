@@ -7,6 +7,7 @@ public enum SectionCategory
     TwoD,
     ThreeD,
     Audio,
+    Theo,
     Addon,
     Disabled /*Dummy category so i can disable a section*/,
 };
