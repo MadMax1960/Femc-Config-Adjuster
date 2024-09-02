@@ -8,7 +8,7 @@ public class Model : ISection
 
 	public string Description { get; } = "Theo Model";
 
-	public SectionCategory Category { get; } = SectionCategory.ThreeD;
+	public SectionCategory Category { get; } = SectionCategory.Theo;
 
 	public ModOption[] Options { get; }
 
