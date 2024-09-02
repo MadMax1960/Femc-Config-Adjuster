@@ -20,6 +20,7 @@ public class EnabledAddonsSection : ISection
                 Name = "Persona 3 Reload Intro Movies",
                 Authors = [Author.Mosq, Author.TheBestAstroNOT, Author.Neptune],
                 Category = "Addon",
+                DownloadUrl = "https://github.com/TheBestAstroNOT/Persona-3-Reload-Intro-Movies/releases/download/1.0.0/Persona_3_Reload_Intro_Movies1.0.0.7z"
 
                 // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("Persona_3_Reload_Intro_Movies"),
