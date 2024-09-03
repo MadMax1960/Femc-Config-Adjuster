@@ -44,7 +44,7 @@
                             <Border
                                 Grid.Row="1"
                                 Grid.Column="1"
-                                Width="225"
+                                Width="250"
                                 Margin="8"
                                 Padding="8"
                                 Background="{DynamicResource SubtleFillColorSecondaryBrush}"
