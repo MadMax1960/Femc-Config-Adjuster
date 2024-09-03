@@ -25,11 +25,22 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <TextBlock
-            Margin="0,8"
-            FontSize="32"
-            FontWeight="SemiBold"
-            Text="UI" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <TextBlock
+                Margin="0,8"
+                FontSize="32"
+                FontWeight="SemiBold"
+                Text="UI" />
+            <Button
+                Grid.Column="1"
+                HorizontalAlignment="Right"
+                Command="{Binding ResetCommand}"
+                Content="Reset" />
+        </Grid>
 
         <Grid Grid.Row="1">
             <ScrollViewer>

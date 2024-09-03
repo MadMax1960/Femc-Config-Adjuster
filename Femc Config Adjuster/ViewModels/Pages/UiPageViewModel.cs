@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using DynamicData.Binding;
 using FemcConfig.Library.Config;
 using FemcConfig.Library.Config.Models;
@@ -6,9 +7,10 @@ using System.Reactive.Linq;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages;
 
-public class UiPageViewModel
+public partial class UiPageViewModel : ObservableObject
 {
     private readonly SavableFile<FemcModConfig> config;
+    private readonly Dictionary<string, ConfigColor> defaults = [];
 
     public UiPageViewModel(AppService app)
     {
@@ -26,6 +28,7 @@ public class UiPageViewModel
         //    new(nameof(this.config.DateTimePanelBottomTextColor), this.config.DateTimePanelBottomTextColor),
         //];
 
+        var defaultConfig = new FemcModConfig();
         var options = new List<UiOption>();
 
         var colorProps = this.config.Settings.GetType().GetProperties().Where(x => x.PropertyType == typeof(ConfigColor));
@@ -33,6 +36,8 @@ public class UiPageViewModel
         {
             var option = new UiOption(prop.Name, (ConfigColor)prop.GetValue(this.config.Settings)!);
             options.Add(option);
+
+            this.defaults[prop.Name] = (ConfigColor)prop.GetValue(defaultConfig)!;
 
             //option.PropertyChanged += (sender, args) => app.GetContext().FemcConfig.Save();
             option.WhenAnyPropertyChanged().Skip(1).Throttle(TimeSpan.FromMilliseconds(250)).Subscribe(_ => this.config.Save());
@@ -42,6 +47,18 @@ public class UiPageViewModel
     }
 
     public UiOption[] Options { get; }
+
+    [RelayCommand]
+    private void Reset()
+    {
+        var props = this.config.Settings.GetType().GetProperties().Where(x => x.PropertyType == typeof(ConfigColor));
+        foreach (var prop in props)
+        {
+            prop.SetValue(this.config.Settings, this.defaults[prop.Name]);
+        }
+
+        this.config.Save();
+    }
 }
 
 public class UiOption : ObservableObject
