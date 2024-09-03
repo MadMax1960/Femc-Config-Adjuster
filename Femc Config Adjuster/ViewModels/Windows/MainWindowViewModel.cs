@@ -61,7 +61,7 @@ public partial class MainWindowViewModel : ObservableObject
 		new NavigationViewItem()
 		{
             Content = "Theo",
-            Icon = new SymbolIcon { Symbol = SymbolRegular.Speaker216 },
+            Icon = new SymbolIcon { Symbol = SymbolRegular.PlayingCards20 },
 			TargetPageType = typeof(Views.Pages.Categories.Category_Theo),
         },
         new NavigationViewItem()
