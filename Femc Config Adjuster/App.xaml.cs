@@ -66,6 +66,7 @@ public partial class App
 			}
 
 			services.AddSingleton<SettingsViewModel>();
+            services.AddSingleton<UiPageViewModel>();
 
             // FEMC config library.
             services.AddSingleton<AppService>();

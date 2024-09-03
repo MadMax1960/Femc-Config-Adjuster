@@ -4,6 +4,7 @@
 // All Rights Reserved.
 
 using CommunityToolkit.Mvvm.ComponentModel;
+using Femc_Config_Adjuster.Views.Pages;
 using System.Collections.ObjectModel;
 using Wpf.Ui.Controls;
 
@@ -68,6 +69,12 @@ public partial class MainWindowViewModel : ObservableObject
             Content = "Addons",
             Icon = new SymbolIcon { Symbol = SymbolRegular.Library28},
             TargetPageType = typeof(Views.Pages.Categories.Category_Addon),
+        },
+        new NavigationViewItem()
+        {
+            Content = "UI",
+            Icon = new SymbolIcon { Symbol = SymbolRegular.Color16},
+            TargetPageType = typeof(UiPage),
         },
     ];
 }

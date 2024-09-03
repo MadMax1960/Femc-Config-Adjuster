@@ -1,9 +1,23 @@
 ﻿#pragma warning disable CS1591
 
+using CommunityToolkit.Mvvm.ComponentModel;
+
 namespace FemcConfig.Library.Config.Models;
 
-public class ConfigColor
+public partial class ConfigColor : ObservableObject
 {
+    [ObservableProperty]
+    private byte r;
+
+    [ObservableProperty]
+    private byte g;
+
+    [ObservableProperty]
+    private byte b;
+
+    [ObservableProperty]
+    private byte a;
+
     // Basic Color Presets
     public static readonly ConfigColor White = new ConfigColor(0xff, 0xff, 0xff, 0xff);
     public static readonly ConfigColor Black = new ConfigColor(0x0, 0x0, 0x0, 0xff);
@@ -55,10 +69,6 @@ public class ConfigColor
 
     public static readonly ConfigColor PersonaStatusSkillListBg = new ConfigColor(0x2a, 0x00, 0x12, 0xff);
     public static readonly ConfigColor PersonaStatusSkillListCheckboardAlt = new ConfigColor(0x5c, 0x27, 0x3e, 0xff);
-    public byte R { get; set; }
-    public byte G { get; set; }
-    public byte B { get; set; }
-    public byte A { get; set; }
 
     public ConfigColor(byte R, byte G, byte B, byte A) { this.R = R; this.G = G; this.B = B; this.A = A; }
 
