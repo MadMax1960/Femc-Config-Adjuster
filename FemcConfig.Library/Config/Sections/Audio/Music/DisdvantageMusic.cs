@@ -37,11 +37,11 @@ public class DisadvantageMusicSection : ISection
                 Authors = [Author.Atlus],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Mastertar = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Mastertar = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.MasterTar = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.MasterTar = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Mastertar,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.MasterTar,
             },
            new ModOption(ctx)
             {
@@ -50,11 +50,11 @@ public class DisadvantageMusicSection : ISection
                 Authors = [Author.Mosq],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Mosqdis = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Mosqdis = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.MosqDis = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.MosqDis = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Mosqdis,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.MosqDis,
             },
            new ModOption(ctx)
             {
@@ -63,11 +63,11 @@ public class DisadvantageMusicSection : ISection
                 Authors = [Author.Karma],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Karmadis = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Karmadis = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.KarmaDis = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.KarmaDis = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Karmadis,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.KarmaDis,
             },
             new ModOption(ctx)
             {
@@ -76,11 +76,11 @@ public class DisadvantageMusicSection : ISection
                 Authors = [Author.GillStudio],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Sgdis = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Sgdis = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.SgDis = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.SgDis = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Sgdis,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.SgDis,
             },
             new ModOption(ctx)
             {
@@ -89,11 +89,11 @@ public class DisadvantageMusicSection : ISection
                 Authors = [Author.EidieK87],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Eddis = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Eddis = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.EdDis = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.EdDis = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Eddis,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EdDis,
             }
         ];
     }

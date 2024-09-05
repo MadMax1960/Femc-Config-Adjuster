@@ -22,11 +22,11 @@ public class FinalMusic : ISection
                 Name = "Burn My Dread -Last Battle (Reload)",
                 Authors = [Author.Atlus],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Bmd = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Bmd = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.BMD = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.BMD = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Bmd,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BMD,
             },
             new ModOption(ctx)
             {
@@ -34,11 +34,11 @@ public class FinalMusic : ISection
                 Name = "Soul Phrase -Final Battle",
                 Authors = [Author.Karma],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Soulpk = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Soulpk = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.SoulPK = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.SoulPK = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Soulpk,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.SoulPK,
             },
         ];
     }

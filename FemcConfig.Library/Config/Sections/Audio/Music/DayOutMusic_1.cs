@@ -22,11 +22,11 @@ public class DayOutMusic_1 : ISection
                 Name = "Way of Life (Mosq Remix)",
                 Authors = [Author.Mosq],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.WayofLife = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.WayofLife = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.WayOfLife = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.WayOfLife = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WayofLife,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WayOfLife,
             },
             new ModOption(ctx)
             {

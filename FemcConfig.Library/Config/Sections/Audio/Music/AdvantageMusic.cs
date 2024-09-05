@@ -37,11 +37,11 @@ public class AdvantageMusicSection : ISection
                 Authors = [Author.Atlus],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Itgoingdown = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Itgoingdown = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.ItGoingDown = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.ItGoingDown = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Itgoingdown,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ItGoingDown,
             },
             new ModOption(ctx)
             {
@@ -50,11 +50,11 @@ public class AdvantageMusicSection : ISection
                 Authors = [Author.Jen],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Jenadv = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Jenadv = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.JenAdv = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.JenAdv = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Jenadv,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.JenAdv,
             },
            new ModOption(ctx)
             {
@@ -63,11 +63,11 @@ public class AdvantageMusicSection : ISection
                 Authors = [Author.Mosq],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Mosqadv = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Mosqadv = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.MosqAdv = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.MosqAdv = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Mosqadv,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.MosqAdv,
             },
            new ModOption(ctx)
             {
@@ -76,11 +76,11 @@ public class AdvantageMusicSection : ISection
                 Authors = [Author.Karma],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Karmaadv = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Karmaadv = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.KarmaAdv = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.KarmaAdv = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Karmaadv,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.KarmaAdv,
             },
             new ModOption(ctx)
             {
@@ -89,11 +89,11 @@ public class AdvantageMusicSection : ISection
                 Authors = [Author.EidieK87],
 
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Eidadv = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Eidadv = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.EidAdv = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.EidAdv = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Eidadv,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EidAdv,
             }
         ];
     }

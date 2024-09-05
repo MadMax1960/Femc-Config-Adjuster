@@ -34,11 +34,11 @@ public class SocialMusic : ISection
                 Name = "After School",
                 Authors = [Author.Mosq],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Afterschool = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Afterschool = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.AfterSchool = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.AfterSchool = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Afterschool,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AfterSchool,
             }
         ];
     }

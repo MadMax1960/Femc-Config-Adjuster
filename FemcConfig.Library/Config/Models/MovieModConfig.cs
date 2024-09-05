@@ -26,4 +26,10 @@ public partial class MovieModConfig : ObservableObject
     [Category("Intro")]
     [ObservableProperty]
     private bool soulmosq = true;
+
+    [Category("Intro")]
+    [Description("View this movie on startup?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool epag = true;
 }

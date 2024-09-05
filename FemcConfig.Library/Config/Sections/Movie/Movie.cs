@@ -63,6 +63,19 @@ public class IntroMovieSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.Soulmosq,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "movie_EA",
+                Name = "Episode Aigis OP",
+                Authors = [Author.Atlus],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.MovieConfig!.Settings.Epag = true,
+                Disable = (ctx) => ctx.MovieConfig!.Settings.Epag = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.MovieConfig!.Settings.Epag,
             }
         ];
     }

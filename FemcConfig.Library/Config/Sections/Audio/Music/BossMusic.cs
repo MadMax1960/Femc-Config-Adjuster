@@ -22,11 +22,11 @@ public class BossMusic : ISection
                 Name = "Master Of Shadow Reload",
                 Authors = [Author.Atlus],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Bms = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Bms = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.BMS = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.BMS = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Bms,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BMS,
             },
             new ModOption(ctx)
             {
@@ -34,11 +34,11 @@ public class BossMusic : ISection
                 Name = "Master Of Shadow Fate Mix",
                 Authors = [Author.Mosq],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Bmsf = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Bmsf = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.BMSF = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.BMSF = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Bmsf,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BMSF,
             },
         ];
     }

@@ -22,11 +22,11 @@ public class DayInMusic_1 : ISection
                 Name = "Time (Mosq Remix)",
                 Authors = [Author.Mosq],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Timeschool = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Timeschool = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.TimeSchool = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.TimeSchool = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Timeschool,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TimeSchool,
             },
             new ModOption(ctx)
             {
@@ -34,11 +34,11 @@ public class DayInMusic_1 : ISection
                 Name = "Time (GabiShy Remix)",
                 Authors = [Author.GabiShy, Author.Mosq],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Gabitimeschool = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Gabitimeschool = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.GabiTimeSchool = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.GabiTimeSchool = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Gabitimeschool,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.GabiTimeSchool,
             },
             new ModOption(ctx)
             {
@@ -46,11 +46,11 @@ public class DayInMusic_1 : ISection
                 Name = "Want to Be Close (Reload)",
                 Authors = [Author.Atlus],
                 // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.Wantclose = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.Wantclose = false,
+                Enable = (ctx) => ctx.FemcConfig.Settings.WantClose = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.WantClose = false,
 
                 // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Wantclose,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WantClose,
             },
         ];
     }
