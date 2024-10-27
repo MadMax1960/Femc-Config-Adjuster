@@ -34,7 +34,8 @@ public class AppService
     public void Initialize(string reloadedDir)
     {
         this.appData.Settings.ReloadedDir = reloadedDir;
-
+        if (reloadedDir is null)
+            throw new Exception("Reloaded Directory not found");
         var appConfigFile = Path.Join(reloadedDir, "Apps", "p3r.exe", "AppConfig.json");
         if (!File.Exists(appConfigFile))
         {
@@ -57,29 +58,28 @@ public class AppService
             }
         }
 
-        if (femcDir == null)
-        {
-            throw new FemcNotFound();
-        }
-
         // Find FEMC mod config file.
         var reloadedConfigsDir = Path.Join(reloadedDir, "User", "Mods");
         string? femcConfigFile = null;
         foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
         {
+            Console.WriteLine(configDir);
             var userConfigFile = Path.Join(configDir, "ModUserConfig.json");
-            var userConfig = JsonUtils.DeserializeFile<ReloadedModUserConfig>(userConfigFile);
+            var userConfig = File.Exists(userConfigFile) ? JsonUtils.DeserializeFile<ReloadedModUserConfig>(userConfigFile) : null;
 
-            if (userConfig.ModId == Constants.FEMC_MOD_ID)
+            if (userConfig is not null)
             {
-                femcConfigFile = Path.Join(configDir, "Config.json");
-                break;
+                if(userConfig.ModId == Constants.FEMC_MOD_ID)
+                {
+                    femcConfigFile = Path.Join(configDir, "Config.json");
+                    break;
+                }
             }
         }
 
         if (femcConfigFile == null || File.Exists(femcConfigFile) == false)
         {
-            throw new Exception("Failed to find FEMC config file.");
+            throw new FemcNotFound();
         }
 
         string? movieConfigFile = null;
@@ -111,7 +111,7 @@ public class AppService
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
             ReloadedAppConfig = appConfig,
-            FemcConfig = new(femcConfigFile),
+            FemcConfig = Directory.Exists(femcDir) ? new(femcConfigFile) : null,
             MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null,
         };
     }
@@ -135,7 +135,7 @@ public class AppService
 
 public class FemcNotFound : Exception
 {
-    public FemcNotFound() : base("FEMC install was not found.")
+    public FemcNotFound() : base("Failed to find FEMC config file. Please launch the game once with the mod enabled.")
     {
     }
 }
