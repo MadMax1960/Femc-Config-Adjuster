@@ -30,7 +30,7 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     private void InitializeViewModel()
     {
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
-        AppVersion = $"1.0.1 - Addons, Musics and Portable Release Compatibility Update";
+        AppVersion = $"1.1.0 - Femc Mod AutoDownload Update";
         _isInitialized = true;
     }
 

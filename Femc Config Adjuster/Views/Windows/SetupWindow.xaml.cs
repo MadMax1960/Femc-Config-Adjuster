@@ -48,9 +48,9 @@ public partial class SetupWindow : FluentWindow
         }
         catch (FemcNotFound)
         {
+            //Open a download window to download the mod via the r2 protocol.
             var downloadWin = new DownloadWindow();
             downloadWin.ShowDialog();
-
             _app.Initialize(reloadedDir);
         }
 

@@ -5,4 +5,5 @@ public enum DownloadHandler
     Browser,
     Direct,
     Reloaded,
+    Femc
 }

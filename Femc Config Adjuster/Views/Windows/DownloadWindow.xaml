@@ -15,7 +15,7 @@
     WindowCornerPreference="Round"
     WindowStartupLocation="CenterScreen"
     mc:Ignorable="d">
-    <Grid>
+    <Grid Height="182" VerticalAlignment="Top">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
@@ -29,5 +29,9 @@
                 <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
             </ui:TitleBar.Icon>
         </ui:TitleBar>
+        <Button x:Name="DownloadButton" Content="Initiate Download" Margin="286,94,0,0" Grid.Row="1" VerticalAlignment="Top" Visibility="Collapsed" Click="DownloadButton_Clicked"/>
+        <Button x:Name="Exit" Content="Close" Margin="424,94,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Exit_Clicked"/>
+        <ui:TextBlock x:Name="Version" Text="Please wait while we load the Mod Download..." Margin="0,12,114,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="376"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,43,0,0" Grid.Row="1" TextWrapping="Wrap" Text="💡Tip: If you already have the mod downloaded. Try clicking on configure mod in Reloaded-II." VerticalAlignment="Top" Width="480"/>
     </Grid>
 </ui:FluentWindow>
