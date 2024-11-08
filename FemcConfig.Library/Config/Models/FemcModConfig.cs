@@ -902,6 +902,29 @@ public partial class FemcModConfig : ObservableObject
         KotoneBeanHair
     }
 
+    [Description("The group photo")]
+    [Category("2D Options")]
+    [DefaultValue(GroupEventtype.bichelle)]
+    [ObservableProperty]
+    private GroupEventtype _GroupEventTrue = GroupEventtype.bichelle;
+
+    public enum GroupEventtype
+    {
+        bichelle,
+        ely
+    }
+
+    [Description("The photos from the Kyoto trip")]
+    [Category("2D Options")]
+    [DefaultValue(KyotoEventtype.ely)]
+    [ObservableProperty]
+    private KyotoEventtype _KyotoEventTrue = KyotoEventtype.ely;
+
+    public enum KyotoEventtype
+    {
+        ely
+    }
+
     [Description("The AOA Image.")]
     [Category("2D Options")]
     [DefaultValue(AOAType.Fernando)]
@@ -918,8 +941,9 @@ public partial class FemcModConfig : ObservableObject
 		esaadrien,
 		mekki,
 		shiosakana,
-		shiosakanaAlt
-	}
+		shiosakanaAlt,
+        Nami
+    }
 
 	[Description("The AOA Foreground Text.")]
     [Category("2D Options")]
@@ -943,26 +967,30 @@ public partial class FemcModConfig : ObservableObject
 
 	public enum BustupType
 	{
-		Neptune,
-		Ely,
-		Esa,
-		Betina,
-		Anniversary,
-		JustBlue,
-		Sav,
-		Doodled,
-		RonaldReagan,
-		ElyAlt,
-		Yuunagi,
-		cielbell,
-		axolotl,
-		ghostedtoast,
-		Strelko,
-		gackt,
-		Jackie,
-		Lisa,
-		BetaFemcByMae
-	}
+        Neptune,
+        Ely,
+        Esa,
+        Betina,
+        Anniversary,
+        JustBlue,
+        Sav,
+        Doodled,
+        RonaldReagan,
+        ElyAlt,
+        Yuunagi,
+        cielbell,
+        axolotl,
+        ghostedtoast,
+        Strelko,
+        gackt,
+        Jackie,
+        Lisa,
+        BetaFemcByMae,
+        crezzstar,
+        AngieDaGorl,
+        namiweiko,
+        chitu
+    }
 
 	[Description("The Glass Shard in that one menu when pausing.")]
     [Category("2D Options")]
@@ -975,8 +1003,9 @@ public partial class FemcModConfig : ObservableObject
 		Esa,
 		Ely,
 		ElyAlt,
-		Shiosakana
-	}
+		Shiosakana,
+        namiweiko
+    }
 
 	[Description("The Level Up :adachitrue:.")]
     [Category("2D Options")]
@@ -1011,7 +1040,8 @@ public partial class FemcModConfig : ObservableObject
     public enum CutinType
     {
         berrycha,
-        ElyandPatmandx
+        ElyandPatmandx,
+        Mekki
     }
 
     [Category("Fun Stuff")]
@@ -1021,7 +1051,7 @@ public partial class FemcModConfig : ObservableObject
 
     [Category("Fun Stuff")]
     [DefaultValue(false)]
-    private bool GregoryHouseRatPoisonDeliverySystem = false;
+    private bool _GregoryHouseRatPoisonDeliverySystem = false;
 
     [Description("Gives FemC Nagitanas for weapons")]
     [Category("3D Options")]
@@ -1029,9 +1059,14 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool _NagiWeap = true;
 
-	[DisplayName("Skirt, Face, Etc Fix")]
 	[Description("THIS MIGHT BREAK SOME STUFF, ITS A TEST FOR PEOPLE WHO WANT TO, PLEASE GO IN EXPECTING ERRORS")]
 	[Category("3D Options")]
 	[DefaultValue(true)]
-	public bool SkirtEtcFix { get; set; } = true;
+    [ObservableProperty]
+	private bool _SkirtEtcFix = true;
+
+    [Category("Theo")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool _TheodorefromAlvinandTheChipmunks = false; // soon this should be a whole thing, movies, bustups, etc 
 }

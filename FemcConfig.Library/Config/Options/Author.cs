@@ -51,4 +51,9 @@ public record Author(string Name, string? Description = null, string? Url = null
 	public static readonly Author Mae = new("Mae", Url: "https://x.com/stab3ry");
     public static readonly Author Pealeaf = new("Pealeaf", Url: "https://www.youtube.com/pealeaf");
     public static readonly Author ChewieMelodies = new("Chewie Melodies", Url: "https://www.youtube.com/chewiemelodies");
+    public static readonly Author Bichelle = new("Bichelle");
+    public static readonly Author namiweiko = new("Namiweiko");
+    public static readonly Author AngieDaGorl = new("AngieDaGorl", Url: "https://www.instagram.com/bmoangie2002");
+    public static readonly Author Chitu = new("Chitu");
+    public static readonly Author Crezzstar = new("Crezz star", Url: "https://x.com/infj_crezz");
 };

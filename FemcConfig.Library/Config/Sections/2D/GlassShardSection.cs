@@ -46,6 +46,13 @@ public class GlassShardSection : ISection
 				Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Shiosakana,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Shiosakana,
 			},
-		];
+            new ModOption(ctx)
+            {
+                InternalName = "shard_namiweiko",
+                Authors = [Author.namiweiko],
+                Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.namiweiko,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.namiweiko,
+            },
+        ];
     }
 }

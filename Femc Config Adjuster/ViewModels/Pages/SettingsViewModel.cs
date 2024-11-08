@@ -30,7 +30,7 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     private void InitializeViewModel()
     {
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
-        AppVersion = $"1.1.0 - Femc Mod AutoDownload Update";
+        AppVersion = $"1.1.1 - Added missing config options for v1.4.1+ of the mod. (Some config options showcased in the app are unavailable for versions 1.4.1 and earlier of the feMC Mod.)";
         _isInitialized = true;
     }
 

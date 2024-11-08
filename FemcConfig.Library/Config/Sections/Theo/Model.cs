@@ -19,20 +19,17 @@ public class Model : ISection
 		[
 			new ModOption(ctx)
 			{
-				InternalName = "hair_default",
-				Name = "Default",
-				Authors = [Author.Mudkip],
-				Enable = ctx => ctx.FemcConfig.Settings.HairTrue = Models.FemcModConfig.HairType.MudkipsHair,
-				IsEnabledFunc = ctx => ctx.FemcConfig.Settings.HairTrue == Models.FemcModConfig.HairType.MudkipsHair,
-			},
-			new ModOption(ctx)
-			{
-				InternalName = "hair_bean",
-				Name = "Kotone Bean",
-				Authors = [Author.Mudkip],
-				Enable = ctx => ctx.FemcConfig.Settings.HairTrue = Models.FemcModConfig.HairType.KotoneBeanHair,
-				IsEnabledFunc = ctx => ctx.FemcConfig.Settings.HairTrue == Models.FemcModConfig.HairType.KotoneBeanHair,
-			},
+                InternalName = "theodore",
+                Name = "Theodore Model",
+                Authors = [Author.Femc],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.TheodorefromAlvinandTheChipmunks = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.TheodorefromAlvinandTheChipmunks = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TheodorefromAlvinandTheChipmunks,
+            }
 		];
 	}
 }

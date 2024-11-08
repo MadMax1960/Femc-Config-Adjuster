@@ -36,7 +36,7 @@ public class AOATextSection : ISection
 			new ModOption(ctx)
 			{
 				InternalName = "aoatext_PerfectlyAccomplished",
-				Name="Don't Look Back",
+				Name="Pefectly Accomplished !!",
 				Authors = [Author.Shiosakana],
 				Enable = (ctx) => ctx.FemcConfig.Settings.AOAText = Models.FemcModConfig.AOATextType.PerfectlyAccomplished,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOAText == Models.FemcModConfig.AOATextType.PerfectlyAccomplished,

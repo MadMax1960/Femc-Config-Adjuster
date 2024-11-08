@@ -80,6 +80,13 @@ public class AOASection : ISection
 				Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.shiosakanaAlt,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.shiosakanaAlt,
 			},
-		];
+            new ModOption(ctx)
+            {
+                InternalName = "aoa_nami",
+                Authors = [Author.namiweiko],
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Nami,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Nami,
+            },
+        ];
     }
 }

@@ -30,7 +30,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "3.1.0";
+    public const string APP_VERSION = "1.1.1";
     public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Concursus/releases";
     private static readonly IHost _host = Host
 		.CreateDefaultBuilder()

@@ -43,6 +43,13 @@ public class CutinSection : ISection
                 Enable = ctx => ctx.FemcConfig.Settings.CutinTrue = Models.FemcModConfig.CutinType.ElyandPatmandx,
                 IsEnabledFunc = ctx => ctx.FemcConfig.Settings.CutinTrue == Models.FemcModConfig.CutinType.ElyandPatmandx,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "cutin_mekki",
+                Authors = [Author.Mekki],
+                Enable = ctx => ctx.FemcConfig.Settings.CutinTrue = Models.FemcModConfig.CutinType.Mekki,
+                IsEnabledFunc = ctx => ctx.FemcConfig.Settings.CutinTrue == Models.FemcModConfig.CutinType.Mekki,
+            },
         ];
     }
 }
