@@ -2,6 +2,7 @@
 // If a copy of the MIT was not distributed with this file, You can obtain one at https://opensource.org/licenses/MIT.
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
+
 using Femc_Config_Adjuster.Services;
 using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
@@ -13,7 +14,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
 using System.IO;
+using System.Net.Http;
 using System.Reflection;
+using System.Text.Json;
 using System.Windows;
 using System.Windows.Threading;
 using Wpf.Ui;
@@ -30,50 +33,53 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.5.1"; //Should always match the latest feMC mod version. Doesn't break anything tho if it isn't updated.
+    public const string APP_VERSION = "1.5.1"; // Should always match the latest feMC mod version.
     private static readonly IHost _host = Host
-		.CreateDefaultBuilder()
-		.ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)!); })
-		.ConfigureServices((context, services) =>
-		{
-			services.AddHostedService<ApplicationHostService>();
+        .CreateDefaultBuilder()
+        .ConfigureAppConfiguration(c =>
+        {
+            c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)!);
+        })
+        .ConfigureServices((context, services) =>
+        {
+            services.AddHostedService<ApplicationHostService>();
 
-			// Page resolver service
-			services.AddSingleton<IPageService, PageService>();
+            // Page resolver service
+            services.AddSingleton<IPageService, PageService>();
 
-			// Theme manipulation
-			services.AddSingleton<IThemeService, ThemeService>();
+            // Theme manipulation
+            services.AddSingleton<IThemeService, ThemeService>();
 
-			// TaskBar manipulation
-			services.AddSingleton<ITaskBarService, TaskBarService>();
+            // TaskBar manipulation
+            services.AddSingleton<ITaskBarService, TaskBarService>();
 
-			// Service containing navigation, same as INavigationWindow... but without window
-			services.AddSingleton<INavigationService, NavigationService>();
+            // Service containing navigation, same as INavigationWindow... but without window
+            services.AddSingleton<INavigationService, NavigationService>();
 
-			// Main window with navigation
-			services.AddSingleton<INavigationWindow, MainWindow>();
-			services.AddSingleton<MainWindowViewModel>();
+            // Main window with navigation
+            services.AddSingleton<INavigationWindow, MainWindow>();
+            services.AddSingleton<MainWindowViewModel>();
 
-			// Auto-register pages.
-			var types = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.IsClass);
-			foreach (var type in types)
-			{
-				if (type.Namespace?.StartsWith("Femc_Config_Adjuster.Views.Pages") == true)
-				{
-					services.AddSingleton(type);
-				}
-			}
+            // Auto-register pages.
+            var types = Assembly.GetExecutingAssembly().GetTypes().Where(x => x.IsClass);
+            foreach (var type in types)
+            {
+                if (type.Namespace?.StartsWith("Femc_Config_Adjuster.Views.Pages") == true)
+                {
+                    services.AddSingleton(type);
+                }
+            }
 
-			services.AddSingleton<SettingsViewModel>();
+            services.AddSingleton<SettingsViewModel>();
             services.AddSingleton<UiPageViewModel>();
 
             // FEMC config library.
             services.AddSingleton<AppService>();
 
             // Register setting sections.
-			services.AddSingleton(s =>
+            services.AddSingleton(s =>
             {
-				var app = s.GetRequiredService<AppService>();
+                var app = s.GetRequiredService<AppService>();
 
                 var sectionType = typeof(ISection);
                 var sectionTypes = AppDomain.CurrentDomain.GetAssemblies()
@@ -88,8 +94,11 @@ public partial class App
                     sections.Add(instance);
                 }
 
-				return sections.ToArray();
-			});
+                return sections.ToArray();
+            });
+
+            // Register UpdateChecker
+            services.AddSingleton<UpdateChecker>();
         }).Build();
 
     /// <summary>
@@ -98,10 +107,10 @@ public partial class App
     /// <typeparam name="T">Type of the service to get.</typeparam>
     /// <returns>Instance of the service or <see langword="null"/>.</returns>
     public static T GetService<T>()
-		where T : class
-	{
-		return (_host.Services.GetService(typeof(T)) as T)!;
-	}
+        where T : class
+    {
+        return (_host.Services.GetService(typeof(T)) as T)!;
+    }
 
     /// <summary>
     /// Occurs when the application is loading.
@@ -109,6 +118,10 @@ public partial class App
     private void OnStartup(object sender, StartupEventArgs e)
     {
         _host.Start();
+
+        // Check for updates
+        var updateChecker = GetService<UpdateChecker>();
+        _ = updateChecker?.CheckForUpdatesAsync(APP_VERSION);
     }
 
     /// <summary>
@@ -120,15 +133,79 @@ public partial class App
         _host.Dispose();
     }
 
-	/// <summary>
-	/// Occurs when an exception is thrown by an application but not handled.
-	/// </summary>
-	private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
-	{
+    /// <summary>
+    /// Occurs when an exception is thrown by an application but not handled.
+    /// </summary>
+    private void OnDispatcherUnhandledException(object sender, DispatcherUnhandledExceptionEventArgs e)
+    {
         // For more info see https://docs.microsoft.com/en-us/dotnet/api/system.windows.application.dispatcherunhandledexception?view=windowsdesktop-6.0
         Log.Error(e.Exception, e.Exception.Message);
 
         var exceptionWin = new ExceptionWindow(e.Exception);
         exceptionWin.Show();
-	}
+    }
+}
+
+/// <summary>
+/// A class to check for updates from the latest GitHub release.
+/// </summary>
+public class UpdateChecker
+{
+    /// <summary>
+    /// Checks the latest GitHub release and compares it with the current version.
+    /// </summary>
+    /// <param name="currentVersion">The current application version.</param>
+    public async Task CheckForUpdatesAsync(string currentVersion)
+    {
+        try
+        {
+            
+            string apiUrl = $"https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases/latest";
+
+            using HttpClient client = new HttpClient();
+            client.DefaultRequestHeaders.Add("User-Agent", "FemcConfigAdjuster");
+
+            var response = await client.GetAsync(apiUrl);
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsStringAsync();
+                var release = JsonSerializer.Deserialize<GitHubRelease>(content);
+                MessageBox.Show(release.tag_name);
+                if (release != null && IsNewerVersion(release.tag_name, currentVersion))
+                {
+                    MessageBox.Show(
+                        $"A new version is available: {release.tag_name}",
+                        "Update Available",
+                        MessageBoxButton.OK,
+                        MessageBoxImage.Information);
+                }
+            }
+        }
+        catch (Exception ex)
+        {
+            // Log or handle update check error
+            Console.WriteLine($"Error checking for updates: {ex.Message}");
+        }
+    }
+
+    /// <summary>
+    /// Compares the latest version with the current version.
+    /// </summary>
+    /// <param name="latestVersion">The latest version from GitHub.</param>
+    /// <param name="currentVersion">The current application version.</param>
+    /// <returns>True if the latest version is newer.</returns>
+    private bool IsNewerVersion(string latestVersion, string currentVersion)
+    {
+        Version latest = new Version(latestVersion.TrimStart('v'));
+        Version current = new Version(currentVersion);
+        return latest > current;
+    }
+
+    /// <summary>
+    /// Represents the structure of a GitHub release.
+    /// </summary>
+    private class GitHubRelease
+    {
+        public string tag_name { get; set; } = string.Empty;
+    }
 }
