@@ -30,8 +30,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.1.1";
-    public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Concursus/releases";
+    public const string APP_VERSION = "1.5.1"; //Should always match the latest feMC mod version. Doesn't break anything tho if it isn't updated.
     private static readonly IHost _host = Host
 		.CreateDefaultBuilder()
 		.ConfigureAppConfiguration(c => { c.SetBasePath(Path.GetDirectoryName(Assembly.GetEntryAssembly()!.Location)!); })

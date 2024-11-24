@@ -2,6 +2,7 @@
 using Microsoft.Win32;
 using System.IO;
 using System.Windows;
+using System.Windows.Threading;
 using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
 
@@ -19,7 +20,6 @@ public partial class SetupWindow : FluentWindow
     {
         SystemThemeWatcher.Watch(this);
         InitializeComponent();
-
         _app = app;
         _finishSetup = finishSetup;
     }
@@ -41,7 +41,7 @@ public partial class SetupWindow : FluentWindow
 
         var path = dialog.FileName;
         var reloadedDir = Path.GetDirectoryName(path)!;
-
+        System.Windows.MessageBox.Show("Debug", "Conditions Checked.");
         try
         {
             _app.Initialize(reloadedDir);
@@ -54,7 +54,8 @@ public partial class SetupWindow : FluentWindow
             _app.Initialize(reloadedDir);
         }
 
+
         _finishSetup();
-        this.Close();
+        this.Close();        
     }
 }

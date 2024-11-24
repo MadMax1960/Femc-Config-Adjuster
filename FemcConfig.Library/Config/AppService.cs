@@ -33,6 +33,9 @@ public class AppService
 
     public void Initialize(string reloadedDir)
     {
+        //VERY IMPORTANT PLEASE UPDATE EVERY TIME TO MATCH LATEST FEMC MOD VERSION
+        var appFemcSupportVer = "1.5.1";
+
         this.appData.Settings.ReloadedDir = reloadedDir;
         if (reloadedDir is null)
             throw new Exception("Reloaded Directory not found");
@@ -61,6 +64,7 @@ public class AppService
         // Find FEMC mod config file.
         var reloadedConfigsDir = Path.Join(reloadedDir, "User", "Mods");
         string? femcConfigFile = null;
+        string? femcModConfigFile = null;
         foreach (var configDir in Directory.EnumerateDirectories(reloadedConfigsDir))
         {
             Console.WriteLine(configDir);
@@ -72,6 +76,7 @@ public class AppService
                 if(userConfig.ModId == Constants.FEMC_MOD_ID)
                 {
                     femcConfigFile = Path.Join(configDir, "Config.json");
+                    femcModConfigFile = Path.Join(reloadedModsDir, Constants.FEMC_MOD_ID, "ModConfig.json");
                     break;
                 }
             }
@@ -105,13 +110,34 @@ public class AppService
 			}
 		}
 
-		// Setup mod context.
-		this.appContext = new()
+        string femcModVersionStatus = "NotExecError";
+        string? femcModVersion = null;
+        //Check mod version.
+        if (File.Exists(femcModConfigFile))
+        {
+            femcModVersion = JsonUtils.DeserializeFile<ModInfo>(femcModConfigFile).ModVersion;
+            if (femcModVersion == appFemcSupportVer)
+            {
+                femcModVersionStatus = "SUPPORTED";
+            }
+            else
+            {
+                femcModVersionStatus = "UNSUPPORTED";
+            }
+        }
+        else
+        {
+            femcModVersionStatus = "404FILENOTFOUND";
+        }
+
+        // Setup mod context.
+        this.appContext = new()
         {
             ReloadedDir = reloadedDir,
             ModDir = femcDir,
             ReloadedAppConfig = appConfig,
             FemcConfig = Directory.Exists(femcDir) ? new(femcConfigFile) : null,
+            FemcModVersion = femcModVersionStatus,
             MovieConfig = File.Exists(movieConfigFile) ? new(movieConfigFile) : null,
         };
     }
@@ -144,4 +170,9 @@ public partial class AppData : ObservableObject
 {
     [ObservableProperty]
     public string? reloadedDir;
+}
+
+public class ModInfo
+{
+    public string ModVersion { get; set; }
 }

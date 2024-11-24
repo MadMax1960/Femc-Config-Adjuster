@@ -12,6 +12,8 @@ public class AppContext
 
     public required SavableFile<FemcModConfig> FemcConfig { get; init; }
 
+    public required string FemcModVersion { get; init; }
+
     public SavableFile<MovieModConfig>? MovieConfig { get; init; }
 
     public required SavableFile<ReloadedAppConfig> ReloadedAppConfig { get; init; }
