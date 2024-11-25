@@ -170,7 +170,7 @@ public class UpdateChecker
             {
                 var content = await response.Content.ReadAsStringAsync();
                 var release = JsonSerializer.Deserialize<GitHubRelease>(content);
-                MessageBox.Show(release.tag_name);
+                //MessageBox.Show(release.tag_name); this shouldn't pop up
                 if (release != null && IsNewerVersion(release.tag_name, currentVersion))
                 {
                     MessageBox.Show(
