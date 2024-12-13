@@ -33,7 +33,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.5.1"; // Should always match the latest feMC mod version.
+    public const string APP_VERSION = "1.2.0"; // Should always be update after every update and needs to match the release tagname.
     private static readonly IHost _host = Host
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(c =>
@@ -170,7 +170,6 @@ public class UpdateChecker
             {
                 var content = await response.Content.ReadAsStringAsync();
                 var release = JsonSerializer.Deserialize<GitHubRelease>(content);
-                //MessageBox.Show(release.tag_name); this shouldn't pop up
                 if (release != null && IsNewerVersion(release.tag_name, currentVersion))
                 {
                     MessageBox.Show(

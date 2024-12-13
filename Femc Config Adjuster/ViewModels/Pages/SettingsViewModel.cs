@@ -14,7 +14,6 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     
     [ObservableProperty]
 	private string _appVersion = "1.0.1";
-    public const string APP_UPDATE_ENDPOINT = "https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases";
 
     [ObservableProperty]
     private ApplicationTheme _currentTheme = ApplicationTheme.Unknown;
