@@ -33,7 +33,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.2.0"; // Should always be update after every update and needs to match the release tagname.
+    public const string APP_VERSION = "0.2.0"; // Should always be update after every update and needs to match the release tagname.
     private static readonly IHost _host = Host
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(c =>
@@ -172,18 +172,16 @@ public class UpdateChecker
                 var release = JsonSerializer.Deserialize<GitHubRelease>(content);
                 if (release != null && IsNewerVersion(release.tag_name, currentVersion))
                 {
-                    MessageBox.Show(
-                        $"A new version is available: {release.tag_name}",
-                        "Update Available",
-                        MessageBoxButton.OK,
-                        MessageBoxImage.Information);
+                    var infoWin = new InfoWindow("Update Available!", $"A new version of the app is available: {release.tag_name}. You will need to update manually.");
+                    infoWin.ShowDialog();
                 }
             }
         }
         catch (Exception ex)
         {
             // Log or handle update check error
-            Console.WriteLine($"Error checking for updates: {ex.Message}");
+            var exceptWin = new ExceptionWindow(ex);
+            exceptWin.Show();
         }
     }
 

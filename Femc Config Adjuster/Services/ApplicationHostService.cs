@@ -61,8 +61,8 @@ public class ApplicationHostService : IHostedService
             // Verify context was set before
             // starting main window.
             _ = _app.GetContext();
-            CheckModCompatibility(_app);
             this.OpenMainWindow();
+            CheckModCompatibility(_app);
         }
         catch (Exception)
         {
@@ -77,15 +77,18 @@ public class ApplicationHostService : IHostedService
         var context = app.GetContext();
         if (context.FemcModVersion == "UNSUPPORTED")
         {
-            System.Windows.MessageBox.Show("The version of the femc mod installed currently might not be supported by the app. Check the settings page to see what version of the mod is needed for use with this app.", "Mod Version Mismatch", System.Windows.MessageBoxButton.OK, MessageBoxImage.Warning);
+            var infoWin = new InfoWindow("Femc Mod and App Version Mismatch", "The version of the femc mod installed currently might not be supported by the app. Check the settings page to see what version of the mod is needed for use with this app.");
+            infoWin.ShowDialog();
         }
         else if (context.FemcModVersion == "404FILENOTFOUND")
         {
-            System.Windows.MessageBox.Show("File integrity can't be verified. The installation of the mod might be corrupted. Please try installing the mod again.", "Mod Installation Corrupted", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            var infoWin = new InfoWindow("Mod files integrity can't be verified", "The installation of the mod might be corrupted. Please try installing the mod again.");
+            infoWin.ShowDialog();
         }
         else if (context.FemcModVersion == "NotExecError")
         {
-            System.Windows.MessageBox.Show("An unexpected error occured. Please try restarting the app or the app might not work as intended.", "Error", System.Windows.MessageBoxButton.OK, MessageBoxImage.Error);
+            var infoWin = new InfoWindow("An unexpected error occured", "Please try restarting the app or the app might not work as intended.");
+            infoWin.ShowDialog();
         }
     }
 
