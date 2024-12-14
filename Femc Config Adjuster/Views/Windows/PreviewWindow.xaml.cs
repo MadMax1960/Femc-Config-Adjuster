@@ -45,12 +45,12 @@ public partial class PreviewWindow : FluentWindow
         {
             if (vm.Option.DownloadUrl != null)
             {
-                this.HandleDownloadUrl(vm.Option.DownloadUrl, vm.Option.Downloader);
+                this.HandleDownloadUrl(vm.Option.DownloadUrl, vm.Option.Downloader, vm.Option.GithubOwner, vm.Option.GithubName);
             }
         }
     }
 
-    private void HandleDownloadUrl(string url, DownloadHandler handler)
+    private void HandleDownloadUrl(string url, DownloadHandler handler, string? githubowner, string? githubreponame)
     {
         if (handler == DownloadHandler.Reloaded)
         {
@@ -71,10 +71,19 @@ public partial class PreviewWindow : FluentWindow
             proc.Start();
         }
 
-        else if (handler == DownloadHandler.Femc)
+        else if (handler == DownloadHandler.GithubReloadedDirectDL)
         {
-            GetLatestRelease7zUrl();
-            System.Windows.MessageBox.Show("Download Initiated. You might need to launch the game and restart the app for changes to appear.");
+            if(githubowner  != null && githubreponame != null)
+            {
+                GithubR2Direct7z(githubowner,githubreponame);
+                var infoWin = new InfoWindow("Download Info", "Your download has been initiated. You might need to launch the game and restart the app for changes to appear.");
+                infoWin.ShowDialog();
+            }
+            else
+            {
+                var infoWin = new InfoWindow("Download Error", "The app is unable to initiate the download due to missing info. Please install this mod manually.", "Download Error");
+                infoWin.ShowDialog();
+            }
         }
     }
     
@@ -83,19 +92,16 @@ public partial class PreviewWindow : FluentWindow
     {
         Timeout = TimeSpan.FromSeconds(30) // Set timeout to avoid hanging indefinitely
     };
-    static string _owner = "MadMax1960";
-    static string _repo = "Femc-Reloaded-Project";
-
 
     /// <summary>
     /// Downloads the latest release ZIP file from a GitHub repository.
     /// </summary>
-    public static async void GetLatestRelease7zUrl()
+    public static async void GithubR2Direct7z(string owner, string repo)
     {
         try
         {
             // Get the latest release info from GitHub
-            var releaseInfo = await GetLatestReleaseInfo();
+            var releaseInfo = await GetLatestReleaseInfo(owner, repo);
 
             // Find the first ZIP asset from the release's assets
             var firstZipAsset = releaseInfo.Assets.FirstOrDefault(a => a.Name.EndsWith("7z"));
@@ -110,13 +116,13 @@ public partial class PreviewWindow : FluentWindow
         }
         catch (Exception ex)
         {
-            System.Windows.MessageBox.Show($"Failed to get 7z URL: {ex.Message}");
-            App.Current.Shutdown();
+            var infoWin = new InfoWindow("Failed to get 7z URL", "The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.", "Installation Failed");
+            infoWin.ShowDialog();
         }
     }
-    private static async Task<ReleaseInfo> GetLatestReleaseInfo()
+    private static async Task<ReleaseInfo> GetLatestReleaseInfo(string owner, string repo)
     {
-        string apiUrl = $"https://api.github.com/repos/{_owner}/{_repo}/releases/latest";
+        string apiUrl = $"https://api.github.com/repos/{owner}/{repo}/releases/latest";
 
         // Ensure only one User-Agent header is added
         if (!client.DefaultRequestHeaders.UserAgent.Any())

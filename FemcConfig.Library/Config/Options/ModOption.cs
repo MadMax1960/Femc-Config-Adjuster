@@ -62,6 +62,16 @@ public class ModOption : ObservableObject
     public string? DownloadUrl { get; init; }
 
     /// <summary>
+    /// Owner of the github repo from where the release is to be downloaded. For example: MadMax1960 in https://github.com/MadMax1960/Femc-Reloaded-Project.
+    /// </summary>
+    public string? GithubOwner { get; init; }
+
+    /// <summary>
+    /// Name of the github repo from where the release is to be downloaded. For example: Femc-Reloaded-Project in https://github.com/MadMax1960/Femc-Reloaded-Project.
+    /// </summary>
+    public string? GithubName { get; init; }
+
+    /// <summary>
     /// Download handler for download URL.
     /// </summary>
     public DownloadHandler Downloader { get; init; } = DownloadHandler.Reloaded;

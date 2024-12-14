@@ -19,7 +19,9 @@ public class FemcProjectSection : ISection
                 Authors = [Author.Femc],
                 Category = "Addon",
                 DownloadUrl = "https://github.com/MadMax1960/Femc-Reloaded-Project",
-                Downloader = Models.DownloadHandler.Femc,
+                Downloader = Models.DownloadHandler.GithubReloadedDirectDL,
+                GithubOwner="MadMax1960",
+                GithubName="Femc-Reloaded-Project",
 
                // When option is enabled set the bool setting to true.
                 Enable = (ctx) => ctx.ReloadedAppConfig.Settings.EnabledMods.Add("p3rpc.femc"),
