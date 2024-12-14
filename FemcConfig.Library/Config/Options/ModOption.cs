@@ -72,6 +72,11 @@ public class ModOption : ObservableObject
     public string? GithubName { get; init; }
 
     /// <summary>
+    /// Name of the 7z file you want to search for. This option is ONLY REQUIRED for the GithubReloadedDirectDL protocol. For example: UnrealEssentials in UnrealEssentials1.1.5.7z.
+    /// </summary>
+    public string? Regex { get; init; }
+
+    /// <summary>
     /// Download handler for download URL.
     /// </summary>
     public DownloadHandler Downloader { get; init; } = DownloadHandler.Reloaded;

@@ -5,6 +5,7 @@ using System.Diagnostics;
 using System.Net.Http;
 using System.Text.Json;
 using System.Text.Json.Serialization;
+using System.Text.RegularExpressions;
 using System.Windows;
 using Wpf.Ui.Controls;
 
@@ -45,12 +46,12 @@ public partial class PreviewWindow : FluentWindow
         {
             if (vm.Option.DownloadUrl != null)
             {
-                this.HandleDownloadUrl(vm.Option.DownloadUrl, vm.Option.Downloader, vm.Option.GithubOwner, vm.Option.GithubName);
+                this.HandleDownloadUrl(vm.Option.DownloadUrl, vm.Option.Downloader, vm.Option.GithubOwner, vm.Option.GithubName, vm.Option.Regex);
             }
         }
     }
 
-    private void HandleDownloadUrl(string url, DownloadHandler handler, string? githubowner, string? githubreponame)
+    private void HandleDownloadUrl(string url, DownloadHandler handler, string? githubowner, string? githubreponame, string? regex)
     {
         if (handler == DownloadHandler.Reloaded)
         {
@@ -75,7 +76,7 @@ public partial class PreviewWindow : FluentWindow
         {
             if(githubowner  != null && githubreponame != null)
             {
-                GithubR2Direct7z(githubowner,githubreponame);
+                GithubR2Direct7z(githubowner, githubreponame, regex);
                 var infoWin = new InfoWindow("Download Info", "Your download has been initiated. You might need to launch the game and restart the app for changes to appear.");
                 infoWin.ShowDialog();
             }
@@ -86,106 +87,120 @@ public partial class PreviewWindow : FluentWindow
             }
         }
     }
-    
-    //Definiton of some things needed to download the Femc Mod via the r2 protocol
-    private static readonly HttpClient client = new HttpClient()
-    {
-        Timeout = TimeSpan.FromSeconds(30) // Set timeout to avoid hanging indefinitely
-    };
 
-    /// <summary>
-    /// Downloads the latest release ZIP file from a GitHub repository.
-    /// </summary>
-    public static async void GithubR2Direct7z(string owner, string repo)
+
+
+private static readonly HttpClient client = new HttpClient()
+{
+    Timeout = TimeSpan.FromSeconds(30) // Set timeout to avoid hanging indefinitely
+};
+
+public static async void GithubR2Direct7z(string owner, string repo, string? includereg)
+{
+    try
     {
-        try
+        // Get the latest release info from GitHub
+        var releaseInfo = await GetLatestReleaseInfo(owner, repo);
+
+        var excludeToRegex = new Regex(@"_to_", RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        Regex includeToRegex = null;
+        if (!string.IsNullOrEmpty(includereg))
         {
-            // Get the latest release info from GitHub
-            var releaseInfo = await GetLatestReleaseInfo(owner, repo);
+            includeToRegex = new Regex(includereg, RegexOptions.Compiled | RegexOptions.IgnoreCase);
+        }
+        var endsWith7zRegex = new Regex(@"\.7z$", RegexOptions.Compiled | RegexOptions.IgnoreCase);
 
-            // Find the first ZIP asset from the release's assets
-            var firstZipAsset = releaseInfo.Assets.FirstOrDefault(a => a.Name.EndsWith("7z"));
-            if (firstZipAsset == null)
+        var matchingAsset = releaseInfo.Assets
+        .FirstOrDefault(a => endsWith7zRegex.IsMatch(a.Name) && !excludeToRegex.IsMatch(a.Name) && (includeToRegex == null || includeToRegex.IsMatch(a.Name)));
+
+        if (matchingAsset == null)
+        {
+            throw new Exception("No suitable 7z file found that meets the criteria.");
+        }
+
+        // Downloads the file using the r2 protocol
+        var proc = new Process()
+        {
+            StartInfo = new ProcessStartInfo()
             {
-                throw new Exception("No 7z file found in the latest release.");
+                FileName = $"r2:{matchingAsset.DownloadUrl}",
+                UseShellExecute = true
             }
-
-            // Downloads the file using the r2 protocol
-            var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = $"r2:{firstZipAsset.DownloadUrl}", UseShellExecute = true } };
-            proc.Start();
-        }
-        catch (Exception ex)
-        {
-            var infoWin = new InfoWindow("Failed to get 7z URL", "The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.", "Installation Failed");
-            infoWin.ShowDialog();
-        }
+        };
+        proc.Start();
     }
-    private static async Task<ReleaseInfo> GetLatestReleaseInfo(string owner, string repo)
+    catch (Exception ex)
     {
-        string apiUrl = $"https://api.github.com/repos/{owner}/{repo}/releases/latest";
-
-        // Ensure only one User-Agent header is added
-        if (!client.DefaultRequestHeaders.UserAgent.Any())
-        {
-            client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppName/1.0");
-        }
-
-        try
-        {
-            // Fetch the latest release info from GitHub
-            var response = await client.GetAsync(apiUrl).ConfigureAwait(false);
-
-            // Handle API errors gracefully
-            if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
-            {
-                var remaining = response.Headers.TryGetValues("X-RateLimit-Remaining", out var values)
-                    ? values.FirstOrDefault()
-                    : "0";
-                throw new Exception($"API rate limit exceeded. Remaining: {remaining}");
-            }
-
-            response.EnsureSuccessStatusCode(); // Throw if the request failed
-
-            // Read and deserialize the response body
-            string responseBody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
-            return JsonSerializer.Deserialize<ReleaseInfo>(responseBody)
-                ?? throw new Exception("Failed to deserialize release info.");
-        }
-        catch (TaskCanceledException)
-        {
-            throw new Exception("The request timed out. Please try again.");
-        }
-        catch (HttpRequestException ex)
-        {
-            throw new Exception($"Network error: {ex.Message}");
-        }
-        catch (Exception ex)
-        {
-            throw new Exception($"An unexpected error occurred: {ex.Message}");
-        }
+        var infoWin = new InfoWindow(
+            "Failed to get 7z URL",
+            "The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.",
+            "Installation Failed"
+        );
+        infoWin.ShowDialog();
     }
+}
+private static async Task<ReleaseInfo> GetLatestReleaseInfo(string owner, string repo)
+{
+    string apiUrl = $"https://api.github.com/repos/{owner}/{repo}/releases/latest";
 
-    private class ReleaseInfo
+    if (!client.DefaultRequestHeaders.UserAgent.Any())
     {
-        [JsonPropertyName("tag_name")]
-        public string TagName { get; set; } = string.Empty;
-
-        [JsonPropertyName("zipball_url")]
-        public string ZipballUrl { get; set; } = string.Empty;
-
-        [JsonPropertyName("assets")]
-        public List<ReleaseAsset> Assets { get; set; } = new();
+        client.DefaultRequestHeaders.UserAgent.ParseAdd("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppName/1.0");
     }
-    private class ReleaseAsset
+
+    try
     {
-        [JsonPropertyName("name")]
-        public string Name { get; set; } = string.Empty;
+        var response = await client.GetAsync(apiUrl).ConfigureAwait(false);
 
-        [JsonPropertyName("browser_download_url")]
-        public string DownloadUrl { get; set; } = string.Empty;
+        if (response.StatusCode == System.Net.HttpStatusCode.Forbidden)
+        {
+            var remaining = response.Headers.TryGetValues("X-RateLimit-Remaining", out var values)
+                ? values.FirstOrDefault()
+                : "0";
+            throw new Exception($"API rate limit exceeded. Remaining: {remaining}");
+        }
+
+        response.EnsureSuccessStatusCode();
+
+        string responseBody = await response.Content.ReadAsStringAsync().ConfigureAwait(false);
+        return JsonSerializer.Deserialize<ReleaseInfo>(responseBody)
+            ?? throw new Exception("Failed to deserialize release info.");
     }
+    catch (TaskCanceledException)
+    {
+        throw new Exception("The request timed out. Please try again.");
+    }
+    catch (HttpRequestException ex)
+    {
+        throw new Exception($"Network error: {ex.Message}");
+    }
+    catch (Exception ex)
+    {
+        throw new Exception($"An unexpected error occurred: {ex.Message}");
+    }
+}
 
-    protected override void OnClosed(EventArgs e)
+private class ReleaseInfo
+{
+    [JsonPropertyName("tag_name")]
+    public string TagName { get; set; } = string.Empty;
+
+    [JsonPropertyName("zipball_url")]
+    public string ZipballUrl { get; set; } = string.Empty;
+
+    [JsonPropertyName("assets")]
+    public List<ReleaseAsset> Assets { get; set; } = new();
+}
+private class ReleaseAsset
+{
+    [JsonPropertyName("name")]
+    public string Name { get; set; } = string.Empty;
+
+    [JsonPropertyName("browser_download_url")]
+    public string DownloadUrl { get; set; } = string.Empty;
+}
+
+protected override void OnClosed(EventArgs e)
     {
         base.OnClosed(e);
 
