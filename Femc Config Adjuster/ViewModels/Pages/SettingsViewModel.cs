@@ -11,9 +11,9 @@ namespace Femc_Config_Adjuster.ViewModels.Pages;
 public partial class SettingsViewModel : ObservableObject, INavigationAware
 {
     private bool _isInitialized = false;
-    
+
     [ObservableProperty]
-	private string _appVersion = "1.0.1";
+    private string? _appVersion;
 
     [ObservableProperty]
     private ApplicationTheme _currentTheme = ApplicationTheme.Unknown;
