@@ -180,8 +180,8 @@ public class UpdateChecker
         catch (Exception ex)
         {
             // Log or handle update check error
-            var exceptWin = new ExceptionWindow(ex);
-            exceptWin.Show();
+            var infoWin = new InfoWindow("Update Check Failed", "The app was unable to check for updates so you will need to check for updates manually.");
+            infoWin.ShowDialog();
         }
     }
 
