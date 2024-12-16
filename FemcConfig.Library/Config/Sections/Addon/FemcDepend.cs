@@ -35,6 +35,10 @@ public class FemcDependSection : ISection
                 Authors = [Author.AnimatedSwine37, Author.Rirurin],
                 Category = "Addon",
                 DownloadUrl = "https://github.com/AnimatedSwine37/UnrealEssentials/releases/latest",
+                Downloader = Models.DownloadHandler.GithubReloadedDirectDL,
+                GithubName="UnrealEssentials",
+                GithubOwner="AnimatedSwine37",
+                Regex="UnrealEssentials",
 
                 // When option is enabled set the bool setting to true.
                 Enable = (ctx) => { },

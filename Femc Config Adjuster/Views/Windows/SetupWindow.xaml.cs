@@ -41,7 +41,6 @@ public partial class SetupWindow : FluentWindow
 
         var path = dialog.FileName;
         var reloadedDir = Path.GetDirectoryName(path)!;
-        System.Windows.MessageBox.Show("Debug", "Conditions Checked.");
         try
         {
             _app.Initialize(reloadedDir);

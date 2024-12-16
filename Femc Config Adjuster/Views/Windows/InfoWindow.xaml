@@ -1,0 +1,67 @@
+﻿<ui:FluentWindow
+    x:Class="Femc_Config_Adjuster.Views.Windows.InfoWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Windows"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    ExtendsContentIntoTitleBar="True"
+    SizeToContent="WidthAndHeight"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    WindowBackdropType="Mica"
+    WindowCornerPreference="Round"
+    WindowStartupLocation="CenterScreen"
+    Title="FEMC Config Info"
+    Width="400"
+    MaxWidth="600"
+    MaxHeight="600"
+    ResizeMode="CanMinimize">
+
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="FEMC Config Info"
+            CloseWindowByDoubleClickOnIcon="True"
+            Grid.Row="0"
+            Height="25">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
+            </ui:TitleBar.Icon>
+        </ui:TitleBar>
+
+        <TextBlock
+            x:Name="InfoTitle"
+            Text="Information Title"
+            FontSize="24"
+            FontWeight="SemiBold"
+            Padding="10"
+            VerticalAlignment="Top"
+            Grid.Row="1" />
+
+        <TextBlock
+            x:Name="InfoContent"
+            Text="This is example content that will wrap."
+            TextWrapping="Wrap"
+            Padding="10"
+            VerticalAlignment="Top"
+            Grid.Row="2" />
+
+        <Button
+            x:Name="CloseButton"
+            Content="OK"
+            Width="200"
+            HorizontalAlignment="Stretch"
+            VerticalAlignment="Center"
+            Grid.Row="3"
+            Margin="0,10,0,0"
+            Click="Close_Click" />
+    </Grid>
+</ui:FluentWindow>
