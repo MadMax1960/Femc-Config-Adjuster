@@ -10,22 +10,28 @@ namespace FemcConfig.Library.Config.Models;
 public partial class FemcModConfig : ObservableObject
 {
     [Category("Battle Music")]
-    [Description("Enable Karma's pull the trigger?")]
+    [Description("Enable Karma's Pull the Trigger?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool karmaAdv = true;
 
     [Category("Battle Music")]
-    [Description("Enable Mosq's pull the trigger?")]
+    [Description("Enable Mosq's Pull the Trigger?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool mosqAdv = true;
 
     [Category("Battle Music")]
-    [Description("Enable EidieK87's pull the trigger?")]
+    [Description("Enable EidieK87's Pull the Trigger?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool eidAdv = true;
+
+    [Category("Battle Music")]
+    [Description("Enable EidieK87's Danger Zone?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool eidDis = true;
 
     [Category("Battle Music")]
     [Description("Enable Mosq's Wiping All Out?")]
@@ -64,16 +70,34 @@ public partial class FemcModConfig : ObservableObject
     private bool mosqDis = true;
 
     [Category("Battle Music")]
-    [Description("Enable Atlus's It's Going down now?")]
+    [Description("Enable EidieK87's Danger Zone?")]
     [DefaultValue(false)]
     [ObservableProperty]
-    public bool itGoingDown = true;
+    private bool edDis = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Atlus's It's Going Down Now?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool itGoingDown = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Jen's It's Going Down Now?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool jenAdv = true;
+
+    [Category("Music")]
+    [Description("Enable Way of Life by Jen as the daytime music?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool wayOfLifeJen = true;
 
     [Category("Battle Music")]
     [Description("Enable Atlus's Master of Tartarus -Reload-?")]
     [DefaultValue(false)]
     [ObservableProperty]
-    public bool masterTar = true;
+    private bool masterTar = true;
 
     [Category("Battle Music")]
     [Description("Enable Atlus's Mass Destruction -Reload-?")]
@@ -81,35 +105,11 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool massDes = true;
 
-    [Category("Battle Music")]
-    [Description("Enable EidieK87's Danger Zone?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool edDis = true;
-
-    [Category("Battle Music")]
-    [Description("Enable Jen's It's Going down now?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool jenAdv = true;
-
     [Category("Music")]
-    [Description("Enable Way of life by Jen as the daytime music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool wayOfLifeJen = true;
-
-    [Category("Music")]
-    [Description("Enable Color your Night as the night music?")]
+    [Description("Enable Color Your Night as the night music?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool colNight = true;
-
-    [Category("Music")]
-    [Description("Enable Night Color your night as the night music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool peaColNight = true;
 
     [Category("Music")]
     [Description("Enable Midnight Reverie as the night music?")]
@@ -118,7 +118,7 @@ public partial class FemcModConfig : ObservableObject
     private bool midNight = true;
 
     [Category("Music")]
-    [Description("Enable Time (Night Version) as the night music?")]
+    [Description("Enable Time (Night Version) by Mosq as the night music?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool femNight = true;
@@ -135,14 +135,26 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool nightWand = true;
 
-    [Description("Enable When the moon's reaching out stars as the daytime music?")]
     [Category("Music")]
+    [Description("Enable Night Color Your Night as the night music?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool peaColNight = true;
+
+    [Category("Music")]
+    [Description("Enable When the Moon's Reaching Out Stars as the daytime music?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool moon = true;
 
     [Category("Music")]
-    [Description("Enable Way of life as the daytime music?")]
+    [Description("Enable Way of Life by Super M Plush, Mosq, Karma, and Cora as the daytime music?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool wayLifeVocal = true;
+
+    [Category("Music")]
+    [Description("Enable Way of Life by Mosq as the daytime music?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool wayOfLife = true;
@@ -154,13 +166,13 @@ public partial class FemcModConfig : ObservableObject
     private bool wantClose = true;
 
     [Category("Music")]
-    [Description("Enable Time as the daytime music inside the school?")]
+    [Description("Enable Time by Mosq as the daytime music inside the school?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool timeSchool = true;
 
     [Category("Music")]
-    [Description("Enable (Time GabiShy Remix) as the daytime music inside the school?")]
+    [Description("Enable Time -Reload- by GabiShy and Mosq as the daytime music inside the school?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool gabiTimeSchool = true;
@@ -184,10 +196,16 @@ public partial class FemcModConfig : ObservableObject
     private bool seasons = true;
 
     [Category("Music")]
-    [Description("Enable Sun as the daytime music inside the school?")]
+    [Description("Enable Sun by Mosq as the daytime music inside the school?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool sun = true;
+
+    [Category("Music")]
+    [Description("Enable Sun by MineFormer as the daytime music inside the school?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool sunMForm = true;
 
     [Category("Music")]
     [Description("Enable Soul Phrase as the music played during the battle with Nyx?")]
@@ -196,13 +214,13 @@ public partial class FemcModConfig : ObservableObject
     private bool soulPK = true;
 
     [Category("Music")]
-    [Description("Enable Burn my dread as the music played during the battle with Nyx?")]
+    [Description("Enable Burn My Dread as the music played during the battle with Nyx?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool bMD = true;
 
     [Category("Music")]
-    [Description("Enable Master of Shadow -Reload to be the music played during boss battles?")]
+    [Description("Enable Master of Shadow -Reload- to be the music played during boss battles?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool bMS = true;

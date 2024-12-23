@@ -34,7 +34,6 @@ public class AppService
     public void Initialize(string reloadedDir)
     {
         //VERY IMPORTANT PLEASE UPDATE EVERY TIME TO MATCH LATEST FEMC MOD VERSION
-        var appFemcSupportVer = "1.5.1";
 
         this.appData.Settings.ReloadedDir = reloadedDir;
         if (reloadedDir is null)
@@ -116,7 +115,7 @@ public class AppService
         if (File.Exists(femcModConfigFile))
         {
             femcModVersion = JsonUtils.DeserializeFile<ModInfo>(femcModConfigFile).ModVersion;
-            if (femcModVersion == appFemcSupportVer)
+            if (femcModVersion == Constants.FEMC_MOD_VER)
             {
                 femcModVersionStatus = "SUPPORTED";
             }

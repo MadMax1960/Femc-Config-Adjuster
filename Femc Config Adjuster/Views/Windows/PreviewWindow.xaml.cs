@@ -1,4 +1,5 @@
-﻿using Femc_Config_Adjuster.ViewModels.Windows;
+﻿using Femc_Config_Adjuster.Controls;
+using Femc_Config_Adjuster.ViewModels.Windows;
 using FemcConfig.Library.Config.Models;
 using Microsoft.Web.WebView2.Wpf;
 using System.Diagnostics;
@@ -55,7 +56,7 @@ public partial class PreviewWindow : FluentWindow
     {
         if (handler == DownloadHandler.Reloaded)
         {
-            var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = $"r2:{url}", UseShellExecute = true } };
+            var proc = new Process() { StartInfo = new ProcessStartInfo() { FileName = "cmd.exe", Arguments = $"/c start r2:{url}", UseShellExecute = false, CreateNoWindow = true } };
             proc.Start();
         }
         else if (handler == DownloadHandler.Browser)
@@ -123,8 +124,10 @@ public static async void GithubR2Direct7z(string owner, string repo, string? inc
         {
             StartInfo = new ProcessStartInfo()
             {
-                FileName = $"r2:{matchingAsset.DownloadUrl}",
-                UseShellExecute = true
+                FileName = "cmd.exe",
+                Arguments = $"/c start r2:{matchingAsset.DownloadUrl}",
+                UseShellExecute = false,
+                CreateNoWindow = true
             }
         };
         proc.Start();

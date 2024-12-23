@@ -30,6 +30,18 @@ public class DayInMusic_2 : ISection
             },
             new ModOption(ctx)
             {
+                InternalName = "music_mineformer_sun",
+                Name = "Sun (Mineformer Remix)",
+                Authors = [Author.Mineformer],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.SunMForm = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.SunMForm = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.SunMForm,
+            },
+            new ModOption(ctx)
+            {
                 InternalName = "music_atlus_seasons",
                 Name = "Changing Seasons (Reload)",
                 Authors = [Author.Atlus],

@@ -1,16 +1,16 @@
-﻿using System.Windows.Input;
-using Wpf.Ui.Appearance;
-using Microsoft.Win32;
-using Femc_Config_Adjuster.Helpers;
+﻿using Wpf.Ui.Appearance;
 using Wpf.Ui.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
+using FemcConfig.Library.Config;
+using FemcConfig.Library.Common;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages;
 
 public partial class SettingsViewModel : ObservableObject, INavigationAware
 {
     private bool _isInitialized = false;
+    private AppService app;
 
     [ObservableProperty]
     private string? _appVersion;
@@ -27,10 +27,10 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     public void OnNavigatedFrom() { }
 
     private void InitializeViewModel()
-    {
+    {   
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
         //AppVersion should always match the latest version of the FeMC mod.
-        AppVersion = $"1.5.1 - This should match the version of the FeMC mod you have installed on your system.";
+        AppVersion = Constants.FEMC_MOD_VER + " - This should match the version of the FeMC mod you have installed on your system.";
         _isInitialized = true;
     }
 
