@@ -1,0 +1,85 @@
+﻿<ui:FluentWindow
+    x:Class="Femc_Config_Adjuster.Views.Windows.PromptWindow"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    ExtendsContentIntoTitleBar="True"
+    SizeToContent="WidthAndHeight"
+    Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+    WindowBackdropType="Mica"
+    WindowCornerPreference="Round"
+    WindowStartupLocation="CenterScreen"
+    Title="FEMC Config Update"
+    Width="400"
+    MaxWidth="600"
+    MaxHeight="600"
+    ResizeMode="CanMinimize">
+
+    <Grid Margin="8">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="FEMC Config Update"
+            CloseWindowByDoubleClickOnIcon="True"
+            Grid.Row="0"
+            Height="25">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
+            </ui:TitleBar.Icon>
+        </ui:TitleBar>
+
+        <TextBlock
+            x:Name="PromptTitle"
+            Text="Update Available"
+            FontSize="24"
+            FontWeight="SemiBold"
+            Padding="10"
+            VerticalAlignment="Top"
+            Grid.Row="1" />
+
+        <TextBlock
+            x:Name="PromptContent"
+            Text="A new version of the application is available. Would you like to update?"
+            TextWrapping="Wrap"
+            Padding="10"
+            VerticalAlignment="Top"
+            Grid.Row="2" />
+
+        <ProgressBar
+            x:Name="UpdateProgressBar"
+            Minimum="0"
+            Maximum="100"
+            Visibility="Collapsed"
+            Height="20"
+            Margin="10"
+            Grid.Row="3" />
+
+        <StackPanel
+            Orientation="Horizontal"
+            HorizontalAlignment="Center"
+            Grid.Row="4"
+            Margin="0,10,0,0">
+            <Button
+                x:Name="YesButton"
+                Content="Yes"
+                Width="100"
+                Margin="5"
+                Click="YesButton_Click" />
+            <Button
+                x:Name="NoButton"
+                Content="No"
+                Width="100"
+                Margin="5"
+                Click="NoButton_Click" />
+        </StackPanel>
+    </Grid>
+</ui:FluentWindow>

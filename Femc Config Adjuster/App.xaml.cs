@@ -33,7 +33,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.2.0"; // Should always be update after every update and needs to match the release tagname.
+    public const string APP_VERSION = "1.0.0"; // Should always be update after every update and needs to match the release tagname.
     private static readonly IHost _host = Host
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(c =>
@@ -151,58 +151,231 @@ public partial class App
 /// </summary>
 public class UpdateChecker
 {
-    /// <summary>
-    /// Checks the latest GitHub release and compares it with the current version.
-    /// </summary>
-    /// <param name="currentVersion">The current application version.</param>
-    public async Task CheckForUpdatesAsync(string currentVersion)
-    {
-        try
-        {
-            
-            string apiUrl = $"https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases/latest";
+	private const string GitHubApiUrl = "https://api.github.com/repos/MadMax1960/Femc-Config-Adjuster/releases/latest";
+	private const string DownloadDirectory = "Updates";
 
-            using HttpClient client = new HttpClient();
-            client.DefaultRequestHeaders.Add("User-Agent", "FemcConfigAdjuster");
+	/// <summary>
+	/// Checks the latest GitHub release and compares it with the current version.
+	/// </summary>
+	/// <param name="currentVersion">The current application version.</param>
+	public async Task CheckForUpdatesAsync(string currentVersion)
+	{
+		try
+		{
+			using HttpClient client = new HttpClient();
+			client.DefaultRequestHeaders.Add("User-Agent", "FemcConfigAdjuster");
 
-            var response = await client.GetAsync(apiUrl);
-            if (response.IsSuccessStatusCode)
-            {
-                var content = await response.Content.ReadAsStringAsync();
-                var release = JsonSerializer.Deserialize<GitHubRelease>(content);
-                if (release != null && IsNewerVersion(release.tag_name, currentVersion))
-                {
-                    var infoWin = new InfoWindow("Update Available!", $"A new version of the app is available: {release.tag_name}. You will need to update manually.");
-                    infoWin.ShowDialog();
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            // Log or handle update check error
-            var infoWin = new InfoWindow("Update Check Failed", "The app was unable to check for updates so you will need to check for updates manually.");
-            infoWin.ShowDialog();
-        }
-    }
+			var response = await client.GetAsync(GitHubApiUrl);
+			if (response.IsSuccessStatusCode)
+			{
+				var content = await response.Content.ReadAsStringAsync();
+				var release = JsonSerializer.Deserialize<GitHubRelease>(content);
 
-    /// <summary>
-    /// Compares the latest version with the current version.
-    /// </summary>
-    /// <param name="latestVersion">The latest version from GitHub.</param>
-    /// <param name="currentVersion">The current application version.</param>
-    /// <returns>True if the latest version is newer.</returns>
-    private bool IsNewerVersion(string latestVersion, string currentVersion)
-    {
-        Version latest = new Version(latestVersion.TrimStart('v'));
-        Version current = new Version(currentVersion);
-        return latest > current;
-    }
+				if (release != null && IsNewerVersion(release.tag_name, currentVersion))
+				{
+					var promptWin = new PromptWindow(
+						title: "Update Available",
+						content: $"A new version ({release.tag_name}) is available. Would you like to update?"
+					);
+					promptWin.ShowDialog();
 
-    /// <summary>
-    /// Represents the structure of a GitHub release.
-    /// </summary>
-    private class GitHubRelease
-    {
-        public string tag_name { get; set; } = string.Empty;
-    }
+					if (promptWin.Result)
+					{
+						// Pass the PromptWindow instance to show progress updates
+						await DownloadAndApplyUpdate(release.assets_url, promptWin);
+					}
+					else
+					{
+						var infoWin = new InfoWindow(
+							"Update Skipped",
+							"You can update later from the settings or when the application restarts."
+						);
+						infoWin.ShowDialog();
+					}
+				}
+			}
+		}
+		catch (Exception ex)
+		{
+			Log.Error(ex, "Failed to check for updates.");
+			var infoWin = new InfoWindow("Update Error", "An error occurred while checking for updates.");
+			infoWin.ShowDialog();
+		}
+	}
+
+	/// <summary>
+	/// Downloads and applies the update.
+	/// </summary>
+	/// <param name="assetsUrl">The URL to the release assets.</param>
+	private async Task DownloadAndApplyUpdate(string assetsUrl, PromptWindow promptWindow)
+	{
+		try
+		{
+			using HttpClient client = new HttpClient();
+			client.DefaultRequestHeaders.Add("User-Agent", "FemcConfigAdjuster");
+
+			// Fetch asset information
+			var response = await client.GetAsync(assetsUrl);
+			if (response.IsSuccessStatusCode)
+			{
+				var content = await response.Content.ReadAsStringAsync();
+				var assets = JsonSerializer.Deserialize<List<GitHubAsset>>(content);
+
+				var zipAsset = assets?.FirstOrDefault(asset => asset.name.EndsWith(".zip", StringComparison.OrdinalIgnoreCase));
+				if (zipAsset == null)
+				{
+					throw new Exception("No valid update file found in the release assets.");
+				}
+
+				string downloadPath = Path.Combine(Directory.GetCurrentDirectory(), DownloadDirectory);
+				Directory.CreateDirectory(downloadPath);
+				string zipFilePath = Path.Combine(downloadPath, zipAsset.name);
+
+				using (var downloadStream = await client.GetStreamAsync(zipAsset.browser_download_url))
+				using (var fileStream = new FileStream(zipFilePath, FileMode.Create, FileAccess.Write))
+				{
+					var buffer = new byte[8192];
+					int bytesRead;
+					long totalBytesRead = 0;
+					var totalBytes = Convert.ToInt64(response.Content.Headers.ContentLength);
+
+					while ((bytesRead = await downloadStream.ReadAsync(buffer, 0, buffer.Length)) > 0)
+					{
+						await fileStream.WriteAsync(buffer, 0, bytesRead);
+						totalBytesRead += bytesRead;
+
+						double progress = (double)totalBytesRead / totalBytes * 100;
+						promptWindow.UpdateProgress(progress);
+					}
+				}
+
+				string extractPath = Path.Combine(downloadPath, "Extracted");
+				if (Directory.Exists(extractPath))
+					Directory.Delete(extractPath, true);
+				System.IO.Compression.ZipFile.ExtractToDirectory(zipFilePath, extractPath);
+
+				ApplyUpdateFromExtractedFiles(extractPath);
+			}
+		}
+		catch (Exception ex)
+		{
+			Log.Error(ex, "Failed to download or apply the update.");
+			var errorWin = new InfoWindow("Update Error", $"An error occurred while applying the update: {ex.Message}");
+			errorWin.ShowDialog();
+		}
+	}
+
+	/// <summary>
+	/// Applies the update by launching the new version and scheduling deletion of the old one.
+	/// </summary>
+	/// <param name="extractedPath">The path to the extracted files.</param>
+	private void ApplyUpdateFromExtractedFiles(string extractedPath)
+	{
+		string currentDirectory = Directory.GetCurrentDirectory();
+		string newFolderPath = Path.Combine(Directory.GetParent(currentDirectory)?.FullName ?? currentDirectory, "FemcConfigAdjuster_New");
+		string newExePath = Path.Combine(newFolderPath, "Femc Config Adjuster.exe");
+
+		try
+		{
+			// Move extracted files to the new folder
+			if (Directory.Exists(newFolderPath))
+				Directory.Delete(newFolderPath, true);
+
+			Directory.CreateDirectory(newFolderPath);
+			foreach (var file in Directory.GetFiles(extractedPath, "*", SearchOption.AllDirectories))
+			{
+				var relativePath = Path.GetRelativePath(extractedPath, file);
+				var destinationPath = Path.Combine(newFolderPath, relativePath);
+
+				var destinationDir = Path.GetDirectoryName(destinationPath);
+				if (!Directory.Exists(destinationDir))
+					Directory.CreateDirectory(destinationDir);
+
+				File.Copy(file, destinationPath, true);
+			}
+
+			// Launch the new executable
+			if (File.Exists(newExePath))
+			{
+				System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+				{
+					FileName = newExePath,
+					UseShellExecute = true
+				});
+
+				// Schedule deletion of the old version
+				DeleteOldVersion(currentDirectory);
+				Application.Current.Shutdown();
+			}
+			else
+			{
+				throw new FileNotFoundException($"The main executable was not found in the new version's folder: {newExePath}");
+			}
+		}
+		catch (Exception ex)
+		{
+			Log.Error(ex, "Failed to apply the update.");
+			var errorWin = new InfoWindow("Update Error", $"An error occurred: {ex.Message}");
+			errorWin.ShowDialog();
+		}
+	}
+
+	/// <summary>
+	/// Deletes the old application folder after launching the new version.
+	/// </summary>
+	/// <param name="oldFolderPath">Path to the old folder.</param>
+	private void DeleteOldVersion(string oldFolderPath)
+	{
+		try
+		{
+			var deleteScript = Path.Combine(Directory.GetParent(oldFolderPath)?.FullName ?? oldFolderPath, "delete_old.bat");
+
+			var batchContent = $@"
+                    @echo off
+                    timeout /t 2 > nul
+                    rmdir /s /q ""{oldFolderPath}""
+                    del ""%~f0""
+                ";
+
+			File.WriteAllText(deleteScript, batchContent);
+
+			System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo
+			{
+				FileName = deleteScript,
+				UseShellExecute = true
+			});
+		}
+		catch (Exception ex)
+		{
+			Log.Error(ex, "Failed to schedule deletion of the old version.");
+		}
+	}
+
+	/// <summary>
+	/// Compares the latest version with the current version.
+	/// </summary>
+	private bool IsNewerVersion(string latestVersion, string currentVersion)
+	{
+		Version latest = new Version(latestVersion.TrimStart('v'));
+		Version current = new Version(currentVersion);
+		return latest > current;
+	}
+
+	/// <summary>
+	/// Represents the structure of a GitHub release.
+	/// </summary>
+	private class GitHubRelease
+	{
+		public string tag_name { get; set; } = string.Empty;
+		public string assets_url { get; set; } = string.Empty;
+	}
+
+	/// <summary>
+	/// Represents a GitHub release asset.
+	/// </summary>
+	private class GitHubAsset
+	{
+		public string name { get; set; } = string.Empty;
+		public string browser_download_url { get; set; } = string.Empty;
+	}
 }
