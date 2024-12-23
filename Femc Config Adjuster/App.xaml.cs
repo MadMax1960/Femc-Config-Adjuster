@@ -33,7 +33,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.3.0"; // Should always be update after every update and needs to match the release tagname.
+    public const string APP_VERSION = "1.2.0"; // Should always be update after every update and needs to match the release tagname.
     private static readonly IHost _host = Host
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(c =>
@@ -181,8 +181,7 @@ public class UpdateChecker
 
 					if (promptWin.Result)
 					{
-						// Pass the PromptWindow instance to show progress updates
-						await DownloadAndApplyUpdate(release.assets_url, promptWin);
+						await DownloadAndApplyUpdate(release.assets_url, promptWin, release.tag_name);
 					}
 					else
 					{
@@ -207,7 +206,7 @@ public class UpdateChecker
 	/// Downloads and applies the update.
 	/// </summary>
 	/// <param name="assetsUrl">The URL to the release assets.</param>
-	private async Task DownloadAndApplyUpdate(string assetsUrl, PromptWindow promptWindow)
+	private async Task DownloadAndApplyUpdate(string assetsUrl, PromptWindow promptWindow, string version)
 	{
 		try
 		{
@@ -254,7 +253,7 @@ public class UpdateChecker
 					Directory.Delete(extractPath, true);
 				System.IO.Compression.ZipFile.ExtractToDirectory(zipFilePath, extractPath);
 
-				ApplyUpdateFromExtractedFiles(extractPath);
+				ApplyUpdateFromExtractedFiles(extractPath, version);
 			}
 		}
 		catch (Exception ex)
@@ -269,17 +268,26 @@ public class UpdateChecker
 	/// Applies the update by launching the new version and scheduling deletion of the old one.
 	/// </summary>
 	/// <param name="extractedPath">The path to the extracted files.</param>
-	private void ApplyUpdateFromExtractedFiles(string extractedPath)
+	private void ApplyUpdateFromExtractedFiles(string extractedPath, string version)
 	{
 		string currentDirectory = Directory.GetCurrentDirectory();
-		string newFolderPath = Path.Combine(Directory.GetParent(currentDirectory)?.FullName ?? currentDirectory, "FemcConfigAdjuster_New");
+		string newFolderPath = Path.Combine(Directory.GetParent(currentDirectory)?.FullName ?? currentDirectory, $"FemcConfigAdjuster_{version}");
 		string newExePath = Path.Combine(newFolderPath, "Femc Config Adjuster.exe");
 
 		try
 		{
+			Log.Information("Starting update process...");
+			Log.Information($"Current directory: {currentDirectory}");
+			Log.Information($"New folder path: {newFolderPath}");
+			Log.Information($"Extracted path: {extractedPath}");
+			Log.Information($"New executable path: \"{newExePath}\"");
+
 			// Move extracted files to the new folder
 			if (Directory.Exists(newFolderPath))
+			{
+				Log.Information("Deleting existing new folder...");
 				Directory.Delete(newFolderPath, true);
+			}
 
 			Directory.CreateDirectory(newFolderPath);
 			foreach (var file in Directory.GetFiles(extractedPath, "*", SearchOption.AllDirectories))
@@ -309,7 +317,7 @@ public class UpdateChecker
 			}
 			else
 			{
-				throw new FileNotFoundException($"The main executable was not found in the new version's folder: {newExePath}");
+				throw new FileNotFoundException($"The main executable was not found in the new version's folder: \"{newExePath}\"");
 			}
 		}
 		catch (Exception ex)
@@ -319,6 +327,7 @@ public class UpdateChecker
 			errorWin.ShowDialog();
 		}
 	}
+
 
 	/// <summary>
 	/// Deletes the old application folder after launching the new version.
