@@ -177,13 +177,27 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.crezzstar,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.crezzstar,
             },
-            new ModOption(ctx)
+			new ModOption(ctx)
+			{
+				InternalName = "bustup_crezzalt",
+				Authors = [Author.Crezzstar],
+				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.crezzstarAlt,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.crezzstarAlt,
+			},
+			new ModOption(ctx)
             {
                 InternalName = "bustup_namiweiko",
                 Authors = [Author.namiweiko],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.namiweiko,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.namiweiko,
             },
-        ];
+			new ModOption(ctx)
+			{
+				InternalName = "bustup_shiosakana",
+				Authors = [Author.Shiosakana],
+				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.shiosakana,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.shiosakana,
+			},
+		];
     }
 }

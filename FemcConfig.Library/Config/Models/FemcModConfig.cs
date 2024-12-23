@@ -967,30 +967,32 @@ public partial class FemcModConfig : ObservableObject
 
 	public enum BustupType
 	{
-        Neptune,
-        Ely,
-        Esa,
-        Betina,
-        Anniversary,
-        JustBlue,
-        Sav,
-        Doodled,
-        RonaldReagan,
-        ElyAlt,
-        Yuunagi,
-        cielbell,
-        axolotl,
-        ghostedtoast,
-        Strelko,
-        gackt,
-        Jackie,
-        Lisa,
-        BetaFemcByMae,
-        crezzstar,
-        AngieDaGorl,
-        namiweiko,
-        chitu
-    }
+		Neptune,
+		Ely,
+		Esa,
+		Betina,
+		Anniversary,
+		JustBlue,
+		Sav,
+		Doodled,
+		RonaldReagan,
+		ElyAlt,
+		Yuunagi,
+		cielbell,
+		axolotl,
+		ghostedtoast,
+		Strelko,
+		gackt,
+		Jackie,
+		Lisa,
+		BetaFemcByMae,
+		crezzstar,
+		crezzstarAlt,
+		AngieDaGorl,
+		namiweiko,
+		chitu,
+		shiosakana
+	}
 
 	[Description("The Glass Shard in that one menu when pausing.")]
     [Category("2D Options")]
