@@ -46,12 +46,13 @@ jobs:
       run: |
         git config user.name "github-actions[bot]"
         git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git checkout -b temp-branch
-        git add "Femc Config Adjuster/App.xaml.cs"
-        git commit -m "Update APP_VERSION to match tag ${{ github.ref_name }}"
-        git checkout master
-        git merge temp-branch
-        git push origin master
+        git checkout -b temp-branch  # Create and switch to a temporary branch
+        git add "Femc Config Adjuster/App.xaml.cs"  # Add the modified file
+        git commit -m "Update APP_VERSION to match tag ${{ github.ref_name }}"  # Commit changes
+        git checkout master  # Switch to the master branch
+        git pull origin master --rebase  # Pull the latest changes from master with rebase
+        git merge temp-branch  # Merge the temporary branch into master
+        git push origin master  # Push changes to the master branch
 
     - name: Build
       run: dotnet publish 'Femc Config Adjuster' -c Release -o build
