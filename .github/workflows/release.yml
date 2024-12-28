@@ -26,34 +26,6 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-
-    - name: Update APP_VERSION to Match Tag
-      run: |
-        $filePath = "./Femc Config Adjuster/App.xaml.cs"
-        $tag = "${{ github.ref_name }}"
-        $regex = '^v?(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)$'
-        if ($tag -match $regex) {
-          $newVersion = $tag.TrimStart('v')
-          $content = Get-Content $filePath -Raw
-          $content = $content -replace 'public const string APP_VERSION = ".*";', "public const string APP_VERSION = `"$newVersion`";"
-          Set-Content -Path $filePath -Value $content
-          Write-Host "APP_VERSION updated to $newVersion"
-        } else {
-          Write-Error "Tag format does not match expected MAJOR.MINOR.PATCH format: $tag"
-        }
-  
-    - name: Commit and Merge Version Update
-      run: |
-        git config user.name "github-actions[bot]"
-        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-        git checkout -b temp-branch  # Create a temporary branch
-        git add "Femc Config Adjuster/App.xaml.cs"  # Add the modified file
-        git commit -m "Update APP_VERSION to match tag ${{ github.ref_name }}"  # Commit changes
-        git fetch origin master  # Fetch the latest updates from the remote master branch
-        git checkout master  # Switch to the master branch
-        git merge temp-branch  # Merge the temporary branch into master
-        git push origin master  # Push the merged changes to the remote master branch
-
     - name: Build
       run: dotnet publish 'Femc Config Adjuster' -c Release -o build
 
