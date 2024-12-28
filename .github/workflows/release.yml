@@ -49,7 +49,7 @@ jobs:
         git checkout -b temp-branch  # Create a temporary branch
         git add "Femc Config Adjuster/App.xaml.cs"  # Add updated file
         git commit -m "Update APP_VERSION to match tag ${{ github.ref_name }}"  # Commit changes
-        git push origin temp-branch:main  # Push to main branch
+        git push origin temp-branch:master  # Push to master branch
 
     - name: Build
       run: dotnet publish 'Femc Config Adjuster' -c Release -o build
