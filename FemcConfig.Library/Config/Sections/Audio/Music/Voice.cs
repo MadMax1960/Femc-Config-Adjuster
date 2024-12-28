@@ -1,17 +1,17 @@
 ﻿using FemcConfig.Library.Config.Options;
 namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
-public class GenderedAudioMusic : ISection
+public class Voice : ISection
 {
-    public string Name { get; } = "Social Link Music";
+    public string Name { get; } = "Voice";
 
-    public string Description { get; } = "Music used during social link events.";
+    public string Description { get; } = "Voice used ingame.";
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 
     public ModOption[] Options { get; }
 
-    public GenderedAudioMusic(AppService app)
+    public Voice(AppService app)
     {
         var ctx = app.GetContext();
         this.Options =

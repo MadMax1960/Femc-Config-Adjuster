@@ -1064,6 +1064,19 @@ public partial class FemcModConfig : ObservableObject
         Mekki
     }
 
+    [Description("The Voice of Kotone.")]
+    [Category("Voice")]
+    [DefaultValue(VoiceType.Mellodi)]
+    [ObservableProperty]
+    private VoiceType _VoiceTrue = VoiceType.Mellodi;
+
+    public enum VoiceType
+    {
+        Mellodi,
+        MellodiSilly,
+        Japanese
+    }
+
     [Category("Fun Stuff")]
     [DefaultValue(false)]
     [ObservableProperty]
