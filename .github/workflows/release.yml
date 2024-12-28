@@ -1,10 +1,10 @@
 name: Release
 
 on:
-  workflow_dispatch:
   push:
     tags:
       - '*.*.*'
+
 env:
   IS_RELEASE: ${{ startsWith(github.ref, 'refs/tags/') }}
   RELEASE_TAG: ${{ github.ref_name }}
@@ -26,7 +26,30 @@ jobs:
       uses: actions/setup-dotnet@v4
       with:
         dotnet-version: 8.0.x
-        
+
+    - name: Update APP_VERSION to Match Tag
+      run: |
+        $filePath = "./Femc Config Adjuster/App.xaml.cs"
+        $tag = "${{ github.ref_name }}"
+        $regex = '^v?(?<major>\d+)\.(?<minor>\d+)\.(?<patch>\d+)$'
+        if ($tag -match $regex) {
+          $newVersion = $tag.TrimStart('v')
+          $content = Get-Content $filePath -Raw
+          $content = $content -replace 'public const string APP_VERSION = ".*";', "public const string APP_VERSION = `"$newVersion`";"
+          Set-Content -Path $filePath -Value $content
+          Write-Host "APP_VERSION updated to $newVersion"
+        } else {
+          Write-Error "Tag format does not match expected MAJOR.MINOR.PATCH format: $tag"
+        }
+
+    - name: Commit Version Update
+      run: |
+        git config user.name "github-actions[bot]"
+        git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add ./Femc\ Config\ Adjuster/App.xaml.cs
+        git commit -m "Update APP_VERSION to match tag ${{ github.ref_name }}"
+        git push
+
     - name: Build
       run: dotnet publish 'Femc Config Adjuster' -c Release -o build
 
