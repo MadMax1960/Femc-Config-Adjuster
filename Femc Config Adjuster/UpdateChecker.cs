@@ -175,14 +175,21 @@ namespace Femc_Config_Adjuster
 		{
 			try
 			{
-				var deleteScript = Path.Combine(Directory.GetParent(oldFolderPath)?.FullName ?? oldFolderPath, "delete_old.bat");
+				string backupFolder = Path.Combine(Directory.GetParent(oldFolderPath)?.FullName ?? oldFolderPath, "Backup_OldVersion");
 
+				// Move old folder to backup
+				if (Directory.Exists(backupFolder))
+					Directory.Delete(backupFolder, true); // Clean up any previous backup
+				Directory.Move(oldFolderPath, backupFolder);
+
+				// Create a batch file to delete the backup after the new version launches
+				var deleteScript = Path.Combine(Directory.GetParent(backupFolder)?.FullName ?? backupFolder, "delete_old.bat");
 				var batchContent = $@"
-                    @echo off
-                    timeout /t 2 > nul
-                    rmdir /s /q ""{oldFolderPath}""
-                    del ""%~f0""
-                ";
+            @echo off
+            timeout /t 10 > nul
+            rmdir /s /q ""{backupFolder}""
+            del ""%~f0""
+        ";
 
 				File.WriteAllText(deleteScript, batchContent);
 
@@ -194,7 +201,9 @@ namespace Femc_Config_Adjuster
 			}
 			catch (Exception ex)
 			{
-				Log.Error(ex, "Failed to schedule deletion of the old version.");
+				Log.Error(ex, "Failed to move the old version to a backup folder.");
+				var errorWin = new InfoWindow("Update Error", "An error occurred while creating a backup of the old version.");
+				errorWin.ShowDialog();
 			}
 		}
 
