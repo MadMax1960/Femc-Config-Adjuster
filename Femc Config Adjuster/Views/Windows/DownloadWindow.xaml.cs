@@ -94,7 +94,7 @@ public partial class DownloadWindow : FluentWindow
             };
             proc.Start();
         }
-        catch (Exception ex)
+        catch
         {
             var infoWin = new InfoWindow(
                 "Failed to get 7z URL",

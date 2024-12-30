@@ -132,7 +132,7 @@ public static async void GithubR2Direct7z(string owner, string repo, string? inc
         };
         proc.Start();
     }
-    catch (Exception ex)
+    catch
     {
         var infoWin = new InfoWindow(
             "Failed to get 7z URL",

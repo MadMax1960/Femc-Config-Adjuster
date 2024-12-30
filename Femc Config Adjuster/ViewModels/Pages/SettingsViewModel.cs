@@ -10,7 +10,6 @@ namespace Femc_Config_Adjuster.ViewModels.Pages;
 public partial class SettingsViewModel : ObservableObject, INavigationAware
 {
     private bool _isInitialized = false;
-    private AppService app;
 
     [ObservableProperty]
     private string? _appVersion;
