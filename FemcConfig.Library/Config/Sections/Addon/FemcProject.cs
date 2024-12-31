@@ -2,7 +2,7 @@ using FemcConfig.Library.Config.Options;
 namespace FemcConfig.Library.Config.Sections;
 public class FemcProjectSection : ISection
 {
-    public string Name { get; } = "Main Page";
+    public string Name { get; } = "The Femc Mod";
     public string Description { get; } = "Use this page manage the installation of the Femc Mod.";
     public SectionCategory Category { get; } = SectionCategory.MainPage;
     public ModOption[] Options { get; }

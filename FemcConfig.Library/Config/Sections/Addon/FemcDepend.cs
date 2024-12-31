@@ -4,7 +4,7 @@ public class FemcDependSection : ISection
 {
     public string Name { get; } = "Dependencies";
     public string Description { get; } = "Use this page to install and manage the dependencies used by the Femc Mod.";
-    public SectionCategory Category { get; } = SectionCategory.Addon;
+    public SectionCategory Category { get; } = SectionCategory.MainPage;
     public ModOption[] Options { get; }
     public FemcDependSection(AppService app)
     {

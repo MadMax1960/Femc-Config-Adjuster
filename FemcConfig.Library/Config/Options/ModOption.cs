@@ -42,6 +42,11 @@ public class ModOption : ObservableObject
     public required string InternalName { get; init; }
 
     /// <summary>
+    /// Minimum version of the femc mod required for this option to appear. Allows you to release an update for the app without dooming users to having a broken config. For example "1.7.0".
+    /// </summary>
+    public string? MinVersion { get; init; }
+
+    /// <summary>
     /// Name of option.
     /// </summary>
     public string? Name { get; init; }

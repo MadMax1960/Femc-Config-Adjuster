@@ -4,7 +4,7 @@ public class EnabledAddonsSection : ISection
 {
     public string Name { get; } = "Addons";
     public string Description { get; } = "Use this page to enable or disable addons. If an addon is not installed click on preview and then download addon.";
-    public SectionCategory Category { get; } = SectionCategory.Addon;
+    public SectionCategory Category { get; } = SectionCategory.MainPage;
     public ModOption[] Options { get; }
     public EnabledAddonsSection(AppService app)
     {

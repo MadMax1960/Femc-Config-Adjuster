@@ -118,6 +118,6 @@ public class ApplicationHostService : IHostedService
         _navigationWindow = _serviceProvider.GetRequiredService<INavigationWindow>();
 
         _navigationWindow.ShowWindow();
-        _navigationWindow.Navigate(typeof(Views.Pages.Categories.Category_2D));
+        _navigationWindow.Navigate(typeof(Views.Pages.Categories.Category_Main));
     }
 }

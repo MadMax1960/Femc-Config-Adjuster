@@ -12,7 +12,7 @@ public partial class CategoryViewModel : ObservableObject
     public CategoryViewModel(string name, ISection[] sections)
     {
         this.Name = name;
-        this.Sections = sections.Select(x => new OptionsSection(x.Name, x.Description, new(x.Options))).ToArray();
+        this.Sections = sections.OrderBy(x => x.Name == "The Femc Mod" ? 0 : 1).Select(x => new OptionsSection(x.Name, x.Description, new(x.Options))).ToArray();
         this.SelectedSection = this.Sections.FirstOrDefault();
     }
 
