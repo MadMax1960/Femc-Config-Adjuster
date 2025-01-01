@@ -1,5 +1,6 @@
 ﻿using Femc_Config_Adjuster.ViewModels.Pages;
-using Microsoft.Win32;
+using Femc_Config_Adjuster.Views.Windows;
+using System.Windows;
 using Wpf.Ui.Controls;
 
 namespace Femc_Config_Adjuster.Views.Pages
@@ -12,7 +13,6 @@ namespace Femc_Config_Adjuster.Views.Pages
         {
             ViewModel = viewModel;
             DataContext = this;
-
             InitializeComponent();
         }
     }

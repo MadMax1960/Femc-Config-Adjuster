@@ -35,4 +35,10 @@
 			<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
 		</Content>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Page Update="Views\Windows\WebViewWindow.xaml">
+	    <SubType>Designer</SubType>
+	  </Page>
+	</ItemGroup>
 </Project>
