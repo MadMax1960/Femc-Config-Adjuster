@@ -1063,7 +1063,8 @@ public partial class FemcModConfig : ObservableObject
     {
         berrycha,
         ElyandPatmandx,
-        Mekki
+        Mekki,
+        shiosakana
     }
 
     [Description("The Voice of Kotone.")]
