@@ -180,7 +180,8 @@ public class BustupSection : ISection
 			new ModOption(ctx)
 			{
 				InternalName = "bustup_crezzalt",
-				Authors = [Author.Crezzstar],
+                Name = "Crezz star (Alt)",
+                Authors = [Author.Crezzstar],
 				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.crezzstarAlt,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.crezzstarAlt,
 			},
