@@ -31,6 +31,13 @@ public class LevelUpSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Esa,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.Esa,
             },
-        ];
+			new ModOption(ctx)
+			{
+				InternalName = "level_shiosakana",
+				Authors = [Author.Shiosakana],
+				Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.shiosakana,
+				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.shiosakana,
+			},
+		];
     }
 }

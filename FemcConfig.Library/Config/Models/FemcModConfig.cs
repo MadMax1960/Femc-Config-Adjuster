@@ -1035,9 +1035,11 @@ public partial class FemcModConfig : ObservableObject
 
     public enum LevelUpType
     {
-        Esa,
-        Ely
-    }
+		Esa,
+		Ely,
+		shiosakana,
+		ElyAlt
+	}
 
 	[Description("The face icons in battle and pause menu")]
 	[Category("2D Options")]
