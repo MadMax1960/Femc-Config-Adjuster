@@ -38,6 +38,15 @@ public class LevelUpSection : ISection
 				Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.shiosakana,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.shiosakana,
 			},
-		];
+            new ModOption(ctx)
+            {
+                InternalName = "level_ElyAlt",
+                Name = "Ely (Alt)",
+                Authors = [Author.Ely],
+                Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.ElyAlt,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.ElyAlt,
+            },
+
+        ];
     }
 }
