@@ -87,6 +87,13 @@ public class AOASection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.Nami,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.Nami,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "aoa_angie",
+                Authors = [Author.AngieDaGorl],
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.AngieDaGorl,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.AngieDaGorl,
+            },
         ];
     }
 }

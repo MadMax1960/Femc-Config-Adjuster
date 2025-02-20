@@ -46,6 +46,13 @@ public class LevelUpSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.ElyAlt,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.ElyAlt,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "level_angie",
+                Authors = [Author.AngieDaGorl],
+                Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.AngieDaGorl,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.AngieDaGorl,
+            },
 
         ];
     }
