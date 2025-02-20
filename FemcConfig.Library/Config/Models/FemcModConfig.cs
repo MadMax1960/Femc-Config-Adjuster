@@ -950,20 +950,21 @@ public partial class FemcModConfig : ObservableObject
     private AOAType _AOATrue = AOAType.Ely;
 
 	public enum AOAType
-	{
-		Ely,
-		Chrysanthie,
-		Fernando,
-		Monica,
-		RonaldReagan,
-		esaadrien,
-		mekki,
-		shiosakana,
-		shiosakanaAlt,
-        Nami
+    {
+        Ely,
+        Chrysanthie,
+        Fernando,
+        Monica,
+        RonaldReagan,
+        esaadrien,
+        mekki,
+        shiosakana,
+        shiosakanaAlt,
+        Nami,
+        AngieDaGorl
     }
 
-	[Description("The AOA Foreground Text.")]
+    [Description("The AOA Foreground Text.")]
     [Category("2D Options")]
     [DefaultValue(AOATextType.SorryBoutThat)]
     [ObservableProperty]
@@ -1019,15 +1020,16 @@ public partial class FemcModConfig : ObservableObject
     private ShardType _ShardTrue = ShardType.Esa;
 
 	public enum ShardType
-	{
-		Esa,
-		Ely,
-		ElyAlt,
-		Shiosakana,
-        namiweiko
+    {
+        Esa,
+        Ely,
+        ElyAlt,
+        Shiosakana,
+        namiweiko,
+        AngieDaGorl
     }
 
-	[Description("The Level Up :adachitrue:.")]
+    [Description("The Level Up :adachitrue:.")]
     [Category("2D Options")]
     [DefaultValue(LevelUpType.Esa)]
     [ObservableProperty]
@@ -1035,13 +1037,14 @@ public partial class FemcModConfig : ObservableObject
 
     public enum LevelUpType
     {
-		Esa,
-		Ely,
-		shiosakana,
-		ElyAlt
-	}
+        Esa,
+        Ely,
+        shiosakana,
+        ElyAlt,
+        AngieDaGorl
+    }
 
-	[Description("The face icons in battle and pause menu")]
+    [Description("The face icons in battle and pause menu")]
 	[Category("2D Options")]
 	[DefaultValue(PartyPanelType.Esa)]
 	[ObservableProperty]
