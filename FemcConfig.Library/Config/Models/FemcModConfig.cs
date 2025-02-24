@@ -1010,8 +1010,9 @@ public partial class FemcModConfig : ObservableObject
 		AngieDaGorl,
 		namiweiko,
 		chitu,
-		shiosakana
-	}
+		shiosakana,
+        samythecoolkid
+    }
 
 	[Description("The Glass Shard in that one menu when pausing.")]
     [Category("2D Options")]
