@@ -199,6 +199,13 @@ public class BustupSection : ISection
 				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.shiosakana,
 				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.shiosakana,
 			},
-		];
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_samythecoolkid",
+                Authors = [Author.samythecoolkid],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.samythecoolkid,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.samythecoolkid,
+            },
+        ];
     }
 }
