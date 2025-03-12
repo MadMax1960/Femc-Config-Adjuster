@@ -385,6 +385,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Personalisation.
+        /// </summary>
+        public static string Personalisation {
+            get {
+                return ResourceManager.GetString("Personalisation", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Play.
         /// </summary>
         public static string Play {
