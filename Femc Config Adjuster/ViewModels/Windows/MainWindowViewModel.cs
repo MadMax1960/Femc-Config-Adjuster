@@ -7,6 +7,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using Femc_Config_Adjuster.Views.Pages;
 using System.Collections.ObjectModel;
 using Wpf.Ui.Controls;
+using Femc_Config_Adjuster.LocalisationResources;
 
 namespace Femc_Config_Adjuster.ViewModels.Windows;
 
@@ -20,7 +21,7 @@ public partial class MainWindowViewModel : ObservableObject
 	{
 		new NavigationViewItem()
 		{
-			Content = "Settings",
+			Content = Resources.Settings,
 			Icon = new SymbolIcon { Symbol = SymbolRegular.Settings24 },
 			TargetPageType = typeof(Views.Pages.SettingsPage)
 		}
@@ -36,7 +37,7 @@ public partial class MainWindowViewModel : ObservableObject
     [
         new NavigationViewItem()
         {
-            Content = "Home",
+            Content = Resources.Home,
             Icon = new SymbolIcon { Symbol = SymbolRegular.Home16 },
             TargetPageType = typeof(Views.Pages.Categories.Category_Main),
         },
@@ -54,7 +55,7 @@ public partial class MainWindowViewModel : ObservableObject
         },
         new NavigationViewItem()
         {
-            Content = "Audio",
+            Content = Resources.Audio,
             Icon = new SymbolIcon { Symbol = SymbolRegular.Speaker216 },
 			TargetPageType = typeof(Views.Pages.Categories.Category_Audio),
         },
@@ -66,7 +67,7 @@ public partial class MainWindowViewModel : ObservableObject
         },
         new NavigationViewItem()
         {
-            Content = "UI",
+            Content = Resources.UI,
             Icon = new SymbolIcon { Symbol = SymbolRegular.Color16},
             TargetPageType = typeof(UiPage),
         },
