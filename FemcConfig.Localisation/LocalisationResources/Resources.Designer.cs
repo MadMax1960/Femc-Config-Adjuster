@@ -160,6 +160,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Dark.
+        /// </summary>
+        public static string Dark {
+            get {
+                return ResourceManager.GetString("Dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Daytime Outside Music (Phase 1).
         /// </summary>
         public static string Daytime_Outside_Music__Phase_1_ {
@@ -309,6 +318,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string Level_Up_Screen {
             get {
                 return ResourceManager.GetString("Level Up Screen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Light.
+        /// </summary>
+        public static string Light {
+            get {
+                return ResourceManager.GetString("Light", resourceCulture);
             }
         }
         

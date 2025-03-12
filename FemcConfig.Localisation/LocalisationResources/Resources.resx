@@ -150,6 +150,9 @@
   <data name="Cutin" xml:space="preserve">
     <value>Cutin</value>
   </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Dark</value>
+  </data>
   <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
     <value>Daytime Outside Music (Phase 1)</value>
   </data>
@@ -200,6 +203,9 @@
   </data>
   <data name="Level Up Screen" xml:space="preserve">
     <value>Level Up Screen</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Light</value>
   </data>
   <data name="Mod Download Error" xml:space="preserve">
     <value>The app is unable to initiate the download due to missing info. Please install this mod manually.</value>

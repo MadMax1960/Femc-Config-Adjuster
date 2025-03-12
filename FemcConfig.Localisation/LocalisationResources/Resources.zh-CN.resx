@@ -150,6 +150,9 @@
   <data name="Cutin" xml:space="preserve">
     <value />
   </data>
+  <data name="Dark" xml:space="preserve">
+    <value />
+  </data>
   <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
     <value />
   </data>
@@ -199,6 +202,9 @@
     <value>应用语言已被修改，请重启应用更改</value>
   </data>
   <data name="Level Up Screen" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Light" xml:space="preserve">
     <value />
   </data>
   <data name="Mod Download Error" xml:space="preserve">
