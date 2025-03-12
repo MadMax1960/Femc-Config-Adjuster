@@ -6,7 +6,7 @@ public class PartyPanelSection : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Party_Panel;
 
-    public string Description { get; } = "Select the party panel, the things on the side.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.PartyPanelDesc;
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

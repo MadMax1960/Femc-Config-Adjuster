@@ -6,7 +6,7 @@ public class AOASection : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.AOA;
 
-    public string Description { get; } = "Card used when finishing battles with an all-out attack.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.AOADesc;
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

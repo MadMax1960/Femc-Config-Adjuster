@@ -5,7 +5,7 @@ public class FinalMusic : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Final_Battle_Music;
 
-    public string Description { get; } = "Music used during the final battle with Nyx's core.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.FinalDesc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

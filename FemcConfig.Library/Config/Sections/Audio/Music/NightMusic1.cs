@@ -5,7 +5,7 @@ public class NightMusic_1 : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Night_Outside_Music__Phase_1_;
 
-    public string Description { get; } = "Music used at night outside the dorm before September.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.NightMusic1Desc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

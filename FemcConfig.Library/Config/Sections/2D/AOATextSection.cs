@@ -6,7 +6,7 @@ public class AOATextSection : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.AOA_Text;
 
-    public string Description { get; } = "Text used when finishing battles with an all-out attack.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.AOATextDesc;
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

@@ -70,6 +70,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use this page to enable or disable addons. If an addon is not installed click on preview and then download addon..
+        /// </summary>
+        public static string AddonDesc {
+            get {
+                return ResourceManager.GetString("AddonDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Addons.
         /// </summary>
         public static string Addons {
@@ -84,6 +93,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string Advantage_Battle_Music {
             get {
                 return ResourceManager.GetString("Advantage Battle Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select what music should be played when you are in a normal battle (Party Advantage). Multiple songs can be chosen for randomisation!.
+        /// </summary>
+        public static string AdvantageDesc {
+            get {
+                return ResourceManager.GetString("AdvantageDesc", resourceCulture);
             }
         }
         
@@ -106,11 +124,38 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Card used when finishing battles with an all-out attack..
+        /// </summary>
+        public static string AOADesc {
+            get {
+                return ResourceManager.GetString("AOADesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Text used when finishing battles with an all-out attack..
+        /// </summary>
+        public static string AOATextDesc {
+            get {
+                return ResourceManager.GetString("AOATextDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Audio.
         /// </summary>
         public static string Audio {
             get {
                 return ResourceManager.GetString("Audio", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Author(s).
+        /// </summary>
+        public static string Author {
+            get {
+                return ResourceManager.GetString("Author", resourceCulture);
             }
         }
         
@@ -124,11 +169,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Music used during some boss battles..
+        /// </summary>
+        public static string BossDesc {
+            get {
+                return ResourceManager.GetString("BossDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Bustup.
         /// </summary>
         public static string Bustup {
             get {
                 return ResourceManager.GetString("Bustup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Character portrait used in textboxes..
+        /// </summary>
+        public static string BustupDesc {
+            get {
+                return ResourceManager.GetString("BustupDesc", resourceCulture);
             }
         }
         
@@ -160,11 +223,47 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Animation that occasionally plays when attacking weaknesses or hitting criticals..
+        /// </summary>
+        public static string CutinDesc {
+            get {
+                return ResourceManager.GetString("CutinDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Dark.
         /// </summary>
         public static string Dark {
             get {
                 return ResourceManager.GetString("Dark", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Music used inside of school between April and August..
+        /// </summary>
+        public static string DayInMusic1Desc {
+            get {
+                return ResourceManager.GetString("DayInMusic1Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Music used inside of school September onwards..
+        /// </summary>
+        public static string DayInMusic2Desc {
+            get {
+                return ResourceManager.GetString("DayInMusic2Desc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Music used outside of school before September..
+        /// </summary>
+        public static string DayOutMusic1Desc {
+            get {
+                return ResourceManager.GetString("DayOutMusic1Desc", resourceCulture);
             }
         }
         
@@ -205,11 +304,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use this page to install and manage the dependencies used by the Femc Mod..
+        /// </summary>
+        public static string DependencyDesc {
+            get {
+                return ResourceManager.GetString("DependencyDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Disadvantage Battle Music.
         /// </summary>
         public static string Disadvantage_Battle_Music {
             get {
                 return ResourceManager.GetString("Disadvantage Battle Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select what music should be played when you are in a normal battle (Party Disadvantage). Multiple songs can be chosen for randomisation!.
+        /// </summary>
+        public static string DisadvantageDesc {
+            get {
+                return ResourceManager.GetString("DisadvantageDesc", resourceCulture);
             }
         }
         
@@ -241,11 +358,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Use this page manage the installation of the Femc Mod..
+        /// </summary>
+        public static string FemcDesc {
+            get {
+                return ResourceManager.GetString("FemcDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Final Battle Music.
         /// </summary>
         public static string Final_Battle_Music {
             get {
                 return ResourceManager.GetString("Final Battle Music", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Music used during the final battle with Nyx&apos;s core..
+        /// </summary>
+        public static string FinalDesc {
+            get {
+                return ResourceManager.GetString("FinalDesc", resourceCulture);
             }
         }
         
@@ -268,6 +403,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Glass Shards used in the config screen..
+        /// </summary>
+        public static string GlassShardDesc {
+            get {
+                return ResourceManager.GetString("GlassShardDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Group Photo.
         /// </summary>
         public static string Group_Photo {
@@ -277,11 +421,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The group photo taken ingame..
+        /// </summary>
+        public static string GroupPhotoDesc {
+            get {
+                return ResourceManager.GetString("GroupPhotoDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hair.
         /// </summary>
         public static string Hair {
             get {
                 return ResourceManager.GetString("Hair", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to FEMC&apos;s hair model..
+        /// </summary>
+        public static string HairDesc {
+            get {
+                return ResourceManager.GetString("HairDesc", resourceCulture);
             }
         }
         
@@ -304,6 +466,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The photos taken in Kyoto ingame..
+        /// </summary>
+        public static string KyotoPhotoDesc {
+            get {
+                return ResourceManager.GetString("KyotoPhotoDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The language of the app has been changed, please restart the app for changes to appear..
         /// </summary>
         public static string LanguageChangeAlert {
@@ -322,11 +493,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select the level up screen that is shown..
+        /// </summary>
+        public static string LevelUpDesc {
+            get {
+                return ResourceManager.GetString("LevelUpDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Light.
         /// </summary>
         public static string Light {
             get {
                 return ResourceManager.GetString("Light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The installation of the mod might be corrupted. Please try installing the mod again..
+        /// </summary>
+        public static string Mod_Corrupt {
+            get {
+                return ResourceManager.GetString("Mod Corrupt", resourceCulture);
             }
         }
         
@@ -349,6 +538,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The version of the femc mod installed currently might not be supported by the app. Check the settings page to see what version of the mod is needed for use with this app..
+        /// </summary>
+        public static string Mod_Ver_Mismatch {
+            get {
+                return ResourceManager.GetString("Mod Ver Mismatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Please wait while we load the Mod Download....
         /// </summary>
         public static string ModDownloadWait {
@@ -367,11 +565,38 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Theo Model.
+        /// </summary>
+        public static string ModelDesc {
+            get {
+                return ResourceManager.GetString("ModelDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually..
+        /// </summary>
+        public static string ModInfoRetrievalFail {
+            get {
+                return ResourceManager.GetString("ModInfoRetrievalFail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Night Outside Music (Phase 1).
         /// </summary>
         public static string Night_Outside_Music__Phase_1_ {
             get {
                 return ResourceManager.GetString("Night Outside Music (Phase 1)", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Music used at night outside the dorm before September..
+        /// </summary>
+        public static string NightMusic1Desc {
+            get {
+                return ResourceManager.GetString("NightMusic1Desc", resourceCulture);
             }
         }
         
@@ -394,11 +619,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Select what music should be played when you are in a normal battle. Multiple songs can be chosen for randomisation!.
+        /// </summary>
+        public static string NormalDesc {
+            get {
+                return ResourceManager.GetString("NormalDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Party Panel.
         /// </summary>
         public static string Party_Panel {
             get {
                 return ResourceManager.GetString("Party Panel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select the party panel, the things on the side..
+        /// </summary>
+        public static string PartyPanelDesc {
+            get {
+                return ResourceManager.GetString("PartyPanelDesc", resourceCulture);
             }
         }
         
@@ -466,6 +709,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Music used during social link events..
+        /// </summary>
+        public static string SocialDesc {
+            get {
+                return ResourceManager.GetString("SocialDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Femc Mod.
         /// </summary>
         public static string The_Femc_Mod {
@@ -484,11 +736,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Theo.
+        /// </summary>
+        public static string Theo {
+            get {
+                return ResourceManager.GetString("Theo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to UI.
         /// </summary>
         public static string UI {
             get {
                 return ResourceManager.GetString("UI", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Please try restarting the app or the app might not work as intended..
+        /// </summary>
+        public static string UnexpectedErr {
+            get {
+                return ResourceManager.GetString("UnexpectedErr", resourceCulture);
             }
         }
         
@@ -525,6 +795,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string UpdatePromptContent {
             get {
                 return ResourceManager.GetString("UpdatePromptContent", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voice used ingame. Currently only English is supported..
+        /// </summary>
+        public static string VoiceDesc {
+            get {
+                return ResourceManager.GetString("VoiceDesc", resourceCulture);
             }
         }
         

@@ -72,7 +72,7 @@
                     <TextBlock
                         FontSize="16"
                         FontWeight="Light"
-                        Text="Author(s)" />
+                        Text="{x:Static resx:Resources.Author}" />
                     <Separator Margin="0,4" />
                     <ItemsControl ItemsSource="{Binding Option.Authors}">
                         <ItemsControl.ItemTemplate>

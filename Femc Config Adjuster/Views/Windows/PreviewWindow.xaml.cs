@@ -135,7 +135,7 @@ public static async void GithubR2Direct7z(string owner, string repo, string? inc
     {
         var infoWin = new InfoWindow(
             "Failed to get 7z URL",
-            "The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.",
+            FemcConfig.Localisation.LocalisationResources.Resources.ModInfoRetrievalFail,
             "Installation Failed"
         );
         infoWin.ShowDialog();

@@ -6,7 +6,7 @@ public class Hair : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Hair;
 
-    public string Description { get; } = "FEMC's hair model.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.HairDesc;
 
     public SectionCategory Category { get; } = SectionCategory.ThreeD;
 

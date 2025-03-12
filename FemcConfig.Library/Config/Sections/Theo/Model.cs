@@ -6,7 +6,7 @@ public class Model : ISection
 {
 	public string Name { get; } = Localisation.LocalisationResources.Resources.Model;
 
-	public string Description { get; } = "Theo Model";
+	public string Description { get; } = Localisation.LocalisationResources.Resources.ModelDesc;
 
 	public SectionCategory Category { get; } = SectionCategory.Theo;
 

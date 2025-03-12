@@ -5,7 +5,7 @@ public class DayOutMusic_1 : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Daytime_Outside_Music__Phase_1_;
 
-    public string Description { get; } = "Music used outside of school before September.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.DayOutMusic1Desc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

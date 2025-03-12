@@ -117,13 +117,106 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AddonDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AdvantageDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AOADesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AOATextDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BossDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="BustupDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="CutinDesc" xml:space="preserve">
+    <value />
+  </data>
   <data name="Dark" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DayInMusic1Desc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DayInMusic2Desc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DayOutMusic1Desc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DependencyDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="DisadvantageDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FemcDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="FinalDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GlassShardDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GroupPhotoDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="HairDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="KyotoPhotoDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LevelUpDesc" xml:space="preserve">
     <value />
   </data>
   <data name="Light" xml:space="preserve">
     <value />
   </data>
+  <data name="Mod Corrupt" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Mod Ver Mismatch" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ModelDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ModInfoRetrievalFail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NightMusic1Desc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="PartyPanelDesc" xml:space="preserve">
+    <value />
+  </data>
   <data name="Personalisation" xml:space="preserve">
+    <value />
+  </data>
+  <data name="SocialDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Theo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnexpectedErr" xml:space="preserve">
+    <value />
+  </data>
+  <data name="VoiceDesc" xml:space="preserve">
     <value />
   </data>
 </root>

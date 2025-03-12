@@ -9,7 +9,7 @@ public class NormalMusicSection : ISection
     /// </summary>
     public string Name { get; } = Localisation.LocalisationResources.Resources.Normal_Battle_Music;
 
-    public string Description { get; } = "Select what music should be played when you are in a normal battle. Multiple songs can be chosen for randomisation!";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.NormalDesc;
 
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.

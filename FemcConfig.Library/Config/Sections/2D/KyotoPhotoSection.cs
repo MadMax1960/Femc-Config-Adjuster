@@ -6,7 +6,7 @@ public class KyotoPhotoSection : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Kyoto_Photos;
 
-    public string Description { get; } = "The photos taken in Kyoto ingame.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.KyotoPhotoDesc;
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

@@ -6,7 +6,7 @@ public class GroupPhotoSection : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Group_Photo;
 
-    public string Description { get; } = "The group photo taken ingame.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.GroupPhotoDesc;
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

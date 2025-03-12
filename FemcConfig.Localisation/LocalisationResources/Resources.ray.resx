@@ -1,17 +1,17 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
-  <!-- 
-    Microsoft ResX Schema 
-    
+  <!--
+    Microsoft ResX Schema
+
     Version 2.0
-    
-    The primary goals of this format is to allow a simple XML format 
-    that is mostly human readable. The generation and parsing of the 
-    various data types are done through the TypeConverter classes 
+
+    The primary goals of this format is to allow a simple XML format
+    that is mostly human readable. The generation and parsing of the
+    various data types are done through the TypeConverter classes
     associated with the data types.
-    
+
     Example:
-    
+
     ... ado.net/XML headers & schema ...
     <resheader name="resmimetype">text/microsoft-resx</resheader>
     <resheader name="version">2.0</resheader>
@@ -26,40 +26,43 @@
         <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
         <comment>This is a comment</comment>
     </data>
-                
-    There are any number of "resheader" rows that contain simple 
+
+    There are any number of "resheader" rows that contain simple
     name/value pairs.
-    
-    Each data row contains a name, and value. The row also contains a 
-    type or mimetype. Type corresponds to a .NET class that support 
-    text/value conversion through the TypeConverter architecture. 
-    Classes that don't support this are serialized and stored with the 
+
+    Each data row contains a name, and value. The row also contains a
+    type or mimetype. Type corresponds to a .NET class that support
+    text/value conversion through the TypeConverter architecture.
+    Classes that don't support this are serialized and stored with the
     mimetype set.
-    
-    The mimetype is used for serialized objects, and tells the 
-    ResXResourceReader how to depersist the object. This is currently not 
+
+    The mimetype is used for serialized objects, and tells the
+    ResXResourceReader how to depersist the object. This is currently not
     extensible. For a given mimetype the value must be set accordingly:
-    
-    Note - application/x-microsoft.net.object.binary.base64 is the format 
-    that the ResXResourceWriter will generate, however the reader can 
+
+    Note - application/x-microsoft.net.object.binary.base64 is the format
+    that the ResXResourceWriter will generate, however the reader can
     read any of the formats listed below.
-    
+
     mimetype: application/x-microsoft.net.object.binary.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
             : and then encoded with base64 encoding.
-    
+
     mimetype: application/x-microsoft.net.object.soap.base64
-    value   : The object must be serialized with 
+    value   : The object must be serialized with
             : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
             : and then encoded with base64 encoding.
 
     mimetype: application/x-microsoft.net.object.bytearray.base64
-    value   : The object must be serialized into a byte array 
+    value   : The object must be serialized into a byte array
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+  <xsd:schema id="root"
+    xmlns=""
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+    xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
     <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
@@ -118,255 +121,163 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About text" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="AddonDesc" xml:space="preserve">
-    <value />
+    <value>About how awesome Ray is</value>
   </data>
   <data name="Addons" xml:space="preserve">
-    <value />
+    <value>Addons to the amazing ray</value>
   </data>
   <data name="Advantage Battle Music" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AdvantageDesc" xml:space="preserve">
-    <value />
+    <value>Advantage roll with +3</value>
   </data>
   <data name="AOA" xml:space="preserve">
-    <value />
+    <value>AOA More like All out Aray</value>
   </data>
   <data name="AOA Text" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AOADesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AOATextDesc" xml:space="preserve">
-    <value />
+    <value>AOA Text nyam</value>
   </data>
   <data name="Audio" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Author" xml:space="preserve">
-    <value />
+    <value>Audio the sound of Ray</value>
   </data>
   <data name="Boss Battle Music" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value />
+    <value>Boss, that Ray</value>
   </data>
   <data name="Bustup" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BustupDesc" xml:space="preserve">
-    <value />
+    <value>Bustup nyam</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Test</value>
+    <value>Closenyam</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Test</value>
+    <value>Confirm nyam</value>
   </data>
   <data name="Cutin" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CutinDesc" xml:space="preserve">
-    <value />
+    <value>Cutin nyam</value>
   </data>
   <data name="Dark" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DayInMusic1Desc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DayInMusic2Desc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Dark</value>
   </data>
   <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
-    <value />
+    <value>Daytime Outside Music (Phase 1)</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
-    <value />
+    <value>Daytime School Music (Phase 1)</value>
   </data>
   <data name="Daytime School Music (Phase 2)" xml:space="preserve">
-    <value />
+    <value>Daytime School Music (Phase 2)</value>
   </data>
   <data name="Dependencies" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DependencyDesc" xml:space="preserve">
-    <value />
+    <value>Dependencies</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DisadvantageDesc" xml:space="preserve">
-    <value />
+    <value>Disadvantage Battle Music</value>
   </data>
   <data name="Download" xml:space="preserve">
-    <value>Test</value>
+    <value>Download</value>
   </data>
   <data name="DownloadTip" xml:space="preserve">
-    <value>Test</value>
+    <value>💡Tip: If you already have the mod downloaded. Try clicking on configure mod in Reloaded-II.</value>
   </data>
   <data name="Enabled" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="FemcDesc" xml:space="preserve">
-    <value />
+    <value>Enabled</value>
   </data>
   <data name="Final Battle Music" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FinalDesc" xml:space="preserve">
-    <value />
+    <value>Final Battle Music</value>
   </data>
   <data name="Gendered Audio" xml:space="preserve">
-    <value />
+    <value>Gendered Audio</value>
   </data>
   <data name="Glass Shard" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GlassShardDesc" xml:space="preserve">
-    <value />
+    <value>Glass Shard</value>
   </data>
   <data name="Group Photo" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GroupPhotoDesc" xml:space="preserve">
-    <value />
+    <value>Group Photo</value>
   </data>
   <data name="Hair" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HairDesc" xml:space="preserve">
-    <value />
+    <value>Hair</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Test</value>
+    <value>Home</value>
   </data>
   <data name="Kyoto Photos" xml:space="preserve">
-    <value />
-  </data>
-  <data name="KyotoPhotoDesc" xml:space="preserve">
-    <value />
+    <value>Kyoto Photos</value>
   </data>
   <data name="LanguageChangeAlert" xml:space="preserve">
-    <value>应用语言已被修改，请重启应用更改</value>
+    <value>The language of the app has been changed, please restart the app for changes to appear.</value>
   </data>
   <data name="Level Up Screen" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LevelUpDesc" xml:space="preserve">
-    <value />
+    <value>Level Up Screen</value>
   </data>
   <data name="Light" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Mod Corrupt" xml:space="preserve">
-    <value />
+    <value>Light</value>
   </data>
   <data name="Mod Download Error" xml:space="preserve">
-    <value />
+    <value>The app is unable to initiate the download due to missing info. Please install this mod manually.</value>
   </data>
   <data name="Mod Download Start" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Mod Ver Mismatch" xml:space="preserve">
-    <value />
+    <value>Your download has been initiated. You might need to launch the game and restart the app for changes to appear.</value>
   </data>
   <data name="ModDownloadWait" xml:space="preserve">
-    <value>Test</value>
+    <value>Please wait while we load the Mod Download...</value>
   </data>
   <data name="Model" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ModelDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ModInfoRetrievalFail" xml:space="preserve">
-    <value />
+    <value>Model</value>
   </data>
   <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NightMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Night Outside Music (Phase 1)</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Test</value>
+    <value>No</value>
   </data>
   <data name="Normal Battle Music" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NormalDesc" xml:space="preserve">
-    <value />
+    <value>Normal Battle Music</value>
   </data>
   <data name="Party Panel" xml:space="preserve">
-    <value />
-  </data>
-  <data name="PartyPanelDesc" xml:space="preserve">
-    <value />
+    <value>Party Panel</value>
   </data>
   <data name="Personalisation" xml:space="preserve">
-    <value />
+    <value>Personalisation</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Test</value>
+    <value>Play</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value>Test</value>
+    <value>Preview</value>
   </data>
   <data name="ReloadExePrompt" xml:space="preserve">
-    <value>Test</value>
+    <value>Find and select your Reloaded II install (exe) to continue.</value>
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
-    <value>Test</value>
+    <value>Change Language</value>
+    <comment>Text that appears above the select language combobox</comment>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Test</value>
+    <value>Settings</value>
   </data>
   <data name="Social Link Music" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SocialDesc" xml:space="preserve">
-    <value />
+    <value>Social Link Music</value>
   </data>
   <data name="The Femc Mod" xml:space="preserve">
-    <value />
+    <value>The Femc Mod</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Theo" xml:space="preserve">
-    <value />
+    <value>Theme</value>
   </data>
   <data name="UI" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="UnexpectedErr" xml:space="preserve">
-    <value />
+    <value>UI</value>
   </data>
   <data name="Update Check Fail" xml:space="preserve">
-    <value />
+    <value>An error occurred while checking for updates.</value>
   </data>
   <data name="Update Later" xml:space="preserve">
-    <value />
+    <value>You can update later from the settings or when the application restarts.</value>
   </data>
   <data name="Update Notify" xml:space="preserve">
-    <value />
+    <value>A new version is available. Would you like to update?</value>
   </data>
   <data name="UpdatePromptContent" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="VoiceDesc" xml:space="preserve">
-    <value />
+    <value>A new version of the application is available. Would you like to update?</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Test</value>
+    <value>Yes</value>
   </data>
 </root>

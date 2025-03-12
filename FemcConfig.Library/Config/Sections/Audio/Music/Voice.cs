@@ -5,7 +5,7 @@ public class Voice : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Gendered_Audio;
 
-    public string Description { get; } = "Voice used ingame.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.VoiceDesc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

@@ -5,7 +5,7 @@ public class DayInMusic_1 : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Daytime_Outside_Music__Phase_1_;
 
-    public string Description { get; } = "Music used inside of school between April and August.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.DayInMusic1Desc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

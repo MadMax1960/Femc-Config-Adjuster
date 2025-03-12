@@ -5,7 +5,7 @@ public class BossMusic : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Boss_Battle_Music;
 
-    public string Description { get; } = "Music used during some boss battles.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.BossDesc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 
