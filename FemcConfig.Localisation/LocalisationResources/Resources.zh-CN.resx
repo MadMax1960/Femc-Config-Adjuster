@@ -118,64 +118,153 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About text" xml:space="preserve">
-    <value>About Femc Config Adjuster</value>
+    <value>Test</value>
+  </data>
+  <data name="Addons" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Advantage Battle Music" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AOA" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AOA Text" xml:space="preserve">
+    <value />
   </data>
   <data name="Audio" xml:space="preserve">
-    <value>Audio</value>
+    <value>Test</value>
+  </data>
+  <data name="Boss Battle Music" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Bustup" xml:space="preserve">
+    <value />
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Close</value>
+    <value>Test</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Confirm</value>
+    <value>Test</value>
+  </data>
+  <data name="Cutin" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Daytime School Music (Phase 1)" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Daytime School Music (Phase 2)" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Disadvantage Battle Music" xml:space="preserve">
+    <value />
   </data>
   <data name="Download" xml:space="preserve">
-    <value>Download</value>
+    <value>Test</value>
   </data>
   <data name="DownloadTip" xml:space="preserve">
-    <value>💡Tip: If you already have the mod downloaded. Try clicking on configure mod in Reloaded-II.</value>
+    <value>Test</value>
   </data>
   <data name="Enabled" xml:space="preserve">
-    <value>Enabled</value>
+    <value>Test</value>
+  </data>
+  <data name="Final Battle Music" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Gendered Audio" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Glass Shard" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Group Photo" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Hair" xml:space="preserve">
+    <value />
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Home</value>
+    <value>Test</value>
+  </data>
+  <data name="Kyoto Photos" xml:space="preserve">
+    <value />
   </data>
   <data name="LanguageChangeAlert" xml:space="preserve">
-    <value>The language of the app has been changed, please restart the app for changes to appear.</value>
+    <value>应用语言已被修改，请重启应用更改</value>
+  </data>
+  <data name="Level Up Screen" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Mod Download Error" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Mod Download Start" xml:space="preserve">
+    <value />
   </data>
   <data name="ModDownloadWait" xml:space="preserve">
-    <value>Please wait while we load the Mod Download...</value>
+    <value>Test</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
+    <value />
   </data>
   <data name="No" xml:space="preserve">
-    <value>No</value>
+    <value>Test</value>
+  </data>
+  <data name="Normal Battle Music" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Party Panel" xml:space="preserve">
+    <value />
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Play</value>
+    <value>Test</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value>Preview</value>
+    <value>Test</value>
   </data>
   <data name="ReloadExePrompt" xml:space="preserve">
-    <value>Find and select your Reloaded II install (exe) to continue.</value>
+    <value>Test</value>
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
-    <value>Change Language</value>
-    <comment>Text that appears above the select language combobox</comment>
+    <value>Test</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Settings</value>
+    <value>Test</value>
+  </data>
+  <data name="Social Link Music" xml:space="preserve">
+    <value />
+  </data>
+  <data name="The Femc Mod" xml:space="preserve">
+    <value />
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Theme</value>
+    <value>Test</value>
   </data>
   <data name="UI" xml:space="preserve">
-    <value>UI</value>
+    <value>Test</value>
+  </data>
+  <data name="Update Check Fail" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Update Later" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Update Notify" xml:space="preserve">
+    <value />
   </data>
   <data name="UpdatePromptContent" xml:space="preserve">
-    <value>A new version of the application is available. Would you like to update?</value>
+    <value>Test</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Yes</value>
+    <value>Test</value>
   </data>
 </root>

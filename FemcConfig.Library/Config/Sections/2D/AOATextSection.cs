@@ -4,7 +4,7 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class AOATextSection : ISection
 {
-    public string Name { get; } = "AOA Text";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.AOA_Text;
 
     public string Description { get; } = "Text used when finishing battles with an all-out attack.";
 

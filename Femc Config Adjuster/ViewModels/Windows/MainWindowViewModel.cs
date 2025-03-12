@@ -7,7 +7,7 @@ using CommunityToolkit.Mvvm.ComponentModel;
 using Femc_Config_Adjuster.Views.Pages;
 using System.Collections.ObjectModel;
 using Wpf.Ui.Controls;
-using Femc_Config_Adjuster.LocalisationResources;
+using FemcConfig.Localisation.LocalisationResources;
 
 namespace Femc_Config_Adjuster.ViewModels.Windows;
 

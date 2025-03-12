@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class DayInMusic_2 : ISection
 {
-    public string Name { get; } = "Daytime Music (School) 2";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Daytime_School_Music__Phase_2_;
 
     public string Description { get; } = "Music used inside of school September onwards.";
 

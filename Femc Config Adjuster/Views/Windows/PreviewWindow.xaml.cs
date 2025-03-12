@@ -1,5 +1,4 @@
-﻿using Femc_Config_Adjuster.Controls;
-using Femc_Config_Adjuster.ViewModels.Windows;
+﻿using Femc_Config_Adjuster.ViewModels.Windows;
 using FemcConfig.Library.Config.Models;
 using Microsoft.Web.WebView2.Wpf;
 using System.Diagnostics;
@@ -78,12 +77,12 @@ public partial class PreviewWindow : FluentWindow
             if(githubowner  != null && githubreponame != null)
             {
                 GithubR2Direct7z(githubowner, githubreponame, regex);
-                var infoWin = new InfoWindow("Download Info", "Your download has been initiated. You might need to launch the game and restart the app for changes to appear.");
+                var infoWin = new InfoWindow("Download Info", FemcConfig.Localisation.LocalisationResources.Resources.Mod_Download_Start);
                 infoWin.ShowDialog();
             }
             else
             {
-                var infoWin = new InfoWindow("Download Error", "The app is unable to initiate the download due to missing info. Please install this mod manually.", "Download Error");
+                var infoWin = new InfoWindow("Download Error", FemcConfig.Localisation.LocalisationResources.Resources.Mod_Download_Error);
                 infoWin.ShowDialog();
             }
         }

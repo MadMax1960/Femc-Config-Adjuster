@@ -4,7 +4,7 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class LevelUpSection : ISection
 {
-    public string Name { get; } = "Level Up Screen";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Level_Up_Screen;
 
     public string Description { get; } = "Select the level up screen that is shown.";
 

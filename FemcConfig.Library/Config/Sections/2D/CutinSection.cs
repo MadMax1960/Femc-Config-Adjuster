@@ -7,7 +7,7 @@ public class CutinSection : ISection
     /// <summary>
     /// Section name. Sets the text that appears on the side and title of page.
     /// </summary>
-    public string Name { get; } = "Cutin";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Cutin;
 
     public string Description { get; } = "Animation that occasionally plays when attacking weaknesses or hitting criticals.";
 

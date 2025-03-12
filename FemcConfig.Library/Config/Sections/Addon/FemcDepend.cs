@@ -2,7 +2,7 @@
 namespace FemcConfig.Library.Config.Sections;
 public class FemcDependSection : ISection
 {
-    public string Name { get; } = "Dependencies";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Dependencies;
     public string Description { get; } = "Use this page to install and manage the dependencies used by the Femc Mod.";
     public SectionCategory Category { get; } = SectionCategory.MainPage;
     public ModOption[] Options { get; }

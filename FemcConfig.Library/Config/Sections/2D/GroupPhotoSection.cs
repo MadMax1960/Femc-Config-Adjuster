@@ -4,7 +4,7 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class GroupPhotoSection : ISection
 {
-    public string Name { get; } = "Group Photo";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Group_Photo;
 
     public string Description { get; } = "The group photo taken ingame.";
 

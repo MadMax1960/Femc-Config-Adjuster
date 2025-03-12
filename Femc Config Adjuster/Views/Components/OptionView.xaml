@@ -6,7 +6,7 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Components"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:resx="clr-namespace:Femc_Config_Adjuster.LocalisationResources"
+    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">

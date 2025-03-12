@@ -117,64 +117,29 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About text" xml:space="preserve">
-    <value>Test</value>
+  <data name="Mod Download Error" xml:space="preserve">
+    <value />
   </data>
-  <data name="Audio" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Close" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Confirm" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Download" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="DownloadTip" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Enabled" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Home" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="LanguageChangeAlert" xml:space="preserve">
-    <value>应用语言已被修改，请重启应用更改</value>
-  </data>
-  <data name="ModDownloadWait" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="No" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Play" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="Preview" xml:space="preserve">
-    <value>Test</value>
-  </data>
-  <data name="ReloadExePrompt" xml:space="preserve">
-    <value>Test</value>
+  <data name="Mod Download Start" xml:space="preserve">
+    <value />
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
-    <value>Test</value>
+    <value />
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Test</value>
   </data>
-  <data name="Theme" xml:space="preserve">
-    <value>Test</value>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="Social Link Music" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
   </data>
-  <data name="UI" xml:space="preserve">
-    <value>Test</value>
+  <data name="Update Check Fail" xml:space="preserve">
+    <value />
   </data>
-  <data name="UpdatePromptContent" xml:space="preserve">
-    <value>Test</value>
+  <data name="Update Later" xml:space="preserve">
+    <value />
   </data>
-  <data name="Yes" xml:space="preserve">
-    <value>Test</value>
+  <data name="Update Notify" xml:space="preserve">
+    <value />
   </data>
 </root>

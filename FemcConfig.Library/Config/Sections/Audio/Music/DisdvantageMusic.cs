@@ -7,7 +7,7 @@ public class DisadvantageMusicSection : ISection
     /// <summary>
     /// Section name. Sets the text that appears on the side and title of page.
     /// </summary>
-    public string Name { get; } = "Disadvantage Battle Music";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Disadvantage_Battle_Music;
 
     public string Description { get; } = "Select what music should be played when you are in a normal battle (Party Disadvantage). Multiple songs can be chosen for randomisation!";
 

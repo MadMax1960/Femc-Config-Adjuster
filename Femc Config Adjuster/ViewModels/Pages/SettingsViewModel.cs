@@ -2,11 +2,10 @@
 using Wpf.Ui.Controls;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using FemcConfig.Library.Config;
 using FemcConfig.Library.Common;
 using Femc_Config_Adjuster.Views.Windows;
 using System.Globalization;
-using Femc_Config_Adjuster.LocalisationResources;
+using FemcConfig.Localisation.LocalisationResources;
 using System.Diagnostics;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages;
@@ -16,7 +15,8 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     public Dictionary<string, string> AvailableLanguages { get; } = new()
     {
         { "English", "en-US" },
-        { "简体中文 (Simplified Chinese)", "zh-CN" }
+        { "简体中文 (Simplified Chinese)", "zh-CN" },
+        { "日本語 (Japanese)", "ja" }
     };
 
     private bool _isInitialized = false;
@@ -40,7 +40,6 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
 
     private void InitializeViewModel()
     {
-        
         //AppVersion should always match the latest version of the FeMC mod.
         AppVersion = Constants.FEMC_MOD_VER + " - This should match the version of the FeMC mod you have installed on your system.";
         string savedCulture = Properties.Settings.Default.SelectedLanguage;
@@ -49,18 +48,10 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(savedCulture);
             Thread.CurrentThread.CurrentCulture = new CultureInfo(savedCulture);
         }
-        //bool wasTrackingChanges = _isInitialized;
-        //_isInitialized = true;
-
-        // Set selected language WITHOUT triggering ChangeLanguage()
         _selectedLanguage = AvailableLanguages.FirstOrDefault(x => x.Value == Thread.CurrentThread.CurrentUICulture.Name).Key
                              ?? "English";
-        OnPropertyChanged(nameof(SelectedLanguage)); // Manually notify UI
-        
+        OnPropertyChanged(nameof(SelectedLanguage));
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
-
-        // Restore change tracking
-        //_isInitialized = wasTrackingChanges;
         _isInitialized = true;
 
     }

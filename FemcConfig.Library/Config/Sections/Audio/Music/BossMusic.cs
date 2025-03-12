@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class BossMusic : ISection
 {
-    public string Name { get; } = "Boss Battle Music";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Boss_Battle_Music;
 
     public string Description { get; } = "Music used during some boss battles.";
 

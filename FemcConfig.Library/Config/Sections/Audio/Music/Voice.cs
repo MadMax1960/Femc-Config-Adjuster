@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class Voice : ISection
 {
-    public string Name { get; } = "Voice";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Gendered_Audio;
 
     public string Description { get; } = "Voice used ingame.";
 
