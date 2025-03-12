@@ -117,7 +117,7 @@ public partial class App
     private void SetupCulture()
     {
         string setCulture = Settings.Default.SelectedLanguage;
-        if (new List<string>{"ja", "en-US", "zh-CN"}.Contains(setCulture))
+        if (new List<string>{"ja", "en-US", "zh-CN", "ru"}.Contains(setCulture))
         {
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Default.SelectedLanguage);
             Thread.CurrentThread.CurrentCulture = new CultureInfo(Settings.Default.SelectedLanguage);
