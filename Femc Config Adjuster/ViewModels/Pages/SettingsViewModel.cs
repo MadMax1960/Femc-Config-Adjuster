@@ -18,7 +18,8 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
         { "简体中文 (Simplified Chinese)", "zh-CN" },
         { "日本語 (Japanese)", "ja" },
         { "Русский (Russian)", "ru" },
-        { "Polski (Polish)", "pl" }
+        { "Polski (Polish)", "pl" },
+        { "Español (Spanish)", "es" }
     };
 
     private bool _isInitialized = false;
