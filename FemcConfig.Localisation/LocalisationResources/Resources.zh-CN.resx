@@ -118,255 +118,257 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="About text" xml:space="preserve">
-    <value>Test</value>
+    <value>关于哈姆子 mod 配置器</value>
   </data>
   <data name="AddonDesc" xml:space="preserve">
-    <value />
+    <value>这里可以管理拓展。没安装的话点击“预览”然后点“安装”就好</value>
   </data>
   <data name="Addons" xml:space="preserve">
-    <value />
+    <value>拓展</value>
   </data>
   <data name="Advantage Battle Music" xml:space="preserve">
-    <value />
+    <value>先发攻击 BGM</value>
   </data>
   <data name="AdvantageDesc" xml:space="preserve">
-    <value />
+    <value>选择普通战斗(即你砍暗影时的)音乐。勾选多首歌可以随机哦！</value>
   </data>
   <data name="AOA" xml:space="preserve">
-    <value />
+    <value>总攻击立绘</value>
   </data>
   <data name="AOA Text" xml:space="preserve">
-    <value />
+    <value>总攻击文本</value>
   </data>
   <data name="AOADesc" xml:space="preserve">
-    <value />
+    <value>选择以哈姆子完成总攻击时的立绘。</value>
   </data>
   <data name="AOATextDesc" xml:space="preserve">
-    <value />
+    <value>选择以哈姆子完成总攻击时的文本。</value>
   </data>
   <data name="Audio" xml:space="preserve">
-    <value>Test</value>
+    <value>音频相关</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value />
+    <value>作者</value>
   </data>
   <data name="Boss Battle Music" xml:space="preserve">
-    <value />
+    <value>boss 战 BGM</value>
   </data>
   <data name="BossDesc" xml:space="preserve">
-    <value />
+    <value>选择 boss 战使用的音乐。</value>
   </data>
   <data name="Bustup" xml:space="preserve">
-    <value />
+    <value>对话立绘</value>
   </data>
   <data name="BustupDesc" xml:space="preserve">
-    <value />
+    <value>选择对话回复时使用的立绘。</value>
   </data>
   <data name="Close" xml:space="preserve">
-    <value>Test</value>
+    <value>关闭</value>
   </data>
   <data name="Confirm" xml:space="preserve">
-    <value>Test</value>
+    <value>确定</value>
   </data>
   <data name="Cutin" xml:space="preserve">
-    <value />
+    <value>暴击背景立绘</value>
   </data>
   <data name="CutinDesc" xml:space="preserve">
-    <value />
+    <value>选择打出 weak 和暴击时触发特效使用的背景。</value>
   </data>
   <data name="Dark" xml:space="preserve">
-    <value />
+    <value>暗色</value>
   </data>
   <data name="DayInMusic1Desc" xml:space="preserve">
-    <value />
+    <value>选择4-8月的校内音乐。</value>
   </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
-    <value />
+    <value>选择九月以后的校内音乐。</value>
   </data>
   <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value />
+    <value>选择九月以前的校外音乐。</value>
   </data>
   <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
-    <value />
+    <value>校内音乐(4-8月)</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
-    <value />
+    <value>校外音乐(4-8月)</value>
   </data>
   <data name="Daytime School Music (Phase 2)" xml:space="preserve">
-    <value />
+    <value>校内音乐(9月以后)</value>
   </data>
   <data name="Dependencies" xml:space="preserve">
-    <value />
+    <value>依赖模组</value>
   </data>
   <data name="DependencyDesc" xml:space="preserve">
-    <value />
+    <value>安装和管理哈姆子mod所需的依赖mod。</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value />
+    <value>后发攻击 BGM</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value />
+    <value>选择普通战斗(但是是暗影打你时的)音乐。勾选多首歌可以随机哦！</value>
   </data>
   <data name="Download" xml:space="preserve">
-    <value>Test</value>
+    <value>下载</value>
   </data>
   <data name="DownloadTip" xml:space="preserve">
-    <value>Test</value>
+    <value>💡小提示: 如果 mod 已经下好了，就试试在reloaded-II点击“配置mod”吧</value>
   </data>
   <data name="Enabled" xml:space="preserve">
-    <value>Test</value>
+    <value>开</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
-    <value />
+    <value>管理哈姆子mod。</value>
   </data>
   <data name="Final Battle Music" xml:space="preserve">
-    <value />
+    <value>最终战音乐</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value />
+    <value>选择哈姆登月时的BGM。</value>
   </data>
   <data name="Gendered Audio" xml:space="preserve">
-    <value />
+    <value>音频“他”改“她”</value>
   </data>
   <data name="Glass Shard" xml:space="preserve">
-    <value />
+    <value>玻璃碴立绘</value>
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
-    <value />
+    <value>选择成员配置时的玻璃碴立绘。</value>
   </data>
   <data name="Group Photo" xml:space="preserve">
-    <value />
+    <value>无小艾合照</value>
   </data>
   <data name="GroupPhotoDesc" xml:space="preserve">
-    <value />
+    <value>选择“结束影时间”后的合照。</value>
   </data>
   <data name="Hair" xml:space="preserve">
-    <value />
+    <value>头发相关</value>
   </data>
   <data name="HairDesc" xml:space="preserve">
-    <value />
+    <value>哈姆子的头发模型。</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value>Test</value>
+    <value>主页</value>
   </data>
   <data name="Kyoto Photos" xml:space="preserve">
-    <value />
+    <value>研学照片</value>
   </data>
   <data name="KyotoPhotoDesc" xml:space="preserve">
-    <value />
+    <value>京都研学时的照片。</value>
   </data>
   <data name="LanguageChangeAlert" xml:space="preserve">
     <value>应用语言已被修改，请重启应用更改</value>
   </data>
   <data name="Level Up Screen" xml:space="preserve">
-    <value />
+    <value>等级UP立绘</value>
   </data>
   <data name="LevelUpDesc" xml:space="preserve">
-    <value />
+    <value>选择等级up时的立绘。</value>
   </data>
   <data name="Light" xml:space="preserve">
-    <value />
+    <value>亮色</value>
   </data>
   <data name="Mod Corrupt" xml:space="preserve">
-    <value />
+    <value>mod可能已损坏。尝试重装mod吧。</value>
   </data>
   <data name="Mod Download Error" xml:space="preserve">
-    <value />
+    <value>缺乏数据，无法开始下载，手动安装mod吧
+译者注：少年，你开GitHub加速了吗？</value>
   </data>
   <data name="Mod Download Start" xml:space="preserve">
-    <value />
+    <value>下载已开始，可能要打开P3R并重启app 使更改生效</value>
   </data>
   <data name="Mod Ver Mismatch" xml:space="preserve">
-    <value />
+    <value>app可能不支持此版本的哈姆子mod，在设置中查看支持的mod版本吧</value>
   </data>
   <data name="ModDownloadWait" xml:space="preserve">
-    <value>Test</value>
+    <value>mod下载中... 坐和放宽</value>
   </data>
   <data name="Model" xml:space="preserve">
-    <value />
+    <value>模型相关</value>
   </data>
   <data name="ModelDesc" xml:space="preserve">
-    <value />
+    <value>选择西奥多的模型。</value>
   </data>
   <data name="ModInfoRetrievalFail" xml:space="preserve">
-    <value />
+    <value>app无法获取此版本mod的发布信息。稍后重试或者重装mod吧。</value>
   </data>
   <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value />
+    <value>校外夜间音乐</value>
   </data>
   <data name="NightMusic1Desc" xml:space="preserve">
-    <value />
+    <value>选择4-8月的校外夜间音乐。</value>
   </data>
   <data name="No" xml:space="preserve">
-    <value>Test</value>
+    <value>否</value>
   </data>
   <data name="Normal Battle Music" xml:space="preserve">
-    <value />
+    <value>常规战斗音乐</value>
   </data>
   <data name="NormalDesc" xml:space="preserve">
-    <value />
+    <value>选择普通战斗时的音乐。勾选多首歌可以随机哦！</value>
   </data>
   <data name="Party Panel" xml:space="preserve">
-    <value />
+    <value>血量头像</value>
   </data>
   <data name="PartyPanelDesc" xml:space="preserve">
-    <value />
+    <value>选择右下角血量头像的立绘。</value>
   </data>
   <data name="Personalisation" xml:space="preserve">
-    <value />
+    <value>个性化</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value>Test</value>
+    <value>播放(需要魔法)</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value>Test</value>
+    <value>预览</value>
   </data>
   <data name="ReloadExePrompt" xml:space="preserve">
-    <value>Test</value>
+    <value>选择 reloaded-II.exe 以继续</value>
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
-    <value>Test</value>
+    <value>选择语言</value>
   </data>
   <data name="Settings" xml:space="preserve">
-    <value>Test</value>
+    <value>设置</value>
   </data>
   <data name="Social Link Music" xml:space="preserve">
-    <value />
+    <value>社群BGM</value>
   </data>
   <data name="SocialDesc" xml:space="preserve">
-    <value />
+    <value>选择社群事件使用的音乐。</value>
   </data>
   <data name="The Femc Mod" xml:space="preserve">
-    <value />
+    <value>哈姆子 mod</value>
   </data>
   <data name="Theme" xml:space="preserve">
-    <value>Test</value>
+    <value>主题</value>
   </data>
   <data name="Theo" xml:space="preserve">
-    <value />
+    <value>西奥多相关</value>
   </data>
   <data name="UI" xml:space="preserve">
-    <value>Test</value>
+    <value>UI颜色调节</value>
   </data>
   <data name="UnexpectedErr" xml:space="preserve">
-    <value />
+    <value>重启app，否则可能会出错</value>
   </data>
   <data name="Update Check Fail" xml:space="preserve">
-    <value />
+    <value>检查更新出错。
+译者注：开github加速了吗？</value>
   </data>
   <data name="Update Later" xml:space="preserve">
-    <value />
+    <value>可以稍候在设置里或重启时更新。</value>
   </data>
   <data name="Update Notify" xml:space="preserve">
-    <value />
+    <value>更新吗？</value>
   </data>
   <data name="UpdatePromptContent" xml:space="preserve">
-    <value>Test</value>
+    <value>app新版本出了，更新吗？</value>
   </data>
   <data name="VoiceDesc" xml:space="preserve">
-    <value />
+    <value>称呼主角为"她"的配音。目前只有英配，所以会导致配音日英混合。</value>
   </data>
   <data name="Yes" xml:space="preserve">
-    <value>Test</value>
+    <value>是</value>
   </data>
 </root>
