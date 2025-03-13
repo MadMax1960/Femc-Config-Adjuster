@@ -210,4 +210,148 @@
   <data name="VoiceDesc" xml:space="preserve">
     <value />
   </data>
+  <data name="Advantage Battle Music" xml:space="preserve">
+    <value>Música para Batallas con Ventaja</value>
+  </data>
+  <data name="AOA" xml:space="preserve">
+    <value>Ataque Combinado</value>
+  </data>
+  <data name="AOA Text" xml:space="preserve">
+    <value>Texto para Ataques Combinados</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Boss Battle Music" xml:space="preserve">
+    <value>Música para Batallas contra Jefes</value>
+  </data>
+  <data name="Bustup" xml:space="preserve">
+    <value>Busto</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Cerrar</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirmar</value>
+  </data>
+  <data name="Cutin" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Oscuro</value>
+  </data>
+  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
+    <value>Música para las Mañanas (Fase 1)</value>
+  </data>
+  <data name="Daytime School Music (Phase 1)" xml:space="preserve">
+    <value>Música para el Instituto (Fase 1)</value>
+  </data>
+  <data name="Daytime School Music (Phase 2)" xml:space="preserve">
+    <value>Música para el Instituto (Fase 2)</value>
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value>Dependencias</value>
+  </data>
+  <data name="Disadvantage Battle Music" xml:space="preserve">
+    <value>Música para Batallas con Desventaja</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Descargar</value>
+  </data>
+  <data name="DownloadTip" xml:space="preserve">
+    <value>💡Tip: Si ya tiene el mod descargado. Intente hacer click en configurar mod en Reloaded-II.</value>
+  </data>
+  <data name="Group Photo" xml:space="preserve">
+    <value>Foto grupal</value>
+  </data>
+  <data name="Hair" xml:space="preserve">
+    <value>Cabello</value>
+  </data>
+  <data name="Home" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Kyoto Photos" xml:space="preserve">
+    <value>Fotos de Kioto</value>
+  </data>
+  <data name="LanguageChangeAlert" xml:space="preserve">
+    <value>El idioma de la aplicación ha sido cambiado, por favor reinicie la aplicación para que los cambios aparezcan.</value>
+  </data>
+  <data name="Level Up Screen" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Claro</value>
+  </data>
+  <data name="Mod Download Error" xml:space="preserve">
+    <value>La aplicación no puede iniciar la descarga debido a información faltante. Por favor instale el mod manualmente.</value>
+  </data>
+  <data name="Mod Download Start" xml:space="preserve">
+    <value>La descarga ha iniciado. Puede ser que necesite iniciar el juego y reiniciar la aplicación para que los cambios aparezcan.</value>
+  </data>
+  <data name="ModDownloadWait" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
+    <value>Música para las Noches (Fase 1)</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="Normal Battle Music" xml:space="preserve">
+    <value>Música Normal para Batallas</value>
+  </data>
+  <data name="Party Panel" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Personalisation" xml:space="preserve">
+    <value>Personalización</value>
+  </data>
+  <data name="Play" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Preview" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="ReloadExePrompt" xml:space="preserve">
+    <value>Encuentra y seleccione el exe de la instalación de Reloaded II para continuar</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>Cambiar el idioma</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ajustes</value>
+  </data>
+  <data name="Social Link Music" xml:space="preserve">
+    <value>Música para Vínculos Sociales</value>
+  </data>
+  <data name="The Femc Mod" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Tema</value>
+  </data>
+  <data name="UI" xml:space="preserve">
+    <value>IU</value>
+  </data>
+  <data name="Update Check Fail" xml:space="preserve">
+    <value>Un error ha ocurrido mientras se buscaban actualizaciones.</value>
+  </data>
+  <data name="Update Later" xml:space="preserve">
+    <value>Puede actualizarla más tarde desde ajustes o cuando la aplicación se reinicie.</value>
+  </data>
+  <data name="Update Notify" xml:space="preserve">
+    <value>Una nueva versión está disponible. ¿Le interesaría actualizar?</value>
+  </data>
+  <data name="UpdatePromptContent" xml:space="preserve">
+    <value>Una nueva versión de la aplicación está disponible. ¿Le interesaría actualizarla?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Sí</value>
+  </data>
+  <data name="About text" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Modelo</value>
+  </data>
 </root>
