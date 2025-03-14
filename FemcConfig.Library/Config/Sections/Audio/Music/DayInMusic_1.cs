@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class DayInMusic_1 : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Daytime_Outside_Music__Phase_1_;
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Daytime_School_Music__Phase_1_;
 
     public string Description { get; } = Localisation.LocalisationResources.Resources.DayInMusic1Desc;
 

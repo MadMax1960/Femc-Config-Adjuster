@@ -16,16 +16,16 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     {
         { "English", "en-US" },
         { "简体中文 (Simplified Chinese)", "zh-CN" },
-        { "日本語 (Japanese)", "ja" },
+        //{ "日本語 (Japanese)", "ja" }, - Localisation Pending
         { "Русский (Russian)", "ru" },
         { "Polski (Polish)", "pl" },
-        { "Español (Spanish)", "es" }
+        //{ "Español (Spanish)", "es" } - Localisation Pending
     };
 
     private bool _isInitialized = false;
 
     [ObservableProperty]
-    private string _selectedLanguage;
+    private string? _selectedLanguage;
 
     [ObservableProperty]
     private string? _appVersion;
@@ -51,7 +51,8 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(savedCulture);
             Thread.CurrentThread.CurrentCulture = new CultureInfo(savedCulture);
         }
-        _selectedLanguage = AvailableLanguages.FirstOrDefault(x => x.Value == Thread.CurrentThread.CurrentUICulture.Name).Key
+
+        SelectedLanguage = AvailableLanguages.FirstOrDefault(x => x.Value == Thread.CurrentThread.CurrentUICulture.Name).Key
                              ?? "English";
         OnPropertyChanged(nameof(SelectedLanguage));
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
