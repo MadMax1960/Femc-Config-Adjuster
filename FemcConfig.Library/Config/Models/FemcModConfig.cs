@@ -52,6 +52,12 @@ public partial class FemcModConfig : ObservableObject
     private bool sgNom = true;
 
     [Category("Battle Music")]
+    [Description("Enable Atlus's Wiping All Out?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool p3pNom = true;
+
+    [Category("Battle Music")]
     [Description("Enable Stella and GillStudio's Danger Zone?")]
     [DefaultValue(false)]
     [ObservableProperty]
@@ -74,6 +80,12 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool edDis = true;
+
+    [Category("Battle Music")]
+    [Description("Enable Atlus's Danger Zone?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool p3pDis = true;
 
     [Category("Battle Music")]
     [Description("Enable Atlus's It's Going Down Now?")]
@@ -160,6 +172,18 @@ public partial class FemcModConfig : ObservableObject
     private bool wayOfLife = true;
 
     [Category("Music")]
+    [Description("Enable Way of Life as the daytime music?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool wayOfLifeP3P = true;
+
+    [Category("Music")]
+    [Description("Enable Way of Life -Deep inside my mind Remix- as the daytime music?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool wayOfLifeRemix = true;
+
+    [Category("Music")]
     [Description("Enable Want to Be Close -Reload- as the daytime music inside the school (Phase 1)?")]
     [DefaultValue(false)]
     [ObservableProperty]
@@ -178,6 +202,12 @@ public partial class FemcModConfig : ObservableObject
     private bool gabiTimeSchool = true;
 
     [Category("Music")]
+    [Description("Enable Time as the daytime music inside the school?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool timeSchoolP3P = true;
+
+    [Category("Music")]
     [Description("Enable Joy to be the music played during social link events?")]
     [DefaultValue(false)]
     [ObservableProperty]
@@ -188,6 +218,12 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(true)]
     [ObservableProperty]
     private bool afterSchool = true;
+
+    [Category("Music")]
+    [Description("Enable After School (P3P) to be the music played during social link events?")]
+    [DefaultValue(true)]
+    [ObservableProperty]
+    private bool afterSchoolP3P = true;
 
     [Category("Music")]
     [Description("Enable Changing Seasons as the daytime music inside the school?")]
@@ -206,6 +242,12 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool sunMForm = true;
+
+    [Category("Music")]
+    [Description("Enable Sun as the daytime music inside the school?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool sunP3P = true;
 
     [Category("Music")]
     [Description("Enable Soul Phrase as the music played during the battle with Nyx?")]

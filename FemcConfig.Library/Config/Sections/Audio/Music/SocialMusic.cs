@@ -30,6 +30,18 @@ public class SocialMusic : ISection
             },
             new ModOption(ctx)
             {
+                InternalName = "music_atlus_afterschool",
+                Name = "After School",
+                Authors = [Author.Atlus],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.AfterSchoolP3P = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.AfterSchoolP3P = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AfterSchoolP3P,
+            },
+            new ModOption(ctx)
+            {
                 InternalName = "music_mosq_afterschool",
                 Name = "After School",
                 Authors = [Author.Mosq],

@@ -45,6 +45,19 @@ public class DisadvantageMusicSection : ISection
             },
            new ModOption(ctx)
             {
+                InternalName = "music_atlus_dz",
+                Name = "Danger Zone",
+                Authors = [Author.Atlus],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.P3pDis = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.P3pDis = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.P3pDis,
+            },
+           new ModOption(ctx)
+            {
                 InternalName = "music_mosq_dz",
                 Name = "Danger Zone -Reload-",
                 Authors = [Author.Mosq],
