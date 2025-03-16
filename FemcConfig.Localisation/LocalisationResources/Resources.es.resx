@@ -117,9 +117,6 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About text" xml:space="preserve">
-    <value>Acerca del Ajustador de Configuración de Femc</value>
-  </data>
   <data name="Addons" xml:space="preserve">
     <value>Complementos</value>
   </data>
@@ -181,13 +178,13 @@
     <value>Música para la Batalla final</value>
   </data>
   <data name="Gendered Audio" xml:space="preserve">
-    <value>Audio modificado</value>
+    <value>Audio Modificado</value>
   </data>
   <data name="Glass Shard" xml:space="preserve">
     <value>Fragmento de Vidrio</value>
   </data>
   <data name="Group Photo" xml:space="preserve">
-    <value>Foto grupal</value>
+    <value>Foto Grupal</value>
   </data>
   <data name="Hair" xml:space="preserve">
     <value>Cabello</value>
@@ -216,9 +213,6 @@
   <data name="ModDownloadWait" xml:space="preserve">
     <value>Por favor espere mientras cargamos la descarga del mod...</value>
   </data>
-  <data name="Model" xml:space="preserve">
-    <value>Modelo</value>
-  </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
@@ -226,7 +220,7 @@
     <value>Música para Batallas Comunes</value>
   </data>
   <data name="Party Panel" xml:space="preserve">
-    <value>Panel de equipo</value>
+    <value>Panel de Equipo</value>
   </data>
   <data name="Personalisation" xml:space="preserve">
     <value>Personalización</value>
@@ -235,13 +229,13 @@
     <value>Escuchar</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value>Vista previa</value>
+    <value>Vista Previa</value>
   </data>
   <data name="ReloadExePrompt" xml:space="preserve">
     <value>Encuentre y seleccione el exe de instalación del Reloaded II para continuar.</value>
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
-    <value>Cambiar el idioma</value>
+    <value>Cambiar el Idioma</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Ajustes</value>
@@ -272,6 +266,12 @@
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
+  </data>
+  <data name="About text" xml:space="preserve">
+    <value>Acerca del Ajustador de Configuración de Femc</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Modelo</value>
   </data>
   <data name="AddonDesc" xml:space="preserve">
     <value>Utilice esta página para habilitar o desabilitar complementos. Si un complemento no está instalado, haz click en "Vista previa" y luego en "Descargar".</value>
