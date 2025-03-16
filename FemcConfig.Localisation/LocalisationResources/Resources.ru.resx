@@ -117,20 +117,11 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="About text" xml:space="preserve">
-    <value>Об Femc Config Adjuster</value>
-  </data>
-  <data name="AddonDesc" xml:space="preserve">
-    <value>Страница для включения и выключения дополнений. Если дополнения не установлены, нажмите на предпросмотр и скачайте.</value>
-  </data>
   <data name="Addons" xml:space="preserve">
     <value>Дополнения</value>
   </data>
   <data name="Advantage Battle Music" xml:space="preserve">
     <value>Музыка битвы (Превосходство)</value>
-  </data>
-  <data name="AdvantageDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в обычном сражении (Превосходство отряда). При выборе нескольких треков, они будут выбираться случайно!</value>
   </data>
   <data name="AOA" xml:space="preserve">
     <value>AOA</value>
@@ -138,29 +129,14 @@
   <data name="AOA Text" xml:space="preserve">
     <value>Текст AOA</value>
   </data>
-  <data name="AOADesc" xml:space="preserve">
-    <value>Изображение, которое будет показываться при завершении битвы с All-out Attack.</value>
-  </data>
-  <data name="AOATextDesc" xml:space="preserve">
-    <value>Текст, который будет показываться при завершении битвы с All-out Attack.</value>
-  </data>
   <data name="Audio" xml:space="preserve">
     <value>Звук</value>
-  </data>
-  <data name="Author" xml:space="preserve">
-    <value>Автор</value>
   </data>
   <data name="Boss Battle Music" xml:space="preserve">
     <value>Музыка боссов</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Музыка проигрываемая во время сражения с боссами.</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Портреты</value>
-  </data>
-  <data name="BustupDesc" xml:space="preserve">
-    <value>Изменение портретов в диалоговых окнах.</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Закрыть</value>
@@ -171,20 +147,8 @@
   <data name="Cutin" xml:space="preserve">
     <value>Анимации</value>
   </data>
-  <data name="CutinDesc" xml:space="preserve">
-    <value>Анимации проигрываемые во время атаки уязвимости или критическом попадании.</value>
-  </data>
   <data name="Dark" xml:space="preserve">
     <value>Темная</value>
-  </data>
-  <data name="DayInMusic1Desc" xml:space="preserve">
-    <value>Музыка проигрываемая в школе днем между Апрелем и Августом.</value>
-  </data>
-  <data name="DayInMusic2Desc" xml:space="preserve">
-    <value>Музыка проигрываемая в школе днем после Сентября.</value>
-  </data>
-  <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value>Музыка проигрываемая вне школы днем до Сентября.</value>
   </data>
   <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
     <value>Дневная уличная музыка</value>
@@ -198,14 +162,8 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Зависимости</value>
   </data>
-  <data name="DependencyDesc" xml:space="preserve">
-    <value>Моды необходимые для правильной работы Femc Mod.</value>
-  </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
     <value>Музыка битвы (Затруднение)</value>
-  </data>
-  <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в обычном сражении (Превосходство противника). При выборе нескольких треков, они будут выбираться случайно!</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>Загрузка</value>
@@ -216,14 +174,8 @@
   <data name="Enabled" xml:space="preserve">
     <value>Включено</value>
   </data>
-  <data name="FemcDesc" xml:space="preserve">
-    <value>Используйте эту страницу для установки Femc Mod.</value>
-  </data>
   <data name="Final Battle Music" xml:space="preserve">
     <value>Музыка финальной битвы</value>
-  </data>
-  <data name="FinalDesc" xml:space="preserve">
-    <value>Музыка используемая в сражении с Никс.</value>
   </data>
   <data name="Gendered Audio" xml:space="preserve">
     <value>Озвучка произношения</value>
@@ -231,20 +183,11 @@
   <data name="Glass Shard" xml:space="preserve">
     <value>Портреты осколков</value>
   </data>
-  <data name="GlassShardDesc" xml:space="preserve">
-    <value>Осколки используемые в меню паузы.</value>
-  </data>
   <data name="Group Photo" xml:space="preserve">
     <value>Групповое фото</value>
   </data>
-  <data name="GroupPhotoDesc" xml:space="preserve">
-    <value>Групповое фото в игре.</value>
-  </data>
   <data name="Hair" xml:space="preserve">
     <value>Волосы</value>
-  </data>
-  <data name="HairDesc" xml:space="preserve">
-    <value>Модель волос FeMC</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
@@ -252,23 +195,14 @@
   <data name="Kyoto Photos" xml:space="preserve">
     <value>Фото из Киото</value>
   </data>
-  <data name="KyotoPhotoDesc" xml:space="preserve">
-    <value>Фото из поездки в Киото в игре.</value>
-  </data>
   <data name="LanguageChangeAlert" xml:space="preserve">
     <value>Настройки языка были изменены. Приложение будет перезапущено для применения.</value>
   </data>
   <data name="Level Up Screen" xml:space="preserve">
     <value>Окно повышения уровня</value>
   </data>
-  <data name="LevelUpDesc" xml:space="preserve">
-    <value>Выбор варианта окна при повышении уровня.</value>
-  </data>
   <data name="Light" xml:space="preserve">
     <value>Светлая</value>
-  </data>
-  <data name="Mod Corrupt" xml:space="preserve">
-    <value>Установка мода вероятно произошла с ошибками. Пожалуйста, попробуйте установить мод заново.</value>
   </data>
   <data name="Mod Download Error" xml:space="preserve">
     <value>Приложение не смогло начать загрузку приложения из-за отсуствия информации. Пожалуйста, установите мод вручную.</value>
@@ -276,26 +210,8 @@
   <data name="Mod Download Start" xml:space="preserve">
     <value>Загрузка была завершена. Вам возможно потребуется запуск игры и перезапуск приложения для изменения.</value>
   </data>
-  <data name="Mod Ver Mismatch" xml:space="preserve">
-    <value>Установленная версия Femc Mod не поддерживается приложением. Проверьте страницу настроек, чтобы увидеть версию мода для этого приложения.</value>
-  </data>
   <data name="ModDownloadWait" xml:space="preserve">
     <value>Пожалуйста подождите, пока загружается Загрузчик модов...</value>
-  </data>
-  <data name="Model" xml:space="preserve">
-    <value>Модель</value>
-  </data>
-  <data name="ModelDesc" xml:space="preserve">
-    <value>Модель Тео.</value>
-  </data>
-  <data name="ModInfoRetrievalFail" xml:space="preserve">
-    <value>Приложению не удалось получить информацию о моде. Пожалуйста, попробуйте позже или установите мод вручную.</value>
-  </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>Ночная музыка</value>
-  </data>
-  <data name="NightMusic1Desc" xml:space="preserve">
-    <value>Ночная музыка проигрываемая снаружи общежития до Сентрября.</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>Нет</value>
@@ -303,14 +219,8 @@
   <data name="Normal Battle Music" xml:space="preserve">
     <value>Музыка битвы</value>
   </data>
-  <data name="NormalDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в обычном сражении. При выборе нескольких треков, они будут выбираться случайно!</value>
-  </data>
   <data name="Party Panel" xml:space="preserve">
     <value>Меню отряда</value>
-  </data>
-  <data name="PartyPanelDesc" xml:space="preserve">
-    <value>Выбор варианта меню отряда.</value>
   </data>
   <data name="Personalisation" xml:space="preserve">
     <value>Персонализация</value>
@@ -333,23 +243,14 @@
   <data name="Social Link Music" xml:space="preserve">
     <value>Музыка социальных связей</value>
   </data>
-  <data name="SocialDesc" xml:space="preserve">
-    <value>Музыка проигрываемая во время событий социальных связей.</value>
-  </data>
   <data name="The Femc Mod" xml:space="preserve">
     <value>Основной мод</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Тема</value>
   </data>
-  <data name="Theo" xml:space="preserve">
-    <value>Тео</value>
-  </data>
   <data name="UI" xml:space="preserve">
     <value>UI</value>
-  </data>
-  <data name="UnexpectedErr" xml:space="preserve">
-    <value>Пожалуйста перезапустите приложение, иначе оно может работать неправильно.</value>
   </data>
   <data name="Update Check Fail" xml:space="preserve">
     <value>Возникла ошибка во время проверки обновления.</value>
@@ -363,10 +264,112 @@
   <data name="UpdatePromptContent" xml:space="preserve">
     <value>Новая версия приложения доступна. Хотите обновить?</value>
   </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Да</value>
+  </data>
+  <data name="About text" xml:space="preserve">
+    <value>Об Femc Config Adjuster</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Модель</value>
+  </data>
+  <data name="AddonDesc" xml:space="preserve">
+    <value>Страница для включения и выключения дополнений. Если дополнения не установлены, нажмите на предпросмотр и скачайте.</value>
+  </data>
+  <data name="AdvantageDesc" xml:space="preserve">
+    <value>Выбор музыки которая будет играть в обычном сражении (Превосходство отряда). При выборе нескольких треков, они будут выбираться случайно!</value>
+  </data>
+  <data name="AOADesc" xml:space="preserve">
+    <value>Изображение, которое будет показываться при завершении битвы с All-out Attack.</value>
+  </data>
+  <data name="AOATextDesc" xml:space="preserve">
+    <value>Текст, который будет показываться при завершении битвы с All-out Attack.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Автор</value>
+  </data>
+  <data name="BossDesc" xml:space="preserve">
+    <value>Музыка проигрываемая во время сражения с боссами.</value>
+  </data>
+  <data name="BustupDesc" xml:space="preserve">
+    <value>Изменение портретов в диалоговых окнах.</value>
+  </data>
+  <data name="CutinDesc" xml:space="preserve">
+    <value>Анимации проигрываемые во время атаки уязвимости или критическом попадании.</value>
+  </data>
+  <data name="DayInMusic1Desc" xml:space="preserve">
+    <value>Музыка проигрываемая в школе днем между Апрелем и Августом.</value>
+  </data>
+  <data name="DayInMusic2Desc" xml:space="preserve">
+    <value>Музыка проигрываемая в школе днем после Сентября.</value>
+  </data>
+  <data name="DayOutMusic1Desc" xml:space="preserve">
+    <value>Музыка проигрываемая вне школы днем до Сентября.</value>
+  </data>
+  <data name="DependencyDesc" xml:space="preserve">
+    <value>Моды необходимые для правильной работы Femc Mod.</value>
+  </data>
+  <data name="DisadvantageDesc" xml:space="preserve">
+    <value>Выбор музыки которая будет играть в обычном сражении (Превосходство противника). При выборе нескольких треков, они будут выбираться случайно!</value>
+  </data>
+  <data name="FemcDesc" xml:space="preserve">
+    <value>Используйте эту страницу для установки Femc Mod.</value>
+  </data>
+  <data name="FinalDesc" xml:space="preserve">
+    <value>Музыка используемая в сражении с Никс.</value>
+  </data>
+  <data name="GlassShardDesc" xml:space="preserve">
+    <value>Осколки используемые в меню паузы.</value>
+  </data>
+  <data name="GroupPhotoDesc" xml:space="preserve">
+    <value>Групповое фото в игре.</value>
+  </data>
+  <data name="HairDesc" xml:space="preserve">
+    <value>Модель волос FeMC</value>
+  </data>
+  <data name="KyotoPhotoDesc" xml:space="preserve">
+    <value>Фото из поездки в Киото в игре.</value>
+  </data>
+  <data name="LevelUpDesc" xml:space="preserve">
+    <value>Выбор варианта окна при повышении уровня.</value>
+  </data>
+  <data name="Mod Corrupt" xml:space="preserve">
+    <value>Установка мода вероятно произошла с ошибками. Пожалуйста, попробуйте установить мод заново.</value>
+  </data>
+  <data name="Mod Ver Mismatch" xml:space="preserve">
+    <value>Установленная версия Femc Mod не поддерживается приложением. Проверьте страницу настроек, чтобы увидеть версию мода для этого приложения.</value>
+  </data>
+  <data name="ModelDesc" xml:space="preserve">
+    <value>Модель Тео.</value>
+  </data>
+  <data name="ModInfoRetrievalFail" xml:space="preserve">
+    <value>Приложению не удалось получить информацию о моде. Пожалуйста, попробуйте позже или установите мод вручную.</value>
+  </data>
+  <data name="NightMusic1Desc" xml:space="preserve">
+    <value>Ночная музыка проигрываемая снаружи общежития до Сентрября.</value>
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value>Выбор музыки которая будет играть в обычном сражении. При выборе нескольких треков, они будут выбираться случайно!</value>
+  </data>
+  <data name="PartyPanelDesc" xml:space="preserve">
+    <value>Выбор варианта меню отряда.</value>
+  </data>
+  <data name="SocialDesc" xml:space="preserve">
+    <value>Музыка проигрываемая во время событий социальных связей.</value>
+  </data>
+  <data name="Theo" xml:space="preserve">
+    <value>Тео</value>
+  </data>
+  <data name="UnexpectedErr" xml:space="preserve">
+    <value>Пожалуйста перезапустите приложение, иначе оно может работать неправильно.</value>
+  </data>
   <data name="VoiceDesc" xml:space="preserve">
     <value>Озвучка произношения пола FeMC. На данный момент поддерживается только Английская.</value>
   </data>
-  <data name="Yes" xml:space="preserve">
-    <value>Да</value>
+  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
+    <value>Ночная музыка</value>
+  </data>
+  <data name="LangChangeHeader" xml:space="preserve">
+    <value />
   </data>
 </root>

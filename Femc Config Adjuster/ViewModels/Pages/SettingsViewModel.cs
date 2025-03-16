@@ -15,17 +15,17 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     public Dictionary<string, string> AvailableLanguages { get; } = new()
     {
         { "English", "en-US" },
-        { "简体中文 (Simplified Chinese)", "zh-CN" },
-        { "日本語 (Japanese)", "ja" },
-        { "Русский (Russian)", "ru" },
+        { "Español (Spanish)", "es" },
+        //{ "日本語 (Japanese)", "ja" }, - Localisation Pending
         { "Polski (Polish)", "pl" },
-        { "Español (Spanish)", "es" }
+        { "Русский (Russian)", "ru" },
+        { "简体中文 (Simplified Chinese)", "zh-CN" },
     };
 
     private bool _isInitialized = false;
 
     [ObservableProperty]
-    private string _selectedLanguage;
+    private string? _selectedLanguage;
 
     [ObservableProperty]
     private string? _appVersion;
@@ -51,7 +51,8 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
             Thread.CurrentThread.CurrentUICulture = new CultureInfo(savedCulture);
             Thread.CurrentThread.CurrentCulture = new CultureInfo(savedCulture);
         }
-        _selectedLanguage = AvailableLanguages.FirstOrDefault(x => x.Value == Thread.CurrentThread.CurrentUICulture.Name).Key
+
+        SelectedLanguage = AvailableLanguages.FirstOrDefault(x => x.Value == Thread.CurrentThread.CurrentUICulture.Name).Key
                              ?? "English";
         OnPropertyChanged(nameof(SelectedLanguage));
         CurrentTheme = ApplicationThemeManager.GetAppTheme();
@@ -81,20 +82,20 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
         Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultureCode);
         Thread.CurrentThread.CurrentCulture = new CultureInfo(cultureCode);
 
-        var langnotify = new InfoWindow("Language Changed!", Resources.LanguageChangeAlert);
+        var langnotify = new InfoWindow(Resources.LangChangeHeader, Resources.LanguageChangeAlert);
         langnotify.ShowDialog();
         Process.Start(Process.GetCurrentProcess().MainModule.FileName);
         App.Current.Shutdown();
     }
 
     [RelayCommand]
-	private void OnChangeTheme(string parameter)
-	{
-		switch (parameter)
-		{
-			case "theme_light":
-				if (CurrentTheme == ApplicationTheme.Light)
-					break;
+    private void OnChangeTheme(string parameter)
+    {
+        switch (parameter)
+        {
+            case "theme_light":
+                if (CurrentTheme == ApplicationTheme.Light)
+                    break;
 
                 ApplicationThemeManager.Apply(ApplicationTheme.Light);
                 CurrentTheme = ApplicationTheme.Light;
