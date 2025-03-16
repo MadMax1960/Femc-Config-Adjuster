@@ -121,7 +121,7 @@
     <value>About Femc Config Adjuster</value>
   </data>
   <data name="AddonDesc" xml:space="preserve">
-    <value>Use this page to enable or disable addons. If an addon is not installed click on preview and then download addon.</value>
+    <value>Use this page to enable or disable addons. If an addon is not installed click on preview and then download.</value>
   </data>
   <data name="Addons" xml:space="preserve">
     <value>Addons</value>

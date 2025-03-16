@@ -70,7 +70,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use this page to enable or disable addons. If an addon is not installed click on preview and then download addon..
+        ///   Looks up a localized string similar to Use this page to enable or disable addons. If an addon is not installed click on preview and then download..
         /// </summary>
         public static string AddonDesc {
             get {
