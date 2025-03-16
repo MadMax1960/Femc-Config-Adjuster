@@ -117,107 +117,257 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Dark" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Light" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Personalisation" xml:space="preserve">
-    <value />
+  <data name="About text" xml:space="preserve">
+    <value>O Aplikacji FeMC Config Adjuster</value>
   </data>
   <data name="AddonDesc" xml:space="preserve">
-    <value />
+    <value>Użyj tej strony, aby włączyć lub wyłączyć dodatki. Jeśli dodatek nie jest zainstalowany, kliknij podgląd, a następnie pobierz dodatek.</value>
+  </data>
+  <data name="Addons" xml:space="preserve">
+    <value>Dodatki</value>
+  </data>
+  <data name="Advantage Battle Music" xml:space="preserve">
+    <value>Motyw Walki – Przewaga</value>
   </data>
   <data name="AdvantageDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce z przewagą. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="AOA" xml:space="preserve">
+    <value>AOA</value>
+  </data>
+  <data name="AOA Text" xml:space="preserve">
+    <value>Tekst AOA</value>
   </data>
   <data name="AOADesc" xml:space="preserve">
-    <value />
+    <value>Grafika używana podczas zakończenia bitwy poprzez AOA</value>
   </data>
   <data name="AOATextDesc" xml:space="preserve">
-    <value />
+    <value>Tekst widoczny obok grafiki AOA</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
   </data>
   <data name="Author" xml:space="preserve">
-    <value />
+    <value>Autorzy</value>
+  </data>
+  <data name="Boss Battle Music" xml:space="preserve">
+    <value>Motyw Walki z Bossem</value>
   </data>
   <data name="BossDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy walczysz z Bossem podczas pełni księżyca</value>
+  </data>
+  <data name="Bustup" xml:space="preserve">
+    <value>Portret</value>
   </data>
   <data name="BustupDesc" xml:space="preserve">
-    <value />
+    <value>Portret FeMC widoczny przy opcjach dialogowych</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Potwierdź</value>
+  </data>
+  <data name="Cutin" xml:space="preserve">
+    <value>Wcięcie</value>
   </data>
   <data name="CutinDesc" xml:space="preserve">
-    <value />
+    <value>Animacja czasami widoczna przy wykorzystaniu słabego punktu przeciwnika, bądź zadania obrażeń krytycznych</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Ciemny</value>
   </data>
   <data name="DayInMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka słyszana w szkole od Kwietnia do Sierpnia</value>
   </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka słyszana w szkole od Września aż do końca gry</value>
   </data>
   <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka słyszana poza szkołą</value>
+  </data>
+  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
+    <value>Muzyka pozaszkolna - Dzień</value>
+  </data>
+  <data name="Daytime School Music (Phase 1)" xml:space="preserve">
+    <value>Muzyka szkolna Kwi-Sie</value>
+  </data>
+  <data name="Daytime School Music (Phase 2)" xml:space="preserve">
+    <value>Muzyka szkolna Wrz-Gru</value>
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value>Zależności</value>
   </data>
   <data name="DependencyDesc" xml:space="preserve">
-    <value />
+    <value>Użyj tej strony, aby zainstalować i zarządzać zależnościami używanymi przez moda FeMC</value>
+  </data>
+  <data name="Disadvantage Battle Music" xml:space="preserve">
+    <value>Motyw Walki – Niekorzystna Pozycja</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce w niekorzystnej pozycji. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="DownloadTip" xml:space="preserve">
+    <value>💡Wskazówka: Jeżeli mod jest już pobrany, spróbuj kliknąć na "configure mod" w Reloaded-II.</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Włączony</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
-    <value />
+    <value>Za pomocą tej strony możesz zarządzać instalacją moda FeMC</value>
+  </data>
+  <data name="Final Battle Music" xml:space="preserve">
+    <value>Muzyka finałowej walki</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value />
+    <value>Muzyka używana podczas walki ze rdzeniem Nyx</value>
+  </data>
+  <data name="Gendered Audio" xml:space="preserve">
+    <value>Audio z podziałem na płeć</value>
+  </data>
+  <data name="Glass Shard" xml:space="preserve">
+    <value>Odłamek szkła</value>
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
-    <value />
+    <value>Odłamek szkła trzymany przez FeMC w menu</value>
+  </data>
+  <data name="Group Photo" xml:space="preserve">
+    <value>Zdjęcie grupowe</value>
   </data>
   <data name="GroupPhotoDesc" xml:space="preserve">
-    <value />
+    <value>Zdjęcie zrobione w grze 4 Listopada</value>
+  </data>
+  <data name="Hair" xml:space="preserve">
+    <value>Włosy</value>
   </data>
   <data name="HairDesc" xml:space="preserve">
-    <value />
+    <value>Model włosów FeMC</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Kyoto Photos" xml:space="preserve">
+    <value>Zdjęcia z Kyoto</value>
   </data>
   <data name="KyotoPhotoDesc" xml:space="preserve">
-    <value />
+    <value>Zdjęcia zrobione w grze podczas wycieczki do Kyoto</value>
+  </data>
+  <data name="LanguageChangeAlert" xml:space="preserve">
+    <value>Zmieniono język aplikacji. Aby zmiany zostały uwzględnione, uruchom ponownie aplikację.</value>
+  </data>
+  <data name="Level Up Screen" xml:space="preserve">
+    <value>Ekran wzrostu poziomu</value>
   </data>
   <data name="LevelUpDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz grafikę widoczną podczas wzrostu poziomu postaci</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Jasny</value>
   </data>
   <data name="Mod Corrupt" xml:space="preserve">
-    <value />
+    <value>Instalacja moda może być uszkodzona. Spróbuj zainstalować moda ponownie.</value>
+  </data>
+  <data name="Mod Download Error" xml:space="preserve">
+    <value>Aplikacja nie może rozpocząć pobierania z powodu braku informacji. Zainstaluj ten mod ręcznie.</value>
+  </data>
+  <data name="Mod Download Start" xml:space="preserve">
+    <value>Rozpoczęto pobieranie. Być może będziesz musiał uruchomić grę i ponownie uruchomić aplikację, aby zmiany się pojawiły.</value>
   </data>
   <data name="Mod Ver Mismatch" xml:space="preserve">
-    <value />
+    <value>Wersja moda femc zainstalowana obecnie może nie być obsługiwana przez aplikację. Sprawdź stronę ustawień, aby zobaczyć, jaka wersja moda jest potrzebna do użycia z tą aplikacją.</value>
+  </data>
+  <data name="ModDownloadWait" xml:space="preserve">
+    <value>Proszę czekać, aż załaduje się plik do pobrania moda...</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
   </data>
   <data name="ModelDesc" xml:space="preserve">
-    <value />
+    <value>Model Theo</value>
   </data>
   <data name="ModInfoRetrievalFail" xml:space="preserve">
-    <value />
+    <value>Aplikacja nie była w stanie pobrać informacji o wersji moda. Spróbuj ponownie później lub spróbuj zainstalować moda ręcznie.</value>
+  </data>
+  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
+    <value>Muzyka Pozaszkolna - Noc</value>
   </data>
   <data name="NightMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka słyszana poza szkołą w nocy</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Normal Battle Music" xml:space="preserve">
+    <value>Motyw Walki</value>
   </data>
   <data name="NormalDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś podczas walki. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="Party Panel" xml:space="preserve">
+    <value>Panel Drużyny</value>
   </data>
   <data name="PartyPanelDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz grafikę widoczną na panelu drużyny</value>
+  </data>
+  <data name="Personalisation" xml:space="preserve">
+    <value>Personalizacja</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Odtwórz</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="ReloadExePrompt" xml:space="preserve">
+    <value>Znajdź i wybierz plik .exe , aby kontynuować.</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>Zmiana języka</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="Social Link Music" xml:space="preserve">
+    <value>Muzyka Social Linków</value>
   </data>
   <data name="SocialDesc" xml:space="preserve">
-    <value />
+    <value>Muzyka słyszana podczas spędzania czasu z Social Linkami</value>
+  </data>
+  <data name="The Femc Mod" xml:space="preserve">
+    <value>Mod FeMC</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Motyw</value>
   </data>
   <data name="Theo" xml:space="preserve">
-    <value />
+    <value>Theo</value>
+  </data>
+  <data name="UI" xml:space="preserve">
+    <value>Interfejs</value>
   </data>
   <data name="UnexpectedErr" xml:space="preserve">
-    <value />
+    <value>Spróbuj ponownie uruchomić aplikację, w przeciwnym razie może ona nie działać prawidłowo.</value>
+  </data>
+  <data name="Update Check Fail" xml:space="preserve">
+    <value>Wystąpił błąd podczas sprawdzania dostępności aktualizacji.</value>
+  </data>
+  <data name="Update Later" xml:space="preserve">
+    <value>Aktualizację możesz wykonać później w ustawieniach lub po ponownym uruchomieniu aplikacji.</value>
+  </data>
+  <data name="Update Notify" xml:space="preserve">
+    <value>Dostępna jest nowa wersja. Czy chcesz dokonać aktualizacji?</value>
+  </data>
+  <data name="UpdatePromptContent" xml:space="preserve">
+    <value>Dostępna jest nowa wersja aplikacji. Czy chcesz dokonać aktualizacji?</value>
   </data>
   <data name="VoiceDesc" xml:space="preserve">
-    <value />
+    <value>Głos używany w grze. Obecnie obsługiwany jest tylko język angielski.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
   </data>
   <data name="LangChangeHeader" xml:space="preserve">
     <value />

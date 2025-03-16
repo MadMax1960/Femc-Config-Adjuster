@@ -14,6 +14,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 using System.Net.Http;
@@ -138,9 +139,12 @@ public partial class App
     {
         SetupCulture();
         _host.Start();
-            // Check for updates
+        // Check for updates
+        if (!Debugger.IsAttached)
+        {
             var updateChecker = GetService<UpdateChecker>();
-		_ = updateChecker?.CheckForUpdatesAsync(APP_VERSION);
+            _ = updateChecker?.CheckForUpdatesAsync(APP_VERSION);
+        }
 	}
 
     /// <summary>
