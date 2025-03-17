@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About text" xml:space="preserve">
+    <value>关于哈姆子 mod 配置器</value>
+  </data>
+  <data name="AddonDesc" xml:space="preserve">
+    <value>这里可以管理拓展。没安装的话点击“预览”然后点“安装”就好</value>
+  </data>
   <data name="Addons" xml:space="preserve">
     <value>拓展</value>
   </data>
@@ -150,14 +156,14 @@
   <data name="Dark" xml:space="preserve">
     <value>暗色</value>
   </data>
-  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
-    <value>校内音乐(4-8月)</value>
+  <data name="Daytime Outside Music" xml:space="preserve">
+    <value />
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
-    <value>校外音乐(4-8月)</value>
+    <value />
   </data>
   <data name="Daytime School Music (Phase 2)" xml:space="preserve">
-    <value>校内音乐(9月以后)</value>
+    <value />
   </data>
   <data name="Dependencies" xml:space="preserve">
     <value>依赖模组</value>
@@ -269,14 +275,8 @@
   <data name="Yes" xml:space="preserve">
     <value>是</value>
   </data>
-  <data name="About text" xml:space="preserve">
-    <value>关于哈姆子 mod 配置器</value>
-  </data>
   <data name="Model" xml:space="preserve">
     <value>模型相关</value>
-  </data>
-  <data name="AddonDesc" xml:space="preserve">
-    <value>这里可以管理拓展。没安装的话点击“预览”然后点“安装”就好</value>
   </data>
   <data name="AdvantageDesc" xml:space="preserve">
     <value>选择普通战斗(即你砍暗影时的)音乐。勾选多首歌可以随机哦！</value>
@@ -291,7 +291,7 @@
     <value>作者</value>
   </data>
   <data name="BossDesc" xml:space="preserve">
-    <value>选择 boss 战使用的音乐。</value>
+    <value />
   </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>选择对话回复时使用的立绘。</value>
@@ -300,13 +300,13 @@
     <value>选择打出 weak 和暴击时触发特效使用的背景。</value>
   </data>
   <data name="DayInMusic1Desc" xml:space="preserve">
-    <value>选择4-8月的校内音乐。</value>
+    <value />
   </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
-    <value>选择九月以后的校内音乐。</value>
+    <value />
   </data>
   <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value>选择九月以前的校外音乐。</value>
+    <value />
   </data>
   <data name="DependencyDesc" xml:space="preserve">
     <value>安装和管理哈姆子mod所需的依赖mod。</value>
@@ -318,7 +318,7 @@
     <value>管理哈姆子mod。</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value>选择哈姆登月时的BGM。</value>
+    <value />
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
     <value>选择成员配置时的玻璃碴立绘。</value>
@@ -348,7 +348,7 @@
     <value>app无法获取此版本mod的发布信息。稍后重试或者重装mod吧。</value>
   </data>
   <data name="NightMusic1Desc" xml:space="preserve">
-    <value>选择4-8月的校外夜间音乐。</value>
+    <value />
   </data>
   <data name="NormalDesc" xml:space="preserve">
     <value>选择普通战斗时的音乐。勾选多首歌可以随机哦！</value>
@@ -357,7 +357,7 @@
     <value>选择右下角血量头像的立绘。</value>
   </data>
   <data name="SocialDesc" xml:space="preserve">
-    <value>选择社群事件使用的音乐。</value>
+    <value />
   </data>
   <data name="Theo" xml:space="preserve">
     <value>西奥多相关</value>
@@ -368,8 +368,8 @@
   <data name="VoiceDesc" xml:space="preserve">
     <value>称呼主角为"她"的配音。目前只有英配，所以会导致配音日英混合。</value>
   </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>校外夜间音乐</value>
+  <data name="Night Outside Music" xml:space="preserve">
+    <value />
   </data>
   <data name="LangChangeHeader" xml:space="preserve">
     <value />

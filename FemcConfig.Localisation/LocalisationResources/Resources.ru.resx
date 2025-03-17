@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About text" xml:space="preserve">
+    <value>Об Femc Config Adjuster</value>
+  </data>
+  <data name="AddonDesc" xml:space="preserve">
+    <value>Страница для включения и выключения дополнений. Если дополнения не установлены, нажмите на предпросмотр и скачайте.</value>
+  </data>
   <data name="Addons" xml:space="preserve">
     <value>Дополнения</value>
   </data>
@@ -150,14 +156,14 @@
   <data name="Dark" xml:space="preserve">
     <value>Темная</value>
   </data>
-  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
-    <value>Дневная уличная музыка</value>
+  <data name="Daytime Outside Music" xml:space="preserve">
+    <value />
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
-    <value>Дневная школьная музыка (Этап 1)</value>
+    <value />
   </data>
   <data name="Daytime School Music (Phase 2)" xml:space="preserve">
-    <value>Дневная школьная музыка (Этап 2)</value>
+    <value />
   </data>
   <data name="Dependencies" xml:space="preserve">
     <value>Зависимости</value>
@@ -267,14 +273,8 @@
   <data name="Yes" xml:space="preserve">
     <value>Да</value>
   </data>
-  <data name="About text" xml:space="preserve">
-    <value>Об Femc Config Adjuster</value>
-  </data>
   <data name="Model" xml:space="preserve">
     <value>Модель</value>
-  </data>
-  <data name="AddonDesc" xml:space="preserve">
-    <value>Страница для включения и выключения дополнений. Если дополнения не установлены, нажмите на предпросмотр и скачайте.</value>
   </data>
   <data name="AdvantageDesc" xml:space="preserve">
     <value>Выбор музыки которая будет играть в обычном сражении (Превосходство отряда). При выборе нескольких треков, они будут выбираться случайно!</value>
@@ -289,7 +289,7 @@
     <value>Автор</value>
   </data>
   <data name="BossDesc" xml:space="preserve">
-    <value>Музыка проигрываемая во время сражения с боссами.</value>
+    <value />
   </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Изменение портретов в диалоговых окнах.</value>
@@ -298,13 +298,13 @@
     <value>Анимации проигрываемые во время атаки уязвимости или критическом попадании.</value>
   </data>
   <data name="DayInMusic1Desc" xml:space="preserve">
-    <value>Музыка проигрываемая в школе днем между Апрелем и Августом.</value>
+    <value />
   </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
-    <value>Музыка проигрываемая в школе днем после Сентября.</value>
+    <value />
   </data>
   <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value>Музыка проигрываемая вне школы днем до Сентября.</value>
+    <value />
   </data>
   <data name="DependencyDesc" xml:space="preserve">
     <value>Моды необходимые для правильной работы Femc Mod.</value>
@@ -316,7 +316,7 @@
     <value>Используйте эту страницу для установки Femc Mod.</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value>Музыка используемая в сражении с Никс.</value>
+    <value />
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
     <value>Осколки используемые в меню паузы.</value>
@@ -346,7 +346,7 @@
     <value>Приложению не удалось получить информацию о моде. Пожалуйста, попробуйте позже или установите мод вручную.</value>
   </data>
   <data name="NightMusic1Desc" xml:space="preserve">
-    <value>Ночная музыка проигрываемая снаружи общежития до Сентрября.</value>
+    <value />
   </data>
   <data name="NormalDesc" xml:space="preserve">
     <value>Выбор музыки которая будет играть в обычном сражении. При выборе нескольких треков, они будут выбираться случайно!</value>
@@ -355,7 +355,7 @@
     <value>Выбор варианта меню отряда.</value>
   </data>
   <data name="SocialDesc" xml:space="preserve">
-    <value>Музыка проигрываемая во время событий социальных связей.</value>
+    <value />
   </data>
   <data name="Theo" xml:space="preserve">
     <value>Тео</value>
@@ -366,8 +366,8 @@
   <data name="VoiceDesc" xml:space="preserve">
     <value>Озвучка произношения пола FeMC. На данный момент поддерживается только Английская.</value>
   </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>Ночная музыка</value>
+  <data name="Night Outside Music" xml:space="preserve">
+    <value />
   </data>
   <data name="LangChangeHeader" xml:space="preserve">
     <value />

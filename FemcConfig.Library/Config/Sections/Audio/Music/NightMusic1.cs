@@ -3,7 +3,7 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class NightMusic_1 : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Night_Outside_Music__Phase_1_;
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Night_Outside_Music;
 
     public string Description { get; } = Localisation.LocalisationResources.Resources.NightMusic1Desc;
 

@@ -121,7 +121,7 @@
     <value>About Femc Config Adjuster</value>
   </data>
   <data name="AddonDesc" xml:space="preserve">
-    <value>Use this page to enable or disable addons. If an addon is not installed click on preview and then download.</value>
+    <value>Use this page to enable or disable addons. If an addon is not installed, click on "Preview" and then "Download"</value>
   </data>
   <data name="Addons" xml:space="preserve">
     <value>Addons</value>
@@ -156,7 +156,7 @@
   <data name="Dark" xml:space="preserve">
     <value>Dark</value>
   </data>
-  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
+  <data name="Daytime Outside Music" xml:space="preserve">
     <value>Daytime Outside Music</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
@@ -242,7 +242,6 @@
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
     <value>Change Language</value>
-    <comment>Text that appears above the select language combobox</comment>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
@@ -274,14 +273,8 @@
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
   </data>
-  <data name="About text" xml:space="preserve">
-    <value>About Femc Config Adjuster</value>
-  </data>
   <data name="Model" xml:space="preserve">
     <value>Model</value>
-  </data>
-  <data name="AddonDesc" xml:space="preserve">
-    <value>Use this page to enable or disable addons. If an addon is not installed, click on "Preview" and then "Download"</value>
   </data>
   <data name="AdvantageDesc" xml:space="preserve">
     <value>Music used when you are in a normal battle with Party Advantage. Multiple songs can be chosen for randomisation!</value>
@@ -323,7 +316,7 @@
     <value>Use this page manage the installation of the Femc Mod.</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value>Music used when you battle Nyx's core.</value>
+    <value>Music used when you battle Nyx's core. Multiple songs can be chosen for randomisation!</value>
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
     <value>Glass Shards used in the config screen.</value>
@@ -373,11 +366,8 @@
   <data name="VoiceDesc" xml:space="preserve">
     <value>Voice used ingame, which uses the correct pronouns for Femc. Currently only English audio is supported.</value>
   </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>Night Outside Music</value>
-  </data>
   <data name="Night Outside Music" xml:space="preserve">
-    <value>Night Outside Music </value>
+    <value>Night Outside Music</value>
   </data>
   <data name="LangChangeHeader" xml:space="preserve">
     <value>Language Changed!</value>

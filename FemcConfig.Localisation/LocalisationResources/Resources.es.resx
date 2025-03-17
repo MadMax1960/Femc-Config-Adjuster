@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About text" xml:space="preserve">
+    <value>Acerca del Ajustador de Configuración de Femc</value>
+  </data>
+  <data name="AddonDesc" xml:space="preserve">
+    <value>Utilice esta página para habilitar o desabilitar complementos. Si un complemento no está instalado, haz click en "Vista previa" y luego en "Descargar".</value>
+  </data>
   <data name="Addons" xml:space="preserve">
     <value>Complementos</value>
   </data>
@@ -150,7 +156,7 @@
   <data name="Dark" xml:space="preserve">
     <value>Oscuro</value>
   </data>
-  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
+  <data name="Daytime Outside Music" xml:space="preserve">
     <value>Música para dentro del Instituto (Fase 1)</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
@@ -267,14 +273,8 @@
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
   </data>
-  <data name="About text" xml:space="preserve">
-    <value>Acerca del Ajustador de Configuración de Femc</value>
-  </data>
   <data name="Model" xml:space="preserve">
     <value>Modelo</value>
-  </data>
-  <data name="AddonDesc" xml:space="preserve">
-    <value>Utilice esta página para habilitar o desabilitar complementos. Si un complemento no está instalado, haz click en "Vista previa" y luego en "Descargar".</value>
   </data>
   <data name="AdvantageDesc" xml:space="preserve">
     <value>Música utilizada durante batallas comunes en las que tienes ventaja. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
@@ -316,7 +316,7 @@
     <value>Utilice esta página para manejar la instalación del Mod de Femc.</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value>Música utilizada durante la batalla contra el núcleo de Nyx.</value>
+    <value />
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
     <value>Fragmentos de vidrio utilizados en la pantalla de configuración.</value>
@@ -365,9 +365,6 @@
   </data>
   <data name="VoiceDesc" xml:space="preserve">
     <value>La voz utilizada dentro del juego, que utiliza los pronombres correctos para Femc. Actualmente sólo funciona utilizando el audio en inglés.</value>
-  </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>Música para las Noches</value>
   </data>
   <data name="Night Outside Music" xml:space="preserve">
     <value>Música para las Noches</value>
