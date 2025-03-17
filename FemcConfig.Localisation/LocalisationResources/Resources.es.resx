@@ -117,98 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="About text" xml:space="preserve">
+    <value>Acerca del Ajustador de Configuración de Femc</value>
+  </data>
   <data name="AddonDesc" xml:space="preserve">
-    <value />
+    <value>Utilice esta página para habilitar o desabilitar complementos. Si un complemento no está instalado, haz click en "Vista previa" y luego en "Descargar".</value>
   </data>
-  <data name="AdvantageDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AOADesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="AOATextDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Author" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="BustupDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="CutinDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DayInMusic1Desc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DayInMusic2Desc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DependencyDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="DisadvantageDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FemcDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="FinalDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GlassShardDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="GroupPhotoDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="HairDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="KyotoPhotoDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="LevelUpDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Mod Corrupt" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Mod Ver Mismatch" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ModelDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="ModInfoRetrievalFail" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NightMusic1Desc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="NormalDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="PartyPanelDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="SocialDesc" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Theo" xml:space="preserve">
-    <value />
-  </data>
-  <data name="UnexpectedErr" xml:space="preserve">
-    <value />
-  </data>
-  <data name="VoiceDesc" xml:space="preserve">
-    <value />
+  <data name="Addons" xml:space="preserve">
+    <value>Complementos</value>
   </data>
   <data name="Advantage Battle Music" xml:space="preserve">
     <value>Música para Batallas con Ventaja</value>
@@ -217,7 +133,7 @@
     <value>Ataque Combinado</value>
   </data>
   <data name="AOA Text" xml:space="preserve">
-    <value>Texto para Ataques Combinados</value>
+    <value>Texto para los Ataques Combinados</value>
   </data>
   <data name="Audio" xml:space="preserve">
     <value>Audio</value>
@@ -235,19 +151,19 @@
     <value>Confirmar</value>
   </data>
   <data name="Cutin" xml:space="preserve">
-    <value />
+    <value>Corto</value>
   </data>
   <data name="Dark" xml:space="preserve">
     <value>Oscuro</value>
   </data>
-  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
-    <value>Música para las Mañanas (Fase 1)</value>
+  <data name="Daytime Outside Music" xml:space="preserve">
+    <value>Música para dentro del Instituto (Fase 1)</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
-    <value>Música para el Instituto (Fase 1)</value>
+    <value>Música para dentro del Instituto (Fase 3)</value>
   </data>
   <data name="Daytime School Music (Phase 2)" xml:space="preserve">
-    <value>Música para el Instituto (Fase 2)</value>
+    <value>Música para dentro del Instituto (Fase 2)</value>
   </data>
   <data name="Dependencies" xml:space="preserve">
     <value>Dependencias</value>
@@ -259,16 +175,28 @@
     <value>Descargar</value>
   </data>
   <data name="DownloadTip" xml:space="preserve">
-    <value>💡Tip: Si ya tiene el mod descargado. Intente hacer click en configurar mod en Reloaded-II.</value>
+    <value>💡Consejo: Si ya tiene el mod descargado, intente hacer click en "Configurar Mod" en Reloaded II.</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Habilitado</value>
+  </data>
+  <data name="Final Battle Music" xml:space="preserve">
+    <value>Música para la Batalla final</value>
+  </data>
+  <data name="Gendered Audio" xml:space="preserve">
+    <value>Audio Modificado</value>
+  </data>
+  <data name="Glass Shard" xml:space="preserve">
+    <value>Fragmento de Vidrio</value>
   </data>
   <data name="Group Photo" xml:space="preserve">
-    <value>Foto grupal</value>
+    <value>Foto Grupal</value>
   </data>
   <data name="Hair" xml:space="preserve">
     <value>Cabello</value>
   </data>
   <data name="Home" xml:space="preserve">
-    <value />
+    <value>Menú</value>
   </data>
   <data name="Kyoto Photos" xml:space="preserve">
     <value>Fotos de Kioto</value>
@@ -277,7 +205,7 @@
     <value>El idioma de la aplicación ha sido cambiado, por favor reinicie la aplicación para que los cambios aparezcan.</value>
   </data>
   <data name="Level Up Screen" xml:space="preserve">
-    <value />
+    <value>Pantalla de Subida de Nivel</value>
   </data>
   <data name="Light" xml:space="preserve">
     <value>Claro</value>
@@ -289,34 +217,31 @@
     <value>La descarga ha iniciado. Puede ser que necesite iniciar el juego y reiniciar la aplicación para que los cambios aparezcan.</value>
   </data>
   <data name="ModDownloadWait" xml:space="preserve">
-    <value />
-  </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>Música para las Noches (Fase 1)</value>
+    <value>Por favor espere mientras cargamos la descarga del mod...</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
   </data>
   <data name="Normal Battle Music" xml:space="preserve">
-    <value>Música Normal para Batallas</value>
+    <value>Música para Batallas Comunes</value>
   </data>
   <data name="Party Panel" xml:space="preserve">
-    <value />
+    <value>Panel de Equipo</value>
   </data>
   <data name="Personalisation" xml:space="preserve">
     <value>Personalización</value>
   </data>
   <data name="Play" xml:space="preserve">
-    <value />
+    <value>Escuchar</value>
   </data>
   <data name="Preview" xml:space="preserve">
-    <value />
+    <value>Vista Previa</value>
   </data>
   <data name="ReloadExePrompt" xml:space="preserve">
-    <value>Encuentra y seleccione el exe de la instalación de Reloaded II para continuar</value>
+    <value>Encuentre y seleccione el exe de instalación del Reloaded II para continuar.</value>
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
-    <value>Cambiar el idioma</value>
+    <value>Cambiar el Idioma</value>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Ajustes</value>
@@ -325,7 +250,7 @@
     <value>Música para Vínculos Sociales</value>
   </data>
   <data name="The Femc Mod" xml:space="preserve">
-    <value />
+    <value>El Mod de Femc</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Tema</value>
@@ -340,18 +265,111 @@
     <value>Puede actualizarla más tarde desde ajustes o cuando la aplicación se reinicie.</value>
   </data>
   <data name="Update Notify" xml:space="preserve">
-    <value>Una nueva versión está disponible. ¿Le interesaría actualizar?</value>
+    <value>Una nueva versión está disponible. ¿Le gustaría actualizar?</value>
   </data>
   <data name="UpdatePromptContent" xml:space="preserve">
-    <value>Una nueva versión de la aplicación está disponible. ¿Le interesaría actualizarla?</value>
+    <value>Una nueva versión de la aplicación está disponible. ¿Le gustaría actualizarla?</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
   </data>
-  <data name="About text" xml:space="preserve">
-    <value />
-  </data>
   <data name="Model" xml:space="preserve">
     <value>Modelo</value>
+  </data>
+  <data name="AdvantageDesc" xml:space="preserve">
+    <value>Música utilizada durante batallas comunes en las que tienes ventaja. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="AOADesc" xml:space="preserve">
+    <value>Imagen utilizada al finalizar batallas con ataques combinados.</value>
+  </data>
+  <data name="AOATextDesc" xml:space="preserve">
+    <value>Texto utilizado al finalizar batallas con ataques combinados.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autor/es</value>
+  </data>
+  <data name="BossDesc" xml:space="preserve">
+    <value>Música utilizada durante batallas contra ciertos jefes. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="BustupDesc" xml:space="preserve">
+    <value>Retrato de los personajes utilizado para cuadros de texto.</value>
+  </data>
+  <data name="CutinDesc" xml:space="preserve">
+    <value>Animación que ocurre ocasionalmente al atacar debilidades o realizar golpes críticos..</value>
+  </data>
+  <data name="DayInMusic1Desc" xml:space="preserve">
+    <value>Música utilizada dentro del instituto entre abril y agosto. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="DayInMusic2Desc" xml:space="preserve">
+    <value>Música utilizada dentro del instituto entre septiembre y enero. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="DayOutMusic1Desc" xml:space="preserve">
+    <value>Música utilizada en la ciudad a la mañana o después de clases. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="DependencyDesc" xml:space="preserve">
+    <value>Utilice esta página para instalar y manejar todas las dependencias utilizadas en el Mod de Femc.</value>
+  </data>
+  <data name="DisadvantageDesc" xml:space="preserve">
+    <value>Música utilizada durante batallas comunes en las que tienes desventaja. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="FemcDesc" xml:space="preserve">
+    <value>Utilice esta página para manejar la instalación del Mod de Femc.</value>
+  </data>
+  <data name="FinalDesc" xml:space="preserve">
+    <value />
+  </data>
+  <data name="GlassShardDesc" xml:space="preserve">
+    <value>Fragmentos de vidrio utilizados en la pantalla de configuración.</value>
+  </data>
+  <data name="GroupPhotoDesc" xml:space="preserve">
+    <value>Foto grupal tomada dentro del juego.</value>
+  </data>
+  <data name="HairDesc" xml:space="preserve">
+    <value>Accesorios para el cabello de Femc.</value>
+  </data>
+  <data name="KyotoPhotoDesc" xml:space="preserve">
+    <value>Las fotos tomadas en Kioto dentro del juego.</value>
+  </data>
+  <data name="LevelUpDesc" xml:space="preserve">
+    <value>Seleccione la imágen para la pantalla de subida de nivel.</value>
+  </data>
+  <data name="Mod Corrupt" xml:space="preserve">
+    <value>La instalación del mod podría estar dañada. Por favor intente instalar el mod nuevamente.</value>
+  </data>
+  <data name="Mod Ver Mismatch" xml:space="preserve">
+    <value>Puede ser que la versión del mod de Femc instalada actualmente no sea compatible con la aplicación. Revise la página de "Ajustes" para ver qué versión del mod es necesaria para utilizarla con la aplicación.</value>
+  </data>
+  <data name="ModelDesc" xml:space="preserve">
+    <value>Habilitar a Theo en el juego, reemplazando a Elizabeth como asistente de la Habitación Terciopelo.</value>
+  </data>
+  <data name="ModInfoRetrievalFail" xml:space="preserve">
+    <value>La aplicación no ha podido obtener la información de lanzamiento de este mod. Por favor inténtelo más tarde o instale el mod manualmente.</value>
+  </data>
+  <data name="NightMusic1Desc" xml:space="preserve">
+    <value>Música utilizada fuera de la residencia a la noche. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value>Música utilizada durante batallas comunes. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="PartyPanelDesc" xml:space="preserve">
+    <value>Seleccionar el panel de equipo de Femc, lo que se encuentra a la derecha.</value>
+  </data>
+  <data name="SocialDesc" xml:space="preserve">
+    <value>Música utilizada cuando realizas eventos de vínculos sociales. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+  </data>
+  <data name="Theo" xml:space="preserve">
+    <value>Theo</value>
+  </data>
+  <data name="UnexpectedErr" xml:space="preserve">
+    <value>Por favor intente reiniciar la aplicación o puede ser que no funcione de forma prevista.</value>
+  </data>
+  <data name="VoiceDesc" xml:space="preserve">
+    <value>La voz utilizada dentro del juego, que utiliza los pronombres correctos para Femc. Actualmente sólo funciona utilizando el audio en inglés.</value>
+  </data>
+  <data name="Night Outside Music" xml:space="preserve">
+    <value>Música para las Noches</value>
+  </data>
+  <data name="LangChangeHeader" xml:space="preserve">
+    <value>¡Idioma Modificado!</value>
   </data>
 </root>

@@ -15,11 +15,11 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     public Dictionary<string, string> AvailableLanguages { get; } = new()
     {
         { "English", "en-US" },
-        { "简体中文 (Simplified Chinese)", "zh-CN" },
+        { "Español (Spanish)", "es" },
         //{ "日本語 (Japanese)", "ja" }, - Localisation Pending
-        { "Русский (Russian)", "ru" },
         { "Polski (Polish)", "pl" },
-        //{ "Español (Spanish)", "es" } - Localisation Pending
+        { "Русский (Russian)", "ru" },
+        { "简体中文 (Simplified Chinese)", "zh-CN" },
     };
 
     private bool _isInitialized = false;
@@ -82,20 +82,20 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
         Thread.CurrentThread.CurrentUICulture = new CultureInfo(cultureCode);
         Thread.CurrentThread.CurrentCulture = new CultureInfo(cultureCode);
 
-        var langnotify = new InfoWindow("Language Changed!", Resources.LanguageChangeAlert);
+        var langnotify = new InfoWindow(Resources.LangChangeHeader, Resources.LanguageChangeAlert);
         langnotify.ShowDialog();
         Process.Start(Process.GetCurrentProcess().MainModule.FileName);
         App.Current.Shutdown();
     }
 
     [RelayCommand]
-	private void OnChangeTheme(string parameter)
-	{
-		switch (parameter)
-		{
-			case "theme_light":
-				if (CurrentTheme == ApplicationTheme.Light)
-					break;
+    private void OnChangeTheme(string parameter)
+    {
+        switch (parameter)
+        {
+            case "theme_light":
+                if (CurrentTheme == ApplicationTheme.Light)
+                    break;
 
                 ApplicationThemeManager.Apply(ApplicationTheme.Light);
                 CurrentTheme = ApplicationTheme.Light;

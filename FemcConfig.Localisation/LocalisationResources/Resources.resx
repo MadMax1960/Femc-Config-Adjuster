@@ -121,7 +121,7 @@
     <value>About Femc Config Adjuster</value>
   </data>
   <data name="AddonDesc" xml:space="preserve">
-    <value>Use this page to enable or disable addons. If an addon is not installed click on preview and then download.</value>
+    <value>Use this page to enable or disable addons. If an addon is not installed, click on "Preview" and then "Download"</value>
   </data>
   <data name="Addons" xml:space="preserve">
     <value>Addons</value>
@@ -129,38 +129,20 @@
   <data name="Advantage Battle Music" xml:space="preserve">
     <value>Advantage Battle Music</value>
   </data>
-  <data name="AdvantageDesc" xml:space="preserve">
-    <value>Select what music should be played when you are in a normal battle (Party Advantage). Multiple songs can be chosen for randomisation!</value>
-  </data>
   <data name="AOA" xml:space="preserve">
     <value>AOA</value>
   </data>
   <data name="AOA Text" xml:space="preserve">
     <value>AOA Text</value>
   </data>
-  <data name="AOADesc" xml:space="preserve">
-    <value>Card used when finishing battles with an all-out attack.</value>
-  </data>
-  <data name="AOATextDesc" xml:space="preserve">
-    <value>Text used when finishing battles with an all-out attack.</value>
-  </data>
   <data name="Audio" xml:space="preserve">
     <value>Audio</value>
-  </data>
-  <data name="Author" xml:space="preserve">
-    <value>Author(s)</value>
   </data>
   <data name="Boss Battle Music" xml:space="preserve">
     <value>Boss Battle Music</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Music used during some boss battles.</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Bustup</value>
-  </data>
-  <data name="BustupDesc" xml:space="preserve">
-    <value>Character portrait used in textboxes.</value>
   </data>
   <data name="Close" xml:space="preserve">
     <value>Close</value>
@@ -171,23 +153,11 @@
   <data name="Cutin" xml:space="preserve">
     <value>Cutin</value>
   </data>
-  <data name="CutinDesc" xml:space="preserve">
-    <value>Animation that occasionally plays when attacking weaknesses or hitting criticals.</value>
-  </data>
   <data name="Dark" xml:space="preserve">
     <value>Dark</value>
   </data>
-  <data name="DayInMusic1Desc" xml:space="preserve">
-    <value>Music used inside of school between April and August.</value>
-  </data>
-  <data name="DayInMusic2Desc" xml:space="preserve">
-    <value>Music used inside of school September onwards.</value>
-  </data>
-  <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value>Music used outside of school before September.</value>
-  </data>
-  <data name="Daytime Outside Music (Phase 1)" xml:space="preserve">
-    <value>Daytime Outside Music (Phase 1)</value>
+  <data name="Daytime Outside Music" xml:space="preserve">
+    <value>Daytime Outside Music</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
     <value>Daytime School Music (Phase 1)</value>
@@ -198,32 +168,20 @@
   <data name="Dependencies" xml:space="preserve">
     <value>Dependencies</value>
   </data>
-  <data name="DependencyDesc" xml:space="preserve">
-    <value>Use this page to install and manage the dependencies used by the Femc Mod.</value>
-  </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
     <value>Disadvantage Battle Music</value>
-  </data>
-  <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Select what music should be played when you are in a normal battle (Party Disadvantage). Multiple songs can be chosen for randomisation!</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>Download</value>
   </data>
   <data name="DownloadTip" xml:space="preserve">
-    <value>💡Tip: If you already have the mod downloaded. Try clicking on configure mod in Reloaded-II.</value>
+    <value>💡Tip: If you already have the mod downloaded, try clicking on "Configure Mod" in Reloaded II.</value>
   </data>
   <data name="Enabled" xml:space="preserve">
     <value>Enabled</value>
   </data>
-  <data name="FemcDesc" xml:space="preserve">
-    <value>Use this page manage the installation of the Femc Mod.</value>
-  </data>
   <data name="Final Battle Music" xml:space="preserve">
     <value>Final Battle Music</value>
-  </data>
-  <data name="FinalDesc" xml:space="preserve">
-    <value>Music used during the final battle with Nyx's core.</value>
   </data>
   <data name="Gendered Audio" xml:space="preserve">
     <value>Gendered Audio</value>
@@ -231,20 +189,11 @@
   <data name="Glass Shard" xml:space="preserve">
     <value>Glass Shard</value>
   </data>
-  <data name="GlassShardDesc" xml:space="preserve">
-    <value>Glass Shards used in the config screen.</value>
-  </data>
   <data name="Group Photo" xml:space="preserve">
     <value>Group Photo</value>
   </data>
-  <data name="GroupPhotoDesc" xml:space="preserve">
-    <value>The group photo taken ingame.</value>
-  </data>
   <data name="Hair" xml:space="preserve">
     <value>Hair</value>
-  </data>
-  <data name="HairDesc" xml:space="preserve">
-    <value>FEMC's hair model.</value>
   </data>
   <data name="Home" xml:space="preserve">
     <value>Home</value>
@@ -252,23 +201,14 @@
   <data name="Kyoto Photos" xml:space="preserve">
     <value>Kyoto Photos</value>
   </data>
-  <data name="KyotoPhotoDesc" xml:space="preserve">
-    <value>The photos taken in Kyoto ingame.</value>
-  </data>
   <data name="LanguageChangeAlert" xml:space="preserve">
     <value>The language of the app has been changed, please restart the app for changes to appear.</value>
   </data>
   <data name="Level Up Screen" xml:space="preserve">
     <value>Level Up Screen</value>
   </data>
-  <data name="LevelUpDesc" xml:space="preserve">
-    <value>Select the level up screen that is shown.</value>
-  </data>
   <data name="Light" xml:space="preserve">
     <value>Light</value>
-  </data>
-  <data name="Mod Corrupt" xml:space="preserve">
-    <value>The installation of the mod might be corrupted. Please try installing the mod again.</value>
   </data>
   <data name="Mod Download Error" xml:space="preserve">
     <value>The app is unable to initiate the download due to missing info. Please install this mod manually.</value>
@@ -276,26 +216,8 @@
   <data name="Mod Download Start" xml:space="preserve">
     <value>Your download has been initiated. You might need to launch the game and restart the app for changes to appear.</value>
   </data>
-  <data name="Mod Ver Mismatch" xml:space="preserve">
-    <value>The version of the femc mod installed currently might not be supported by the app. Check the settings page to see what version of the mod is needed for use with this app.</value>
-  </data>
   <data name="ModDownloadWait" xml:space="preserve">
-    <value>Please wait while we load the Mod Download...</value>
-  </data>
-  <data name="Model" xml:space="preserve">
-    <value>Model</value>
-  </data>
-  <data name="ModelDesc" xml:space="preserve">
-    <value>Theo Model</value>
-  </data>
-  <data name="ModInfoRetrievalFail" xml:space="preserve">
-    <value>The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.</value>
-  </data>
-  <data name="Night Outside Music (Phase 1)" xml:space="preserve">
-    <value>Night Outside Music (Phase 1)</value>
-  </data>
-  <data name="NightMusic1Desc" xml:space="preserve">
-    <value>Music used at night outside the dorm before September.</value>
+    <value>Please wait while we load the mod download...</value>
   </data>
   <data name="No" xml:space="preserve">
     <value>No</value>
@@ -303,14 +225,8 @@
   <data name="Normal Battle Music" xml:space="preserve">
     <value>Normal Battle Music</value>
   </data>
-  <data name="NormalDesc" xml:space="preserve">
-    <value>Select what music should be played when you are in a normal battle. Multiple songs can be chosen for randomisation!</value>
-  </data>
   <data name="Party Panel" xml:space="preserve">
     <value>Party Panel</value>
-  </data>
-  <data name="PartyPanelDesc" xml:space="preserve">
-    <value>Select the party panel, the things on the side.</value>
   </data>
   <data name="Personalisation" xml:space="preserve">
     <value>Personalisation</value>
@@ -326,7 +242,6 @@
   </data>
   <data name="SelectLanguageText" xml:space="preserve">
     <value>Change Language</value>
-    <comment>Text that appears above the select language combobox</comment>
   </data>
   <data name="Settings" xml:space="preserve">
     <value>Settings</value>
@@ -334,23 +249,14 @@
   <data name="Social Link Music" xml:space="preserve">
     <value>Social Link Music</value>
   </data>
-  <data name="SocialDesc" xml:space="preserve">
-    <value>Music used during social link events.</value>
-  </data>
   <data name="The Femc Mod" xml:space="preserve">
     <value>The Femc Mod</value>
   </data>
   <data name="Theme" xml:space="preserve">
     <value>Theme</value>
   </data>
-  <data name="Theo" xml:space="preserve">
-    <value>Theo</value>
-  </data>
   <data name="UI" xml:space="preserve">
     <value>UI</value>
-  </data>
-  <data name="UnexpectedErr" xml:space="preserve">
-    <value>Please try restarting the app or the app might not work as intended.</value>
   </data>
   <data name="Update Check Fail" xml:space="preserve">
     <value>An error occurred while checking for updates.</value>
@@ -364,10 +270,106 @@
   <data name="UpdatePromptContent" xml:space="preserve">
     <value>A new version of the application is available. Would you like to update?</value>
   </data>
-  <data name="VoiceDesc" xml:space="preserve">
-    <value>Voice used ingame. Currently only English is supported.</value>
-  </data>
   <data name="Yes" xml:space="preserve">
     <value>Yes</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="AdvantageDesc" xml:space="preserve">
+    <value>Music used when you are in a normal battle with Party Advantage. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="AOADesc" xml:space="preserve">
+    <value>Card used when finishing battles with an all-out attack.</value>
+  </data>
+  <data name="AOATextDesc" xml:space="preserve">
+    <value>Text used when finishing battles with an all-out attack.</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Author(s)</value>
+  </data>
+  <data name="BossDesc" xml:space="preserve">
+    <value>Music used when you battle certain bosses. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="BustupDesc" xml:space="preserve">
+    <value>Character portrait used in textboxes.</value>
+  </data>
+  <data name="CutinDesc" xml:space="preserve">
+    <value>Animation played occasionally when attacking weaknesses or hitting criticals.</value>
+  </data>
+  <data name="DayInMusic1Desc" xml:space="preserve">
+    <value>Music used inside of school between April and August. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="DayInMusic2Desc" xml:space="preserve">
+    <value>Music used inside of school between September and January. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="DayOutMusic1Desc" xml:space="preserve">
+    <value>Music used around the city in the morning or after classes. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="DependencyDesc" xml:space="preserve">
+    <value>Use this page to install and manage the dependencies used by the Femc Mod.</value>
+  </data>
+  <data name="DisadvantageDesc" xml:space="preserve">
+    <value>Music used when you are in a normal battle with Party Disadvantage. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="FemcDesc" xml:space="preserve">
+    <value>Use this page manage the installation of the Femc Mod.</value>
+  </data>
+  <data name="FinalDesc" xml:space="preserve">
+    <value>Music used when you battle Nyx's core. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="GlassShardDesc" xml:space="preserve">
+    <value>Glass Shards used in the config screen.</value>
+  </data>
+  <data name="GroupPhotoDesc" xml:space="preserve">
+    <value>The group photo taken ingame.</value>
+  </data>
+  <data name="HairDesc" xml:space="preserve">
+    <value>Accesories for Femc's hair.</value>
+  </data>
+  <data name="KyotoPhotoDesc" xml:space="preserve">
+    <value>The photos taken in Kyoto ingame.</value>
+  </data>
+  <data name="LevelUpDesc" xml:space="preserve">
+    <value>Select the image for the level up screen.</value>
+  </data>
+  <data name="Mod Corrupt" xml:space="preserve">
+    <value>The installation of the mod might be corrupted. Please try installing the mod again.</value>
+  </data>
+  <data name="Mod Ver Mismatch" xml:space="preserve">
+    <value>The version of the Femc mod installed currently might not be supported by the app. Check the "Settings" page to see what version of the mod is needed for use with this app.</value>
+  </data>
+  <data name="ModelDesc" xml:space="preserve">
+    <value>Enable Theo in the game, replacing Elizabeth as the Velvet Room attendant.</value>
+  </data>
+  <data name="ModInfoRetrievalFail" xml:space="preserve">
+    <value>The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.</value>
+  </data>
+  <data name="NightMusic1Desc" xml:space="preserve">
+    <value>Music used outside the dorm at night. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value>Music used when you are in a normal battle. Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="PartyPanelDesc" xml:space="preserve">
+    <value>Select Femc's party panel, the thing on the right.</value>
+  </data>
+  <data name="SocialDesc" xml:space="preserve">
+    <value>Music used when you do social link events.  Multiple songs can be chosen for randomisation!</value>
+  </data>
+  <data name="Theo" xml:space="preserve">
+    <value>Theo</value>
+  </data>
+  <data name="UnexpectedErr" xml:space="preserve">
+    <value>Please try restarting the app or it might not work as intended.</value>
+  </data>
+  <data name="VoiceDesc" xml:space="preserve">
+    <value>Voice used ingame, which uses the correct pronouns for Femc. Currently only English audio is supported.</value>
+  </data>
+  <data name="Night Outside Music" xml:space="preserve">
+    <value>Night Outside Music</value>
+  </data>
+  <data name="LangChangeHeader" xml:space="preserve">
+    <value>Language Changed!</value>
   </data>
 </root>

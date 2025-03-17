@@ -70,7 +70,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Use this page to enable or disable addons. If an addon is not installed click on preview and then download..
+        ///   Looks up a localized string similar to Use this page to enable or disable addons. If an addon is not installed, click on &quot;Preview&quot; and then &quot;Download&quot;.
         /// </summary>
         public static string AddonDesc {
             get {
@@ -97,7 +97,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select what music should be played when you are in a normal battle (Party Advantage). Multiple songs can be chosen for randomisation!.
+        ///   Looks up a localized string similar to Music used when you are in a normal battle with Party Advantage. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string AdvantageDesc {
             get {
@@ -169,7 +169,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used during some boss battles..
+        ///   Looks up a localized string similar to Music used when you battle certain bosses. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string BossDesc {
             get {
@@ -223,7 +223,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Animation that occasionally plays when attacking weaknesses or hitting criticals..
+        ///   Looks up a localized string similar to Animation played occasionally when attacking weaknesses or hitting criticals..
         /// </summary>
         public static string CutinDesc {
             get {
@@ -241,7 +241,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used inside of school between April and August..
+        ///   Looks up a localized string similar to Music used inside of school between April and August. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DayInMusic1Desc {
             get {
@@ -250,7 +250,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used inside of school September onwards..
+        ///   Looks up a localized string similar to Music used inside of school between September and January. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DayInMusic2Desc {
             get {
@@ -259,7 +259,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used outside of school before September..
+        ///   Looks up a localized string similar to Music used around the city in the morning or after classes. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DayOutMusic1Desc {
             get {
@@ -268,11 +268,11 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Daytime Outside Music (Phase 1).
+        ///   Looks up a localized string similar to Daytime Outside Music.
         /// </summary>
-        public static string Daytime_Outside_Music__Phase_1_ {
+        public static string Daytime_Outside_Music {
             get {
-                return ResourceManager.GetString("Daytime Outside Music (Phase 1)", resourceCulture);
+                return ResourceManager.GetString("Daytime Outside Music", resourceCulture);
             }
         }
         
@@ -322,7 +322,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select what music should be played when you are in a normal battle (Party Disadvantage). Multiple songs can be chosen for randomisation!.
+        ///   Looks up a localized string similar to Music used when you are in a normal battle with Party Disadvantage. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DisadvantageDesc {
             get {
@@ -340,7 +340,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to 💡Tip: If you already have the mod downloaded. Try clicking on configure mod in Reloaded-II..
+        ///   Looks up a localized string similar to 💡Tip: If you already have the mod downloaded, try clicking on &quot;Configure Mod&quot; in Reloaded II..
         /// </summary>
         public static string DownloadTip {
             get {
@@ -376,7 +376,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used during the final battle with Nyx&apos;s core..
+        ///   Looks up a localized string similar to Music used when you battle Nyx&apos;s core. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string FinalDesc {
             get {
@@ -439,7 +439,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to FEMC&apos;s hair model..
+        ///   Looks up a localized string similar to Accesories for Femc&apos;s hair..
         /// </summary>
         public static string HairDesc {
             get {
@@ -475,6 +475,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Language Changed!.
+        /// </summary>
+        public static string LangChangeHeader {
+            get {
+                return ResourceManager.GetString("LangChangeHeader", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The language of the app has been changed, please restart the app for changes to appear..
         /// </summary>
         public static string LanguageChangeAlert {
@@ -493,7 +502,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the level up screen that is shown..
+        ///   Looks up a localized string similar to Select the image for the level up screen..
         /// </summary>
         public static string LevelUpDesc {
             get {
@@ -538,7 +547,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to The version of the femc mod installed currently might not be supported by the app. Check the settings page to see what version of the mod is needed for use with this app..
+        ///   Looks up a localized string similar to The version of the Femc mod installed currently might not be supported by the app. Check the &quot;Settings&quot; page to see what version of the mod is needed for use with this app..
         /// </summary>
         public static string Mod_Ver_Mismatch {
             get {
@@ -547,7 +556,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please wait while we load the Mod Download....
+        ///   Looks up a localized string similar to Please wait while we load the mod download....
         /// </summary>
         public static string ModDownloadWait {
             get {
@@ -565,7 +574,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Theo Model.
+        ///   Looks up a localized string similar to Enable Theo in the game, replacing Elizabeth as the Velvet Room attendant..
         /// </summary>
         public static string ModelDesc {
             get {
@@ -583,16 +592,16 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Night Outside Music (Phase 1).
+        ///   Looks up a localized string similar to Night Outside Music.
         /// </summary>
-        public static string Night_Outside_Music__Phase_1_ {
+        public static string Night_Outside_Music {
             get {
-                return ResourceManager.GetString("Night Outside Music (Phase 1)", resourceCulture);
+                return ResourceManager.GetString("Night Outside Music", resourceCulture);
             }
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used at night outside the dorm before September..
+        ///   Looks up a localized string similar to Music used outside the dorm at night. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string NightMusic1Desc {
             get {
@@ -619,7 +628,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select what music should be played when you are in a normal battle. Multiple songs can be chosen for randomisation!.
+        ///   Looks up a localized string similar to Music used when you are in a normal battle. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string NormalDesc {
             get {
@@ -637,7 +646,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Select the party panel, the things on the side..
+        ///   Looks up a localized string similar to Select Femc&apos;s party panel, the thing on the right..
         /// </summary>
         public static string PartyPanelDesc {
             get {
@@ -709,7 +718,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used during social link events..
+        ///   Looks up a localized string similar to Music used when you do social link events.  Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string SocialDesc {
             get {
@@ -754,7 +763,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Please try restarting the app or the app might not work as intended..
+        ///   Looks up a localized string similar to Please try restarting the app or it might not work as intended..
         /// </summary>
         public static string UnexpectedErr {
             get {
@@ -799,7 +808,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Voice used ingame. Currently only English is supported..
+        ///   Looks up a localized string similar to Voice used ingame, which uses the correct pronouns for Femc. Currently only English audio is supported..
         /// </summary>
         public static string VoiceDesc {
             get {
