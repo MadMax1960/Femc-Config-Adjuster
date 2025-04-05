@@ -52,6 +52,18 @@ public class DayInMusic_1 : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WantClose,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "music_atlus_time",
+                Name = "Time",
+                Authors = [Author.Atlus],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.WantClose = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.WantClose = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WantClose,
+            },
         ];
     }
 }
