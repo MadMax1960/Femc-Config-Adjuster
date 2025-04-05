@@ -139,7 +139,7 @@ namespace Femc_Config_Adjuster
 				{
 					var relativePath = Path.GetRelativePath(extractedPath, file);
 					var destinationPath = Path.Combine(newFolderPath, relativePath);
-
+					// dti
 					var destinationDir = Path.GetDirectoryName(destinationPath);
 					if (!Directory.Exists(destinationDir))
 						Directory.CreateDirectory(destinationDir);
