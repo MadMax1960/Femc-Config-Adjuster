@@ -34,7 +34,7 @@ public class ApplicationHostService : IHostedService
 
     private void SetupLogger()
     {	
-		var logFile = Path.Join(_app.AppDataDir, "log.txt");
+		var logFile = Path.Join(_app.AppDataDir, "log.txt"); // spoiled milk
 		if (File.Exists(logFile))
 		{
 			File.Delete(logFile);
