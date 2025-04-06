@@ -117,4 +117,19 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Update Notify Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Update Later Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Mod Ver Mismatch Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="Mod Corrupt Title" xml:space="preserve">
+    <value />
+  </data>
+  <data name="UnexpectedErr Title" xml:space="preserve">
+    <value />
+  </data>
 </root>

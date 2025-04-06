@@ -76,17 +76,17 @@ public class ApplicationHostService : IHostedService
         var context = app.GetContext();
         if (context.FemcModVersion == "UNSUPPORTED")
         {
-            var infoWin = new InfoWindow("Femc Mod and App Version Mismatch", FemcConfig.Localisation.LocalisationResources.Resources.Mod_Ver_Mismatch);
+            var infoWin = new InfoWindow(FemcConfig.Localisation.LocalisationResources.Resources.Mod_Ver_Mismatch_Title, FemcConfig.Localisation.LocalisationResources.Resources.Mod_Ver_Mismatch);
             infoWin.ShowDialog();
         }
         else if (context.FemcModVersion == "404FILENOTFOUND")
         {
-            var infoWin = new InfoWindow("Mod files integrity can't be verified", FemcConfig.Localisation.LocalisationResources.Resources.Mod_Corrupt);
+            var infoWin = new InfoWindow(FemcConfig.Localisation.LocalisationResources.Resources.Mod_Corrupt_Title, FemcConfig.Localisation.LocalisationResources.Resources.Mod_Corrupt);
             infoWin.ShowDialog();
         }
         else if (context.FemcModVersion == "NotExecError")
         {
-            var infoWin = new InfoWindow("An unexpected error occured", FemcConfig.Localisation.LocalisationResources.Resources.UnexpectedErr);
+            var infoWin = new InfoWindow(FemcConfig.Localisation.LocalisationResources.Resources.UnexpectedErr_Title, FemcConfig.Localisation.LocalisationResources.Resources.UnexpectedErr);
             infoWin.ShowDialog();
         }
     }

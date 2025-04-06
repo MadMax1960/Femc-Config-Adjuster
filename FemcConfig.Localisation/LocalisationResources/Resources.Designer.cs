@@ -250,7 +250,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used inside of school between September and January. Multiple songs can be chosen for randomisation!.
+        ///   Looks up a localized string similar to Music used inside of school between September and December. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DayInMusic2Desc {
             get {
@@ -529,6 +529,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Integrity of mod files can&apos;t be verified.
+        /// </summary>
+        public static string Mod_Corrupt_Title {
+            get {
+                return ResourceManager.GetString("Mod Corrupt Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The app is unable to initiate the download due to missing info. Please install this mod manually..
         /// </summary>
         public static string Mod_Download_Error {
@@ -552,6 +561,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string Mod_Ver_Mismatch {
             get {
                 return ResourceManager.GetString("Mod Ver Mismatch", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Femc Mod and App Version Mismatch.
+        /// </summary>
+        public static string Mod_Ver_Mismatch_Title {
+            get {
+                return ResourceManager.GetString("Mod Ver Mismatch Title", resourceCulture);
             }
         }
         
@@ -772,6 +790,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to An unexpected error occured.
+        /// </summary>
+        public static string UnexpectedErr_Title {
+            get {
+                return ResourceManager.GetString("UnexpectedErr Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to An error occurred while checking for updates..
         /// </summary>
         public static string Update_Check_Fail {
@@ -790,11 +817,29 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Update Skipped.
+        /// </summary>
+        public static string Update_Later_Title {
+            get {
+                return ResourceManager.GetString("Update Later Title", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to A new version is available. Would you like to update?.
         /// </summary>
         public static string Update_Notify {
             get {
                 return ResourceManager.GetString("Update Notify", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Update Available Version:.
+        /// </summary>
+        public static string Update_Notify_Title {
+            get {
+                return ResourceManager.GetString("Update Notify Title", resourceCulture);
             }
         }
         

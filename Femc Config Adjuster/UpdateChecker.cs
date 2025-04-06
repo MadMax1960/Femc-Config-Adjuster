@@ -38,7 +38,7 @@ namespace Femc_Config_Adjuster
 					if (release != null && IsNewerVersion(release.tag_name, currentVersion))
 					{
 						var promptWin = new PromptWindow(
-							title: $"Update Available Version: {release.tag_name}",
+							title: FemcConfig.Localisation.LocalisationResources.Resources.Update_Notify_Title+release.tag_name,
 							content: FemcConfig.Localisation.LocalisationResources.Resources.Update_Notify
 						);
 						promptWin.ShowDialog();
@@ -50,7 +50,7 @@ namespace Femc_Config_Adjuster
 						else
 						{
 							var infoWin = new InfoWindow(
-								"Update Skipped",
+								FemcConfig.Localisation.LocalisationResources.Resources.Update_Later_Title,
 								FemcConfig.Localisation.LocalisationResources.Resources.Update_Later
 							);
 							infoWin.ShowDialog();

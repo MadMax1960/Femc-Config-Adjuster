@@ -301,7 +301,7 @@
     <value>Music used inside of school between April and August. Multiple songs can be chosen for randomisation!</value>
   </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
-    <value>Music used inside of school between September and January. Multiple songs can be chosen for randomisation!</value>
+    <value>Music used inside of school between September and December. Multiple songs can be chosen for randomisation!</value>
   </data>
   <data name="DayOutMusic1Desc" xml:space="preserve">
     <value>Music used around the city in the morning or after classes. Multiple songs can be chosen for randomisation!</value>
@@ -371,5 +371,20 @@
   </data>
   <data name="LangChangeHeader" xml:space="preserve">
     <value>Language Changed!</value>
+  </data>
+  <data name="Update Notify Title" xml:space="preserve">
+    <value>Update Available Version:</value>
+  </data>
+  <data name="Update Later Title" xml:space="preserve">
+    <value>Update Skipped</value>
+  </data>
+  <data name="Mod Ver Mismatch Title" xml:space="preserve">
+    <value>Femc Mod and App Version Mismatch</value>
+  </data>
+  <data name="Mod Corrupt Title" xml:space="preserve">
+    <value>Integrity of mod files can't be verified</value>
+  </data>
+  <data name="UnexpectedErr Title" xml:space="preserve">
+    <value>An unexpected error occured</value>
   </data>
 </root>
