@@ -265,10 +265,10 @@
     <value>Puede actualizarla más tarde desde ajustes o cuando la aplicación se reinicie.</value>
   </data>
   <data name="Update Notify" xml:space="preserve">
-    <value>Una nueva versión está disponible. ¿Le gustaría actualizar?</value>
+    <value>Hay una nueva versión de la aplicación disponible. ¿Le gustaría actualizarla?</value>
   </data>
   <data name="UpdatePromptContent" xml:space="preserve">
-    <value>Una nueva versión de la aplicación está disponible. ¿Le gustaría actualizarla?</value>
+    <value>Hay una nueva versión de la aplicación disponible. ¿Le gustaría actualizarla?</value>
   </data>
   <data name="Yes" xml:space="preserve">
     <value>Sí</value>
@@ -373,18 +373,18 @@
     <value>¡Idioma Modificado!</value>
   </data>
   <data name="Update Notify Title" xml:space="preserve">
-    <value />
+    <value>Actualización disponible:</value>
   </data>
   <data name="Update Later Title" xml:space="preserve">
-    <value />
+    <value>La actualización ha sido omitida</value>
   </data>
   <data name="Mod Ver Mismatch Title" xml:space="preserve">
-    <value />
+    <value>La versión del Mod de Femc y la de la aplicación no coinciden</value>
   </data>
   <data name="Mod Corrupt Title" xml:space="preserve">
-    <value />
+    <value>No se puede verificar la integridad de los archivos del mod</value>
   </data>
   <data name="UnexpectedErr Title" xml:space="preserve">
-    <value />
+    <value>Se ha producido un error inesperado</value>
   </data>
 </root>
