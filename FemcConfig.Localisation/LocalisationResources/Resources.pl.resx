@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -157,16 +157,16 @@
     <value>Ciemny</value>
   </data>
   <data name="Daytime Outside Music" xml:space="preserve">
-    <value />
+    <value>Muzyka na zewnątrz w ciągu dnia</value>
   </data>
   <data name="Daytime School Music (Phase 1)" xml:space="preserve">
-    <value />
+    <value>Muzyka w szkole (Kwi-Sie)</value>
   </data>
   <data name="Daytime School Music (Phase 2)" xml:space="preserve">
-    <value />
+    <value>Muzyka w szkole (Wrz-Gru)</value>
   </data>
   <data name="Dependencies" xml:space="preserve">
-    <value>Zależności</value>
+    <value>Wymagania</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
     <value>Motyw Walki – Niekorzystna Pozycja</value>
@@ -247,7 +247,7 @@
     <value>Ustawienia</value>
   </data>
   <data name="Social Link Music" xml:space="preserve">
-    <value>Muzyka Social Linków</value>
+    <value>Motyw Więzi</value>
   </data>
   <data name="The Femc Mod" xml:space="preserve">
     <value>Mod FeMC</value>
@@ -289,7 +289,7 @@
     <value>Autorzy</value>
   </data>
   <data name="BossDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce w niektórymi bossami. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Portret FeMC widoczny przy opcjach dialogowych</value>
@@ -298,13 +298,13 @@
     <value>Animacja czasami widoczna przy wykorzystaniu słabego punktu przeciwnika, bądź zadania obrażeń krytycznych</value>
   </data>
   <data name="DayInMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka używana w szkole od kwietnia do sierpnia. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka używana w szkole od września do grudnia. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="DayOutMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka używana w mieście rano lub po zajęciach. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="DependencyDesc" xml:space="preserve">
     <value>Użyj tej strony, aby zainstalować i zarządzać zależnościami używanymi przez moda FeMC</value>
@@ -316,7 +316,7 @@
     <value>Za pomocą tej strony możesz zarządzać instalacją moda FeMC</value>
   </data>
   <data name="FinalDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz, jaka muzyka ma być odtwarzana, kiedy walczysz ze rdzeniem Nyx. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="GlassShardDesc" xml:space="preserve">
     <value>Odłamek szkła trzymany przez FeMC w menu</value>
@@ -346,7 +346,7 @@
     <value>Aplikacja nie była w stanie pobrać informacji o wersji moda. Spróbuj ponownie później lub spróbuj zainstalować moda ręcznie.</value>
   </data>
   <data name="NightMusic1Desc" xml:space="preserve">
-    <value />
+    <value>Muzyka używana poza internatem w nocy. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="NormalDesc" xml:space="preserve">
     <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś podczas walki. Można wybrać wiele piosenek do losowania!</value>
@@ -355,7 +355,7 @@
     <value>Wybierz grafikę widoczną na panelu drużyny</value>
   </data>
   <data name="SocialDesc" xml:space="preserve">
-    <value />
+    <value>Muzyka używana podczas wzmacniania więzi. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="Theo" xml:space="preserve">
     <value>Theo</value>
@@ -367,24 +367,24 @@
     <value>Głos używany w grze. Obecnie obsługiwany jest tylko język angielski.</value>
   </data>
   <data name="Night Outside Music" xml:space="preserve">
-    <value />
+    <value>Muzyka podczas nocy</value>
   </data>
   <data name="LangChangeHeader" xml:space="preserve">
-    <value />
+    <value>Język zmieniony!</value>
   </data>
   <data name="Update Notify Title" xml:space="preserve">
-    <value />
+    <value>Dostępna nowa wersja:</value>
   </data>
   <data name="Update Later Title" xml:space="preserve">
-    <value />
+    <value>Aktualizacja pominięta</value>
   </data>
   <data name="Mod Ver Mismatch Title" xml:space="preserve">
-    <value />
+    <value>Niezgodność wersji moda i aplikacji</value>
   </data>
   <data name="Mod Corrupt Title" xml:space="preserve">
-    <value />
+    <value>Nie można zweryfikować integralności plików moda</value>
   </data>
   <data name="UnexpectedErr Title" xml:space="preserve">
-    <value />
+    <value>Wystąpił nieoczekiwany błąd</value>
   </data>
 </root>
