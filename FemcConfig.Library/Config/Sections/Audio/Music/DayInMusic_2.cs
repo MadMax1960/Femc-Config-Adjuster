@@ -52,6 +52,18 @@ public class DayInMusic_2 : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.Seasons,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "music_atlus_sun",
+                Name = "Sun",
+                Authors = [Author.Atlus],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.SunP3P = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.SunP3P = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.SunP3P,
+            },
         ];
     }
 }

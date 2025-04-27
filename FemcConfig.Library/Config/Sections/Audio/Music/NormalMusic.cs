@@ -45,6 +45,19 @@ public class NormalMusicSection : ISection
             },
            new ModOption(ctx)
             {
+                InternalName = "music_atlus_wao",
+                Name = "Wiping All Out",
+                Authors = [Author.Atlus],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.P3pNom = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.P3pNom = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.P3pNom,
+            },
+           new ModOption(ctx)
+            {
                 InternalName = "music_mosq_wao",
                 Name = "Wiping All Out -Reload-",
                 Authors = [Author.Mosq],

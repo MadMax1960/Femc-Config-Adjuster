@@ -57,4 +57,5 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Chitu = new("Chitu");
     public static readonly Author Crezzstar = new("Crezz star", Url: "https://x.com/infj_crezz");
     public static readonly Author samythecoolkid = new("samythecoolkid", Url: "https://bsky.app/profile/samydacoolkid.bsky.social");
+    public static readonly Author Mixi_xiMi = new("Mixi_xiMi");
 };
