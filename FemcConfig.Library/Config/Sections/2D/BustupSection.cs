@@ -213,6 +213,13 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Mixi_xiMi,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Mixi_xiMi,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_StupidAle",
+                Authors = [Author.StupidAle],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.StupidAle,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.StupidAle,
+            },
         ];
     }
 }

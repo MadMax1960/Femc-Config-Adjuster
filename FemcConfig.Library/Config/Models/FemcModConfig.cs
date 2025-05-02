@@ -1027,37 +1027,38 @@ public partial class FemcModConfig : ObservableObject
     private BustupType _BustupTrue = BustupType.Neptune;
 
 	public enum BustupType
-	{
-		Neptune,
-		Ely,
-		Esa,
-		Betina,
-		Anniversary,
-		JustBlue,
-		Sav,
-		Doodled,
-		RonaldReagan,
-		ElyAlt,
-		Yuunagi,
-		cielbell,
-		axolotl,
-		ghostedtoast,
-		Strelko,
-		gackt,
-		Jackie,
-		Lisa,
-		BetaFemcByMae,
-		crezzstar,
-		crezzstarAlt,
-		AngieDaGorl,
-		namiweiko,
-		chitu,
-		shiosakana,
+    {
+        Neptune,
+        Ely,
+        Esa,
+        Betina,
+        Anniversary,
+        JustBlue,
+        Sav,
+        Doodled,
+        RonaldReagan,
+        ElyAlt,
+        Yuunagi,
+        cielbell,
+        axolotl,
+        ghostedtoast,
+        Strelko,
+        gackt,
+        Jackie,
+        Lisa,
+        BetaFemcByMae,
+        crezzstar,
+        crezzstarAlt,
+        AngieDaGorl,
+        namiweiko,
+        chitu,
+        shiosakana,
         samythecoolkid,
-        Mixi_xiMi
+        Mixi_xiMi,
+        StupidAle
     }
 
-	[Description("The Glass Shard in that one menu when pausing.")]
+    [Description("The Glass Shard in that one menu when pausing.")]
     [Category("2D Options")]
     [DefaultValue(ShardType.Esa)]
     [ObservableProperty]
