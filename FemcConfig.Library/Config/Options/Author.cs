@@ -59,4 +59,5 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author samythecoolkid = new("samythecoolkid", Url: "https://bsky.app/profile/samydacoolkid.bsky.social");
     public static readonly Author Mixi_xiMi = new("Mixi_xiMi");
     public static readonly Author StupidAle = new("Stupid Ale", Url: "https://x.com/_StupidAle");
+    public static readonly Author Kiara = new("Kiara", Url: "https://www.tumblr.com/akihikosanada");
 };
