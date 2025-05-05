@@ -1003,7 +1003,8 @@ public partial class FemcModConfig : ObservableObject
         shiosakana,
         shiosakanaAlt,
         Nami,
-        AngieDaGorl
+        AngieDaGorl,
+        StupidAle
     }
 
     [Description("The AOA Foreground Text.")]
