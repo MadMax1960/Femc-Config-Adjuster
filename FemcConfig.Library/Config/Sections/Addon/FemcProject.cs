@@ -2,8 +2,8 @@ using FemcConfig.Library.Config.Options;
 namespace FemcConfig.Library.Config.Sections;
 public class FemcProjectSection : ISection
 {
-    public string Name { get; } = "The Femc Mod";
-    public string Description { get; } = "Use this page manage the installation of the Femc Mod.";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.The_Femc_Mod;
+    public string Description { get; } = Localisation.LocalisationResources.Resources.FemcDesc;
     public SectionCategory Category { get; } = SectionCategory.MainPage;
     public ModOption[] Options { get; }
     public FemcProjectSection(AppService app)

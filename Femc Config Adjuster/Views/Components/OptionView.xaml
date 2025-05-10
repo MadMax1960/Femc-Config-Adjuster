@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Components"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     d:DesignHeight="450"
     d:DesignWidth="800"
     mc:Ignorable="d">
@@ -77,7 +78,7 @@
                                 <Setter Property="Content">
                                     <Setter.Value>
                                         <StackPanel Orientation="Horizontal">
-                                            <TextBlock VerticalAlignment="Center" Text="Preview" />
+                                            <TextBlock VerticalAlignment="Center" Text="{x:Static resx:Resources.Preview}" />
                                             <ui:SymbolIcon
                                                 Margin="4"
                                                 FontSize="20"
@@ -90,7 +91,7 @@
                                         <Setter Property="Content">
                                             <Setter.Value>
                                                 <StackPanel Orientation="Horizontal">
-                                                    <TextBlock VerticalAlignment="Center" Text="Play" />
+                                                    <TextBlock VerticalAlignment="Center" Text="{x:Static resx:Resources.Play}" />
                                                     <ui:SymbolIcon
                                                         Margin="4"
                                                         FontSize="20"
@@ -114,7 +115,7 @@
                             VerticalAlignment="Center"
                             FontSize="14"
                             FontWeight="SemiBold"
-                            Text="Enabled" />
+                            Text="{x:Static resx:Resources.Enabled}" />
                         <CheckBox IsChecked="{Binding Option.IsEnabled}" />
                     </StackPanel>
                 </Border>

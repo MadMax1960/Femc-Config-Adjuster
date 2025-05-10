@@ -4,9 +4,9 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class GlassShardSection : ISection
 {
-    public string Name { get; } = "Glass Shard";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Glass_Shard;
 
-    public string Description { get; } = "Glass Shards used in the config screen.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.GlassShardDesc;
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 
