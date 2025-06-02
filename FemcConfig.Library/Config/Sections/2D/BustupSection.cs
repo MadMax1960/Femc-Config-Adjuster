@@ -227,6 +227,13 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Kiara,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Kiara,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_Autumn",
+                Authors = [Author.Kiara],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Autumn,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Autumn,
+            },
         ];
     }
 }
