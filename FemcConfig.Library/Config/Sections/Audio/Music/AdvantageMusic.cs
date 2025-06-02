@@ -7,9 +7,9 @@ public class AdvantageMusicSection : ISection
     /// <summary>
     /// Section name. Sets the text that appears on the side and title of page.
     /// </summary>
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Advantage_Battle_Music;
+    public string Name { get; } = "Advantage Battle Music";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.AdvantageDesc;
+    public string Description { get; } = "Select what music should be played when you are in a normal battle (Party Advantage). Multiple songs can be chosen for randomisation!";
 
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.

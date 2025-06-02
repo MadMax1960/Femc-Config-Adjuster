@@ -4,9 +4,9 @@ namespace FemcConfig.Library.Config.Sections._3D;
 
 public class Hair : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Hair;
+    public string Name { get; } = "Hair";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.HairDesc;
+    public string Description { get; } = "FEMC's hair model.";
 
     public SectionCategory Category { get; } = SectionCategory.ThreeD;
 

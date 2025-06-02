@@ -1,4 +1,5 @@
-﻿using Femc_Config_Adjuster.ViewModels.Windows;
+﻿using Femc_Config_Adjuster.Controls;
+using Femc_Config_Adjuster.ViewModels.Windows;
 using FemcConfig.Library.Config.Models;
 using Microsoft.Web.WebView2.Wpf;
 using System.Diagnostics;
@@ -77,12 +78,12 @@ public partial class PreviewWindow : FluentWindow
             if(githubowner  != null && githubreponame != null)
             {
                 GithubR2Direct7z(githubowner, githubreponame, regex);
-                var infoWin = new InfoWindow("Download Info", FemcConfig.Localisation.LocalisationResources.Resources.Mod_Download_Start);
+                var infoWin = new InfoWindow("Download Info", "Your download has been initiated. You might need to launch the game and restart the app for changes to appear.");
                 infoWin.ShowDialog();
             }
             else
             {
-                var infoWin = new InfoWindow("Download Error", FemcConfig.Localisation.LocalisationResources.Resources.Mod_Download_Error);
+                var infoWin = new InfoWindow("Download Error", "The app is unable to initiate the download due to missing info. Please install this mod manually.", "Download Error");
                 infoWin.ShowDialog();
             }
         }
@@ -135,7 +136,7 @@ public static async void GithubR2Direct7z(string owner, string repo, string? inc
     {
         var infoWin = new InfoWindow(
             "Failed to get 7z URL",
-            FemcConfig.Localisation.LocalisationResources.Resources.ModInfoRetrievalFail,
+            "The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.",
             "Installation Failed"
         );
         infoWin.ShowDialog();

@@ -6,7 +6,6 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     Title="FEMC Config Setup"
     Width="500"
     Height="200"
@@ -39,7 +38,7 @@
             FontSize="20"
             FontWeight="SemiBold"
             Text="Reloaded II" />
-        <TextBlock Grid.Row="2" Text="{x:Static resx:Resources.ReloadExePrompt}" />
+        <TextBlock Grid.Row="2" Text="Find and select your Reloaded II install (exe) to continue." />
         <Button
             Grid.Row="3"
             HorizontalAlignment="Stretch"

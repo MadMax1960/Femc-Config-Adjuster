@@ -4,8 +4,8 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class BustupSection : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Bustup;
-    public string Description { get; } = Localisation.LocalisationResources.Resources.BustupDesc;
+    public string Name { get; } = "Bustup";
+    public string Description { get; } = "Character portrait used in textboxes.";
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

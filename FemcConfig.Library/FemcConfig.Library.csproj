@@ -10,8 +10,4 @@
     <PackageReference Include="CommunityToolkit.Mvvm" Version="8.3.2" />
   </ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\FemcConfig.Localisation\FemcConfig.Localisation.csproj" />
-  </ItemGroup>
-
 </Project>

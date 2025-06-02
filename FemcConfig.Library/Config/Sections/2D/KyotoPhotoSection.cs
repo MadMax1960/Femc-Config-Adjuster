@@ -4,9 +4,9 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class KyotoPhotoSection : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Kyoto_Photos;
+    public string Name { get; } = "Kyoto Photos";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.KyotoPhotoDesc;
+    public string Description { get; } = "The photos taken in Kyoto ingame.";
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

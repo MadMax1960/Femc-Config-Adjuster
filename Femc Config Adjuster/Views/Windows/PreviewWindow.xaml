@@ -7,7 +7,6 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     xmlns:wv2="clr-namespace:Microsoft.Web.WebView2.Wpf;assembly=Microsoft.Web.WebView2.Wpf"
     Title="{Binding Title}"
     Width="1000"
@@ -72,7 +71,7 @@
                     <TextBlock
                         FontSize="16"
                         FontWeight="Light"
-                        Text="{x:Static resx:Resources.Author}" />
+                        Text="Author(s)" />
                     <Separator Margin="0,4" />
                     <ItemsControl ItemsSource="{Binding Option.Authors}">
                         <ItemsControl.ItemTemplate>
@@ -122,14 +121,14 @@
                     BorderBrush="{DynamicResource AccentTextFillColorPrimaryBrush}"
                     BorderThickness="1"
                     Click="Button_Confirm"
-                    Content="{x:Static resx:Resources.Confirm}"
+                    Content="Confirm"
                     Foreground="{DynamicResource AccentTextFillColorPrimaryBrush}" />
                 <Button
                     Margin="0,4"
                     HorizontalAlignment="Stretch"
                     BorderThickness="1"
                     Click="Button_Download"
-                    Content="{x:Static resx:Resources.Download}">
+                    Content="Download">
                     <Button.Style>
                         <Style BasedOn="{StaticResource {x:Type Button}}" TargetType="Button">
                             <Style.Setters>
@@ -147,7 +146,7 @@
                     Margin="0,4"
                     HorizontalAlignment="Stretch"
                     Click="Button_Close"
-                    Content="{x:Static resx:Resources.Close}" />
+                    Content="Close" />
             </StackPanel>
             <ui:Image
                 Grid.RowSpan="2"

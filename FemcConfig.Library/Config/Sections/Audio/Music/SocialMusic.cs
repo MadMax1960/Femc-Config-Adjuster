@@ -3,9 +3,9 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class SocialMusic : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Social_Link_Music;
+    public string Name { get; } = "Social Link Music";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.SocialDesc;
+    public string Description { get; } = "Music used during social link events.";
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

@@ -3,9 +3,9 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class Voice : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Gendered_Audio;
+    public string Name { get; } = "Voice";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.VoiceDesc;
+    public string Description { get; } = "Voice used ingame.";
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

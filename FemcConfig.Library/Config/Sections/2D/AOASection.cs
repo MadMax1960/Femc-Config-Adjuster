@@ -4,9 +4,9 @@ namespace FemcConfig.Library.Config.Sections;
 
 public class AOASection : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.AOA;
+    public string Name { get; } = "AOA";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.AOADesc;
+    public string Description { get; } = "Card used when finishing battles with an all-out attack.";
 
     public SectionCategory Category { get; } = SectionCategory.TwoD;
 

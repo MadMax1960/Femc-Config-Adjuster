@@ -3,9 +3,9 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class FinalMusic : ISection
 {
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Final_Battle_Music;
+    public string Name { get; } = "Final Battle Music";
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.FinalDesc;
+    public string Description { get; } = "Music used during the final battle with Nyx's core.";
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 

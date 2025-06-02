@@ -38,8 +38,8 @@ namespace Femc_Config_Adjuster
 					if (release != null && IsNewerVersion(release.tag_name, currentVersion))
 					{
 						var promptWin = new PromptWindow(
-							title: FemcConfig.Localisation.LocalisationResources.Resources.Update_Notify_Title+release.tag_name,
-							content: FemcConfig.Localisation.LocalisationResources.Resources.Update_Notify
+							title: "Update Available",
+							content: $"A new version ({release.tag_name}) is available. Would you like to update?"
 						);
 						promptWin.ShowDialog();
 
@@ -50,8 +50,8 @@ namespace Femc_Config_Adjuster
 						else
 						{
 							var infoWin = new InfoWindow(
-								FemcConfig.Localisation.LocalisationResources.Resources.Update_Later_Title,
-								FemcConfig.Localisation.LocalisationResources.Resources.Update_Later
+								"Update Skipped",
+								"You can update later from the settings or when the application restarts."
 							);
 							infoWin.ShowDialog();
 						}
@@ -61,7 +61,7 @@ namespace Femc_Config_Adjuster
 			catch (Exception ex)
 			{
 				Log.Error(ex, "Failed to check for updates.");
-				var infoWin = new InfoWindow("Update Error", FemcConfig.Localisation.LocalisationResources.Resources.Update_Check_Fail);
+				var infoWin = new InfoWindow("Update Error", "An error occurred while checking for updates.");
 				infoWin.ShowDialog();
 			}
 		}

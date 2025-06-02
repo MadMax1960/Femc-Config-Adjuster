@@ -7,7 +7,6 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Pages.Categories"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
-    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     d:DesignHeight="450"
     d:DesignWidth="800"
     ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
@@ -40,7 +39,7 @@
                         Grid.Column="0"
                         FontSize="24"
                         FontWeight="Light"
-                        Text="{x:Static resx:Resources.Settings}" />
+                        Text="Settings" />
 
                     <ui:ListView
                         Margin="8,4"

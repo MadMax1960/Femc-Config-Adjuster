@@ -3,7 +3,6 @@
 // Copyright (C) Leszek Pomianowski and WPF UI Contributors.
 // All Rights Reserved.
 
-using Femc_Config_Adjuster.Properties;
 using Femc_Config_Adjuster.Services;
 using Femc_Config_Adjuster.ViewModels.Pages;
 using Femc_Config_Adjuster.ViewModels.Windows;
@@ -14,8 +13,6 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Serilog;
-using System.Diagnostics;
-using System.Globalization;
 using System.IO;
 using System.Net.Http;
 using System.Reflection;
@@ -115,36 +112,16 @@ public partial class App
         return (_host.Services.GetService(typeof(T)) as T)!;
     }
 
-    private void SetupCulture()
-    {
-        string setCulture = Settings.Default.SelectedLanguage;
-        if (new List<string>{"ja", "en-US", "zh-CN", "ru", "pl", "es"}.Contains(setCulture))
-        {
-            Thread.CurrentThread.CurrentUICulture = new CultureInfo(Settings.Default.SelectedLanguage);
-            Thread.CurrentThread.CurrentCulture = new CultureInfo(Settings.Default.SelectedLanguage);
-
-        }
-        else
-        {
-            Settings.Default.SelectedLanguage = "en-US";
-            Settings.Default.Save();
-            SetupCulture();
-        }
-    }
-
     /// <summary>
     /// Occurs when the application is loading.
     /// </summary>
     private void OnStartup(object sender, StartupEventArgs e)
     {
-        SetupCulture();
         _host.Start();
-        // Check for updates
-        if (!Debugger.IsAttached)
-        {
-            var updateChecker = GetService<UpdateChecker>();
-            _ = updateChecker?.CheckForUpdatesAsync(APP_VERSION);
-        }
+
+		// Check for updates
+		var updateChecker = GetService<UpdateChecker>();
+		_ = updateChecker?.CheckForUpdatesAsync(APP_VERSION);
 	}
 
     /// <summary>
