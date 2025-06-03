@@ -230,7 +230,7 @@ public class BustupSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "bustup_Autumn",
-                Authors = [Author.Kiara],
+                Authors = [Author.Autumn],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Autumn,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Autumn,
             },
