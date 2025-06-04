@@ -1074,7 +1074,8 @@ public partial class FemcModConfig : ObservableObject
         ElyAlt,
         Shiosakana,
         namiweiko,
-        AngieDaGorl
+        AngieDaGorl,
+        StupidAle
     }
 
     [Description("The Level Up :adachitrue:.")]

@@ -60,6 +60,13 @@ public class GlassShardSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.AngieDaGorl,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.AngieDaGorl,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "shard_StupidAle",
+                Authors = [Author.StupidAle],
+                Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.StupidAle,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.StupidAle,
+            },
         ];
     }
 }
