@@ -47,7 +47,7 @@ public class BustupSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "bustup_anniversary",
-                Authors = [Author.Anniversary],
+                Authors = [Author.Anniversary, Author.Atlus],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Anniversary,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Anniversary,
             },
@@ -233,6 +233,13 @@ public class BustupSection : ISection
                 Authors = [Author.Autumn],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Autumn,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Autumn,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_p3pYuha",
+                Authors = [Author.Yuha, Author.Atlus],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.p3pYuha,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.p3pYuha,
             },
         ];
     }

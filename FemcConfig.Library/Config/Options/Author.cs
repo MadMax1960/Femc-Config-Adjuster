@@ -61,5 +61,6 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author StupidAle = new("Stupid Ale", Url: "https://x.com/_StupidAle");
     public static readonly Author Kiara = new("Kiara", Url: "https://www.tumblr.com/akihikosanada");
     public static readonly Author Autumn = new("Autumn");
+    public static readonly Author Yuha = new("Yuhaino", Url: "https://twitter.com/Yuhaino_");
 
 };

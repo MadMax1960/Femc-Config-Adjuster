@@ -1058,7 +1058,8 @@ public partial class FemcModConfig : ObservableObject
         Mixi_xiMi,
         StupidAle,
         Kiara,
-        Autumn
+        Autumn,
+        p3pYuha
     }
 
     [Description("The Glass Shard in that one menu when pausing.")]
