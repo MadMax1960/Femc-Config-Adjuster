@@ -834,6 +834,81 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _MissingSortTriangle = ConfigColor.MellodiColorMid2;
 
+    // edit
+
+    [ObservableProperty]
+    private ConfigColor _NamiTopAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiTopBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSkillAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSkillBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiItemAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiItemBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiEquipAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiEquipBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiPersonaAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiPersonaBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiStatusAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiStatusBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiQuestAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiQuestBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCommuAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCommuBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCalendarAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCalendarBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSystemAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSystemBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiTutorialAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiTutorialBColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiConfigAColor = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _NamiConfigBColor = ConfigColor.Green;
+
+    // edit end
 
     [Category("UI Components")]
     [DefaultValue(true)]
