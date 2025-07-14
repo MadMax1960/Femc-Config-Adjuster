@@ -248,6 +248,13 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Maru,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Maru,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_purpleoctogamer",
+                Authors = [Author.purpleoctogamer],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.purpleoctogamer,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.purpleoctogamer,
+            },
         ];
     }
 }
