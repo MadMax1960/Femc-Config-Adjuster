@@ -332,7 +332,7 @@ public partial class FemcModConfig : ObservableObject
 
     [ObservableProperty]
     private ConfigColor _MindWindowOuterHazeEx = new ConfigColor(ConfigColor.MellodiColorLight3.R, ConfigColor.MellodiColorLight3.G, ConfigColor.MellodiColorLight3.B, 128);
-    
+
 
     [Category("Ui Colors")]
     [ObservableProperty]
@@ -834,6 +834,81 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _MissingSortTriangle = ConfigColor.MellodiColorMid2;
 
+    // edit
+
+    [ObservableProperty]
+    private ConfigColor _NamiTopAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiTopBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSkillAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSkillBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiItemAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiItemBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiEquipAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiEquipBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiPersonaAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiPersonaBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiStatusAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiStatusBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiQuestAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiQuestBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCommuAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCommuBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCalendarAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiCalendarBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSystemAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiSystemBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiTutorialAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiTutorialBColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiConfigAColor = ConfigColor.MellodiColorLight3;
+
+    [ObservableProperty]
+    private ConfigColor _NamiConfigBColor = ConfigColor.MellodiColorLight3;
+
+    // edit end
 
     [Category("UI Components")]
     [DefaultValue(true)]
@@ -991,7 +1066,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private AOAType _AOATrue = AOAType.Ely;
 
-	public enum AOAType
+    public enum AOAType
     {
         Ely,
         Chrysanthie,
@@ -1015,10 +1090,10 @@ public partial class FemcModConfig : ObservableObject
 
     public enum AOATextType
     {
-		DontLookBack,
-		SorryBoutThat,
-		PerfectlyAccomplished
-	}
+        DontLookBack,
+        SorryBoutThat,
+        PerfectlyAccomplished
+    }
 
 
     [Description("The Bustup.")]
@@ -1027,7 +1102,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private BustupType _BustupTrue = BustupType.Neptune;
 
-	public enum BustupType
+    public enum BustupType
     {
         Neptune,
         Ely,
@@ -1070,7 +1145,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ShardType _ShardTrue = ShardType.Esa;
 
-	public enum ShardType
+    public enum ShardType
     {
         Esa,
         Ely,
@@ -1097,18 +1172,18 @@ public partial class FemcModConfig : ObservableObject
     }
 
     [Description("The face icons in battle and pause menu")]
-	[Category("2D Options")]
-	[DefaultValue(PartyPanelType.Esa)]
-	[ObservableProperty]
-	private PartyPanelType _PartyPanelTrue = PartyPanelType.Esa;
+    [Category("2D Options")]
+    [DefaultValue(PartyPanelType.Esa)]
+    [ObservableProperty]
+    private PartyPanelType _PartyPanelTrue = PartyPanelType.Esa;
 
-	public enum PartyPanelType
-	{
-		Kris,
-		Esa
-	}
+    public enum PartyPanelType
+    {
+        Kris,
+        Esa
+    }
 
-	[Description("Cutin Movie")]
+    [Description("Cutin Movie")]
     [Category("2D Options")]
     [DefaultValue(CutinType.berrycha)]
     [ObservableProperty]
@@ -1150,11 +1225,11 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool _NagiWeap = true;
 
-	[Description("THIS MIGHT BREAK SOME STUFF, ITS A TEST FOR PEOPLE WHO WANT TO, PLEASE GO IN EXPECTING ERRORS")]
-	[Category("3D Options")]
-	[DefaultValue(true)]
+    [Description("THIS MIGHT BREAK SOME STUFF, ITS A TEST FOR PEOPLE WHO WANT TO, PLEASE GO IN EXPECTING ERRORS")]
+    [Category("3D Options")]
+    [DefaultValue(true)]
     [ObservableProperty]
-	private bool _SkirtEtcFix = true;
+    private bool _SkirtEtcFix = true;
 
     [Category("Theo")]
     [DefaultValue(false)]
