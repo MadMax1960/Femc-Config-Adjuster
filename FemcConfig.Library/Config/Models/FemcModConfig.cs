@@ -837,76 +837,76 @@ public partial class FemcModConfig : ObservableObject
     // edit
 
     [ObservableProperty]
-    private ConfigColor _NamiTopAColor = ConfigColor.Green;
+    private ConfigColor _NamiTopAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiTopBColor = ConfigColor.Green;
+    private ConfigColor _NamiTopBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiSkillAColor = ConfigColor.Green;
+    private ConfigColor _NamiSkillAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiSkillBColor = ConfigColor.Green;
+    private ConfigColor _NamiSkillBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiItemAColor = ConfigColor.Green;
+    private ConfigColor _NamiItemAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiItemBColor = ConfigColor.Green;
+    private ConfigColor _NamiItemBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiEquipAColor = ConfigColor.Green;
+    private ConfigColor _NamiEquipAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiEquipBColor = ConfigColor.Green;
+    private ConfigColor _NamiEquipBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiPersonaAColor = ConfigColor.Green;
+    private ConfigColor _NamiPersonaAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiPersonaBColor = ConfigColor.Green;
+    private ConfigColor _NamiPersonaBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiStatusAColor = ConfigColor.Green;
+    private ConfigColor _NamiStatusAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiStatusBColor = ConfigColor.Green;
+    private ConfigColor _NamiStatusBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiQuestAColor = ConfigColor.Green;
+    private ConfigColor _NamiQuestAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiQuestBColor = ConfigColor.Green;
+    private ConfigColor _NamiQuestBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiCommuAColor = ConfigColor.Green;
+    private ConfigColor _NamiCommuAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiCommuBColor = ConfigColor.Green;
+    private ConfigColor _NamiCommuBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiCalendarAColor = ConfigColor.Green;
+    private ConfigColor _NamiCalendarAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiCalendarBColor = ConfigColor.Green;
+    private ConfigColor _NamiCalendarBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiSystemAColor = ConfigColor.Green;
+    private ConfigColor _NamiSystemAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiSystemBColor = ConfigColor.Green;
+    private ConfigColor _NamiSystemBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiTutorialAColor = ConfigColor.Green;
+    private ConfigColor _NamiTutorialAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiTutorialBColor = ConfigColor.Green;
+    private ConfigColor _NamiTutorialBColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiConfigAColor = ConfigColor.Green;
+    private ConfigColor _NamiConfigAColor = ConfigColor.MellodiColorLight3;
 
     [ObservableProperty]
-    private ConfigColor _NamiConfigBColor = ConfigColor.Green;
+    private ConfigColor _NamiConfigBColor = ConfigColor.MellodiColorLight3;
 
     // edit end
 
