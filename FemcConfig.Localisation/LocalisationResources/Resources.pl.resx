@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About text" xml:space="preserve">
+    <value>O Aplikacji FeMC Config Adjuster</value>
+  </data>
+  <data name="AddonDesc" xml:space="preserve">
+    <value>Użyj tej strony, aby włączyć lub wyłączyć dodatki. Jeśli dodatek nie jest zainstalowany, kliknij podgląd, a następnie pobierz dodatek.</value>
+  </data>
+  <data name="Addons" xml:space="preserve">
+    <value>Dodatki</value>
+  </data>
+  <data name="Advantage Battle Music" xml:space="preserve">
+    <value>Motyw Walki – Przewaga</value>
+  </data>
+  <data name="AOA" xml:space="preserve">
+    <value>AOA</value>
+  </data>
+  <data name="AOA Text" xml:space="preserve">
+    <value>Tekst AOA</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>Audio</value>
+  </data>
+  <data name="Boss Battle Music" xml:space="preserve">
+    <value>Motyw Walki z Bossem</value>
+  </data>
+  <data name="Bustup" xml:space="preserve">
+    <value>Portret</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>Zamknij</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Potwierdź</value>
+  </data>
+  <data name="Cutin" xml:space="preserve">
+    <value>Wcięcie</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>Ciemny</value>
+  </data>
+  <data name="Daytime Outside Music" xml:space="preserve">
+    <value>Muzyka na zewnątrz w ciągu dnia</value>
+  </data>
+  <data name="Daytime School Music (Phase 1)" xml:space="preserve">
+    <value>Muzyka w szkole (Kwi-Sie)</value>
+  </data>
+  <data name="Daytime School Music (Phase 2)" xml:space="preserve">
+    <value>Muzyka w szkole (Wrz-Gru)</value>
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value>Wymagania</value>
+  </data>
+  <data name="Disadvantage Battle Music" xml:space="preserve">
+    <value>Motyw Walki – Niekorzystna Pozycja</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>Pobierz</value>
+  </data>
+  <data name="DownloadTip" xml:space="preserve">
+    <value>💡Wskazówka: Jeżeli mod jest już pobrany, spróbuj kliknąć na "configure mod" w Reloaded-II.</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>Włączony</value>
+  </data>
+  <data name="Final Battle Music" xml:space="preserve">
+    <value>Muzyka finałowej walki</value>
+  </data>
+  <data name="Gendered Audio" xml:space="preserve">
+    <value>Audio z podziałem na płeć</value>
+  </data>
+  <data name="Glass Shard" xml:space="preserve">
+    <value>Odłamek szkła</value>
+  </data>
+  <data name="Group Photo" xml:space="preserve">
+    <value>Zdjęcie grupowe</value>
+  </data>
+  <data name="Hair" xml:space="preserve">
+    <value>Włosy</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Start</value>
+  </data>
+  <data name="Kyoto Photos" xml:space="preserve">
+    <value>Zdjęcia z Kyoto</value>
+  </data>
+  <data name="LanguageChangeAlert" xml:space="preserve">
+    <value>Zmieniono język aplikacji. Aby zmiany zostały uwzględnione, uruchom ponownie aplikację.</value>
+  </data>
+  <data name="Level Up Screen" xml:space="preserve">
+    <value>Ekran wzrostu poziomu</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>Jasny</value>
+  </data>
+  <data name="Mod Download Error" xml:space="preserve">
+    <value>Aplikacja nie może rozpocząć pobierania z powodu braku informacji. Zainstaluj ten mod ręcznie.</value>
+  </data>
+  <data name="Mod Download Start" xml:space="preserve">
+    <value>Rozpoczęto pobieranie. Być może będziesz musiał uruchomić grę i ponownie uruchomić aplikację, aby zmiany się pojawiły.</value>
+  </data>
+  <data name="ModDownloadWait" xml:space="preserve">
+    <value>Proszę czekać, aż załaduje się plik do pobrania moda...</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>Nie</value>
+  </data>
+  <data name="Normal Battle Music" xml:space="preserve">
+    <value>Motyw Walki</value>
+  </data>
+  <data name="Party Panel" xml:space="preserve">
+    <value>Panel Drużyny</value>
+  </data>
+  <data name="Personalisation" xml:space="preserve">
+    <value>Personalizacja</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Odtwórz</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>Podgląd</value>
+  </data>
+  <data name="ReloadExePrompt" xml:space="preserve">
+    <value>Znajdź i wybierz plik .exe , aby kontynuować.</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>Zmiana języka</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>Ustawienia</value>
+  </data>
+  <data name="Social Link Music" xml:space="preserve">
+    <value>Motyw Więzi</value>
+  </data>
+  <data name="The Femc Mod" xml:space="preserve">
+    <value>Mod FeMC</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>Motyw</value>
+  </data>
+  <data name="UI" xml:space="preserve">
+    <value>Interfejs</value>
+  </data>
+  <data name="Update Check Fail" xml:space="preserve">
+    <value>Wystąpił błąd podczas sprawdzania dostępności aktualizacji.</value>
+  </data>
+  <data name="Update Later" xml:space="preserve">
+    <value>Aktualizację możesz wykonać później w ustawieniach lub po ponownym uruchomieniu aplikacji.</value>
+  </data>
+  <data name="Update Notify" xml:space="preserve">
+    <value>Dostępna jest nowa wersja. Czy chcesz dokonać aktualizacji?</value>
+  </data>
+  <data name="UpdatePromptContent" xml:space="preserve">
+    <value>Dostępna jest nowa wersja aplikacji. Czy chcesz dokonać aktualizacji?</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Tak</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>Model</value>
+  </data>
+  <data name="AdvantageDesc" xml:space="preserve">
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce z przewagą. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="AOADesc" xml:space="preserve">
+    <value>Grafika używana podczas zakończenia bitwy poprzez AOA</value>
+  </data>
+  <data name="AOATextDesc" xml:space="preserve">
+    <value>Tekst widoczny obok grafiki AOA</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>Autorzy</value>
+  </data>
+  <data name="BossDesc" xml:space="preserve">
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce w niektórymi bossami. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="BustupDesc" xml:space="preserve">
+    <value>Portret FeMC widoczny przy opcjach dialogowych</value>
+  </data>
+  <data name="CutinDesc" xml:space="preserve">
+    <value>Animacja czasami widoczna przy wykorzystaniu słabego punktu przeciwnika, bądź zadania obrażeń krytycznych</value>
+  </data>
+  <data name="DayInMusic1Desc" xml:space="preserve">
+    <value>Muzyka używana w szkole od kwietnia do sierpnia. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="DayInMusic2Desc" xml:space="preserve">
+    <value>Muzyka używana w szkole od września do grudnia. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="DayOutMusic1Desc" xml:space="preserve">
+    <value>Muzyka używana w mieście rano lub po zajęciach. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="DependencyDesc" xml:space="preserve">
+    <value>Użyj tej strony, aby zainstalować i zarządzać zależnościami używanymi przez moda FeMC</value>
+  </data>
+  <data name="DisadvantageDesc" xml:space="preserve">
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce w niekorzystnej pozycji. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="FemcDesc" xml:space="preserve">
+    <value>Za pomocą tej strony możesz zarządzać instalacją moda FeMC</value>
+  </data>
+  <data name="FinalDesc" xml:space="preserve">
+    <value>Wybierz, jaka muzyka ma być odtwarzana, kiedy walczysz ze rdzeniem Nyx. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="GlassShardDesc" xml:space="preserve">
+    <value>Odłamek szkła trzymany przez FeMC w menu</value>
+  </data>
+  <data name="GroupPhotoDesc" xml:space="preserve">
+    <value>Zdjęcie zrobione w grze 4 Listopada</value>
+  </data>
+  <data name="HairDesc" xml:space="preserve">
+    <value>Model włosów FeMC</value>
+  </data>
+  <data name="KyotoPhotoDesc" xml:space="preserve">
+    <value>Zdjęcia zrobione w grze podczas wycieczki do Kyoto</value>
+  </data>
+  <data name="LevelUpDesc" xml:space="preserve">
+    <value>Wybierz grafikę widoczną podczas wzrostu poziomu postaci</value>
+  </data>
+  <data name="Mod Corrupt" xml:space="preserve">
+    <value>Instalacja moda może być uszkodzona. Spróbuj zainstalować moda ponownie.</value>
+  </data>
+  <data name="Mod Ver Mismatch" xml:space="preserve">
+    <value>Wersja moda femc zainstalowana obecnie może nie być obsługiwana przez aplikację. Sprawdź stronę ustawień, aby zobaczyć, jaka wersja moda jest potrzebna do użycia z tą aplikacją.</value>
+  </data>
+  <data name="ModelDesc" xml:space="preserve">
+    <value>Model Theo</value>
+  </data>
+  <data name="ModInfoRetrievalFail" xml:space="preserve">
+    <value>Aplikacja nie była w stanie pobrać informacji o wersji moda. Spróbuj ponownie później lub spróbuj zainstalować moda ręcznie.</value>
+  </data>
+  <data name="NightMusic1Desc" xml:space="preserve">
+    <value>Muzyka używana poza internatem w nocy. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś podczas walki. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="PartyPanelDesc" xml:space="preserve">
+    <value>Wybierz grafikę widoczną na panelu drużyny</value>
+  </data>
+  <data name="SocialDesc" xml:space="preserve">
+    <value>Muzyka używana podczas wzmacniania więzi. Można wybrać wiele piosenek do losowania!</value>
+  </data>
+  <data name="Theo" xml:space="preserve">
+    <value>Theo</value>
+  </data>
+  <data name="UnexpectedErr" xml:space="preserve">
+    <value>Spróbuj ponownie uruchomić aplikację, w przeciwnym razie może ona nie działać prawidłowo.</value>
+  </data>
+  <data name="VoiceDesc" xml:space="preserve">
+    <value>Głos używany w grze. Obecnie obsługiwany jest tylko język angielski.</value>
+  </data>
+  <data name="Night Outside Music" xml:space="preserve">
+    <value>Muzyka podczas nocy</value>
+  </data>
+  <data name="LangChangeHeader" xml:space="preserve">
+    <value>Język zmieniony!</value>
+  </data>
+  <data name="Update Notify Title" xml:space="preserve">
+    <value>Dostępna nowa wersja:</value>
+  </data>
+  <data name="Update Later Title" xml:space="preserve">
+    <value>Aktualizacja pominięta</value>
+  </data>
+  <data name="Mod Ver Mismatch Title" xml:space="preserve">
+    <value>Niezgodność wersji moda i aplikacji</value>
+  </data>
+  <data name="Mod Corrupt Title" xml:space="preserve">
+    <value>Nie można zweryfikować integralności plików moda</value>
+  </data>
+  <data name="UnexpectedErr Title" xml:space="preserve">
+    <value>Wystąpił nieoczekiwany błąd</value>
+  </data>
+</root>

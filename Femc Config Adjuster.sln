@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FemcConfig.Library", "FemcC
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FemcConfig.Tests", "FemcConfig.Tests\FemcConfig.Tests.csproj", "{991E3B58-5EFA-48DC-9FCE-487BE4E68CDB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FemcConfig.Localisation", "FemcConfig.Localisation\FemcConfig.Localisation.csproj", "{B2ADEEF4-1EDF-43C5-B808-E181ED4FA43E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{991E3B58-5EFA-48DC-9FCE-487BE4E68CDB}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{991E3B58-5EFA-48DC-9FCE-487BE4E68CDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{991E3B58-5EFA-48DC-9FCE-487BE4E68CDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2ADEEF4-1EDF-43C5-B808-E181ED4FA43E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2ADEEF4-1EDF-43C5-B808-E181ED4FA43E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2ADEEF4-1EDF-43C5-B808-E181ED4FA43E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2ADEEF4-1EDF-43C5-B808-E181ED4FA43E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

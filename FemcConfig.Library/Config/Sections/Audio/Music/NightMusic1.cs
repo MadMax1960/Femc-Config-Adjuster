@@ -3,9 +3,9 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class NightMusic_1 : ISection
 {
-    public string Name { get; } = "Night Music (Outside) 1";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Night_Outside_Music;
 
-    public string Description { get; } = "Music used at night outside the dorm before September.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.NightMusic1Desc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 
