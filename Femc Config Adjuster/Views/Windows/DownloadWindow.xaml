@@ -6,6 +6,7 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Windows"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     Width="500"
     Height="200"
     ExtendsContentIntoTitleBar="True"
@@ -29,9 +30,9 @@
                 <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
             </ui:TitleBar.Icon>
         </ui:TitleBar>
-        <Button x:Name="DownloadButton" Content="Initiate Download" Margin="286,94,0,0" Grid.Row="1" VerticalAlignment="Top" Visibility="Collapsed" Click="DownloadButton_Clicked"/>
-        <Button x:Name="Exit" Content="Close" Margin="424,94,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Exit_Clicked"/>
-        <ui:TextBlock x:Name="Version" Text="Please wait while we load the Mod Download..." Margin="0,12,114,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="376"/>
-        <TextBlock HorizontalAlignment="Center" Margin="0,43,0,0" Grid.Row="1" TextWrapping="Wrap" Text="💡Tip: If you already have the mod downloaded. Try clicking on configure mod in Reloaded-II." VerticalAlignment="Top" Width="480"/>
+        <Button x:Name="DownloadButton" Content="{x:Static resx:Resources.Download}" Margin="286,94,0,0" Grid.Row="1" VerticalAlignment="Top" Visibility="Collapsed" Click="DownloadButton_Clicked"/>
+        <Button x:Name="Exit" Content="{x:Static resx:Resources.Close}" Margin="424,94,0,0" Grid.Row="1" VerticalAlignment="Top" Click="Exit_Clicked"/>
+        <ui:TextBlock x:Name="Version" Text="{x:Static resx:Resources.ModDownloadWait}" Margin="0,12,114,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Right" Width="376"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,43,0,0" Grid.Row="1" TextWrapping="Wrap" Text="{x:Static resx:Resources.DownloadTip}" VerticalAlignment="Top" Width="480"/>
     </Grid>
 </ui:FluentWindow>

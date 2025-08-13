@@ -7,6 +7,7 @@
     xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Pages"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+    xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
     Title="SettingsPage"
     d:DataContext="{d:DesignInstance local:SettingsPage,
                                      IsDesignTimeCreatable=False}"
@@ -24,28 +25,40 @@
         <TextBlock
             FontSize="20"
             FontWeight="Medium"
-            Text="Personalization" />
-        <TextBlock Margin="0,12,0,0" Text="Theme" />
+            Text="{x:Static resx:Resources.Personalisation}" />
+        <TextBlock Margin="0,12,0,0" Text="{x:Static resx:Resources.Theme}" />
         <RadioButton
             Margin="0,12,0,0"
             Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
             CommandParameter="theme_light"
-            Content="Light"
+            Content="{x:Static resx:Resources.Light}"
             GroupName="themeSelect"
             IsChecked="{Binding ViewModel.CurrentTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Light, Mode=OneWay}" />
         <RadioButton
             Margin="0,8,0,0"
             Command="{Binding ViewModel.ChangeThemeCommand, Mode=OneWay}"
             CommandParameter="theme_dark"
-            Content="Dark"
+            Content="{x:Static resx:Resources.Dark}"
             GroupName="themeSelect"
             IsChecked="{Binding ViewModel.CurrentTheme, Converter={StaticResource EnumToBooleanConverter}, ConverterParameter=Dark, Mode=OneWay}" />
 
         <TextBlock
-            Margin="0,24,0,0"
-            FontSize="20"
-            FontWeight="Medium"
-            Text="About Femc Config Adjuster" />
+        Margin="0,24,0,0"
+        FontSize="20"
+        FontWeight="Medium"
+        Text="{x:Static resx:Resources.SelectLanguageText}"/>
+
+        <ComboBox ItemsSource="{Binding ViewModel.AvailableLanguages.Keys}"
+          Margin="0,12,0,0"
+          SelectedItem="{Binding ViewModel.SelectedLanguage, Mode=TwoWay}"
+          HorizontalAlignment="Left"
+          />
+
+        <TextBlock
+        Margin="0,24,0,0"
+        FontSize="20"
+        FontWeight="Medium"
+        Text="{x:Static resx:Resources.About_text}" />
         <TextBlock Margin="0,12,0,0" Text="{Binding ViewModel.AppVersion, Mode=OneWay}" />
     </StackPanel>
 </Page>

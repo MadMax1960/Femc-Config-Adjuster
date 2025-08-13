@@ -3,9 +3,9 @@ namespace FemcConfig.Library.Config.Sections.Audio.Music;
 
 public class DayOutMusic_1 : ISection
 {
-    public string Name { get; } = "Daytime Music (Outside) 1";
+    public string Name { get; } = Localisation.LocalisationResources.Resources.Daytime_Outside_Music;
 
-    public string Description { get; } = "Music used outside of school before September.";
+    public string Description { get; } = Localisation.LocalisationResources.Resources.DayOutMusic1Desc;
 
     public SectionCategory Category { get; } = SectionCategory.Audio;
 
