@@ -910,6 +910,38 @@ public partial class FemcModConfig : ObservableObject
 
     // edit end
 
+    [ObservableProperty]
+    private ConfigColor _GradAUpColorHigh = ConfigColor.White;
+
+    [ObservableProperty]
+    private ConfigColor _GradBUpColorHigh = ConfigColor.MellodiColorLight2;
+
+    [ObservableProperty]
+    private ConfigColor _GradBDownColorHigh = ConfigColor.MellodiColorLight2;
+
+    [ObservableProperty]
+    private ConfigColor _GradAUpColorMid = ConfigColor.White;
+
+    [ObservableProperty]
+    private ConfigColor _GradBUpColorMid = ConfigColor.MellodiColorLight2;
+
+    [ObservableProperty]
+    private ConfigColor _GradBDownColorMid = ConfigColor.MellodiColorLight2;
+
+    [ObservableProperty]
+    private ConfigColor _GradAUpColorLow = ConfigColor.White;
+
+    [ObservableProperty]
+    private ConfigColor _GradBUpColorLow = ConfigColor.MellodiColorLight2;
+
+    [ObservableProperty]
+    private ConfigColor _GradBDownColorLow = ConfigColor.MellodiColorLight2;
+
+    [ObservableProperty]
+    private ConfigColor _HeroCaptureBgColor = ConfigColor.MellodiColorLight2;
+    
+    // other bullshit ^ !!!!!!!!!!
+
     [Category("UI Components")]
     [DefaultValue(true)]
     [ObservableProperty]
