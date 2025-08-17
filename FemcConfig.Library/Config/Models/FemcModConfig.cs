@@ -1,5 +1,6 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
 using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
 
 namespace FemcConfig.Library.Config.Models;
 
@@ -9,95 +10,95 @@ namespace FemcConfig.Library.Config.Models;
 /// </summary>
 public partial class FemcModConfig : ObservableObject
 {
-    [Category("Battle Music")]
+    [Category("Battle Music - Advantage")]
     [Description("Enable Karma's Pull the Trigger?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool karmaAdv = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Advantage")]
     [Description("Enable Mosq's Pull the Trigger?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool mosqAdv = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Advantage")]
     [Description("Enable EidieK87's Pull the Trigger?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool eidAdv = true;
 
-    [Category("Battle Music")]
+    [Category("Tartarus Boss Music")]
     [Description("Enable EidieK87's Danger Zone?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool eidDis = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Normal")]
     [Description("Enable Mosq's Wiping All Out?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool mosqNom = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Normal")]
     [Description("Enable Karma's Wiping All Out?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool karmaNom = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Normal")]
     [Description("Enable Stella and GillStudio's Wiping All Out?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool sgNom = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Normal")]
+    [Description("Enable Wiping All Out ATLUS Kozuka Remix from P3D as normal battle music.\nMultiple songs can be chosen for randomization!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool p3MidNomF = true;
+
+    [Category("Battle Music - Normal")]
     [Description("Enable Atlus's Wiping All Out?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool p3pNom = true;
 
-    [Category("Battle Music")]
+    [Category("Tartarus Boss Music")]
     [Description("Enable Stella and GillStudio's Danger Zone?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool sgDis = true;
 
-    [Category("Battle Music")]
+    [Category("Tartarus Boss Music")]
     [Description("Enable Karma's Danger Zone?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool karmaDis = true;
 
-    [Category("Battle Music")]
+    [Category("Tartarus Boss Music")]
     [Description("Enable Mosq's Danger Zone?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool mosqDis = true;
 
-    [Category("Battle Music")]
+    [Category("Tartarus Boss Music")]
     [Description("Enable EidieK87's Danger Zone?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool edDis = true;
 
-    [Category("Battle Music")]
+    [Category("Tartarus Boss Music")]
     [Description("Enable Atlus's Danger Zone?")]
     [DefaultValue(true)]
     [ObservableProperty]
     private bool p3pDis = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Advantage")]
     [Description("Enable Atlus's It's Going Down Now?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool itGoingDown = true;
-
-    [Category("Battle Music")]
-    [Description("Enable Jen's It's Going Down Now?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool jenAdv = true;
 
     [Category("Music")]
     [Description("Enable Way of Life by Jen as the daytime music?")]
@@ -105,13 +106,19 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool wayOfLifeJen = true;
 
-    [Category("Battle Music")]
+    [Category("Daytime Music")]
+    [Description("Enable A Way Of Life ATLUS Kitajoh Remix from P3D as the daytime music.\nMultiple songs can be chosen for randomization!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool wayOfLifeP3D = true;
+
+    [Category("Tartarus Boss Music")]
     [Description("Enable Atlus's Master of Tartarus -Reload-?")]
     [DefaultValue(false)]
     [ObservableProperty]
     private bool masterTar = true;
 
-    [Category("Battle Music")]
+    [Category("Battle Music - Normal")]
     [Description("Enable Atlus's Mass Destruction -Reload-?")]
     [DefaultValue(false)]
     [ObservableProperty]
@@ -146,12 +153,6 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool nightWand = true;
-
-    [Category("Music")]
-    [Description("Enable Night Color Your Night as the night music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool peaColNight = true;
 
     [Category("Music")]
     [Description("Enable When the Moon's Reaching Out Stars as the daytime music?")]
@@ -200,6 +201,12 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool gabiTimeSchool = true;
+
+    [Category("School Music (1st semester)")]
+    [Description("Enable Time ATLUS Kitajoh Remix from P3D as the 1st semester school music.\nMultiple songs can be chosen for randomization!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool timeSchoolP3D = true;
 
     [Category("Music")]
     [Description("Enable Time as the daytime music inside the school?")]
@@ -260,18 +267,6 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(true)]
     [ObservableProperty]
     private bool bMD = true;
-
-    [Category("Music")]
-    [Description("Enable Master of Shadow -Reload- to be the music played during boss battles?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool bMS = true;
-
-    [Category("Music")]
-    [Description("Enable Master of Shadow Fate Mix to be the music played during boss battles?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool bMSF = true;
 
     [Category("Voice")]
     [Description("Enable Gio's Gendered Audio?")]
@@ -1186,7 +1181,8 @@ public partial class FemcModConfig : ObservableObject
         Shiosakana,
         namiweiko,
         AngieDaGorl,
-        StupidAle
+        StupidAle,
+        samythecoolkid
     }
 
     [Description("The Level Up :adachitrue:.")]
@@ -1201,7 +1197,8 @@ public partial class FemcModConfig : ObservableObject
         Ely,
         shiosakana,
         ElyAlt,
-        AngieDaGorl
+        AngieDaGorl,
+        samythecoolkid
     }
 
     [Description("The face icons in battle and pause menu")]

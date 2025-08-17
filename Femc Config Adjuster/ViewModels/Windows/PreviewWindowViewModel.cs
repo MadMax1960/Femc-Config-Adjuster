@@ -13,12 +13,29 @@ internal class PreviewWindowViewModel
         this.ImagePath = ResourceUtils.GetOptionImagePath(option, true);
         this.YoutubeUrl = ResourceUtils.GetOptionYoutubeUrl(option);
         this.Category = option.Category;
-        if (this.YoutubeUrl != null && Environment.OSVersion.Platform == PlatformID.Win32NT)
+        if (!string.IsNullOrEmpty(this.YoutubeUrl) && 
+    Environment.OSVersion.Platform == PlatformID.Win32NT)
+{
+    if (Uri.TryCreate(this.YoutubeUrl, UriKind.Absolute, out var uri))
+    {
+        string? youtubeId = null;
+        if (uri.Host.Contains("youtube.com", StringComparison.OrdinalIgnoreCase))
         {
-            var youtubeId = this.YoutubeUrl.Split("watch?v=")[1];
-            this.YoutubeEmbedUrl = $@"https://www.youtube.com/embed/{youtubeId}";
+            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
+            youtubeId = query["v"];
+        }
+        else if (uri.Host.Contains("youtu.be", StringComparison.OrdinalIgnoreCase))
+        {
+            youtubeId = uri.AbsolutePath.Trim('/'); 
+        }
+
+        if (!string.IsNullOrEmpty(youtubeId))
+        {
+            this.YoutubeEmbedUrl = $"https://www.youtube.com/embed/{youtubeId}";
             this.UseWebView = true;
         }
+    }
+}
     }
 
     public ModOption Option { get; }

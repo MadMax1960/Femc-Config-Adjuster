@@ -138,9 +138,6 @@
   <data name="Audio" xml:space="preserve">
     <value>Audio</value>
   </data>
-  <data name="Boss Battle Music" xml:space="preserve">
-    <value>Boss Battle Music</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Bustup</value>
   </data>
@@ -169,7 +166,7 @@
     <value>Dependencies</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value>Disadvantage Battle Music</value>
+    <value>Tartarus Boss Music</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>Download</value>
@@ -288,9 +285,6 @@
   <data name="Author" xml:space="preserve">
     <value>Author(s)</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Music used when you battle certain bosses. Multiple songs can be chosen for randomisation!</value>
-  </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Character portrait used in textboxes.</value>
   </data>
@@ -310,7 +304,7 @@
     <value>Use this page to install and manage the dependencies used by the Femc Mod.</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Music used when you are in a normal battle with Party Disadvantage. Multiple songs can be chosen for randomisation!</value>
+    <value>Music used when you are in a Tartarus boss fight. Multiple songs can be chosen for randomisation!</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>Use this page manage the installation of the Femc Mod.</value>

@@ -138,9 +138,6 @@
   <data name="Audio" xml:space="preserve">
     <value>Звук</value>
   </data>
-  <data name="Boss Battle Music" xml:space="preserve">
-    <value>Музыка боссов</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Портреты</value>
   </data>
@@ -169,7 +166,7 @@
     <value>Зависимости</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value>Музыка битвы (Затруднение)</value>
+    <value />
   </data>
   <data name="Download" xml:space="preserve">
     <value>Загрузка</value>
@@ -288,9 +285,6 @@
   <data name="Author" xml:space="preserve">
     <value>Автор</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в сражении с боссами. При выборе нескольких треков, они будут выбираться случайно!</value>
-  </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Изменение портретов в диалоговых окнах.</value>
   </data>
@@ -310,7 +304,7 @@
     <value>Моды необходимые для правильной работы Femc Mod.</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в обычном сражении (Превосходство противника). При выборе нескольких треков, они будут выбираться случайно!</value>
+    <value />
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>Используйте эту страницу для установки Femc Mod.</value>

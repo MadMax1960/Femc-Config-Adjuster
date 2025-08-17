@@ -43,19 +43,6 @@ public class AdvantageMusicSection : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ItGoingDown,
             },
-            new ModOption(ctx)
-            {
-                InternalName = "music_jen_ign",
-                Name = "It's Going Down Now (Jen Remix)",
-                Authors = [Author.Jen],
-
-                // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.JenAdv = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.JenAdv = false,
-
-                // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.JenAdv,
-            },
            new ModOption(ctx)
             {
                 InternalName = "music_mosq_ptr",

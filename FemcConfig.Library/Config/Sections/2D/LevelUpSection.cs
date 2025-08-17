@@ -53,7 +53,13 @@ public class LevelUpSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.AngieDaGorl,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.AngieDaGorl,
             },
-
+            new ModOption(ctx)
+            {
+                InternalName = "level_samy",
+                Authors = [Author.samythecoolkid],
+                Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.samythecoolkid,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.samythecoolkid,
+            }
         ];
     }
 }

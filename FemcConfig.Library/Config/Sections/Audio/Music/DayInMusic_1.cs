@@ -64,6 +64,17 @@ public class DayInMusic_1 : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TimeSchoolP3P,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "music_atlus_time_p3d",
+                Name = "Time ATLUS Kitajoh Remix",
+                Authors = [Author.Atlus],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.TimeSchoolP3D = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.TimeSchoolP3D = false,
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TimeSchoolP3D,
+            },
         ];
     }
 }

@@ -160,24 +160,6 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Boss Battle Music.
-        /// </summary>
-        public static string Boss_Battle_Music {
-            get {
-                return ResourceManager.GetString("Boss Battle Music", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Music used when you battle certain bosses. Multiple songs can be chosen for randomisation!.
-        /// </summary>
-        public static string BossDesc {
-            get {
-                return ResourceManager.GetString("BossDesc", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Looks up a localized string similar to Bustup.
         /// </summary>
         public static string Bustup {
@@ -313,7 +295,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disadvantage Battle Music.
+        ///   Looks up a localized string similar to Tartarus Boss Music.
         /// </summary>
         public static string Disadvantage_Battle_Music {
             get {
@@ -322,7 +304,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used when you are in a normal battle with Party Disadvantage. Multiple songs can be chosen for randomisation!.
+        ///   Looks up a localized string similar to Music used when you are in a Tartarus boss fight. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DisadvantageDesc {
             get {

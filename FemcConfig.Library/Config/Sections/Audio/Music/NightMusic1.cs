@@ -75,19 +75,7 @@ public class NightMusic_1 : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ColNight,
-            },
-            new ModOption(ctx)
-            {
-                InternalName = "music_pea_color_your_night",
-                Name = "Color Your Night (Pealeaf and ChewieMelodies)",
-                Authors = [Author.Pealeaf],
-                // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.PeaColNight = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.PeaColNight = false,
-
-                // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.PeaColNight,
-            },
+            }
         ];
     }
 }

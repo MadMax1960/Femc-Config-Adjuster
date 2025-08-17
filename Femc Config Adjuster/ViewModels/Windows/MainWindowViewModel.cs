@@ -59,11 +59,17 @@ public partial class MainWindowViewModel : ObservableObject
             Icon = new SymbolIcon { Symbol = SymbolRegular.Speaker216 },
 			TargetPageType = typeof(Views.Pages.Categories.Category_Audio),
         },
-		new NavigationViewItem()
+        new NavigationViewItem()
 		{
             Content = Resources.Theo,
             Icon = new SymbolIcon { Symbol = SymbolRegular.PlayingCards20 },
 			TargetPageType = typeof(Views.Pages.Categories.Category_Theo),
+        },
+        new NavigationViewItem()
+        {
+            Content = /*Resources.Misc*/"Misc",
+            Icon = new SymbolIcon { Symbol = SymbolRegular.Library16 },
+            TargetPageType = typeof(Views.Pages.Categories.Category_Misc),
         },
         new NavigationViewItem()
         {

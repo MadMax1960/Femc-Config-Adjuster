@@ -138,9 +138,6 @@
   <data name="Audio" xml:space="preserve">
     <value>Audio</value>
   </data>
-  <data name="Boss Battle Music" xml:space="preserve">
-    <value>Música para Batallas contra Jefes</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Busto</value>
   </data>
@@ -169,7 +166,7 @@
     <value>Dependencias</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value>Música para Batallas con Desventaja</value>
+    <value />
   </data>
   <data name="Download" xml:space="preserve">
     <value>Descargar</value>
@@ -288,9 +285,6 @@
   <data name="Author" xml:space="preserve">
     <value>Autor(es)</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Música utilizada durante batallas contra ciertos jefes. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
-  </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Retrato de los personajes utilizado para cuadros de texto.</value>
   </data>
@@ -310,7 +304,7 @@
     <value>Utilice esta página para instalar y manejar todas las dependencias utilizadas en el Mod de Femc.</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Música utilizada durante batallas comunes en las que tienes desventaja. ¡Se pueden elegir múltiples canciones para aleatorizar!</value>
+    <value />
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>Utilice esta página para manejar la instalación del Mod de Femc.</value>

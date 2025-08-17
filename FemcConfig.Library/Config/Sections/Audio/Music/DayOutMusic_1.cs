@@ -76,6 +76,17 @@ public class DayOutMusic_1 : ISection
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WayOfLifeRemix,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "music_atlus_wol_p3d",
+                Name = "A Way Of Life ATLUS Kitajoh Remix",
+                Authors = [Author.Atlus],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.WayOfLifeP3D = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.WayOfLifeP3D = false,
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.WayOfLifeP3D,
+            },
         ];
     }
 }
