@@ -115,7 +115,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Choose from a few animations.\n\nNote that some custom anims might not look correct if skeleton fix is enabled,\nsuch as the menu animations..
+        ///   Looks up a localized string similar to Choose from a few animations. Note that some custom anims might not look correct if skeleton fix is enabled, nsuch as the menu animations..
         /// </summary>
         public static string AnimationsDesc {
             get {

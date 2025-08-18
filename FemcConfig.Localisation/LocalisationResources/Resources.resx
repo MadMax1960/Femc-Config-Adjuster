@@ -394,6 +394,6 @@
     <value>Animations</value>
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
-    <value>Choose from a few animations.\n\nNote that some custom anims might not look correct if skeleton fix is enabled,\nsuch as the menu animations.</value>
+    <value>Choose from a few animations. Note that some custom anims might not look correct if skeleton fix is enabled, nsuch as the menu animations.</value>
   </data>
 </root>
