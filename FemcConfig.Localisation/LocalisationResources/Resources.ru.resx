@@ -166,7 +166,7 @@
     <value>Зависимости</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value />
+    <value>Музыка боссов Тартара</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>Загрузка</value>
@@ -304,7 +304,7 @@
     <value>Моды необходимые для правильной работы Femc Mod.</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value />
+    <value>Музыка, которая играет во время сражения с боссами Тартар. Если выбраные несколько, то играет случайная!</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>Используйте эту страницу для установки Femc Mod.</value>
@@ -382,18 +382,18 @@
     <value>Произошла непредвиденная ошибка</value>
   </data>
   <data name="FunStuff" xml:space="preserve">
-    <value />
+    <value>Интересное</value>
   </data>
   <data name="FunStuffDesc" xml:space="preserve">
-    <value />
+    <value>Используйте эту страницу для управления различными интересными опциями.</value>
   </data>
   <data name="Misc" xml:space="preserve">
-    <value />
+    <value>Прочее</value>
   </data>
   <data name="Animations" xml:space="preserve">
-    <value />
+    <value>Анимации</value>
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
-    <value />
+    <value>Выбор между несколькими анимациями. Некоторые анимации могут отображаться некорректно, если исправление скелета включено. Например, анимация меню.</value>
   </data>
 </root>

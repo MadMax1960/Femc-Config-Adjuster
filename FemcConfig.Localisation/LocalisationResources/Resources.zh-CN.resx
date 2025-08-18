@@ -393,9 +393,9 @@
     <value>杂项</value>
   </data>
   <data name="Animations" xml:space="preserve">
-    <value />
+    <value>动画</value>
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
-    <value />
+    <value>从几个动画中选择。 注意如果开启skeleton fix 的话会导致一些动画异常，例如菜单动画。</value>
   </data>
 </root>
