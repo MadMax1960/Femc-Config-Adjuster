@@ -381,4 +381,19 @@
   <data name="UnexpectedErr Title" xml:space="preserve">
     <value>An unexpected error occured</value>
   </data>
+  <data name="FunStuff" xml:space="preserve">
+    <value>Fun Stuff</value>
+  </data>
+  <data name="FunStuffDesc" xml:space="preserve">
+    <value>Use this page to manage various fun options to try out.</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Misc</value>
+  </data>
+  <data name="Animations" xml:space="preserve">
+    <value>Animations</value>
+  </data>
+  <data name="AnimationsDesc" xml:space="preserve">
+    <value>Choose from a few animations.\n\nNote that some custom anims might not look correct if skeleton fix is enabled,\nsuch as the menu animations.</value>
+  </data>
 </root>

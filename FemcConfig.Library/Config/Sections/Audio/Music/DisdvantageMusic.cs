@@ -7,9 +7,13 @@ public class DisadvantageMusicSection : ISection
     /// <summary>
     /// Section name. Sets the text that appears on the side and title of page.
     /// </summary>
-    public string Name { get; } = Localisation.LocalisationResources.Resources.Disadvantage_Battle_Music;
+    public string Name { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.Disadvantage_Battle_Music)
+    ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("Disadvantage Battle Music", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
+    : Localisation.LocalisationResources.Resources.Disadvantage_Battle_Music;
 
-    public string Description { get; } = Localisation.LocalisationResources.Resources.DisadvantageDesc;
+    public string Description { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.DisadvantageDesc)
+    ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("DisadvantageDesc", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
+    : Localisation.LocalisationResources.Resources.DisadvantageDesc;
 
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.

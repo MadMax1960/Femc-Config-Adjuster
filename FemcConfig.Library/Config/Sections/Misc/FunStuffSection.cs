@@ -9,11 +9,15 @@ namespace FemcConfig.Library.Config.Sections.Misc
 {
     public class FunStuffSection : ISection
     {
-        public string Name { get; } = Localisation.LocalisationResources.Resources.Level_Up_Screen;
+        public string Name { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.FunStuff)
+            ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("FunStuff", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
+            : Localisation.LocalisationResources.Resources.FunStuff;
 
-        public string Description { get; } = Localisation.LocalisationResources.Resources.LevelUpDesc;
+        public string Description { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.FunStuffDesc)
+            ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("FunStuffDesc", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
+            : Localisation.LocalisationResources.Resources.FunStuffDesc;
 
-        public SectionCategory Category { get; } = SectionCategory.TwoD;
+        public SectionCategory Category { get; } = SectionCategory.Misc;
 
         public ModOption[] Options { get; }
 
@@ -23,13 +27,42 @@ namespace FemcConfig.Library.Config.Sections.Misc
             this.Options =
             [
                 new ModOption(ctx)
-            {
-                InternalName = "level_ely",
-                Authors = [Author.Ely],
-                Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Ely,
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.Ely,
-            },
-        ];
+                {
+                    InternalName = "fun_stuff_dorm",
+                    Name = "Test Dorm Room Swap and Hot Spring Event",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.TesticlesDorm = true,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.TesticlesDorm = false,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TesticlesDorm,
+                },
+                new ModOption(ctx)
+                {
+                    InternalName = "fun_stuff_room",
+                    Name = "Kotone Room",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.KotoneRoom = true,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.KotoneRoom = false,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.KotoneRoom,
+                },
+                new ModOption(ctx)
+                {
+                    InternalName = "fun_stuff_apron",
+                    Name = "Gregory House Apron",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.GregoryHouseRatPoisonDeliverySystem = true,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.GregoryHouseRatPoisonDeliverySystem = false,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.GregoryHouseRatPoisonDeliverySystem,
+                },
+                new ModOption(ctx)
+                {
+                    InternalName = "fun_stuff_arcade",
+                    Name = "Otome Arcade Game",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.OtomeArcade = true,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.OtomeArcade = false,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.OtomeArcade,
+                },
+            ];
         }
     }
 }

@@ -106,6 +106,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Animations.
+        /// </summary>
+        public static string Animations {
+            get {
+                return ResourceManager.GetString("Animations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose from a few animations.\n\nNote that some custom anims might not look correct if skeleton fix is enabled,\nsuch as the menu animations..
+        /// </summary>
+        public static string AnimationsDesc {
+            get {
+                return ResourceManager.GetString("AnimationsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AOA.
         /// </summary>
         public static string AOA {
@@ -367,6 +385,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fun Stuff.
+        /// </summary>
+        public static string FunStuff {
+            get {
+                return ResourceManager.GetString("FunStuff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use this page to manage various fun options to try out..
+        /// </summary>
+        public static string FunStuffDesc {
+            get {
+                return ResourceManager.GetString("FunStuffDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Gendered Audio.
         /// </summary>
         public static string Gendered_Audio {
@@ -498,6 +534,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string Light {
             get {
                 return ResourceManager.GetString("Light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Misc.
+        /// </summary>
+        public static string Misc {
+            get {
+                return ResourceManager.GetString("Misc", resourceCulture);
             }
         }
         

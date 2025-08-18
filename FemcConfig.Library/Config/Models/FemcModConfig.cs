@@ -1240,15 +1240,6 @@ public partial class FemcModConfig : ObservableObject
         Japanese
     }
 
-    [Category("Fun Stuff")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool _KotoneRoom = false;
-
-    [Category("Fun Stuff")]
-    [DefaultValue(false)]
-    private bool _GregoryHouseRatPoisonDeliverySystem = false;
-
     [Description("Gives FemC Nagitanas for weapons")]
     [Category("3D Options")]
     [DefaultValue(true)]
@@ -1265,4 +1256,27 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool _TheodorefromAlvinandTheChipmunks = false; // soon this should be a whole thing, movies, bustups, etc 
+
+    [Description("Changes the arcade game that raises charm to be gender swapped.")]
+    [Category("Fun Stuff")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool otomeArcade = true;
+
+    [Category("Fun Stuff")]
+    [Description("Decorate your dorm room with FEMC artwork made by the community!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool kotoneRoom = true;
+
+    [Category("Fun Stuff")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool gregoryHouseRatPoisonDeliverySystem = true;
+
+    [Category("Testing")]
+    [Description("THIS LETS YOU TEST THE NEW DORM ROOM SWAP AND HOT SPRINGS EVENT, IT MIGHT BE VERY BROKEN.")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool testiclesDorm = true;
 }
