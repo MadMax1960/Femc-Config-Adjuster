@@ -1064,6 +1064,19 @@ public partial class FemcModConfig : ObservableObject
         KotoneBeanHair
     }
 
+    [Description("Choose from a few animations.\n\nNote that some custom anims might not look correct if skeleton fix is enabled,\nsuch as the menu animations.")]
+    [Category("3D Options")]
+    [DefaultValue(AnimType.OriginalAnims)]
+    [ObservableProperty]
+    private AnimType _AnimTrue = AnimType.OriginalAnims;
+
+    public enum AnimType
+    {
+        OriginalAnims,
+        CustomAnims,
+        VeryFunnyAnims
+    }
+
     [Description("The group photo")]
     [Category("2D Options")]
     [DefaultValue(GroupEventtype.bichelle)]

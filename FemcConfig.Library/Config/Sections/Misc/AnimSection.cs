@@ -26,7 +26,33 @@ namespace FemcConfig.Library.Config.Sections.Misc
             var ctx = app.GetContext();
             this.Options =
             [
-                
+                new ModOption(ctx)
+                {
+                    InternalName = "anim_original",
+                    Name = "Original Animations",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.OriginalAnims,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.OriginalAnims,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AnimTrue == Models.FemcModConfig.AnimType.OriginalAnims,
+                },
+                new ModOption(ctx)
+                {
+                    InternalName = "anim_custom",
+                    Name = "Custom Animations",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.CustomAnims,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.CustomAnims,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AnimTrue == Models.FemcModConfig.AnimType.CustomAnims,
+                },
+                new ModOption(ctx)
+                {
+                    InternalName = "anim_funny",
+                    Name = "Very Funny Animations",
+                    Authors = [Author.Femc],
+                    Enable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.VeryFunnyAnims,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.VeryFunnyAnims,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AnimTrue == Models.FemcModConfig.AnimType.VeryFunnyAnims,
+                },
             ];
         }
     }
