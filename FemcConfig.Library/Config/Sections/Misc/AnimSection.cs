@@ -9,13 +9,13 @@ namespace FemcConfig.Library.Config.Sections.Misc
 {
     public class AnimSection : ISection
     {
-        public string Name { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.FunStuff)
+        public string Name { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.Animations)
             ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("Animations", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
-            : Localisation.LocalisationResources.Resources.FunStuff;
+            : Localisation.LocalisationResources.Resources.Animations;
 
-        public string Description { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.FunStuffDesc)
+        public string Description { get; } = string.IsNullOrEmpty(Localisation.LocalisationResources.Resources.AnimationsDesc)
             ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("AnimationsDesc", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
-            : Localisation.LocalisationResources.Resources.FunStuffDesc;
+            : Localisation.LocalisationResources.Resources.AnimationsDesc;
 
         public SectionCategory Category { get; } = SectionCategory.Misc;
 
