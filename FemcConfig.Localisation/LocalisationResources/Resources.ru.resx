@@ -138,9 +138,6 @@
   <data name="Audio" xml:space="preserve">
     <value>Звук</value>
   </data>
-  <data name="Boss Battle Music" xml:space="preserve">
-    <value>Музыка боссов</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Портреты</value>
   </data>
@@ -169,7 +166,7 @@
     <value>Зависимости</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value>Музыка битвы (Затруднение)</value>
+    <value>Музыка боссов Тартара</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>Загрузка</value>
@@ -288,9 +285,6 @@
   <data name="Author" xml:space="preserve">
     <value>Автор</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в сражении с боссами. При выборе нескольких треков, они будут выбираться случайно!</value>
-  </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Изменение портретов в диалоговых окнах.</value>
   </data>
@@ -310,7 +304,7 @@
     <value>Моды необходимые для правильной работы Femc Mod.</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Выбор музыки которая будет играть в обычном сражении (Превосходство противника). При выборе нескольких треков, они будут выбираться случайно!</value>
+    <value>Музыка, которая играет во время сражения с боссами Тартар. Если выбраные несколько, то играет случайная!</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>Используйте эту страницу для установки Femc Mod.</value>
@@ -386,5 +380,20 @@
   </data>
   <data name="UnexpectedErr Title" xml:space="preserve">
     <value>Произошла непредвиденная ошибка</value>
+  </data>
+  <data name="FunStuff" xml:space="preserve">
+    <value>Интересное</value>
+  </data>
+  <data name="FunStuffDesc" xml:space="preserve">
+    <value>Используйте эту страницу для управления различными интересными опциями.</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Прочее</value>
+  </data>
+  <data name="Animations" xml:space="preserve">
+    <value>Анимации</value>
+  </data>
+  <data name="AnimationsDesc" xml:space="preserve">
+    <value>Выбор между несколькими анимациями. Некоторые анимации могут отображаться некорректно, если исправление скелета включено. Например, анимация меню.</value>
   </data>
 </root>

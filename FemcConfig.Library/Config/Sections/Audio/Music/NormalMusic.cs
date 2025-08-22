@@ -94,6 +94,15 @@ public class NormalMusicSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.SgDis,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_atlus_wao_p3d",
+                Name = "Wiping All Out ATLUS Kozuka Remix",
+                Authors = [Author.Atlus],
+                Enable = (ctx) => ctx.FemcConfig.Settings.P3MidNomF = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.P3MidNomF = false,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.P3MidNomF,
             }
         ];
     }

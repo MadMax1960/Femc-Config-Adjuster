@@ -106,6 +106,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Animations.
+        /// </summary>
+        public static string Animations {
+            get {
+                return ResourceManager.GetString("Animations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Choose from a few animations. Note that some custom anims might not look correct if skeleton fix is enabled, nsuch as the menu animations..
+        /// </summary>
+        public static string AnimationsDesc {
+            get {
+                return ResourceManager.GetString("AnimationsDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to AOA.
         /// </summary>
         public static string AOA {
@@ -156,24 +174,6 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string Author {
             get {
                 return ResourceManager.GetString("Author", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Boss Battle Music.
-        /// </summary>
-        public static string Boss_Battle_Music {
-            get {
-                return ResourceManager.GetString("Boss Battle Music", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Music used when you battle certain bosses. Multiple songs can be chosen for randomisation!.
-        /// </summary>
-        public static string BossDesc {
-            get {
-                return ResourceManager.GetString("BossDesc", resourceCulture);
             }
         }
         
@@ -313,7 +313,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Disadvantage Battle Music.
+        ///   Looks up a localized string similar to Tartarus Boss Music.
         /// </summary>
         public static string Disadvantage_Battle_Music {
             get {
@@ -322,7 +322,7 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Music used when you are in a normal battle with Party Disadvantage. Multiple songs can be chosen for randomisation!.
+        ///   Looks up a localized string similar to Music used when you are in a Tartarus boss fight. Multiple songs can be chosen for randomisation!.
         /// </summary>
         public static string DisadvantageDesc {
             get {
@@ -381,6 +381,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string FinalDesc {
             get {
                 return ResourceManager.GetString("FinalDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Fun Stuff.
+        /// </summary>
+        public static string FunStuff {
+            get {
+                return ResourceManager.GetString("FunStuff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Use this page to manage various fun options to try out..
+        /// </summary>
+        public static string FunStuffDesc {
+            get {
+                return ResourceManager.GetString("FunStuffDesc", resourceCulture);
             }
         }
         
@@ -516,6 +534,15 @@ namespace FemcConfig.Localisation.LocalisationResources {
         public static string Light {
             get {
                 return ResourceManager.GetString("Light", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Misc.
+        /// </summary>
+        public static string Misc {
+            get {
+                return ResourceManager.GetString("Misc", resourceCulture);
             }
         }
         

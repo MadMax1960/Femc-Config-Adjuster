@@ -138,9 +138,6 @@
   <data name="Audio" xml:space="preserve">
     <value>音频相关</value>
   </data>
-  <data name="Boss Battle Music" xml:space="preserve">
-    <value>boss 战 BGM</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>对话立绘</value>
   </data>
@@ -169,7 +166,7 @@
     <value>依赖模组</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value>后发攻击 BGM</value>
+    <value>塔尔塔罗斯BOSS音乐</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>下载</value>
@@ -290,9 +287,6 @@
   <data name="Author" xml:space="preserve">
     <value>作者</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>选择对战特定boss时所用的音乐。多选可以随机哦！</value>
-  </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>选择对话回复时使用的立绘。</value>
   </data>
@@ -312,7 +306,7 @@
     <value>安装和管理哈姆子mod所需的依赖mod。</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value>选择普通战斗(但是是暗影打你时的)音乐。勾选多首歌可以随机哦！</value>
+    <value>挑战塔尔塔罗斯小BOSS时所用的音乐. 多选歌曲可以随机播放哦！</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>管理哈姆子mod。</value>
@@ -388,5 +382,20 @@
   </data>
   <data name="UnexpectedErr Title" xml:space="preserve">
     <value>出现了未知错误</value>
+  </data>
+  <data name="FunStuff" xml:space="preserve">
+    <value>趣味设置</value>
+  </data>
+  <data name="FunStuffDesc" xml:space="preserve">
+    <value>在这页管理各种整活选项。</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>杂项</value>
+  </data>
+  <data name="Animations" xml:space="preserve">
+    <value>动画</value>
+  </data>
+  <data name="AnimationsDesc" xml:space="preserve">
+    <value>从几个动画中选择。 注意如果开启skeleton fix 的话会导致一些动画异常，例如菜单动画。</value>
   </data>
 </root>

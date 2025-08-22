@@ -138,9 +138,6 @@
   <data name="Audio" xml:space="preserve">
     <value>Audio</value>
   </data>
-  <data name="Boss Battle Music" xml:space="preserve">
-    <value>Motyw Walki z Bossem</value>
-  </data>
   <data name="Bustup" xml:space="preserve">
     <value>Portret</value>
   </data>
@@ -169,7 +166,7 @@
     <value>Wymagania</value>
   </data>
   <data name="Disadvantage Battle Music" xml:space="preserve">
-    <value>Motyw Walki – Niekorzystna Pozycja</value>
+    <value>Motyw Walki z Bossem w Tartarusie</value>
   </data>
   <data name="Download" xml:space="preserve">
     <value>Pobierz</value>
@@ -288,9 +285,6 @@
   <data name="Author" xml:space="preserve">
     <value>Autorzy</value>
   </data>
-  <data name="BossDesc" xml:space="preserve">
-    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce w niektórymi bossami. Można wybrać wiele piosenek do losowania!</value>
-  </data>
   <data name="BustupDesc" xml:space="preserve">
     <value>Portret FeMC widoczny przy opcjach dialogowych</value>
   </data>
@@ -310,7 +304,7 @@
     <value>Użyj tej strony, aby zainstalować i zarządzać zależnościami używanymi przez moda FeMC</value>
   </data>
   <data name="DisadvantageDesc" xml:space="preserve">
-    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy jesteś w walce w niekorzystnej pozycji. Można wybrać wiele piosenek do losowania!</value>
+    <value>Wybierz, jaka muzyka ma być odtwarzana, gdy walczysz z niektórymi bossami w Tartarusie. Można wybrać wiele piosenek do losowania!</value>
   </data>
   <data name="FemcDesc" xml:space="preserve">
     <value>Za pomocą tej strony możesz zarządzać instalacją moda FeMC</value>
@@ -386,5 +380,20 @@
   </data>
   <data name="UnexpectedErr Title" xml:space="preserve">
     <value>Wystąpił nieoczekiwany błąd</value>
+  </data>
+  <data name="FunStuff" xml:space="preserve">
+    <value>Fajne rzeczy</value>
+  </data>
+  <data name="FunStuffDesc" xml:space="preserve">
+    <value>Użyj tej strony do eksperymentowania z różnymi zabawnymi dotatkami.</value>
+  </data>
+  <data name="Misc" xml:space="preserve">
+    <value>Różnorodne</value>
+  </data>
+  <data name="Animations" xml:space="preserve">
+    <value />
+  </data>
+  <data name="AnimationsDesc" xml:space="preserve">
+    <value />
   </data>
 </root>
