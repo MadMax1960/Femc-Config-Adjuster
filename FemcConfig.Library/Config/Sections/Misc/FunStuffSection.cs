@@ -39,7 +39,7 @@ namespace FemcConfig.Library.Config.Sections.Misc
                 {
                     InternalName = "fun_stuff_room",
                     Name = "Kotone Room",
-                    Authors = [Author.Femc],
+                    Authors = [Author.Bichelle, Author.Ely, Author.redmages, Author.Betina, Author.blodhgar, Author.nanometer,Author.ateliebiabonne, Author.Shiosakana, Author.Cielbell, Author.Crezzstar, Author.Esa, Author.Adrien, Author.Mekki],
                     Enable = (ctx) => ctx.FemcConfig.Settings.KotoneRoom = true,
                     Disable = (ctx) => ctx.FemcConfig.Settings.KotoneRoom = false,
                     IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.KotoneRoom,
@@ -57,7 +57,7 @@ namespace FemcConfig.Library.Config.Sections.Misc
                 {
                     InternalName = "fun_stuff_arcade",
                     Name = "Otome Arcade Game",
-                    Authors = [Author.Femc],
+                    Authors = [Author.euphonia],
                     Enable = (ctx) => ctx.FemcConfig.Settings.OtomeArcade = true,
                     Disable = (ctx) => ctx.FemcConfig.Settings.OtomeArcade = false,
                     IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.OtomeArcade,

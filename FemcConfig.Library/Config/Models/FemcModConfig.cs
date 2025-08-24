@@ -1177,7 +1177,8 @@ public partial class FemcModConfig : ObservableObject
         p3pYuha,
         Maru,
         purpleoctogamer,
-        purpleoctogamerAlt
+        purpleoctogamerAlt,
+        Anonymousfluffi
     }
 
     [Description("The Glass Shard in that one menu when pausing.")]

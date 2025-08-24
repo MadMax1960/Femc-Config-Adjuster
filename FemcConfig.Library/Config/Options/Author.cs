@@ -64,5 +64,11 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Yuha = new("Yuhaino", Url: "https://twitter.com/Yuhaino_");
     public static readonly Author Maru = new("Maru", Url: "https://x.com/v2_maru");
     public static readonly Author purpleoctogamer = new("purpleoctogamer", Url: "https://www.instagram.com/purpleoctocosplay/");
+    public static readonly Author Anonymousfluffi = new("Anonymousfluffi", Url: "https://bsky.app/profile/anonymousfluffi.bsky.social");
+    public static readonly Author redmages = new("Redmages(puff)");
+    public static readonly Author blodhgar = new("Blodhgar");
+    public static readonly Author nanometer = new("Nanometer");
+    public static readonly Author ateliebiabonne = new("Ateliebiabonne");
+    public static readonly Author euphonia = new("euphonia.exe");
 
 };
