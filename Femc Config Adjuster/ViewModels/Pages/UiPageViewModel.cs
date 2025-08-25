@@ -3,7 +3,13 @@ using CommunityToolkit.Mvvm.Input;
 using DynamicData.Binding;
 using FemcConfig.Library.Config;
 using FemcConfig.Library.Config.Models;
+using System.Collections.ObjectModel;
+using System.ComponentModel;
+using System.Reactive.Concurrency;
 using System.Reactive.Linq;
+using System.Reactive.Subjects;
+using System.Windows.Data;
+using System.Windows;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages;
 
@@ -11,6 +17,10 @@ public partial class UiPageViewModel : ObservableObject
 {
     private readonly SavableFile<FemcModConfig> config;
     private readonly Dictionary<string, ConfigColor> defaults = [];
+    private readonly Subject<string> searchChanges = new();
+
+    [ObservableProperty]
+    private string searchQuery = string.Empty;
 
     public UiPageViewModel(AppService app)
     {
@@ -43,10 +53,17 @@ public partial class UiPageViewModel : ObservableObject
             option.WhenAnyPropertyChanged().Skip(1).Throttle(TimeSpan.FromMilliseconds(250)).Subscribe(_ => this.config.Save());
         }
 
-        this.Options = options.ToArray();
+        var optionCollection = new ObservableCollection<UiOption>(options);
+        this.OptionsView = CollectionViewSource.GetDefaultView(optionCollection);
+        this.OptionsView.Filter = FilterOptions;
+
+        this.searchChanges
+            .Throttle(TimeSpan.FromMilliseconds(200))
+            .ObserveOn(DispatcherScheduler.Current)
+            .Subscribe(_ => this.OptionsView.Refresh());
     }
 
-    public UiOption[] Options { get; }
+    public ICollectionView OptionsView { get; }
 
     [RelayCommand]
     private void Reset()
@@ -58,6 +75,23 @@ public partial class UiPageViewModel : ObservableObject
         }
 
         this.config.Save();
+    }
+
+    private bool FilterOptions(object? obj)
+    {
+        if (obj is not UiOption option)
+            return true;
+
+        var query = this.SearchQuery;
+        if (string.IsNullOrWhiteSpace(query))
+            return true;
+
+        return option.Name.Contains(query, StringComparison.OrdinalIgnoreCase);
+    }
+
+    partial void OnSearchQueryChanged(string value)
+    {
+        this.searchChanges.OnNext(value);
     }
 }
 
@@ -78,6 +112,14 @@ public class UiOption : ObservableObject
         get => _color;
         set
         {
+            if (_color.A == value.A &&
+                _color.R == value.R &&
+                _color.G == value.G &&
+                _color.B == value.B)
+            {
+                return;
+            }
+
             _color.A = value.A;
             _color.R = value.R;
             _color.G = value.G;
