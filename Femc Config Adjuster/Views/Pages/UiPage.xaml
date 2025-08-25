@@ -23,6 +23,7 @@
     <Grid Margin="24,16">
         <Grid.RowDefinitions>
             <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Grid>
@@ -42,9 +43,14 @@
                 Content="Reset" />
         </Grid>
 
-        <Grid Grid.Row="1">
+        <TextBox
+            Grid.Row="1"
+            Margin="0,8"
+            Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" />
+
+        <Grid Grid.Row="2">
             <ScrollViewer>
-                <ItemsControl ItemsSource="{Binding Options}">
+                <ItemsControl ItemsSource="{Binding OptionsView}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>
                             <WrapPanel />
