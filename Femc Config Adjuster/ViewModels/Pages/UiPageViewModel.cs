@@ -5,6 +5,8 @@ using FemcConfig.Library.Config;
 using FemcConfig.Library.Config.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Reflection;
+using System.Threading.Tasks;
 using System.Reactive.Concurrency;
 using System.Reactive.Linq;
 using System.Reactive.Subjects;
@@ -39,23 +41,21 @@ public partial class UiPageViewModel : ObservableObject
         //];
 
         var defaultConfig = new FemcModConfig();
-        var options = new List<UiOption>();
-
-        var colorProps = this.config.Settings.GetType().GetProperties().Where(x => x.PropertyType == typeof(ConfigColor));
-        foreach (var prop in colorProps)
-        {
-            var option = new UiOption(prop.Name, (ConfigColor)prop.GetValue(this.config.Settings)!);
-            options.Add(option);
-
-            this.defaults[prop.Name] = (ConfigColor)prop.GetValue(defaultConfig)!;
-
-            //option.PropertyChanged += (sender, args) => app.GetContext().FemcConfig.Save();
-            option.WhenAnyPropertyChanged().Skip(1).Throttle(TimeSpan.FromMilliseconds(250)).Subscribe(_ => this.config.Save());
-        }
-
-        var optionCollection = new ObservableCollection<UiOption>(options);
+        var optionCollection = new ObservableCollection<UiOption>();
         this.OptionsView = CollectionViewSource.GetDefaultView(optionCollection);
         this.OptionsView.Filter = FilterOptions;
+
+        var colorProps = this.config.Settings.GetType()
+            .GetProperties()
+            .Where(x => x.PropertyType == typeof(ConfigColor))
+            .ToArray();
+
+        foreach (var prop in colorProps)
+        {
+            this.defaults[prop.Name] = (ConfigColor)prop.GetValue(defaultConfig)!;
+        }
+
+        LoadOptionsAsync(optionCollection, colorProps);
 
         this.searchChanges
             .Throttle(TimeSpan.FromMilliseconds(200))
@@ -92,6 +92,25 @@ public partial class UiPageViewModel : ObservableObject
     partial void OnSearchQueryChanged(string value)
     {
         this.searchChanges.OnNext(value);
+    }
+
+    private void LoadOptionsAsync(ObservableCollection<UiOption> optionCollection, IEnumerable<PropertyInfo> colorProps)
+    {
+        _ = Task.Run(async () =>
+        {
+            foreach (var prop in colorProps)
+            {
+                var option = new UiOption(prop.Name, (ConfigColor)prop.GetValue(this.config.Settings)!);
+
+                option.WhenAnyPropertyChanged()
+                    .Skip(1)
+                    .Throttle(TimeSpan.FromMilliseconds(250))
+                    .Subscribe(_ => this.config.Save());
+
+                await Application.Current.Dispatcher.InvokeAsync(() => optionCollection.Add(option));
+                await Task.Delay(1);
+            }
+        });
     }
 }
 
