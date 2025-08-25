@@ -68,10 +68,12 @@ public partial class UiPageViewModel : ObservableObject
     [RelayCommand]
     private void Reset()
     {
-        var props = this.config.Settings.GetType().GetProperties().Where(x => x.PropertyType == typeof(ConfigColor));
-        foreach (var prop in props)
+        foreach (var item in this.OptionsView.SourceCollection)
         {
-            prop.SetValue(this.config.Settings, this.defaults[prop.Name]);
+            if (item is UiOption option)
+            {
+                option.Color = this.defaults[option.Name];
+            }
         }
 
         this.config.Save();
