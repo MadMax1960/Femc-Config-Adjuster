@@ -391,9 +391,9 @@
     <value>Różnorodne</value>
   </data>
   <data name="Animations" xml:space="preserve">
-    <value />
+    <value>Animacje</value>
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
-    <value />
+    <value>Wybierz jedną z animacji. Pamiętaj, że niektóre niestandardowe animacje mogą wyglądać nie poprawnie, jeżeli włączony zostanie Skeleton Fix, na przykład animacje w menu.</value>
   </data>
 </root>
