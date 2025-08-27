@@ -11,6 +11,7 @@ public class SavableFile<TConfig> : ObservableObject
 {
     private readonly string file;
     private readonly TConfig modConfig;
+    private readonly object saveLock = new();
 
     public SavableFile(string file)
     {
@@ -77,6 +78,9 @@ public class SavableFile<TConfig> : ObservableObject
 
     public void Save()
     {
-        JsonUtils.SerializeFile(this.modConfig, this.file);
+        lock (saveLock)
+        {
+            JsonUtils.SerializeFile(this.modConfig, this.file);
+        }
     }
 }
