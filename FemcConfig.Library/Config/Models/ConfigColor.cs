@@ -69,6 +69,7 @@ public partial class ConfigColor : ObservableObject
 
     public static readonly ConfigColor PersonaStatusSkillListBg = new ConfigColor(0x2a, 0x00, 0x12, 0xff);
     public static readonly ConfigColor PersonaStatusSkillListCheckboardAlt = new ConfigColor(0x5c, 0x27, 0x3e, 0xff);
+    public static readonly ConfigColor FemcShadowColor = new ConfigColor(0xb7, 0x9a, 0xa0, 0xff);
 
     public ConfigColor(byte R, byte G, byte B, byte A) { this.R = R; this.G = G; this.B = B; this.A = A; }
 
