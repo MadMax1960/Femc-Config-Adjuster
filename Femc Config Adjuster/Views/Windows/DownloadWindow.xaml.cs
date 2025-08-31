@@ -5,6 +5,7 @@ using Wpf.Ui.Controls;
 using System.Diagnostics;
 using System.Windows;
 using System.Text.RegularExpressions;
+using Serilog;
 
 namespace Femc_Config_Adjuster.Views.Windows;
 
@@ -33,8 +34,8 @@ public partial class DownloadWindow : FluentWindow
         }
         catch (Exception ex)
         {
-            var infoWin = new InfoWindow("Initialization Error",ex.Message);
-            infoWin.ShowDialog();
+            Log.Error(ex, "Failed to get download");
+            Version.Text = "Unable to fetch the latest version.";
         }
     }
 
