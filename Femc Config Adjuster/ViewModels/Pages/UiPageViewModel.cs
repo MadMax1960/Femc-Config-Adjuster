@@ -68,7 +68,7 @@ public partial class UiPageViewModel : ObservableObject
     [RelayCommand]
     private void Reset()
     {
-        foreach (var item in this.OptionsView.SourceCollection)
+        foreach (var item in this.OptionsView)
         {
             if (item is UiOption option)
             {
