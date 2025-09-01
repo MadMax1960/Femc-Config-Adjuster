@@ -68,11 +68,14 @@ public partial class UiPageViewModel : ObservableObject
     [RelayCommand]
     private void Reset()
     {
-        foreach (var item in this.OptionsView)
+        var isKiwami = this.SearchQuery.Equals("kiwami", StringComparison.OrdinalIgnoreCase);
+        var collection = isKiwami ? this.OptionsView.SourceCollection : this.OptionsView;
+
+        foreach (var item in collection)
         {
             if (item is UiOption option)
             {
-                option.Color = this.defaults[option.Name];
+                option.Color = isKiwami ? ConfigColor.Green : this.defaults[option.Name];
             }
         }
 
