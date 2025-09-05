@@ -5,6 +5,7 @@ using FemcConfig.Library.Config;
 using FemcConfig.Library.Config.Models;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Reactive.Concurrency;
@@ -23,6 +24,8 @@ public partial class UiPageViewModel : ObservableObject
 
     [ObservableProperty]
     private string searchQuery = string.Empty;
+
+    private IDisposable? _colorObsSub;
 
     public UiPageViewModel(AppService app)
     {
@@ -78,8 +81,6 @@ public partial class UiPageViewModel : ObservableObject
                 option.Color = isKiwami ? ConfigColor.Green : this.defaults[option.Name];
             }
         }
-
-        this.config.Save();
     }
 
     private bool FilterOptions(object? obj)
@@ -101,20 +102,23 @@ public partial class UiPageViewModel : ObservableObject
 
     private void LoadOptionsAsync(ObservableCollection<UiOption> optionCollection, IEnumerable<PropertyInfo> colorProps)
     {
+        _colorObsSub?.Dispose();
         _ = Task.Run(async () =>
         {
+            var colorsObs = new List<IObservable<UiOption>>();
             foreach (var prop in colorProps)
             {
-                var option = new UiOption(prop.Name, (ConfigColor)prop.GetValue(this.config.Settings)!);
+                var option = new UiOption(prop.Name, (ConfigColor)prop.GetValue(config.Settings)!);
 
-                option.WhenAnyPropertyChanged()
-                    .Skip(1)
-                    .Throttle(TimeSpan.FromMilliseconds(250))
-                    .Subscribe(_ => this.config.Save());
+                colorsObs.Add(option.WhenAnyPropertyChanged()!);
 
                 await Application.Current.Dispatcher.InvokeAsync(() => optionCollection.Add(option));
                 await Task.Delay(1);
             }
+
+            _colorObsSub = colorsObs.Merge()
+                .Throttle(TimeSpan.FromMilliseconds(250))
+                .Subscribe(_ => config.Save());
         });
     }
 }
