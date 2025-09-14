@@ -70,5 +70,7 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author nanometer = new("Nanometer");
     public static readonly Author ateliebiabonne = new("Ateliebiabonne");
     public static readonly Author euphonia = new("euphonia.exe");
+    public static readonly Author dniwetamp = new("dniwetamp");
+    public static readonly Author Cpido = new("Cpido");
 
 };

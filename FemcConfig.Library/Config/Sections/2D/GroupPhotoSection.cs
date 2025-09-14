@@ -31,6 +31,13 @@ public class GroupPhotoSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.GroupEventTrue = Models.FemcModConfig.GroupEventtype.bichelle,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.GroupEventTrue == Models.FemcModConfig.GroupEventtype.bichelle,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "group_mekki",
+                Authors = [Author.Mekki, Author.Cpido, Author.dniwetamp],
+                Enable = (ctx) => ctx.FemcConfig.Settings.GroupEventTrue = Models.FemcModConfig.GroupEventtype.mekki,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.GroupEventTrue == Models.FemcModConfig.GroupEventtype.mekki,
+            },
         ];
     }
 }

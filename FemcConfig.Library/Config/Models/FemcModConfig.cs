@@ -1595,7 +1595,8 @@ public partial class FemcModConfig : ObservableObject
     public enum GroupEventtype
     {
         bichelle,
-        ely
+        ely,
+        mekki
     }
 
     [Description("The photos from the Kyoto trip")]
