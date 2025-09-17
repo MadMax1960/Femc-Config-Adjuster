@@ -13,6 +13,9 @@ using System.Reactive.Linq;
 using System.Reactive.Subjects;
 using System.Windows.Data;
 using System.Windows;
+using FemcConfig.Library.Utils;
+using Microsoft.Win32;
+using System.Collections.Generic;
 
 namespace Femc_Config_Adjuster.ViewModels.Pages;
 
@@ -21,6 +24,8 @@ public partial class UiPageViewModel : ObservableObject
     private readonly SavableFile<FemcModConfig> config;
     private readonly Dictionary<string, ConfigColor> defaults = [];
     private readonly Subject<string> searchChanges = new();
+    private readonly ObservableCollection<UiOption> options = new();
+    private readonly PropertyInfo[] colorProperties;
 
     [ObservableProperty]
     private string searchQuery = string.Empty;
@@ -44,21 +49,20 @@ public partial class UiPageViewModel : ObservableObject
         //];
 
         var defaultConfig = new FemcModConfig();
-        var optionCollection = new ObservableCollection<UiOption>();
-        this.OptionsView = CollectionViewSource.GetDefaultView(optionCollection);
-        this.OptionsView.Filter = FilterOptions;
-
-        var colorProps = this.config.Settings.GetType()
+        this.colorProperties = this.config.Settings.GetType()
             .GetProperties()
             .Where(x => x.PropertyType == typeof(ConfigColor))
             .ToArray();
 
-        foreach (var prop in colorProps)
+        this.OptionsView = CollectionViewSource.GetDefaultView(this.options);
+        this.OptionsView.Filter = FilterOptions;
+
+        foreach (var prop in this.colorProperties)
         {
             this.defaults[prop.Name] = (ConfigColor)prop.GetValue(defaultConfig)!;
         }
 
-        LoadOptionsAsync(optionCollection, colorProps);
+        LoadOptionsAsync();
 
         this.searchChanges
             .Throttle(TimeSpan.FromMilliseconds(200))
@@ -83,6 +87,92 @@ public partial class UiPageViewModel : ObservableObject
         }
     }
 
+    [RelayCommand]
+    private void Export()
+    {
+        var dialog = new SaveFileDialog
+        {
+            Title = "Export UI Colors",
+            Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*",
+            FileName = "FemcUiColors.json"
+        };
+
+        if (dialog.ShowDialog() != true)
+        {
+            return;
+        }
+
+        try
+        {
+            var exportData = new Dictionary<string, ConfigColor>();
+            foreach (var prop in this.colorProperties)
+            {
+                if (prop.GetValue(this.config.Settings) is ConfigColor color)
+                {
+                    exportData[prop.Name] = new ConfigColor(color.R, color.G, color.B, color.A);
+                }
+            }
+
+            JsonUtils.SerializeFile(exportData, dialog.FileName);
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(
+                $"Failed to export UI colors.\n{ex.Message}",
+                "Export Failed",
+                MessageBoxButton.OK,
+                MessageBoxImage.Error);
+        }
+    }
+
+    [RelayCommand]
+    private void Import()
+    {
+        var dialog = new OpenFileDialog
+        {
+            Title = "Import UI Colors",
+            Filter = "JSON files (*.json)|*.json|All files (*.*)|*.*"
+        };
+
+        if (dialog.ShowDialog() != true)
+        {
+            return;
+        }
+
+        try
+        {
+            var importData = JsonUtils.DeserializeFile<Dictionary<string, ConfigColor>>(dialog.FileName);
+            var appliedAny = false;
+
+            foreach (var item in this.OptionsView.SourceCollection)
+            {
+                if (item is UiOption option && importData.TryGetValue(option.Name, out var color))
+                {
+                    option.Color = new ConfigColor(color.R, color.G, color.B, color.A);
+                    appliedAny = true;
+                }
+            }
+
+            if (!appliedAny)
+            {
+                MessageBox.Show(
+                    "No matching UI colors were found in the selected file.",
+                    "Import UI Colors",
+                    MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+            }
+        }
+        catch (Exception ex)
+        {
+            MessageBox.Show(
+                $"Failed to import UI colors.\n{ex.Message}",
+                "Import Failed",
+                MessageBoxButton.OK,
+                MessageBoxImage.Error);
+        }
+    }
+
+
     private bool FilterOptions(object? obj)
     {
         if (obj is not UiOption option)
@@ -100,19 +190,21 @@ public partial class UiPageViewModel : ObservableObject
         this.searchChanges.OnNext(value);
     }
 
-    private void LoadOptionsAsync(ObservableCollection<UiOption> optionCollection, IEnumerable<PropertyInfo> colorProps)
+    private void LoadOptionsAsync()
     {
         _colorObsSub?.Dispose();
         _ = Task.Run(async () =>
         {
             var colorsObs = new List<IObservable<UiOption>>();
-            foreach (var prop in colorProps)
+            await Application.Current.Dispatcher.InvokeAsync(() => this.options.Clear());
+
+            foreach (var prop in this.colorProperties)
             {
                 var option = new UiOption(prop.Name, (ConfigColor)prop.GetValue(config.Settings)!);
 
                 colorsObs.Add(option.WhenAnyPropertyChanged()!);
 
-                await Application.Current.Dispatcher.InvokeAsync(() => optionCollection.Add(option));
+                await Application.Current.Dispatcher.InvokeAsync(() => this.options.Add(option));
                 await Task.Delay(1);
             }
 
