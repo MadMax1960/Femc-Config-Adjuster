@@ -38,6 +38,10 @@ public partial class ConfigColor : ObservableObject
     public static readonly ConfigColor CampMenuItemColor2 = new ConfigColor(0xf7, 0x83, 0xe4, 0xff);
     public static readonly ConfigColor CampMenuItemColor3 = new ConfigColor(0xe0, 0x79, 0xcf, 0xff);
     public static readonly ConfigColor CampMenuItemColorNoSel = new ConfigColor(0xcf, 0x7c, 0xc1, 0xff);
+    public static readonly ConfigColor CampMenuSystemItemColor1 = new ConfigColor(0xff, 0x8f, 0xec, 0xff);
+    public static readonly ConfigColor CampMenuSystemItemColor2 = new ConfigColor(0xf7, 0x83, 0xe4, 0xff);
+    public static readonly ConfigColor CampMenuSystemItemColor3 = new ConfigColor(0xe0, 0x79, 0xcf, 0xff);
+    public static readonly ConfigColor CampMenuSystemItemColorNoSel = new ConfigColor(0xcf, 0x7c, 0xc1, 0xff);
     public static readonly ConfigColor CheckFgBorder = new ConfigColor(0x9b, 0x0b, 0x47, 0xff);
     public static readonly ConfigColor SocialStatsCourage = new ConfigColor(0xf5, 0x62, 0xa7, 0xff);
     public static readonly ConfigColor SocialStatsCharm = new ConfigColor(0xff, 0x8f, 0xec, 0xff); // same as mid color
