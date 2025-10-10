@@ -36,7 +36,7 @@ public partial class App
     // https://docs.microsoft.com/dotnet/core/extensions/dependency-injection
     // https://docs.microsoft.com/dotnet/core/extensions/configuration
     // https://docs.microsoft.com/dotnet/core/extensions/logging
-    public const string APP_VERSION = "1.5.2"; // Should always be update after every update and needs to match the release tag
+    public const string APP_VERSION = "1.5.3"; // Should always be update after every update and needs to match the release tag
     private static readonly IHost _host = Host
         .CreateDefaultBuilder()
         .ConfigureAppConfiguration(c =>
