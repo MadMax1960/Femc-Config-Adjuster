@@ -359,6 +359,18 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _CampMenuItemColorNoSel = ConfigColor.CampMenuItemColorNoSel;
 
     [ObservableProperty]
+    private ConfigColor _CampMenuSystemItemColor1 = ConfigColor.CampMenuSystemItemColor1;
+
+    [ObservableProperty]
+    private ConfigColor _CampMenuSystemItemColor2 = ConfigColor.CampMenuSystemItemColor2;
+
+    [ObservableProperty]
+    private ConfigColor _CampMenuSystemItemColor3 = ConfigColor.CampMenuSystemItemColor3;
+
+    [ObservableProperty]
+    private ConfigColor _CampMenuSystemItemColorNoSel = ConfigColor.CampMenuSystemItemColorNoSel;
+
+    [ObservableProperty]
     private ConfigColor _CampSkillTextColor = ConfigColor.MellodiColorLight1;
 
     [ObservableProperty]
