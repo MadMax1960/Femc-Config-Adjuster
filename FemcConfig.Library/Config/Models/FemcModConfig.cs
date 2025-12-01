@@ -60,7 +60,7 @@ public partial class FemcModConfig : ObservableObject
 
     [Category("Battle Music - Normal")]
     [Description("Enable Atlus's Wiping All Out?")]
-    [DefaultValue(true)]
+    [DefaultValue(false)]
     [ObservableProperty]
     private bool p3pNom = true;
 
@@ -90,7 +90,7 @@ public partial class FemcModConfig : ObservableObject
 
     [Category("Tartarus Boss Music")]
     [Description("Enable Atlus's Danger Zone?")]
-    [DefaultValue(true)]
+    [DefaultValue(false)]
     [ObservableProperty]
     private bool p3pDis = true;
 
@@ -174,13 +174,13 @@ public partial class FemcModConfig : ObservableObject
 
     [Category("Music")]
     [Description("Enable Way of Life as the daytime music?")]
-    [DefaultValue(true)]
+    [DefaultValue(false)]
     [ObservableProperty]
     private bool wayOfLifeP3P = true;
 
     [Category("Music")]
     [Description("Enable Way of Life -Deep inside my mind Remix- as the daytime music?")]
-    [DefaultValue(true)]
+    [DefaultValue(false)]
     [ObservableProperty]
     private bool wayOfLifeRemix = true;
 
