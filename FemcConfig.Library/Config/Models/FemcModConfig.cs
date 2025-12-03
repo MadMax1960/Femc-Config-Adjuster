@@ -1456,6 +1456,122 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _RequestReportBG = new ConfigColor(0xa3, 0x20, 0x28, 0xFF);
 
+    [ObservableProperty]
+    private ConfigColor _RequestChairsColor = new ConfigColor(0x76, 0x01, 0x1C, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatusShardsColor = new ConfigColor(0xff, 0x1b, 0x6f, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _FallingNineColor = new ConfigColor(0xa3, 0x80, 0x8A, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SkillGunColor = new ConfigColor(0x91, 0x56, 0x68, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatsGekkoukanDark = new ConfigColor(0x9C, 0x6B, 0x84, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatsFontColor = new ConfigColor(0xB5, 0xB4, 0xB4, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatsShadowColor = new ConfigColor(0x66, 0x08, 0x29, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatusDetailTitleAndGekkoukanDark = new ConfigColor(0x2B, 0x1E, 0x22, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatusDetailMainBackground = new ConfigColor(0x46, 0x3D, 0x40, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _CmmuStatusStrip = new ConfigColor(0x9F, 0x00, 0x3A, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatusDetailBigShard = new ConfigColor(0x87, 0x6F, 0x7B, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SocialStatsTriangle = new ConfigColor(0x30, 0x22, 0x29, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatusDetailTagColors = new ConfigColor(0x4D, 0x34, 0x3D, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _StatusTheurgyBigShard = new ConfigColor(0x75, 0x4D, 0x59, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _StatusTheurgyDetailTitlesFont = new ConfigColor(0x67, 0x47, 0x60, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _StatusTheurgyDetailBGColor = new ConfigColor(0x4B, 0x2B, 0x40, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _StatusDetailTransitionBGLight = new ConfigColor(0xD8, 0xD1, 0xD4, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _StatusDetailTransitionBGDark = new ConfigColor(0xC1, 0xB0, 0xB6, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _EquipDotsColor = new ConfigColor(0x90, 0x36, 0x55, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _CalendarPastDay = new ConfigColor(0xC8, 0x91, 0xA5, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _CalendarHighlightedDay = new ConfigColor(0x07, 0x40, 0xFD, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _CalendarHighlightedJob = new ConfigColor(0x00, 0x00, 0xF1, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _CalendarJobDetailFont = ConfigColor.MellodiColorLight1;
+
+    [ObservableProperty]
+    public ConfigColor _CampItemEffectBG = ConfigColor.MellodiColorLight1;
+
+    [ObservableProperty]
+    public ConfigColor _CampItemEffectFont = ConfigColor.MellodiColorDark3;
+
+    [ObservableProperty]
+    public ConfigColor _ShiftFromColor = new ConfigColor(0xFF, 0x05, 0x13, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _ShiftToMiddleColor = new ConfigColor(0xFF, 0x17, 0x23, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _ShiftToUpDownColor = new ConfigColor(0xFF, 0x5C, 0x49, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _CampConfSelTexColor = ConfigColor.MellodiColorMid2;
+
+    [ObservableProperty]
+    public ConfigColor _CampConfOptFmtBgColor = new ConfigColor(0x1a, 0x0, 0x10, 0xFF);
+
+    [ObservableProperty]
+    public ConfigColor _CampConfSelNameColor = ConfigColor.MellodiColorMid2;
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigControlSetInactive = ConfigColor.MellodiColorMid3;
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigOptionUnselectedArea = new ConfigColor(0x8f, 0x2f, 0x4f, 0xff);
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigBooleanUnselectedArea = ConfigColor.MellodiColorDark1;
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigMusicPlayerGlow = ConfigColor.MellodiColorMid2;
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigTopDescColor = ConfigColor.MellodiColorMid2;
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigBgColor = ConfigColor.PersonaStatusSkillListBg;
+
+    // public ConfigColor _CampConfigUnk = new ConfigColor(0x8f, 0x65, 0x73, 0xff);
+
+    [ObservableProperty]
+    public ConfigColor _CampConfigPlistHeadColor = new ConfigColor(0x90, 0x46, 0x6c, 0xff);
+
     // other bullshit ^ !!!!!!!!!!
 
     [Category("UI Components")]
