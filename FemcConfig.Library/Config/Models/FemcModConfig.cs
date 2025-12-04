@@ -1735,7 +1735,8 @@ public partial class FemcModConfig : ObservableObject
 
     public enum KyotoEventtype
     {
-        ely
+        ely,
+        mekki
     }
 
     [Description("The AOA Image.")]

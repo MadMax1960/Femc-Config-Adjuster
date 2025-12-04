@@ -24,6 +24,13 @@ public class KyotoPhotoSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.KyotoEventTrue = Models.FemcModConfig.KyotoEventtype.ely,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.KyotoEventTrue == Models.FemcModConfig.KyotoEventtype.ely,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "kyoto_mekki",
+                Authors = [Author.Mekki, Author.Cpido, Author.dniwetamp],
+                Enable = (ctx) => ctx.FemcConfig.Settings.KyotoEventTrue = Models.FemcModConfig.KyotoEventtype.mekki,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.KyotoEventTrue == Models.FemcModConfig.KyotoEventtype.mekki,
+            },
         ];
     }
 }
