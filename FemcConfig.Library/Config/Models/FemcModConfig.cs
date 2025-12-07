@@ -1716,9 +1716,9 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The group photo")]
     [Category("2D Options")]
-    [DefaultValue(GroupEventtype.bichelle)]
+    [DefaultValue(GroupEventtype.mekki)]
     [ObservableProperty]
-    private GroupEventtype _GroupEventTrue = GroupEventtype.bichelle;
+    private GroupEventtype _GroupEventTrue = GroupEventtype.mekki;
 
     public enum GroupEventtype
     {
@@ -1741,7 +1741,7 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The AOA Image.")]
     [Category("2D Options")]
-    [DefaultValue(AOAType.Fernando)]
+    [DefaultValue(AOAType.esaadrien)]
     [ObservableProperty]
     private AOAType _AOATrue = AOAType.Ely;
 
