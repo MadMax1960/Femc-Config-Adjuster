@@ -1134,7 +1134,7 @@ public partial class FemcModConfig : ObservableObject
 
     [ObservableProperty]
     private ConfigColor _CampConfigurationLightReflectiveColor2 = new ConfigColor(0xFF, 0x60, 0x92, 0xFF);
-
+    
     [ObservableProperty]
     private ConfigColor _SaveLoadGradientBottomTopColor = new ConfigColor(0xB2, 0x22, 0x50, 0x00);
 
@@ -1146,7 +1146,7 @@ public partial class FemcModConfig : ObservableObject
 
     [ObservableProperty]
     private ConfigColor _SaveLoadGradientTopBottomColor = new ConfigColor(0xFF, 0x00, 0x6A, 0x00);
-
+    
     [ObservableProperty]
     private ConfigColor _PersonaStatusDeepColorFilter = new ConfigColor(0x88, 0x00, 0x17, 0xA9);
 
@@ -1572,7 +1572,60 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     public ConfigColor _CampConfigPlistHeadColor = new ConfigColor(0x90, 0x46, 0x6c, 0xff);
 
-    // other bullshit ^ !!!!!!!!!!
+    [ObservableProperty]
+    public ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0xB6, 0x3F, 0x68, 0xff);
+
+    [ObservableProperty]
+    public ConfigColor _CampRootHighlightedColor1 = ConfigColor.Blue;
+
+    [ObservableProperty]
+    public ConfigColor _CampRootHighlightedColor2 = ConfigColor.Blue;
+
+    [ObservableProperty]
+    public ConfigColor _SaveLoadHighlightedOption = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _SaveLoadAccentColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SaveLoadSlotBox = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SaveLoadCornerTriangle = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SaveLoadUnhighlightedNumber = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SaveLoadSelectedSlotBox = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _SaveLoadGrey = new ConfigColor(0x3F, 0x39, 0x39, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _PersonaStatusEquipBonusColor = ConfigColor.Blue;
+
+    [ObservableProperty]
+    private ConfigColor _TextBoxSpeakerNameTriangleFront = ConfigColor.Green;
+
+    [ObservableProperty]
+    private ConfigColor _CampSystemCurveColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _MsgSimpleSelectBgFill = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _MsgSimpleSelectBgMainColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _CampKotoneShadowColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _CampKotoneShadowColor2 = new ConfigColor(0xFF, 0x00, 0xFF, 0xFF);
+
+
+    [ObservableProperty]
+    private ConfigColor _CampKotoneInnerShadowColor = new ConfigColor(0xFF, 0x00, 0xFF, 0xFF);
 
     [Category("UI Components")]
     [DefaultValue(true)]
