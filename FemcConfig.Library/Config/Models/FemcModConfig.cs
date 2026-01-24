@@ -1758,7 +1758,8 @@ public partial class FemcModConfig : ObservableObject
         shiosakanaAlt,
         Nami,
         AngieDaGorl,
-        StupidAle
+        StupidAle,
+        cielbell
     }
 
     [Description("The AOA Foreground Text.")]
@@ -1817,7 +1818,9 @@ public partial class FemcModConfig : ObservableObject
         Maru,
         purpleoctogamer,
         purpleoctogamerAlt,
-        Anonymousfluffi
+        Anonymousfluffi,
+        woodwhite,
+        Milky
     }
 
     [Description("The Glass Shard in that one menu when pausing.")]

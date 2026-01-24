@@ -270,6 +270,20 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Anonymousfluffi,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Anonymousfluffi,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_woodwhite",
+                Authors = [Author.woodwhite],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.woodwhite,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.woodwhite,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_Milky",
+                Authors = [Author.Milky],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Milky,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Milky,
+            },
         ];
     }
 }

@@ -101,6 +101,13 @@ public class AOASection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.StupidAle,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.StupidAle,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "aoa_cielbell",
+                Authors = [Author.Cielbell],
+                Enable = (ctx) => ctx.FemcConfig.Settings.AOATrue = Models.FemcModConfig.AOAType.cielbell,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.AOATrue == Models.FemcModConfig.AOAType.cielbell,
+            },
         ];
     }
 }
