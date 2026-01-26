@@ -72,5 +72,7 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author euphonia = new("euphonia.exe");
     public static readonly Author dniwetamp = new("dniwetamp");
     public static readonly Author Cpido = new("Cpido");
+    public static readonly Author woodwhite = new("woodwhite");
+    public static readonly Author Milky = new("Milky", Url: "https://bsky.app/profile/judyhelloworld.bsky.social");
 
 };
