@@ -83,7 +83,7 @@ public partial class UiPageViewModel : ObservableObject
         var collection = (isKiwami || isPeewami || isGoonFellas) ? this.OptionsView.SourceCollection : this.OptionsView;
 
         var rng = isGoonFellas ? new Random() : null;
-        var yellow = new ConfigColor(255, 255, 255, 0);
+        var yellow = new ConfigColor(255, 255, 0, 255);
 
         foreach (var item in collection)
         {
