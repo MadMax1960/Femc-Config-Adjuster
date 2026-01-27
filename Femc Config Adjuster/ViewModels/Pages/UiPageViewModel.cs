@@ -75,14 +75,39 @@ public partial class UiPageViewModel : ObservableObject
     [RelayCommand]
     private void Reset()
     {
-        var isKiwami = this.SearchQuery.Equals("kiwami", StringComparison.OrdinalIgnoreCase);
-        var collection = isKiwami ? this.OptionsView.SourceCollection : this.OptionsView;
+        var query = this.SearchQuery;
+        var isKiwami = query.Equals("kiwami", StringComparison.OrdinalIgnoreCase);
+        var isPeewami = query.Equals("peewami", StringComparison.OrdinalIgnoreCase);
+        var isGoonFellas = query.Equals("goonfellas", StringComparison.OrdinalIgnoreCase);
+
+        var collection = (isKiwami || isPeewami || isGoonFellas) ? this.OptionsView.SourceCollection : this.OptionsView;
+
+        var rng = isGoonFellas ? new Random() : null;
+        var yellow = new ConfigColor(255, 255, 255, 0);
 
         foreach (var item in collection)
         {
             if (item is UiOption option)
             {
-                option.Color = isKiwami ? ConfigColor.Green : this.defaults[option.Name];
+                if (isKiwami)
+                {
+                    option.Color = ConfigColor.Green;
+                }
+                else if (isPeewami)
+                {
+                    option.Color = yellow;
+                }
+                else if (isGoonFellas)
+                {
+                    byte r = (byte)rng!.Next(256);
+                    byte g = (byte)rng!.Next(256);
+                    byte b = (byte)rng!.Next(256);
+                    option.Color = new ConfigColor(r, g, b, 255);
+                }
+                else
+                {
+                    option.Color = this.defaults[option.Name];
+                }
             }
         }
     }
