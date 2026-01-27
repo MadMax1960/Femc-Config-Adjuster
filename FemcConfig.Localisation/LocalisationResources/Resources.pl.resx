@@ -183,6 +183,9 @@
   <data name="Gendered Audio" xml:space="preserve">
     <value>Audio z podziałem na płeć</value>
   </data>
+  <data name="Kotone Voice" xml:space="preserve">
+    <value>Kotone Audio</value>
+  </data>
   <data name="Glass Shard" xml:space="preserve">
     <value>Odłamek szkła</value>
   </data>

@@ -183,6 +183,9 @@
   <data name="Gendered Audio" xml:space="preserve">
     <value>Gendered Audio</value>
   </data>
+  <data name="Kotone Voice" xml:space="preserve">
+    <value>Kotone Audio</value>
+  </data>
   <data name="Glass Shard" xml:space="preserve">
     <value>Glass Shard</value>
   </data>
@@ -359,6 +362,9 @@
   </data>
   <data name="VoiceDesc" xml:space="preserve">
     <value>Voice used ingame, which uses the correct pronouns for Femc. Currently only English audio is supported.</value>
+  </data>
+  <data name="KotoneVoiceDesc" xml:space="preserve">
+    <value>Voice actor used for Femcs voicelines.</value>
   </data>
   <data name="Night Outside Music" xml:space="preserve">
     <value>Night Outside Music</value>

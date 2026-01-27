@@ -1844,6 +1844,55 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _CampTutorialSystemKeyframe3 = new ConfigColor(0x99, 0x33, 0x63, 0xFF);
 
+    // hi adrien set defaults below
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk3 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk4 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk5 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk6 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk7 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk8 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk9 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk10 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk11 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk12 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk13 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk14 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyUnk15 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyModelColour2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
     [Category("UI Components")]
     [DefaultValue(true)]
     [ObservableProperty]
@@ -1999,9 +2048,9 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The photos from the Kyoto trip")]
     [Category("2D Options")]
-    [DefaultValue(KyotoEventtype.ely)]
+    [DefaultValue(KyotoEventtype.mekki)]
     [ObservableProperty]
-    private KyotoEventtype _KyotoEventTrue = KyotoEventtype.ely;
+    private KyotoEventtype _KyotoEventTrue = KyotoEventtype.mekki;
 
     public enum KyotoEventtype
     {
@@ -2163,7 +2212,8 @@ public partial class FemcModConfig : ObservableObject
     {
         Mellodi,
         MellodiSilly,
-        Japanese
+        Japanese,
+        Lantana
     }
 
     [Description("Gives FemC Nagitanas for weapons")]

@@ -475,6 +475,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Kotone Audio.
+        /// </summary>
+        public static string Kotone_Voice {
+            get {
+                return ResourceManager.GetString("Kotone Voice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Voice actor used for Femcs voicelines..
+        /// </summary>
+        public static string KotoneVoiceDesc {
+            get {
+                return ResourceManager.GetString("KotoneVoiceDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Kyoto Photos.
         /// </summary>
         public static string Kyoto_Photos {
