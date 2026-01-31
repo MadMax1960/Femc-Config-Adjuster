@@ -1586,7 +1586,7 @@ public partial class FemcModConfig : ObservableObject
     public ConfigColor _CampRootHighlightedColor2 = ConfigColor.Blue;
 
     [ObservableProperty]
-    public ConfigColor _SaveLoadHighlightedOption = ConfigColor.Green;
+    public ConfigColor _SaveLoadHighlightedOption = new ConfigColor(0x00, 0xD8, 0xFF, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _SaveLoadAccentColor = new ConfigColor(0xF2, 0xC9, 0x95, 0xFF);
@@ -1846,52 +1846,167 @@ public partial class FemcModConfig : ObservableObject
 
     // hi adrien set defaults below
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgySpark1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonalityDescription = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk3 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgySpark2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk4 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyDescription = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk5 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyBarHighlight = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk6 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyBGColour = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk7 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonaShadow = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk8 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonaShadow2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk9 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonalityCircleHighlight = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk10 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonalityCircleBG = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk11 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonalityTitle = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk12 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyModelColour1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk13 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
-
-    [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk14 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyPersonalityCircleDescription = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _BtlTheurgyUnk15 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _BtlTheurgyModelColour2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+
+    [ObservableProperty]
+    private ConfigColor _EditRootFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditSkillFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditItemFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditEquipFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditStatusFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditQuestFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditCommuFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditSystemFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _EditConfigFillColor = new ConfigColor(0xff, 0xd7, 0x9d, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BustupUniverseAmbientColor = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BustupUniverseLightColor = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor __BustupUniverseAmbientColorYko = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlTopUnk1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTopMainCircleColor = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTopCharOutlineColor = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTopTheurgyCircleColor = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiDamageTextColor1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiDamageTextColor2 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiDamageTextColor3 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiOneMoreColor1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiOneMoreColor2 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiOneMoreColor3 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiRush1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiRush2 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlSkillName1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlSkillName2 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlSkillName3 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetInfo1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetInfo2 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetInfo3 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetInfo4 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetPanel1 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetPanel2 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetPanel3 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetPanel4 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _BtlTargetPanel5 = new ConfigColor(0x00, 0xff, 0x00, 0xff);
 
     [Category("UI Components")]
     [DefaultValue(true)]
@@ -2251,8 +2366,8 @@ public partial class FemcModConfig : ObservableObject
     private bool gregoryHouseRatPoisonDeliverySystem = true;
 
     [Category("Testing")]
-    [Description("THIS LETS YOU TEST THE NEW DORM ROOM SWAP AND HOT SPRINGS EVENT, IT MIGHT BE VERY BROKEN.")]
+    [Description("This enables the dorm room swap as well as all the CURRENT edited events.")]
     [DefaultValue(false)]
     [ObservableProperty]
-    private bool testiclesDorm = true;
+    private bool testiclesEventDorm = true;
 }
