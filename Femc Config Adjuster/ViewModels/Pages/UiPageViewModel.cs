@@ -80,8 +80,9 @@ public partial class UiPageViewModel : ObservableObject
         var isPeewami = query.Equals("peewami", StringComparison.OrdinalIgnoreCase);
         var isGoonFellas = query.Equals("goonfellas", StringComparison.OrdinalIgnoreCase);
         var isDespair = query.Equals("despair", StringComparison.OrdinalIgnoreCase);
+        var isRealKiwami = query.Equals("realkiwami", StringComparison.OrdinalIgnoreCase);
 
-        var collection = (isKiwami || isPeewami || isGoonFellas || isDespair) ? this.OptionsView.SourceCollection : this.OptionsView;
+        var collection = (isKiwami || isPeewami || isGoonFellas || isDespair || isRealKiwami) ? this.OptionsView.SourceCollection : this.OptionsView;
 
         var rng = isGoonFellas ? new Random() : null;
         var yellow = new ConfigColor(255, 255, 0, 255);
@@ -109,6 +110,17 @@ public partial class UiPageViewModel : ObservableObject
                 else if (isDespair)
                 {
                     option.Color = despair;
+                }
+                else if (isRealKiwami)
+                {
+                    var color = option.Color;
+                    const float shift = 0.6f;
+
+                    byte r = (byte)(color.R * (1f - shift));
+                    byte g = (byte)Math.Min(255, color.G + 255 * shift);
+                    byte b = (byte)(color.B * (1f - shift));
+
+                    option.Color = new ConfigColor(r, g, b, color.A);
                 }
                 else
                 {
