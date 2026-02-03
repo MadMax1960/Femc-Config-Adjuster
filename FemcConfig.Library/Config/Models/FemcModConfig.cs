@@ -360,7 +360,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _CampMenuItemColor3 = new ConfigColor(0xFF, 0xBA, 0x67, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _CampMenuItemColorNoSel = new ConfigColor(0xFF, 0xB2, 0x9E, 0xFF);
+    private ConfigColor _CampMenuItemColorNoSel = new ConfigColor(0xF4, 0x84, 0x99, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _CampMenuSystemItemColor1 = new ConfigColor(0xFD, 0xDF, 0xA1, 0xFF);
@@ -372,7 +372,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _CampMenuSystemItemColor3 = new ConfigColor(0xFF, 0xBA, 0x67, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _CampMenuSystemItemColorNoSel = new ConfigColor(0xFF, 0xB2, 0x9E, 0xFF);
+    private ConfigColor _CampMenuSystemItemColorNoSel = new ConfigColor(0xF4, 0x84, 0x99, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _CampSkillTextColor = new ConfigColor(0xFF, 0xE7, 0xAD, 0xFF);
