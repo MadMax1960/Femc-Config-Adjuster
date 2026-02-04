@@ -1,6 +1,6 @@
 ﻿using FemcConfig.Library.Config.Options;
 
-namespace FemcConfig.Library.Config.Sections;
+namespace FemcConfig.Library.Config.Sections.Music;
 
 public class AdvantageMusicSection : ISection
 {
@@ -14,7 +14,7 @@ public class AdvantageMusicSection : ISection
     /// <summary>
     /// Section category, such as 2D, 3D, Audio, etc.
     /// </summary>
-    public SectionCategory Category { get; } = SectionCategory.Audio;
+    public SectionCategory Category { get; } = SectionCategory.Music;
 
     /// <summary>
     /// Contains all the options that appear in the section.
@@ -27,7 +27,7 @@ public class AdvantageMusicSection : ISection
         var ctx = app.GetContext();
 
         // Set all the options available.
-        this.Options =
+        Options =
         [
             // Example for a bool setting.
            new ModOption(ctx)

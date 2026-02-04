@@ -401,4 +401,7 @@
   <data name="AnimationsDesc" xml:space="preserve">
     <value>从几个动画中选择。 注意如果开启skeleton fix 的话会导致一些动画异常，例如菜单动画。</value>
   </data>
+  <data name="Music" xml:space="preserve">
+    <value />
+  </data>
 </root>

@@ -1,5 +1,5 @@
 ﻿using FemcConfig.Library.Config.Options;
-namespace FemcConfig.Library.Config.Sections.Audio.Music;
+namespace FemcConfig.Library.Config.Sections.Audio;
 
 public class KotoneVoice : ISection
 {
@@ -14,7 +14,7 @@ public class KotoneVoice : ISection
     public KotoneVoice(AppService app)
     {
         var ctx = app.GetContext();
-        this.Options =
+        Options =
         [
             new ModOption(ctx)
             {

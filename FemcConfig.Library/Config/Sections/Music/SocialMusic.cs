@@ -1,5 +1,5 @@
 ﻿using FemcConfig.Library.Config.Options;
-namespace FemcConfig.Library.Config.Sections.Audio.Music;
+namespace FemcConfig.Library.Config.Sections.Music;
 
 public class SocialMusic : ISection
 {
@@ -7,14 +7,14 @@ public class SocialMusic : ISection
 
     public string Description { get; } = Localisation.LocalisationResources.Resources.SocialDesc;
 
-    public SectionCategory Category { get; } = SectionCategory.Audio;
+    public SectionCategory Category { get; } = SectionCategory.Music;
 
     public ModOption[] Options { get; }
 
     public SocialMusic(AppService app)
     {
         var ctx = app.GetContext();
-        this.Options =
+        Options =
         [
             new ModOption(ctx)
             {

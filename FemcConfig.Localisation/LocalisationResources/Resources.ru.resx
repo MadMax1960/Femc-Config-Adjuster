@@ -399,4 +399,7 @@
   <data name="AnimationsDesc" xml:space="preserve">
     <value>Выбор между несколькими анимациями. Некоторые анимации могут отображаться некорректно, если исправление скелета включено. Например, анимация меню.</value>
   </data>
+  <data name="Music" xml:space="preserve">
+    <value />
+  </data>
 </root>
