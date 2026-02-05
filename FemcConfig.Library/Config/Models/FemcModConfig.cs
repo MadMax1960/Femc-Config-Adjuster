@@ -2063,6 +2063,19 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _TownMapHighlightedArrows = new ConfigColor(0x00, 0xD8, 0xFF, 0xFF);
 
+    /*
+    [ObservableProperty]
+    private ConfigColor _BtlGuiTotalDamageColor = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlGuiTotalDamageNumberDropshadowColor1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    */
+    [ObservableProperty]
+    private ConfigColor _BtlGuiTotalDamageNumberDropshadowColor2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlStupidCircleBehind = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
     [Category("UI Components")]
     [DefaultValue(true)]
     [ObservableProperty]
