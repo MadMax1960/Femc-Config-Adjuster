@@ -2076,6 +2076,9 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _BtlStupidCircleBehind = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
 
+    [ObservableProperty]
+    private ConfigColor _BtlTheurgyArrows = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+
     [Category("UI Components")]
     [DefaultValue(true)]
     [ObservableProperty]
