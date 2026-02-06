@@ -161,6 +161,12 @@ public partial class FemcModConfig : ObservableObject
     private bool moon = true;
 
     [Category("Music")]
+    [Description("Enable A Way of Life (Restless Artist).\nMultiple songs can be chosen for randomization!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool restlessWayofLife = true;
+
+    [Category("Music")]
     [Description("Enable Way of Life by Super M Plush, Mosq, Karma, and Cora as the daytime music?")]
     [DefaultValue(false)]
     [ObservableProperty]
@@ -267,6 +273,18 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(true)]
     [ObservableProperty]
     private bool bMD = true;
+
+    [Category("Music")]
+    [Description("Enable Wiping All Out Remix by Restless Artist as normal battle music.\nMultiple songs can be chosen for randomization!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool restlessNom = true;
+
+    [Category("Music")]
+    [Description("Enable Restless Artist's Danger Zone Tartarus boss battle music.\nMultiple songs can be chosen for randomization!")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool restlessDis = true;
 
     [Category("Voice")]
     [Description("Enable Gio's Gendered Audio?")]

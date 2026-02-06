@@ -76,4 +76,5 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Milky = new("Milky", Url: "https://bsky.app/profile/judyhelloworld.bsky.social");
     public static readonly Author Lantana = new("Lantana", Url: "https://x.com/LantanaVA");
     public static readonly Author Mellodi = new("Mellodi", Url: "https://x.com/RealMelodyHope");
+    public static readonly Author RestlessArtist = new("RestlessArtist", Url: "https://x.com/RealMelodyHope"); // fix credits here
 };

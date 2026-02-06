@@ -103,6 +103,19 @@ public class NormalMusicSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.P3MidNomF = true,
                 Disable = (ctx) => ctx.FemcConfig.Settings.P3MidNomF = false,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.P3MidNomF,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_restless_wao",
+                Name = "Pull the Trigger (RestlessArtist Remix)",
+                Authors = [Author.RestlessArtist],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.RestlessNom = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.RestlessNom = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.RestlessNom,
             }
         ];
     }
