@@ -183,6 +183,9 @@
   <data name="Gendered Audio" xml:space="preserve">
     <value>音频“他”改“她”</value>
   </data>
+  <data name="Kotone Voice" xml:space="preserve">
+    <value>哈姆子配音</value>
+  </data>
   <data name="Glass Shard" xml:space="preserve">
     <value>玻璃碴立绘</value>
   </data>
@@ -397,5 +400,8 @@
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
     <value>从几个动画中选择。 注意如果开启skeleton fix 的话会导致一些动画异常，例如菜单动画。</value>
+  </data>
+  <data name="Music" xml:space="preserve">
+    <value />
   </data>
 </root>

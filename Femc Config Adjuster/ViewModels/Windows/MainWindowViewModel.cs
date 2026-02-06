@@ -65,6 +65,13 @@ public partial class MainWindowViewModel : ObservableObject
             ToolTip = Resources.Audio
         },
         new NavigationViewItem()
+        {
+            Content = Resources.Music,
+            Icon = new SymbolIcon { Symbol = SymbolRegular.Speaker216 },
+            TargetPageType = typeof(Views.Pages.Categories.Category_Music),
+            ToolTip = Resources.Music
+        },
+        new NavigationViewItem()
 		{
             Content = Resources.Theo,
             Icon = new SymbolIcon { Symbol = SymbolRegular.PlayingCards20 },

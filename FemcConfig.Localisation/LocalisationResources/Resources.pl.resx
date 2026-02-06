@@ -183,6 +183,9 @@
   <data name="Gendered Audio" xml:space="preserve">
     <value>Audio z podziałem na płeć</value>
   </data>
+  <data name="Kotone Voice" xml:space="preserve">
+    <value>Kotone Audio</value>
+  </data>
   <data name="Glass Shard" xml:space="preserve">
     <value>Odłamek szkła</value>
   </data>
@@ -395,5 +398,8 @@
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
     <value>Wybierz jedną z animacji. Pamiętaj, że niektóre niestandardowe animacje mogą wyglądać nie poprawnie, jeżeli włączony zostanie Skeleton Fix, na przykład animacje w menu.</value>
+  </data>
+  <data name="Music" xml:space="preserve">
+    <value />
   </data>
 </root>

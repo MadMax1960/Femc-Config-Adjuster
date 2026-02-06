@@ -1,5 +1,5 @@
 ﻿using FemcConfig.Library.Config.Options;
-namespace FemcConfig.Library.Config.Sections.Audio.Music;
+namespace FemcConfig.Library.Config.Sections.Music;
 
 public class DayInMusic_2 : ISection
 {
@@ -7,14 +7,14 @@ public class DayInMusic_2 : ISection
 
     public string Description { get; } = Localisation.LocalisationResources.Resources.DayInMusic2Desc;
 
-    public SectionCategory Category { get; } = SectionCategory.Audio;
+    public SectionCategory Category { get; } = SectionCategory.Music;
 
     public ModOption[] Options { get; }
 
     public DayInMusic_2(AppService app)
     {
         var ctx = app.GetContext();
-        this.Options =
+        Options =
         [
             new ModOption(ctx)
             {

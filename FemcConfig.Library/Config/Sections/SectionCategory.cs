@@ -7,6 +7,7 @@ public enum SectionCategory
     TwoD,
     ThreeD,
     Audio,
+    Music,
     Theo,
     UI,
     Misc,

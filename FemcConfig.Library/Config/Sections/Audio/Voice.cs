@@ -1,5 +1,5 @@
 ﻿using FemcConfig.Library.Config.Options;
-namespace FemcConfig.Library.Config.Sections.Audio.Music;
+namespace FemcConfig.Library.Config.Sections.Audio;
 
 public class Voice : ISection
 {
@@ -14,7 +14,7 @@ public class Voice : ISection
     public Voice(AppService app)
     {
         var ctx = app.GetContext();
-        this.Options =
+        Options =
         [
             new ModOption(ctx)
             {
