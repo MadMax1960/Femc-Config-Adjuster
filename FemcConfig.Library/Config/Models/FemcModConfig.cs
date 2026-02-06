@@ -300,7 +300,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _DateTimePanelBottomTextColor = new ConfigColor(0xFF, 0xD6, 0xAE, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _DateTimePanelBottomColor = new ConfigColor(0xFF, 0xA2, 0x97, 0xFF);
+    private ConfigColor _DateTimePanelBottomColor = new ConfigColor(0xFF, 0x8B, 0x8B, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _DateTimePanelWaterColor = new ConfigColor(0xFF, 0x5C, 0x94, 0xFF);
@@ -360,7 +360,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _CampMenuItemColor3 = new ConfigColor(0xFF, 0xBA, 0x67, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _CampMenuItemColorNoSel = new ConfigColor(0xF4, 0x84, 0x99, 0xFF);
+    private ConfigColor _CampMenuItemColorNoSel = new ConfigColor(0xFF, 0xB2, 0x9E, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _CampMenuSystemItemColor1 = new ConfigColor(0xFD, 0xDF, 0xA1, 0xFF);
@@ -372,7 +372,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _CampMenuSystemItemColor3 = new ConfigColor(0xFF, 0xBA, 0x67, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _CampMenuSystemItemColorNoSel = new ConfigColor(0xF4, 0x84, 0x99, 0xFF);
+    private ConfigColor _CampMenuSystemItemColorNoSel = new ConfigColor(0xFF, 0xB2, 0x9E, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _CampSkillTextColor = new ConfigColor(0xFF, 0xE7, 0xAD, 0xFF);
@@ -1677,7 +1677,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _BtlItemList1 = new ConfigColor(0xFF, 0x00, 0x00, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlItemList2 = new ConfigColor(0xFF, 0xFB, 0x00, 0xFF);
+    private ConfigColor _BtlItemList2 = new ConfigColor(0x00, 0xFF, 0x04, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _BtlItemList3 = new ConfigColor(0xB6, 0x19, 0x52, 0xFF);
@@ -1888,7 +1888,7 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _BtlTheurgyPersonalityCircleDescription = new ConfigColor(0x85, 0x3D, 0x52, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyUnk15 = new ConfigColor(0x17, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyUnk15 = new ConfigColor(0x00, 0xD6, 0xFF, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _BtlTheurgyModelColour2 = new ConfigColor(0xCC, 0x22, 0x60, 0xFF);
@@ -1913,13 +1913,13 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _EditQuestFillColor = new ConfigColor(0xE5, 0x5E, 0x84, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _EditCommuFillColor = new ConfigColor(0xE5, 0x5E, 0x84, 0xFF);
+    private ConfigColor _EditCommuFillColor = new ConfigColor(0xFF, 0x93, 0xB2, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _EditSystemFillColor = new ConfigColor(0xE5, 0x5E, 0x84, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _EditConfigFillColor = new ConfigColor(0x66, 0x28, 0x4F, 0xFF);
+    private ConfigColor _EditConfigFillColor = new ConfigColor(0x81, 0x2C, 0x61, 0xFF);
 
     [ObservableProperty]
     private ConfigColor _BustupUniverseAmbientColor = new ConfigColor(0xFF, 0x7C, 0xB5, 0xFF);
@@ -2071,13 +2071,13 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _BtlGuiTotalDamageNumberDropshadowColor1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
     */
     [ObservableProperty]
-    private ConfigColor _BtlGuiTotalDamageNumberDropshadowColor2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlGuiTotalDamageNumberDropshadowColor2 = new ConfigColor(0x28, 0x02, 0x1B, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlStupidCircleBehind = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlStupidCircleBehind = new ConfigColor(0xEC, 0x4F, 0x85, 0xFF);
 
     [ObservableProperty]
-    private ConfigColor _BtlTheurgyArrows = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    private ConfigColor _BtlTheurgyArrows = new ConfigColor(0x00, 0xD6, 0xFF, 0xFF);
 
     [Category("UI Components")]
     [DefaultValue(true)]
