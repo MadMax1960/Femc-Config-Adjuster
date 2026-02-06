@@ -111,6 +111,19 @@ public class DisadvantageMusicSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EdDis,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_restless_dz",
+                Name = "Danger Zone (RestlessArtist Remix)",
+                Authors = [Author.RestlessArtist],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.RestlessDis = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.RestlessDis = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.RestlessDis,
             }
         ];
     }
