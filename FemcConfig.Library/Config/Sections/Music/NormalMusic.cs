@@ -107,7 +107,7 @@ public class NormalMusicSection : ISection
             new ModOption(ctx)
             {
                 InternalName = "music_restless_wao",
-                Name = "Pull the Trigger (RestlessArtist Remix)",
+                Name = "Wiping All Out (RestlessArtist Remix)",
                 Authors = [Author.RestlessArtist],
 
                 // When option is enabled set the bool setting to true.
