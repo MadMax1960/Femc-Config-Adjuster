@@ -2079,6 +2079,10 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _BtlTheurgyArrows = new ConfigColor(0x00, 0xD6, 0xFF, 0xFF);
 
+    [ObservableProperty]
+    private ConfigColor _SaveLoadScrollBar = new ConfigColor(0x69, 0x03, 0x36, 0xFF);
+
+
     [Category("UI Components")]
     [DefaultValue(true)]
     [ObservableProperty]
