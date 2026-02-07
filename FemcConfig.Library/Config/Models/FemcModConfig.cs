@@ -2100,6 +2100,18 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ConfigColor _SaveLoadScrollBar = new ConfigColor(0x69, 0x03, 0x36, 0xFF);
 
+    [ObservableProperty]
+    private ConfigColor _MsgAssistSupportFontColor = new ConfigColor(0xEA, 0x17, 0x5D, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _MsgWindowSystemNetworkBgColor = new ConfigColor(0xC9, 0x00, 0x54, 0xff);
+
+    [ObservableProperty]
+    private ConfigColor _NetworkDailyActionSecondBlueBgColor = new ConfigColor(0x2E, 0x10, 0x1C, 0xE5);
+
+    [ObservableProperty]
+    private ConfigColor _MusicNotesBgColor = new ConfigColor(0xFF, 0x1F, 0x75, 0xFF);
+
 
     [Category("UI Components")]
     [DefaultValue(true)]
