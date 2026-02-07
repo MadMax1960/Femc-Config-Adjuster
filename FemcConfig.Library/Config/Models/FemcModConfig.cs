@@ -2113,6 +2113,21 @@ public partial class FemcModConfig : ObservableObject
     private ConfigColor _MusicNotesBgColor = new ConfigColor(0xFF, 0x1F, 0x75, 0xFF);
 
 
+    [ObservableProperty]
+    private ConfigColor _BtlStrategyInstructAccent = new ConfigColor(0xFF, 0xD3, 0x99, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlStrategyInstructColor1 = new ConfigColor(0xB3, 0x18, 0x51, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlStrategyInstructColor2 = new ConfigColor(0xB3, 0x18, 0x51, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlStrategyInstructColor3 = new ConfigColor(0x66, 0x05, 0x39, 0xFF);
+
+    [ObservableProperty]
+    private ConfigColor _BtlStrategyInstructColorHighlight = new ConfigColor(0x00, 0xC2, 0xFF, 0xFF);
+
     [Category("UI Components")]
     [DefaultValue(true)]
     [ObservableProperty]
