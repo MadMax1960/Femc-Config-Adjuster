@@ -4,7 +4,7 @@ public class EnabledAddonsSection : ISection
 {
     public string Name { get; } = Localisation.LocalisationResources.Resources.Addons;
     public string Description { get; } = Localisation.LocalisationResources.Resources.AddonDesc;
-    public SectionCategory Category { get; } = SectionCategory.MainPage;
+    public SectionCategory Category { get; } = SectionCategory.Disabled;
     public ModOption[] Options { get; }
     public EnabledAddonsSection(AppService app)
     {
