@@ -13,29 +13,14 @@ internal class PreviewWindowViewModel
         this.ImagePath = ResourceUtils.GetOptionImagePath(option, true);
         this.YoutubeUrl = ResourceUtils.GetOptionYoutubeUrl(option);
         this.Category = option.Category;
-        if (!string.IsNullOrEmpty(this.YoutubeUrl) && 
-    Environment.OSVersion.Platform == PlatformID.Win32NT)
-{
-    if (Uri.TryCreate(this.YoutubeUrl, UriKind.Absolute, out var uri))
-    {
-        string? youtubeId = null;
-        if (uri.Host.Contains("youtube.com", StringComparison.OrdinalIgnoreCase))
+        if (!string.IsNullOrEmpty(this.YoutubeUrl) &&
+            Environment.OSVersion.Platform == PlatformID.Win32NT)
         {
-            var query = System.Web.HttpUtility.ParseQueryString(uri.Query);
-            youtubeId = query["v"];
-        }
-        else if (uri.Host.Contains("youtu.be", StringComparison.OrdinalIgnoreCase))
-        {
-            youtubeId = uri.AbsolutePath.Trim('/'); 
-        }
-
-        if (!string.IsNullOrEmpty(youtubeId))
-        {
-            this.YoutubeEmbedUrl = $"https://www.youtube.com/embed/{youtubeId}";
+            // Direct workaround: Load the actual YouTube video page instead of the embed player.
+            // This bypasses the "Error 153" restriction by treating the view like a standard browser.
+            this.YoutubeEmbedUrl = this.YoutubeUrl;
             this.UseWebView = true;
         }
-    }
-}
     }
 
     public ModOption Option { get; }
