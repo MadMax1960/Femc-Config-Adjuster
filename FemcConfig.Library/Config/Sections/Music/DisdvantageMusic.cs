@@ -101,19 +101,6 @@ public class DisadvantageMusicSection : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "music_eidie_dz",
-                Name = "Danger Zone (EidieK87 Remix)",
-                Authors = [Author.EidieK87],
-
-                // When option is enabled set the bool setting to true.
-                Enable = (ctx) => ctx.FemcConfig.Settings.EdDis = true,
-                Disable = (ctx) => ctx.FemcConfig.Settings.EdDis = false,
-
-                // Simpler than enums, just get the current bool value.
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EdDis,
-            },
-            new ModOption(ctx)
-            {
                 InternalName = "music_restless_dz",
                 Name = "Danger Zone (RestlessArtist Remix)",
                 Authors = [Author.RestlessArtist],

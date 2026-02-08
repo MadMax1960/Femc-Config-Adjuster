@@ -31,9 +31,9 @@ namespace FemcConfig.Library.Config.Sections.Misc
                     InternalName = "fun_stuff_dorm",
                     Name = "Test Dorm Room Swap and Hot Spring Event",
                     Authors = [Author.Femc],
-                    Enable = (ctx) => ctx.FemcConfig.Settings.TesticlesEventDorm = true,
-                    Disable = (ctx) => ctx.FemcConfig.Settings.TesticlesEventDorm = false,
-                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TesticlesEventDorm,
+                    Enable = (ctx) => ctx.FemcConfig.Settings.TesticlesEventsDorm = true,
+                    Disable = (ctx) => ctx.FemcConfig.Settings.TesticlesEventsDorm = false,
+                    IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.TesticlesEventsDorm,
                 },
                 new ModOption(ctx)
                 {
