@@ -923,7 +923,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _StatsShadowColor = new ConfigColor(0x66, 0x08, 0x29, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailTitleAndGekkoukanDark = new ConfigColor(0x2B, 0x1E, 0x22, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailMainBackground = new ConfigColor(0x46, 0x3D, 0x40, 0xFF);
-    [ObservableProperty] private ConfigColor _CmmuStatusStrip = new ConfigColor(0x9F, 0x00, 0x4B, 0xFF);
+    [ObservableProperty] private ConfigColor _CmmuStatusStrip = new ConfigColor(0x99, 0x1B, 0x88, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailBigShard = new ConfigColor(0x87, 0x6F, 0x7B, 0xFF);
     [ObservableProperty] private ConfigColor _SocialStatsTriangle = new ConfigColor(0x30, 0x22, 0x29, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailTagColors = new ConfigColor(0x4D, 0x34, 0x3D, 0xFF);
