@@ -267,7 +267,7 @@ public partial class FemcModConfig : ObservableObject
     private bool moon = true;
 
     [Category("Daytime Music")]
-    [DefaultValue(true)]
+    [DefaultValue(false)]
     [ObservableProperty]
     private bool restlessWayofLife = false;
 
