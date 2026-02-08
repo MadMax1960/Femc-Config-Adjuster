@@ -664,6 +664,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to FEMC&apos;s weapon.
+        /// </summary>
+        public static string Naginata {
+            get {
+                return ResourceManager.GetString("Naginata", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Change FEMC&apos;s weapons from 1h swords to naginatas..
+        /// </summary>
+        public static string NaginataDesc {
+            get {
+                return ResourceManager.GetString("NaginataDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Night Outside Music.
         /// </summary>
         public static string Night_Outside_Music {

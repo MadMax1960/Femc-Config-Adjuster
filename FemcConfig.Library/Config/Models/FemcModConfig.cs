@@ -267,9 +267,9 @@ public partial class FemcModConfig : ObservableObject
     private bool moon = true;
 
     [Category("Daytime Music")]
-    [DefaultValue(true)]
+    [DefaultValue(false)]
     [ObservableProperty]
-    private bool restlessWayofLife = true;
+    private bool restlessWayofLife = false;
 
     // --- School Music (1st semester) ---
     [Category("School Music (1st semester)")]
@@ -588,7 +588,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _BackLogTitleColor = new ConfigColor(0xFF, 0x4A, 0x88, 0xFF);
     [ObservableProperty] private ConfigColor _BackLogTexColorSelected = new ConfigColor(0xFF, 0x89, 0xA6, 0xFF);
     [ObservableProperty] private ConfigColor _BackLogTexColorUnselectedEx = new ConfigColor(0xB6, 0x3F, 0x67, 0xFF);
-    [ObservableProperty] private ConfigColor _LocationSelectBgColor = new ConfigColor(0xFF, 0x58, 0x9F, 0xFF);
+    [ObservableProperty] private ConfigColor _LocationSelectBgColor = new ConfigColor(0x95, 0x21, 0x52, 0xFF);
     [ObservableProperty] private ConfigColor _LocationSelectMarkerColor = new ConfigColor(0xFF, 0x4A, 0x94, 0xFF);
     [ObservableProperty] private ConfigColor _LocationSelectSelColor = new ConfigColor(0xFF, 0x58, 0x95, 0xFF);
     [ObservableProperty] private ConfigColor _TimeSkipColor = new ConfigColor(0xFF, 0x58, 0x8A, 0xFF);
@@ -923,7 +923,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _StatsShadowColor = new ConfigColor(0x66, 0x08, 0x29, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailTitleAndGekkoukanDark = new ConfigColor(0x2B, 0x1E, 0x22, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailMainBackground = new ConfigColor(0x46, 0x3D, 0x40, 0xFF);
-    [ObservableProperty] private ConfigColor _CmmuStatusStrip = new ConfigColor(0x9F, 0x00, 0x4B, 0xFF);
+    [ObservableProperty] private ConfigColor _CmmuStatusStrip = new ConfigColor(0x99, 0x1B, 0x88, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailBigShard = new ConfigColor(0x87, 0x6F, 0x7B, 0xFF);
     [ObservableProperty] private ConfigColor _SocialStatsTriangle = new ConfigColor(0x30, 0x22, 0x29, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailTagColors = new ConfigColor(0x4D, 0x34, 0x3D, 0xFF);
@@ -952,7 +952,8 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CampConfigTopDescColor = new ConfigColor(0xFF, 0xFC, 0x9F, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigBgColor = new ConfigColor(0x55, 0x1E, 0x3F, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigPlistHeadColor = new ConfigColor(0xE2, 0x41, 0x89, 0xFF);
-    [ObservableProperty] private ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0xB6, 0x3F, 0x68, 0xFF);
+    [ObservableProperty] private ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
+    [ObservableProperty] private ConfigColor _EquipPMUnavailableColor = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
     [ObservableProperty] private ConfigColor _CampRootHighlightedColor1 = new ConfigColor(0x00, 0xF9, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _CampRootHighlightedColor2 = new ConfigColor(0x00, 0xD2, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadHighlightedOption = new ConfigColor(0x00, 0xF0, 0xFF, 0xFF);
