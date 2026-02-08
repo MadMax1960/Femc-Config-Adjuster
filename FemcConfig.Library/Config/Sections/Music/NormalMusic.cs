@@ -116,6 +116,19 @@ public class NormalMusicSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.RestlessNom,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_eidiek87_wao",
+                Name = "Wiping All Out (EidieK87's Remix)",
+                Authors = [Author.EidieK87],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.EidNom = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.EidNom = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EidNom,
             }
         ];
     }

@@ -75,6 +75,18 @@ public class NightMusic_1 : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ColNight,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_mosq_moonlight",
+                Name = "Moonlight",
+                Authors = [Author.Mosq],
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.EsaComm = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.EsaComm = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EsaComm,
             }
         ];
     }
