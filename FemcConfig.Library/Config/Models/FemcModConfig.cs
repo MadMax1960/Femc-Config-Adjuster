@@ -952,7 +952,8 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CampConfigTopDescColor = new ConfigColor(0xFF, 0xFC, 0x9F, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigBgColor = new ConfigColor(0x55, 0x1E, 0x3F, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigPlistHeadColor = new ConfigColor(0xE2, 0x41, 0x89, 0xFF);
-    [ObservableProperty] private ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0xB6, 0x3F, 0x68, 0xFF);
+    [ObservableProperty] private ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
+    [ObservableProperty] private ConfigColor _EquipPMUnavailableColor = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
     [ObservableProperty] private ConfigColor _CampRootHighlightedColor1 = new ConfigColor(0x00, 0xF9, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _CampRootHighlightedColor2 = new ConfigColor(0x00, 0xD2, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadHighlightedOption = new ConfigColor(0x00, 0xF0, 0xFF, 0xFF);

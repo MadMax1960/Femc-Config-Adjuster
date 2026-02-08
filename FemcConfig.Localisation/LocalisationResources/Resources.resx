@@ -297,6 +297,12 @@
   <data name="DayInMusic1Desc" xml:space="preserve">
     <value>Music used inside of school between April and August. Multiple songs can be chosen for randomisation!</value>
   </data>
+  <data name="NaginataDesc" xml:space="preserve">
+    <value>Change FEMC's weapons from 1h swords to naginatas.</value>
+  </data>
+  <data name="Naginata" xml:space="preserve">
+    <value>FEMC's weapon</value>
+  </data>
   <data name="DayInMusic2Desc" xml:space="preserve">
     <value>Music used inside of school between September and December. Multiple songs can be chosen for randomisation!</value>
   </data>
