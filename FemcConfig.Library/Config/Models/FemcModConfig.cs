@@ -588,7 +588,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _BackLogTitleColor = new ConfigColor(0xFF, 0x4A, 0x88, 0xFF);
     [ObservableProperty] private ConfigColor _BackLogTexColorSelected = new ConfigColor(0xFF, 0x89, 0xA6, 0xFF);
     [ObservableProperty] private ConfigColor _BackLogTexColorUnselectedEx = new ConfigColor(0xB6, 0x3F, 0x67, 0xFF);
-    [ObservableProperty] private ConfigColor _LocationSelectBgColor = new ConfigColor(0xFF, 0x58, 0x9F, 0xFF);
+    [ObservableProperty] private ConfigColor _LocationSelectBgColor = new ConfigColor(0x95, 0x21, 0x52, 0xFF);
     [ObservableProperty] private ConfigColor _LocationSelectMarkerColor = new ConfigColor(0xFF, 0x4A, 0x94, 0xFF);
     [ObservableProperty] private ConfigColor _LocationSelectSelColor = new ConfigColor(0xFF, 0x58, 0x95, 0xFF);
     [ObservableProperty] private ConfigColor _TimeSkipColor = new ConfigColor(0xFF, 0x58, 0x8A, 0xFF);
