@@ -169,8 +169,12 @@ public partial class FemcModConfig : ObservableObject
     private bool p3MidNomF = false;
 
     [Category("Battle Music - Normal")]
-<<<<<<< Updated upstream
-=======
+    [Description("Enable EidieK87's Wiping All Out?")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool eidNom = false;
+
+    [Category("Battle Music - Normal")]
     [Description("Enable EidieK87's Wiping All Out?")]
     [DefaultValue(false)]
     [ObservableProperty]
@@ -178,7 +182,7 @@ public partial class FemcModConfig : ObservableObject
 
     [Category("Tartarus Boss Music")]
     [Description("Enable Stella and GillStudio's Danger Zone?")]
->>>>>>> Stashed changes
+
     [DefaultValue(false)]
     [ObservableProperty]
     private bool eidNom = false;
