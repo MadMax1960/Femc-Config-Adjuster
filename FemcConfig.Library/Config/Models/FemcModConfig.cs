@@ -169,20 +169,6 @@ public partial class FemcModConfig : ObservableObject
     private bool p3MidNomF = false;
 
     [Category("Battle Music - Normal")]
-    [Description("Enable EidieK87's Wiping All Out?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool eidNom = false;
-
-    [Category("Battle Music - Normal")]
-    [Description("Enable EidieK87's Wiping All Out?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool eidNom = false;
-
-    [Category("Tartarus Boss Music")]
-    [Description("Enable Stella and GillStudio's Danger Zone?")]
-
     [DefaultValue(false)]
     [ObservableProperty]
     private bool eidNom = false;
@@ -233,170 +219,8 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private bool masterTar = false;
 
-<<<<<<< Updated upstream
     // --- Special Boss Music ---
     [Category("Special Boss Music")]
-=======
-    [Category("Battle Music - Normal")]
-    [Description("Enable Atlus's Mass Destruction -Reload-?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool massDes = true;
-
-    [Category("Music")]
-    [Description("Enable Color Your Night as the night music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool colNight = true;
-
-
-    [Category("Music")]
-    [Description("Enable Moonlight by MOSQ as the night music?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool esaComm = true;
-
-    [Category("Music")]
-    [Description("Enable Midnight Reverie as the night music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool midNight = true;
-
-    [Category("Music")]
-    [Description("Enable Time (Night Version) by Mosq as the night music?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool femNight = true;
-
-    [Category("Music")]
-    [Description("Enable Time (Night Version GabiShy Remix) as the night music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool gabiFemNight = true;
-
-    [Category("Music")]
-    [Description("Enable Night Wanderer as the night music?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool nightWand = true;
-
-    [Category("Music")]
-    [Description("Enable When the Moon's Reaching Out Stars as the daytime music?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool moon = true;
-
-    [Category("Music")]
-    [Description("Enable A Way of Life (Restless Artist).\nMultiple songs can be chosen for randomization!")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool restlessWayofLife = true;
-
-    [Category("Music")]
-    [Description("Enable Way of Life by Super M Plush, Mosq, Karma, and Cora as the daytime music?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool wayLifeVocal = true;
-
-    [Category("Music")]
-    [Description("Enable Way of Life by Mosq as the daytime music?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool wayOfLife = true;
-
-    [Category("Music")]
-    [Description("Enable Way of Life as the daytime music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool wayOfLifeP3P = true;
-
-    [Category("Music")]
-    [Description("Enable Way of Life -Deep inside my mind Remix- as the daytime music?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool wayOfLifeRemix = true;
-
-    [Category("Music")]
-    [Description("Enable Want to Be Close -Reload- as the daytime music inside the school (Phase 1)?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool wantClose = true;
-
-    [Category("Music")]
-    [Description("Enable Time by Mosq as the daytime music inside the school?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool timeSchool = true;
-
-    [Category("Music")]
-    [Description("Enable Time -Reload- by GabiShy and Mosq as the daytime music inside the school?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool gabiTimeSchool = true;
-
-    [Category("School Music (1st semester)")]
-    [Description("Enable Time ATLUS Kitajoh Remix from P3D as the 1st semester school music.\nMultiple songs can be chosen for randomization!")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool timeSchoolP3D = true;
-
-    [Category("Music")]
-    [Description("Enable Time as the daytime music inside the school?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool timeSchoolP3P = true;
-
-    [Category("Music")]
-    [Description("Enable Joy to be the music played during social link events?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool joy = true;
-
-    [Category("Music")]
-    [Description("Enable Mosq's After School to be the music played during social link events?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool afterSchool = true;
-
-    [Category("Music")]
-    [Description("Enable After School (P3P) to be the music played during social link events?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool afterSchoolP3P = true;
-
-    [Category("Music")]
-    [Description("Enable Changing Seasons as the daytime music inside the school?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool seasons = true;
-
-    [Category("Music")]
-    [Description("Enable Sun by Mosq as the daytime music inside the school?")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool sun = true;
-
-    [Category("Music")]
-    [Description("Enable Sun by MineFormer as the daytime music inside the school?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool sunMForm = true;
-
-    [Category("Music")]
-    [Description("Enable Sun as the daytime music inside the school?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool sunP3P = true;
-
-    [Category("Music")]
-    [Description("Enable Soul Phrase as the music played during the battle with Nyx?")]
-    [DefaultValue(false)]
-    [ObservableProperty]
-    private bool soulPK = true;
-
-    [Category("Music")]
-    [Description("Enable Burn My Dread as the music played during the battle with Nyx?")]
->>>>>>> Stashed changes
     [DefaultValue(true)]
     [ObservableProperty]
     private bool bMD = true;
@@ -445,7 +269,7 @@ public partial class FemcModConfig : ObservableObject
     [Category("Daytime Music")]
     [DefaultValue(true)]
     [ObservableProperty]
-    private bool restlessWayofLife = true;
+    private bool restlessWayofLife = false;
 
     // --- School Music (1st semester) ---
     [Category("School Music (1st semester)")]
