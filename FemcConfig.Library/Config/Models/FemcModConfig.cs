@@ -526,7 +526,6 @@ public partial class FemcModConfig : ObservableObject
     private bool _EnableGuidance = true;
 
     // --- UI Colors ---
-    [ObservableProperty] private ConfigColor _MailIconOuterCircleColorEx = new ConfigColor(0x90, 0x21, 0x4D, 0xAF);
     [ObservableProperty] private ConfigColor _MailIconInnerCircleColorEx = new ConfigColor(0xFF, 0x5C, 0x94, 0xFF);
     [ObservableProperty] private ConfigColor _CampHighColor = new ConfigColor(0xFF, 0x9B, 0xCE, 0xFF);
     [ObservableProperty] private ConfigColor _CampHighColorGradation = new ConfigColor(0xE3, 0x96, 0xB9, 0xFF);
@@ -545,6 +544,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _TextBoxLeftHaze = new ConfigColor(0x79, 0x07, 0x2A, 0xFF);
     [ObservableProperty] private ConfigColor _MindWindowOuterBorderNew = new ConfigColor(0xBE, 0x1C, 0x53, 0xFF);
     [ObservableProperty] private ConfigColor _MindWindowInnerColorNew = new ConfigColor(0x39, 0x03, 0x21, 0xFF);
+    [ObservableProperty] private ConfigColor _MindWindowOuterHazeEx = new ConfigColor(0xFF, 0x89, 0xA6, 0x80);
     [ObservableProperty] private ConfigColor _MindWindowBgDotsNew = new ConfigColor(0xA6, 0x06, 0x52, 0xFF);
     [ObservableProperty] private ConfigColor _MinimapPlaceNameBgColor = new ConfigColor(0x73, 0x18, 0x3C, 0xF5);
     [ObservableProperty] private ConfigColor _CheckPromptBackBoxColorNew = new ConfigColor(0xFA, 0x50, 0x8B, 0xFF);
@@ -615,6 +615,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _GenericSelectTitle = new ConfigColor(0xFF, 0x58, 0x9F, 0xFF);
     [ObservableProperty] private ConfigColor _GenericSelectCharacterShadow = new ConfigColor(0xD4, 0x45, 0x80, 0xFF);
     [ObservableProperty] private ConfigColor _MsgSimpleSelectTextColor = new ConfigColor(0xFF, 0x58, 0x95, 0xFF);
+    [ObservableProperty] private ConfigColor _MsgSimpleSelectBoxShadow = new ConfigColor(0xB6, 0x3F, 0x67, 0xFF);
     [ObservableProperty] private ConfigColor _MsgSimpleSelectShadowEx = new ConfigColor(0x49, 0x04, 0x21, 0xFF);
     [ObservableProperty] private ConfigColor _MsgSimpleSelectBorderColorEx = new ConfigColor(0x49, 0x04, 0x21, 0xFF);
     [ObservableProperty] private ConfigColor _MsgSimpleFillColor = new ConfigColor(0xD4, 0x15, 0x5F, 0xFF);
@@ -805,6 +806,9 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _SaveLoadScreenshotFilterKeyframe2 = new ConfigColor(0xCC, 0x19, 0x6B, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadScreenshotFilterKeyframe3 = new ConfigColor(0xF2, 0x26, 0x86, 0xFF);
     [ObservableProperty] private ConfigColor _MailStartAnimationColor = new ConfigColor(0xC2, 0x00, 0x44, 0xFF);
+    [ObservableProperty] private ConfigColor _BattleResultLeftSquare = new ConfigColor(0x6E, 0x03, 0x0E, 0xFF);
+    [ObservableProperty] private ConfigColor _BattleResultLeftZeroFontColor = new ConfigColor(0xEB, 0x44, 0x7D, 0xFF);
+    [ObservableProperty] private ConfigColor _BattleResultFontColor = new ConfigColor(0xFD, 0x9B, 0xB7, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigurationLightReflectiveColor1 = new ConfigColor(0xFF, 0x2E, 0x70, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigurationLightReflectiveColor2 = new ConfigColor(0xFF, 0x60, 0x92, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadGradientBottomTopColor = new ConfigColor(0xB2, 0x22, 0x62, 0xFF);
@@ -920,7 +924,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _SkillGunColor = new ConfigColor(0xC5, 0x85, 0x85, 0xFF);
     [ObservableProperty] private ConfigColor _StatsGekkoukanDark = new ConfigColor(0x9C, 0x6B, 0x79, 0xFF);
     [ObservableProperty] private ConfigColor _StatsFontColor = new ConfigColor(0xB5, 0xB4, 0xB4, 0xFF);
-    [ObservableProperty] private ConfigColor _StatsShadowColor = new ConfigColor(0x66, 0x08, 0x29, 0xFF);
+    [ObservableProperty] private ConfigColor _StatsShadowsColor = new ConfigColor(0x66, 0x08, 0x29, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailTitleAndGekkoukanDark = new ConfigColor(0x2B, 0x1E, 0x22, 0xFF);
     [ObservableProperty] private ConfigColor _StatusDetailMainBackground = new ConfigColor(0x46, 0x3D, 0x40, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuStatusStrip = new ConfigColor(0x99, 0x1B, 0x88, 0xFF);
@@ -939,6 +943,10 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CalendarJobDetailFont = new ConfigColor(0xFF, 0xBD, 0xCE, 0xFF);
     [ObservableProperty] private ConfigColor _CampItemEffectBG = new ConfigColor(0xFF, 0xBD, 0xCE, 0xFF);
     [ObservableProperty] private ConfigColor _CampItemEffectFont = new ConfigColor(0x49, 0x04, 0x21, 0xFF);
+    [ObservableProperty] private ConfigColor _CampMenuSystemItemColor1 = new ConfigColor(0xFD, 0xDF, 0xA1, 0xFF);
+    [ObservableProperty] private ConfigColor _CampMenuSystemItemColor2 = new ConfigColor(0xFF, 0xD7, 0x9D, 0xFF);
+    [ObservableProperty] private ConfigColor _CampMenuSystemItemColor3 = new ConfigColor(0xFF, 0xBA, 0x67, 0xFF);
+    [ObservableProperty] private ConfigColor _CampMenuSystemItemColorNoSel = new ConfigColor(0xFF, 0xB2, 0x9E, 0xFF);
     [ObservableProperty] private ConfigColor _ShiftFromColor = new ConfigColor(0xFF, 0x05, 0x13, 0xFF);
     [ObservableProperty] private ConfigColor _ShiftToMiddleColor = new ConfigColor(0xFF, 0x17, 0x23, 0xFF);
     [ObservableProperty] private ConfigColor _ShiftToUpDownColor = new ConfigColor(0xFF, 0x5C, 0x49, 0xFF);
@@ -951,11 +959,13 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CampConfigMusicPlayerGlow = new ConfigColor(0xFF, 0xFC, 0x9F, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigTopDescColor = new ConfigColor(0xFF, 0xFC, 0x9F, 0xFF);
     [ObservableProperty] private ConfigColor _CampConfigBgColor = new ConfigColor(0x55, 0x1E, 0x3F, 0xFF);
+    [ObservableProperty] private ConfigColor _CampConfigUnk = new ConfigColor(0x8f, 0x65, 0x73, 0xff);
     [ObservableProperty] private ConfigColor _CampConfigPlistHeadColor = new ConfigColor(0xE2, 0x41, 0x89, 0xFF);
-    [ObservableProperty] private ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
     [ObservableProperty] private ConfigColor _EquipPMUnavailableColor = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
+    [ObservableProperty] private ConfigColor _EquipPMUnavailableParallelogram = new ConfigColor(0x63, 0x27, 0x3E, 0xFF);
     [ObservableProperty] private ConfigColor _CampRootHighlightedColor1 = new ConfigColor(0x00, 0xF9, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _CampRootHighlightedColor2 = new ConfigColor(0x00, 0xD2, 0xFF, 0xFF);
+    [ObservableProperty] private ConfigColor _PersonaStatusEquipBonusColor = new ConfigColor(0x00, 0xD8, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadHighlightedOption = new ConfigColor(0x00, 0xF0, 0xFF, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadAccentColor = new ConfigColor(0xF2, 0xC9, 0x95, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadSlotBox = new ConfigColor(0x48, 0x04, 0x2D, 0xFF);
@@ -963,7 +973,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _SaveLoadUnhighlightedNumber = new ConfigColor(0x5D, 0x0B, 0x34, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadSelectedSlotBox = new ConfigColor(0xF4, 0x3A, 0x75, 0xFF);
     [ObservableProperty] private ConfigColor _SaveLoadGrey = new ConfigColor(0x3F, 0x39, 0x39, 0xFF);
-    [ObservableProperty] private ConfigColor _PersonaStatusEquipBonusColor = new ConfigColor(0x00, 0xD8, 0xFF, 0xFF);
+    [ObservableProperty] private ConfigColor _SaveLoadScrollBar = new ConfigColor(0x69, 0x03, 0x36, 0xFF);
     [ObservableProperty] private ConfigColor _CampSystemCurveColor = new ConfigColor(0xAC, 0x27, 0xBF, 0xFF);
     [ObservableProperty] private ConfigColor _MsgSimpleSelectBgFill = new ConfigColor(0xB5, 0x3C, 0x66, 0xFF);
     [ObservableProperty] private ConfigColor _MsgSimpleSelectBgMainColor = new ConfigColor(0xFF, 0xAF, 0x00, 0xFF);
@@ -1099,20 +1109,21 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _AccessIconTalk01Color1 = new ConfigColor(0x7D, 0x06, 0x1F, 0xFF);
     [ObservableProperty] private ConfigColor _AccessIconTalk02Color1 = new ConfigColor(0x50, 0x00, 0x1B, 0xFF);
     [ObservableProperty] private ConfigColor _TownMapHighlightedArrows = new ConfigColor(0x00, 0xD8, 0xFF, 0xFF);
-    [ObservableProperty] private ConfigColor _GuidanceMainBGColor = new ConfigColor(0x48, 0x44, 0x46, 0xFF);
-    [ObservableProperty] private ConfigColor _GuidanceSquareColor = new ConfigColor(0x72, 0x6C, 0x6E, 0xFF);
-    [ObservableProperty] private ConfigColor _GuidanceExclamationGlowColor = new ConfigColor(0xFF, 0x00, 0x6A, 0xFF);
-    [ObservableProperty] private ConfigColor _GuidanceExclamationMainColor = new ConfigColor(0xFC, 0xBB, 0xD6, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameFirstGlowColor = new ConfigColor(0x8F, 0x00, 0x34, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameFirstFontColor = new ConfigColor(0xFF, 0x00, 0x62, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameFirstBGColor = new ConfigColor(0xFC, 0xF0, 0xF6, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGamePreSecondFontTint1 = new ConfigColor(0x97, 0x01, 0x38, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGamePreSecondFontTint2 = new ConfigColor(0xB7, 0x01, 0x4A, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameSecondGlowColor1 = new ConfigColor(0x9D, 0x3D, 0x62, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameSecondGlowColor2 = new ConfigColor(0xCD, 0x00, 0x4B, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameSecondFontGlowColor1 = new ConfigColor(0xFE, 0x55, 0x96, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameSecondFontGlowColor2 = new ConfigColor(0xFE, 0x14, 0x6E, 0xFF);
-    [ObservableProperty] private ConfigColor _EndGameSecondFontGlowColor3 = new ConfigColor(0xFF, 0x12, 0x75, 0xFF);
+    [ObservableProperty] private ConfigColor _CampSystemStartFadeColor = new ConfigColor(0x9f, 0x04, 0x38, 0xff);
+    [ObservableProperty] private ConfigColor _GuidanceMainBGColor = new ConfigColor(0x48, 0x44, 0x46, 0xff);
+    [ObservableProperty] private ConfigColor _GuidanceSquareColor = new ConfigColor(0x72, 0x6c, 0x6e, 0xff);
+    [ObservableProperty] private ConfigColor _GuidanceExclamationGlowColor = new ConfigColor(0xff, 0x00, 0x6a, 0xff);
+    [ObservableProperty] private ConfigColor _GuidanceExclamationMainColor = new ConfigColor(0xfc, 0xbb, 0xd6, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameFirstGlowColor = new ConfigColor(0x8f, 0x00, 0x34, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameFirstFontColor = new ConfigColor(0xff, 0x00, 0x62, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameFirstBGColor = new ConfigColor(0xfc, 0xf0, 0xf6, 0xff);
+    [ObservableProperty] private ConfigColor _EndGamePreSecondFontTint1 = new ConfigColor(0x97, 0x01, 0x38, 0xff);
+    [ObservableProperty] private ConfigColor _EndGamePreSecondFontTint2 = new ConfigColor(0xb7, 0x01, 0x4a, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameSecondGlowColor1 = new ConfigColor(0x9d, 0x3d, 0x62, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameSecondGlowColor2 = new ConfigColor(0xcd, 0x00, 0x4b, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameSecondFontGlowColor1 = new ConfigColor(0xfe, 0x55, 0x96, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameSecondFontGlowColor2 = new ConfigColor(0xfe, 0x14, 0x6e, 0xff);
+    [ObservableProperty] private ConfigColor _EndGameSecondFontGlowColor3 = new ConfigColor(0xff, 0x12, 0x75, 0xff);
     [ObservableProperty] private ConfigColor _DUISituationHelp1 = new ConfigColor(0xB8, 0x00, 0x55, 0xFF);
     [ObservableProperty] private ConfigColor _DUISituationHelp2 = new ConfigColor(0xCA, 0x24, 0x64, 0xFF);
     [ObservableProperty] private ConfigColor _DUISituationHelp3 = new ConfigColor(0x70, 0x26, 0x46, 0xFF);
@@ -1125,8 +1136,8 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _BtlGuiTotalDamageNumberDropshadowColor2 = new ConfigColor(0x28, 0x02, 0x1B, 0xFF);
     [ObservableProperty] private ConfigColor _BtlStupidCircleBehind = new ConfigColor(0xEC, 0x4F, 0x85, 0xFF);
     [ObservableProperty] private ConfigColor _BtlTheurgyArrows = new ConfigColor(0x00, 0xD6, 0xFF, 0xFF);
-    [ObservableProperty] private ConfigColor _MsgAssistSupportFontColor = new ConfigColor(0xEA, 0x17, 0x5D, 0xFF);
-    [ObservableProperty] private ConfigColor _MsgWindowSystemNetworkBgColor = new ConfigColor(0xC9, 0x00, 0x54, 0xFF);
+    [ObservableProperty] private ConfigColor _MsgAssistSupportFontColor = new ConfigColor(0xEA, 0x17, 0x5D, 0xff);
+    [ObservableProperty] private ConfigColor _MsgWindowSystemNetworkBgColor = new ConfigColor(0xC9, 0x00, 0x54, 0xff);
     [ObservableProperty] private ConfigColor _NetworkDailyActionSecondBlueBgColor = new ConfigColor(0x2E, 0x10, 0x1C, 0xE5);
     [ObservableProperty] private ConfigColor _MusicNotesBgColor = new ConfigColor(0xFF, 0x1F, 0x75, 0xFF);
     [ObservableProperty] private ConfigColor _BtlStrategyInstructAccent = new ConfigColor(0xFF, 0xD3, 0x99, 0xFF);
