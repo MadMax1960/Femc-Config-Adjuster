@@ -1,4 +1,5 @@
-﻿using Femc_Config_Adjuster.ViewModels.Pages;
+﻿using System.Windows;
+using Femc_Config_Adjuster.ViewModels.Pages;
 using FemcConfig.Library.Config;
 using System.Windows.Controls;
 

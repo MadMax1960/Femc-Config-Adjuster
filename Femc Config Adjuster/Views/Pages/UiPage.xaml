@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:converters="clr-namespace:Femc_Config_Adjuster.Helpers"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Pages"
+    xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Components"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
@@ -81,44 +81,7 @@
                 </ItemsControl.ItemsPanel>
                 <ItemsControl.ItemTemplate>
                     <DataTemplate>
-                        <Border
-                            Grid.Row="1"
-                            Grid.Column="1"
-                            Margin="8"
-                            Padding="8"
-                            Background="{DynamicResource SubtleFillColorSecondaryBrush}"
-                            CornerRadius="8">
-                            <StackPanel
-                                HorizontalAlignment="Center"
-                                VerticalAlignment="Center"
-                                Orientation="Horizontal">
-                                <TextBlock
-                                    Height="36"
-                                    VerticalAlignment="Bottom"
-                                    FontSize="14"
-                                    Text="{Binding Name}"
-                                    TextTrimming="CharacterEllipsis"
-                                    TextWrapping="NoWrap"
-                                    ToolTip="{Binding Name}" />
-                                <StackPanel 
-                                    Background="{Binding Color, Converter={StaticResource BrushToConfigColor}}"
-                                    Height="36"
-                                    Width="250"/>
-                                <TextBlock
-                                    VerticalAlignment="Center"
-                                    HorizontalAlignment="Center"
-                                    FontSize="14"
-                                    Text="{Binding ColorHex}"
-                                    TextTrimming="CharacterEllipsis"
-                                    TextWrapping="NoWrap"
-                                    ToolTip="{Binding ColorHex}"
-                                />
-                                <Button 
-                                    Margin="8,0,0,0"
-                                    Command="{Binding ShowColorCanvas}"
-                                    Content="Edit"/>
-                            </StackPanel>
-                        </Border>
+                        <local:ColorView/>
                     </DataTemplate>
                 </ItemsControl.ItemTemplate>
             </ItemsControl>
