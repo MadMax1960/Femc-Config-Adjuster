@@ -1,0 +1,66 @@
+﻿<ui:FluentWindow
+        x:Class="Femc_Config_Adjuster.Views.Windows.ColorEditWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Windows"
+        xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
+        xmlns:converters="clr-namespace:Femc_Config_Adjuster.Helpers"
+        xmlns:resx="clr-namespace:FemcConfig.Localisation.LocalisationResources;assembly=FemcConfig.Localisation"
+        xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
+        Title="{Binding Title}"
+        Width="800"
+        Height="450"
+        MinWidth="800"
+        MinHeight="450"
+        d:DesignWidth="800"
+        d:DesignHeight="450"
+        ui:Design.Background="{DynamicResource ApplicationBackgroundBrush}"
+        ui:Design.Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+        ExtendsContentIntoTitleBar="True"
+        Foreground="{DynamicResource TextFillColorPrimaryBrush}"
+        WindowBackdropType="Mica"
+        WindowCornerPreference="Round"
+        WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d">
+    <ui:FluentWindow.Resources>
+        <ResourceDictionary>
+            <converters:ColorToConfigColorConverter x:Key="ColorToConfigColor" />
+        </ResourceDictionary>
+    </ui:FluentWindow.Resources>
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ui:TitleBar
+            x:Name="TitleBar"
+            Title="{Binding Title}"
+            CloseWindowByDoubleClickOnIcon="True">
+            <ui:TitleBar.Icon>
+                <ui:ImageIcon Source="pack://application:,,,/Assets/logo.ico" />
+            </ui:TitleBar.Icon>
+        </ui:TitleBar>
+        <Grid 
+            Grid.Row="1"
+            Margin = "24, 16, 24, 8">
+            <TextBlock
+                VerticalAlignment="Center"
+                FontSize="32"
+                FontWeight="SemiBold"
+                Text="{Binding Name}"
+                TextTrimming="CharacterEllipsis"
+                TextWrapping="NoWrap"
+                ToolTip="{Binding Name}" />
+        </Grid>
+        <Grid 
+            Margin = "24, 8, 24, 16"
+            Grid.Row="2">
+            <xctk:ColorCanvas 
+                Foreground="Black" 
+                SelectedColor="{ Binding Color, Converter={StaticResource ColorToConfigColor}}"/>
+        </Grid>
+    </Grid>
+</ui:FluentWindow>

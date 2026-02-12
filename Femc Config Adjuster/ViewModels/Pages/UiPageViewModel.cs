@@ -35,19 +35,6 @@ public partial class UiPageViewModel : ObservableObject
     public UiPageViewModel(AppService app)
     {
         this.config = app.GetContext().FemcConfig;
-
-        //this.Options =
-        //[
-        //    new(nameof(this.config.MailIconOuterCircleColorEx), this.config.MailIconOuterCircleColorEx),
-        //    new(nameof(this.config.MailIconInnerCircleColorEx), this.config.MailIconInnerCircleColorEx),
-        //    new(nameof(this.config.CampHighColor), this.config.CampHighColor),
-        //    new(nameof(this.config.CampHighColorGradation), this.config.CampHighColorGradation),
-        //    new(nameof(this.config.CampMiddleColor), this.config.CampMiddleColor),
-        //    new(nameof(this.config.CampLowColor), this.config.CampLowColor),
-        //    new(nameof(this.config.DateTimePanelTopTextColor), this.config.DateTimePanelTopTextColor),
-        //    new(nameof(this.config.DateTimePanelBottomTextColor), this.config.DateTimePanelBottomTextColor),
-        //];
-
         var defaultConfig = new FemcModConfig();
         this.colorProperties = this.config.Settings.GetType()
             .GetProperties()
@@ -248,7 +235,6 @@ public partial class UiPageViewModel : ObservableObject
                 colorsObs.Add(option.WhenAnyPropertyChanged()!);
 
                 await Application.Current.Dispatcher.InvokeAsync(() => this.options.Add(option));
-                await Task.Delay(1);
             }
 
             _colorObsSub = colorsObs.Merge()
@@ -288,7 +274,10 @@ public class UiOption : ObservableObject
             _color.G = value.G;
             _color.B = value.B;
 
-            this.OnPropertyChanged(nameof(Color));
+            OnPropertyChanged();
+            OnPropertyChanged(nameof(ColorHex));
         }
     }
+    
+    public string ColorHex => $"#{_color.A:X2}{_color.R:X2}{_color.G:X2}{_color.B:X2}";
 }

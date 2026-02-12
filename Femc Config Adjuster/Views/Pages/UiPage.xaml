@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:converters="clr-namespace:Femc_Config_Adjuster.Helpers"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-    xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Pages"
+    xmlns:local="clr-namespace:Femc_Config_Adjuster.Views.Components"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ui="http://schemas.lepo.co/wpfui/2022/xaml"
     xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit"
@@ -16,7 +16,7 @@
     mc:Ignorable="d">
     <UserControl.Resources>
         <ResourceDictionary>
-            <converters:ColorToConfigColorConverter x:Key="ColorToConfigColor" />
+            <converters:BrushToConfigColor x:Key="BrushToConfigColor" />
         </ResourceDictionary>
     </UserControl.Resources>
 
@@ -62,40 +62,29 @@
             Text="{Binding SearchQuery, UpdateSourceTrigger=PropertyChanged}" />
 
         <Grid Grid.Row="2">
-            <ScrollViewer>
-                <ItemsControl ItemsSource="{Binding OptionsView}">
-                    <ItemsControl.ItemsPanel>
-                        <ItemsPanelTemplate>
-                            <WrapPanel />
-                        </ItemsPanelTemplate>
-                    </ItemsControl.ItemsPanel>
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <Border
-                                Grid.Row="1"
-                                Grid.Column="1"
-                                Width="250"
-                                Margin="8"
-                                Padding="8"
-                                Background="{DynamicResource SubtleFillColorSecondaryBrush}"
-                                CornerRadius="8">
-
-                                <StackPanel>
-                                    <TextBlock
-                                        Height="36"
-                                        VerticalAlignment="Bottom"
-                                        FontSize="14"
-                                        Text="{Binding Name}"
-                                        TextTrimming="CharacterEllipsis"
-                                        TextWrapping="NoWrap"
-                                        ToolTip="{Binding Name}" />
-                                    <xctk:ColorCanvas Foreground="Black" SelectedColor="{Binding Color, Converter={StaticResource ColorToConfigColor}}" />
-                                </StackPanel>
-                            </Border>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </ScrollViewer>
+            <ItemsControl 
+                ScrollViewer.CanContentScroll="True"
+                VirtualizingPanel.ScrollUnit="Pixel"
+                VirtualizingStackPanel.VirtualizationMode="Recycling"
+                ItemsSource="{Binding OptionsView}">
+                <ItemsControl.Template>
+                    <ControlTemplate>
+                        <ScrollViewer>
+                            <ItemsPresenter/>
+                        </ScrollViewer>
+                    </ControlTemplate>
+                </ItemsControl.Template>
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <VirtualizingStackPanel/>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <local:ColorView/>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
         </Grid>
     </Grid>
 </UserControl>
