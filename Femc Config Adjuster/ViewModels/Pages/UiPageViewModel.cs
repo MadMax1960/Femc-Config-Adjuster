@@ -248,7 +248,6 @@ public partial class UiPageViewModel : ObservableObject
                 colorsObs.Add(option.WhenAnyPropertyChanged()!);
 
                 await Application.Current.Dispatcher.InvokeAsync(() => this.options.Add(option));
-                await Task.Delay(1);
             }
 
             _colorObsSub = colorsObs.Merge()
@@ -291,4 +290,6 @@ public class UiOption : ObservableObject
             this.OnPropertyChanged(nameof(Color));
         }
     }
+    
+    public string ColorHex => $"#{_color.A:X2}{_color.R:X2}{_color.G:X2}{_color.B:X2}";
 }
