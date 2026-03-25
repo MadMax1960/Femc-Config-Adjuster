@@ -29,11 +29,11 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The character portrait used in textboxes.")]
     [Category("2D Options")]
-    [DefaultValue(BustupType.Esa)]
+    [DefaultValue(BustupType.Adrien)]
     [ObservableProperty]
-    private BustupType _BustupTrue = BustupType.Esa;
+    private BustupType _BustupTrue = BustupType.Adrien;
 
-    public enum BustupType { Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky }
+    public enum BustupType { Adrien, Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky }
 
     [Description("The animation played occasionally when attacking weaknesses or hitting criticals.")]
     [Category("2D Options")]

@@ -18,6 +18,13 @@ public class BustupSection : ISection
         [
             new ModOption(ctx)
             {
+                InternalName = "bustup_adrien",
+                Authors = [Author.Ronald],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Adrien,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Adrien,
+            },
+            new ModOption(ctx)
+            {
                 InternalName = "bustup_neptune",
                 Authors = [Author.Neptune],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Neptune,
