@@ -19,6 +19,13 @@ public class GlassShardSection : ISection
         [
             new ModOption(ctx)
             {
+                InternalName = "shard_adrien",
+                Authors = [Author.Femc],
+                Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Adrien,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.ShardTrue == Models.FemcModConfig.ShardType.Adrien,
+            },
+            new ModOption(ctx)
+            {
                 InternalName = "shard_ely",
                 Authors = [Author.Ely],
                 Enable = (ctx) => ctx.FemcConfig.Settings.ShardTrue = Models.FemcModConfig.ShardType.Ely,

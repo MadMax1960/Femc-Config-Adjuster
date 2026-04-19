@@ -19,6 +19,13 @@ public class LevelUpSection : ISection
         [
             new ModOption(ctx)
             {
+                InternalName = "level_adrien",
+                Authors = [Author.Femc],
+                Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Adrien,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.Adrien,
+            },
+            new ModOption(ctx)
+            {
                 InternalName = "level_ely",
                 Authors = [Author.Ely],
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Ely,
