@@ -29,11 +29,11 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The character portrait used in textboxes.")]
     [Category("2D Options")]
-    [DefaultValue(BustupType.Esa)]
+    [DefaultValue(BustupType.Adrien)]
     [ObservableProperty]
-    private BustupType _BustupTrue = BustupType.Esa;
+    private BustupType _BustupTrue = BustupType.Adrien;
 
-    public enum BustupType { Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky }
+    public enum BustupType { Adrien, Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky }
 
     [Description("The animation played occasionally when attacking weaknesses or hitting criticals.")]
     [Category("2D Options")]
@@ -61,11 +61,11 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The character art used for the level up screen.")]
     [Category("2D Options")]
-    [DefaultValue(LevelUpType.Esa)]
+    [DefaultValue(LevelUpType.Adrien)]
     [ObservableProperty]
-    private LevelUpType _LevelUpTrue = LevelUpType.Esa;
+    private LevelUpType _LevelUpTrue = LevelUpType.Adrien;
 
-    public enum LevelUpType { Esa, Ely, shiosakana, ElyAlt, AngieDaGorl, samythecoolkid }
+    public enum LevelUpType { Adrien, Esa, Ely, shiosakana, ElyAlt, AngieDaGorl, samythecoolkid }
 
     [Description("The character icon on the right when dungeon crawling or in combat.")]
     [Category("2D Options")]
@@ -77,11 +77,11 @@ public partial class FemcModConfig : ObservableObject
 
     [Description("The character art used in the status menu.")]
     [Category("2D Options")]
-    [DefaultValue(ShardType.Esa)]
+    [DefaultValue(ShardType.Adrien)]
     [ObservableProperty]
-    private ShardType _ShardTrue = ShardType.Esa;
+    private ShardType _ShardTrue = ShardType.Adrien;
 
-    public enum ShardType { Esa, Ely, ElyAlt, Shiosakana, namiweiko, AngieDaGorl, StupidAle, samythecoolkid }
+    public enum ShardType { Adrien, Esa, Ely, ElyAlt, Shiosakana, namiweiko, AngieDaGorl, StupidAle, samythecoolkid }
 
     // --- 3D Options ---
     [Description("Choose from a few animations.")]
