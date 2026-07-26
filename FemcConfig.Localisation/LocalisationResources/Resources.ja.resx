@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <root>
   <!-- 
     Microsoft ResX Schema 
@@ -117,43 +117,304 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="CustomBustupsDesc" xml:space="preserve">
-    <value>Non-Femc Bustup variants</value>
+  <data name="About text" xml:space="preserve">
+    <value>Femc Config Adjusterについて</value>
   </data>
-  <data name="CustomBustups" xml:space="preserve">
-    <value>Custom Bustups</value>
+  <data name="AddonDesc" xml:space="preserve">
+    <value>この画面で、アドオンの有効化や無効化を行えます。アドオンがインストールされていない場合は、「プレビュー」をクリックしてから「ダウンロード」をクリックしてください。</value>
+  </data>
+  <data name="Addons" xml:space="preserve">
+    <value>アドオン</value>
+  </data>
+  <data name="Advantage Battle Music" xml:space="preserve">
+    <value>戦闘BGM(チャンスエンカウント)</value>
+  </data>
+  <data name="AOA" xml:space="preserve">
+    <value>AOA</value>
+  </data>
+  <data name="AOA Text" xml:space="preserve">
+    <value>AOAテキスト</value>
+  </data>
+  <data name="Audio" xml:space="preserve">
+    <value>ボイス</value>
+  </data>
+  <data name="Bustup" xml:space="preserve">
+    <value>バストアップ</value>
+  </data>
+  <data name="Close" xml:space="preserve">
+    <value>閉じる</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>これに変更する</value>
+  </data>
+  <data name="Cutin" xml:space="preserve">
+    <value>カットイン</value>
+  </data>
+  <data name="Dark" xml:space="preserve">
+    <value>ダーク</value>
+  </data>
+  <data name="Daytime Outside Music" xml:space="preserve">
+    <value>屋外BGM (昼)</value>
+  </data>
+  <data name="Daytime School Music (Phase 1)" xml:space="preserve">
+    <value>校内BGM (昼・Phase 1)</value>
+  </data>
+  <data name="Daytime School Music (Phase 2)" xml:space="preserve">
+    <value>校内BGM (昼・Phase 2)</value>
+  </data>
+  <data name="Dependencies" xml:space="preserve">
+    <value>依存関係</value>
+  </data>
+  <data name="Disadvantage Battle Music" xml:space="preserve">
+    <value>戦闘BGM (vs Boss)</value>
+  </data>
+  <data name="Download" xml:space="preserve">
+    <value>ダウンロード</value>
+  </data>
+  <data name="DownloadTip" xml:space="preserve">
+    <value>💡Tip:すでにMODをダウンロード済みであれば、Reloaded IIで「Configure Mod」をクリックしてみてください。</value>
+  </data>
+  <data name="Enabled" xml:space="preserve">
+    <value>有効化</value>
+  </data>
+  <data name="Final Battle Music" xml:space="preserve">
+    <value>戦闘BGM (ラストバトル)</value>
+  </data>
+  <data name="Gendered Audio" xml:space="preserve">
+    <value>性別が反映されたボイス</value>
+  </data>
+  <data name="Kotone Voice" xml:space="preserve">
+    <value>琴音のボイス</value>
+  </data>
+  <data name="Glass Shard" xml:space="preserve">
+    <value>ガラスシャード</value>
+  </data>
+  <data name="Group Photo" xml:space="preserve">
+    <value>集合写真</value>
+  </data>
+  <data name="Hair" xml:space="preserve">
+    <value>髪</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>ホーム画面</value>
+  </data>
+  <data name="Kyoto Photos" xml:space="preserve">
+    <value>写真 (in 京都)</value>
+  </data>
+  <data name="LanguageChangeAlert" xml:space="preserve">
+    <value>アプリの言語が変更されました。変更を反映させるために、アプリを再起動してください。</value>
+  </data>
+  <data name="Level Up Screen" xml:space="preserve">
+    <value>レベルアップ画面</value>
+  </data>
+  <data name="Light" xml:space="preserve">
+    <value>ライト</value>
+  </data>
+  <data name="Mod Download Error" xml:space="preserve">
+    <value>情報が不足しているため、アプリでのダウンロードを開始できません。このMODは手動でインストールしてください。</value>
+  </data>
+  <data name="Mod Download Start" xml:space="preserve">
+    <value>ダウンロードが開始されました。変更を反映させるには、ゲームを起動し、アプリを再起動する必要がある場合があります。</value>
+  </data>
+  <data name="ModDownloadWait" xml:space="preserve">
+    <value>ダウンロードしたMODを読み込んでいます。少々お待ちください...</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>いいえ</value>
+  </data>
+  <data name="Normal Battle Music" xml:space="preserve">
+    <value>戦闘BGM (通常戦)</value>
+  </data>
+  <data name="Party Panel" xml:space="preserve">
+    <value>パーティ用キャラアイコン</value>
+  </data>
+  <data name="Personalisation" xml:space="preserve">
+    <value>パーソナライゼーション</value>
+  </data>
+  <data name="Play" xml:space="preserve">
+    <value>Play</value>
+  </data>
+  <data name="Preview" xml:space="preserve">
+    <value>プレビュー</value>
+  </data>
+  <data name="ReloadExePrompt" xml:space="preserve">
+    <value>続行するには、Reloaded IIのインストール（exeファイル）を見つけて選択してください。</value>
+  </data>
+  <data name="SelectLanguageText" xml:space="preserve">
+    <value>言語を変更する</value>
+  </data>
+  <data name="Settings" xml:space="preserve">
+    <value>セッティング</value>
+  </data>
+  <data name="Social Link Music" xml:space="preserve">
+    <value>コミュBGM</value>
+  </data>
+  <data name="The Femc Mod" xml:space="preserve">
+    <value>The Femc Mod</value>
+  </data>
+  <data name="Theme" xml:space="preserve">
+    <value>テーマ</value>
+  </data>
+  <data name="UI" xml:space="preserve">
+    <value>UI</value>
+  </data>
+  <data name="Update Check Fail" xml:space="preserve">
+    <value>更新の確認中にエラーが発生しました。</value>
+  </data>
+  <data name="Update Later" xml:space="preserve">
+    <value>後でセッティングから、またはアプリケーションの再起動時に更新できます。</value>
+  </data>
+  <data name="Update Notify" xml:space="preserve">
+    <value>新しいバージョンが利用可能です。アップデートしますか？</value>
+  </data>
+  <data name="UpdatePromptContent" xml:space="preserve">
+    <value>アプリケーションの新しいバージョンが利用可能です。アップデートしますか？</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>はい</value>
+  </data>
+  <data name="Model" xml:space="preserve">
+    <value>3Dモデル</value>
+  </data>
+  <data name="AdvantageDesc" xml:space="preserve">
+    <value>「チャンスエンカウント」の状態で通常戦闘を行う際に流れるBGMです。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="AOADesc" xml:space="preserve">
+    <value>女性主人公の総攻撃フィニッシュで表示されるイラスト。(AOAは、all-out attackの略称です。)</value>
+  </data>
+  <data name="AOATextDesc" xml:space="preserve">
+    <value>女性主人公の総攻撃フィニッシュで表示されるテキスト。</value>
+  </data>
+    <data name="CustomBustupsDesc" xml:space="preserve">
+    <value>女性主人公以外のバストアップ・バリエーション</value>
+  </data>
+    <data name="CustomBustups" xml:space="preserve">
+    <value>女性主人公以外のバストアップをカスタムする</value>
+  </data>
+  <data name="Author" xml:space="preserve">
+    <value>作成者(達)</value>
+  </data>
+  <data name="BustupDesc" xml:space="preserve">
+    <value>テキストボックスで使用される女性主人公のバストアップイラスト。</value>
+  </data>
+  <data name="CutinDesc" xml:space="preserve">
+    <value>ペルソナ召喚時、弱点を突いたりクリティカルヒットを出したりした際に時折カットインイラストが差し込まれます。</value>
+  </data>
+  <data name="DayInMusic1Desc" xml:space="preserve">
+    <value>4月から8月にかけて校内で使用されるBGMです。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="NaginataDesc" xml:space="preserve">
+    <value>女性主人公の武器を片手剣から薙刀に変更します。</value>
+  </data>
+  <data name="Naginata" xml:space="preserve">
+    <value>女性主人公の武器</value>
+  </data>
+  <data name="DayInMusic2Desc" xml:space="preserve">
+    <value>9月から12月にかけて校内で使用されるBGMです。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="DayOutMusic1Desc" xml:space="preserve">
+    <value>朝や放課後に街中で流れる音楽です。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="DependencyDesc" xml:space="preserve">
+    <value>この画面では、Femc Modと依存関係にあるMODのインストール及び管理ができます。</value>
+  </data>
+  <data name="DisadvantageDesc" xml:space="preserve">
+    <value>ボス戦で流れるBGMです。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="FemcDesc" xml:space="preserve">
+    <value>この画面では、Femc Modのインストール及び管理ができます。</value>
+  </data>
+  <data name="FinalDesc" xml:space="preserve">
+    <value>ラストバトルで使用されるBGMです。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="GlassShardDesc" xml:space="preserve">
+    <value>メニュー画面で使用される女性主人公のイラスト</value>
+  </data>
+  <data name="GroupPhotoDesc" xml:space="preserve">
+    <value>ゲーム内で撮影される集合写真。</value>
+  </data>
+  <data name="HairDesc" xml:space="preserve">
+    <value>女性主人公の髪用アクセサリー</value>
+  </data>
+  <data name="KyotoPhotoDesc" xml:space="preserve">
+    <value>ゲーム内で京都にて撮影された写真。</value>
+  </data>
+  <data name="LevelUpDesc" xml:space="preserve">
+    <value>レベルアップ画面で使用される女性主人公のイラスト。</value>
+  </data>
+  <data name="Mod Corrupt" xml:space="preserve">
+    <value>MODがインストールに失敗して破損している可能性があります。MODを再度インストールしてみてください。</value>
+  </data>
+  <data name="Mod Ver Mismatch" xml:space="preserve">
+    <value>現在インストールされているFemc MODのバージョンは、このアプリでサポートされていない可能性があります。このアプリを使用できるFemc MODのバージョンについては、「セッティング」画面をご確認ください。</value>
+  </data>
+  <data name="ModelDesc" xml:space="preserve">
+    <value>ゲーム内でテオドアを有効にし、エリザベスに代わって彼をベルベットルームの住人として登場させる。</value>
+  </data>
+  <data name="ModInfoRetrievalFail" xml:space="preserve">
+    <value>アプリはこのMODのリリース情報を取得できませんでした。後で再試行するか、手動でMODをインストールしてみてください。</value>
+  </data>
+  <data name="NightMusic1Desc" xml:space="preserve">
+    <value>夜間、屋外で流れる音楽です。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="NormalDesc" xml:space="preserve">
+    <value>通常の戦闘で使用されるBGM。 複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="PartyPanelDesc" xml:space="preserve">
+    <value>女性主人公のパーティ画面及び戦闘時右側に表示されるキャラアイコン。</value>
+  </data>
+  <data name="SocialDesc" xml:space="preserve">
+    <value>コミュイベント時に流れるBGMです。複数の曲を設定してランダム再生できます！</value>
+  </data>
+  <data name="Theo" xml:space="preserve">
+    <value>テオドア</value>
+  </data>
+  <data name="UnexpectedErr" xml:space="preserve">
+    <value>アプリを再起動してください。再起動しない場合、正常に動作しない可能性があります。</value>
+  </data>
+  <data name="VoiceDesc" xml:space="preserve">
+    <value>ゲーム内で使用されるボイスは、女性主人公に適切な代名詞を使用しています。現時点では英語音声のみ対応しているため、該当する台詞では自動的に英語音声へ切り替わります。</value>
+  </data>
+  <data name="KotoneVoiceDesc" xml:space="preserve">
+    <value>女性主人公のボイスを担当した声優。</value>
+  </data>
+  <data name="Night Outside Music" xml:space="preserve">
+    <value>屋外BGM (夜)</value>
+  </data>
+  <data name="LangChangeHeader" xml:space="preserve">
+    <value>言語を変更しました！</value>
   </data>
   <data name="Update Notify Title" xml:space="preserve">
-    <value />
+    <value>利用可能なアップデートのバージョン:</value>
   </data>
   <data name="Update Later Title" xml:space="preserve">
-    <value />
+    <value>更新はスキップされました</value>
   </data>
   <data name="Mod Ver Mismatch Title" xml:space="preserve">
-    <value />
+    <value>Femc Modとアプリのバージョン不整合</value>
   </data>
   <data name="Mod Corrupt Title" xml:space="preserve">
-    <value />
+    <value>Modファイルの整合性を検証できません。</value>
   </data>
   <data name="UnexpectedErr Title" xml:space="preserve">
-    <value />
+    <value>予期しないエラーが発生しました。</value>
   </data>
   <data name="FunStuff" xml:space="preserve">
-    <value />
+    <value>楽しい要素</value>
   </data>
   <data name="FunStuffDesc" xml:space="preserve">
-    <value />
+    <value>このページでは、使うと楽しめるさまざまなオプションを管理できます。</value>
   </data>
   <data name="Misc" xml:space="preserve">
-    <value />
+    <value>その他</value>
   </data>
   <data name="Animations" xml:space="preserve">
-    <value />
+    <value>アニメーション</value>
   </data>
   <data name="AnimationsDesc" xml:space="preserve">
-    <value />
+    <value>いくつかのアニメーションから選択できます。なお、「スケルトン修正（skeleton fix）」が有効になっている場合、メニューのアニメーションなど、一部のカスタムアニメーションが正しく表示されないことがあります。</value>
   </data>
   <data name="Music" xml:space="preserve">
-    <value />
+    <value>BGM</value>
   </data>
 </root>

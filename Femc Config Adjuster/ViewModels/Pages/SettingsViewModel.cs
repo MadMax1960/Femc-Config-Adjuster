@@ -16,7 +16,7 @@ public partial class SettingsViewModel : ObservableObject, INavigationAware
     {
         { "English", "en-US" },
         { "Español (Spanish)", "es" },
-        //{ "日本語 (Japanese)", "ja" }, - Localisation Pending
+        { "日本語 (Japanese)", "ja" },
         { "Polski (Polish)", "pl" },
         { "Русский (Russian)", "ru" },
         { "简体中文 (Simplified Chinese)", "zh-CN" },
