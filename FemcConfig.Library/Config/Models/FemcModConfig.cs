@@ -1187,4 +1187,10 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CmmuRankUpSparkles4 = new ConfigColor(0xFF, 0x00, 0x55, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuRankUpSparkleTrails = new ConfigColor(0xFF, 0x5A, 0x83, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuRankUpMovingSparkles = new ConfigColor(0xFF, 0x66, 0x6E, 0xFF);
+    [ObservableProperty] private ConfigColor _TownMapLogosColor = new ConfigColor(0xFF, 0xAD, 0xC0, 0xFF);
+    [ObservableProperty] private ConfigColor _TownMapNamesColor = new ConfigColor(0xFF, 0xAD, 0xC0, 0xFF);
+    [ObservableProperty] private ConfigColor _TownMapSLRankUpCard1 = new ConfigColor(0xFF, 0x5E, 0x82, 0xFF);
+    [ObservableProperty] private ConfigColor _TownMapSLRankUpCard2 = new ConfigColor(0xFF, 0x54, 0x88, 0xFF);
+    [ObservableProperty] private ConfigColor _TownMapSLRankUpGlow = new ConfigColor(0xFF, 0x00, 0x55, 0xFF);
+    [ObservableProperty] public ConfigColor _BtlStrategyTopCircleColor = new ConfigColor(0xB3, 0x49, 0x72, 0xFF);
 }
