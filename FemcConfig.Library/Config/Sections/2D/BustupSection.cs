@@ -101,68 +101,68 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Yuunagi,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Yuunagi,
             },
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_ghostedtoast",
-				Authors = [Author.GhostedToast],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.ghostedtoast,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.ghostedtoast,
-			},
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_axolotl",
-				Authors = [Author.Axolotl],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.axolotl,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.axolotl,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_ghostedtoast",
+                Authors = [Author.GhostedToast],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.ghostedtoast,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.ghostedtoast,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_axolotl",
+                Authors = [Author.Axolotl],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.axolotl,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.axolotl,
+            },
 
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_cielbell",
-				Authors = [Author.Cielbell],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.cielbell,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.cielbell,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_cielbell",
+                Authors = [Author.Cielbell],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.cielbell,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.cielbell,
+            },
 
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_Strelko",
-				Authors = [Author.Strelko],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Strelko,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Strelko,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_Strelko",
+                Authors = [Author.Strelko],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Strelko,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Strelko,
+            },
 
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_gackt",
-				Authors = [Author.Gacktenzo],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.gackt,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.gackt,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_gackt",
+                Authors = [Author.Gacktenzo],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.gackt,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.gackt,
+            },
 
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_Jackie",
-				Authors = [Author.Jackie],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Jackie,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Jackie,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_Jackie",
+                Authors = [Author.Jackie],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Jackie,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Jackie,
+            },
 
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_Lisa",
-				Authors = [Author.Lisa9388],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Lisa,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Lisa,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_Lisa",
+                Authors = [Author.Lisa9388],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Lisa,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Lisa,
+            },
 
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_BetaFemcByMae",
-				Authors = [Author.Mae],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.BetaFemcByMae,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.BetaFemcByMae,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_BetaFemcByMae",
+                Authors = [Author.Mae],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.BetaFemcByMae,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.BetaFemcByMae,
+            },
             new ModOption(ctx)
             {
                 InternalName = "bustup_chitu",
@@ -184,28 +184,28 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.crezzstar,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.crezzstar,
             },
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_crezzalt",
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_crezzalt",
                 Name = "Crezz star (Alt)",
                 Authors = [Author.Crezzstar],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.crezzstarAlt,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.crezzstarAlt,
-			},
-			new ModOption(ctx)
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.crezzstarAlt,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.crezzstarAlt,
+            },
+            new ModOption(ctx)
             {
                 InternalName = "bustup_namiweiko",
                 Authors = [Author.namiweiko],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.namiweiko,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.namiweiko,
             },
-			new ModOption(ctx)
-			{
-				InternalName = "bustup_shiosakana",
-				Authors = [Author.Shiosakana],
-				Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.shiosakana,
-				IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.shiosakana,
-			},
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_shiosakana",
+                Authors = [Author.Shiosakana],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.shiosakana,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.shiosakana,
+            },
             new ModOption(ctx)
             {
                 InternalName = "bustup_samythecoolkid",
@@ -290,6 +290,55 @@ public class BustupSection : ISection
                 Authors = [Author.Milky],
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Milky,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Milky,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_makomeri",
+                Authors = [Author.makomeri],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.makomeri,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.makomeri,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_jvcl24",
+                Authors = [Author.jvcl24],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.jvcl24,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.jvcl24,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_arizno",
+                Authors = [Author.Arizno],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Arizno,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Arizno,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_clover",
+                Authors = [Author.Clover],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Clover,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Clover,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_revolvea",
+                Authors = [Author.Revolvea],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Revolvea,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Revolvea,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_sodasorbet",
+                Authors = [Author.Sodasorbet],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Sodasorbet,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Sodasorbet,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_kaia",
+                Authors = [Author.Kaia],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Kaia,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Kaia,
             },
         ];
     }

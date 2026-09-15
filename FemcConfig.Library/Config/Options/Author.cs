@@ -77,4 +77,12 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Lantana = new("Lantana", Url: "https://x.com/LantanaVA");
     public static readonly Author Mellodi = new("Mellodi", Url: "https://x.com/RealMelodyHope");
     public static readonly Author RestlessArtist = new("Zone (RestlessArtist)", Url: "https://www.instagram.com/restless_.artist/"); 
+    public static readonly Author makomeri = new("makomeri", Url: "https://www.instagram.com/makomeri/");
+    public static readonly Author Arizno = new("Arizno");
+    public static readonly Author Clover = new("Clover", Url: "https://bsky.app/profile/did:plc:kdr44qzcfwor33ow3bvliful");
+    public static readonly Author Revolvea = new("Revolvea");
+    public static readonly Author Sodasorbet = new("Sodasorbet", Url: "https://linktr.ee/sodasorbet");
+    public static readonly Author Kaia = new("Kaia", Url: "https://steamcommunity.com/profiles/76561199107821666");
+    public static readonly Author jvcl24 = new("jvcl24", Url: "https://www.reddit.com/user/jvcl24/");
+    public static readonly Author RayIsEpic = new("rayisepic1", Url: "https://gamebanana.com/members/2131817");
 };

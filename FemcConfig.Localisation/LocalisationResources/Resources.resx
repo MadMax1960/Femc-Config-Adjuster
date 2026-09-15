@@ -351,6 +351,12 @@
   <data name="ModelDesc" xml:space="preserve">
     <value>Enable Theo in the game, replacing Elizabeth as the Velvet Room attendant.</value>
   </data>
+  <data name="SunsetTitleScreen" xml:space="preserve">
+    <value>Sunset Title Screen</value>
+  </data>
+  <data name="SunsetTitleScreenDesc" xml:space="preserve">
+    <value>Enable the title screen to have sunset themed colours, similar to the camp menu.</value>
+  </data>
   <data name="ModInfoRetrievalFail" xml:space="preserve">
     <value>The app was unable to fetch the release info of this mod. Please try again later or try installing the mod manually.</value>
   </data>

@@ -835,6 +835,24 @@ namespace FemcConfig.Localisation.LocalisationResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Sunset Title Screen.
+        /// </summary>
+        public static string SunsetTitleScreen {
+            get {
+                return ResourceManager.GetString("SunsetTitleScreen", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Enable the title screen to have sunset themed colours, similar to the camp menu..
+        /// </summary>
+        public static string SunsetTitleScreenDesc {
+            get {
+                return ResourceManager.GetString("SunsetTitleScreenDesc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to The Femc Mod.
         /// </summary>
         public static string The_Femc_Mod {

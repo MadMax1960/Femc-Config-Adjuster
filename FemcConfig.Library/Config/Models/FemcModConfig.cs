@@ -33,7 +33,10 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private BustupType _BustupTrue = BustupType.Adrien;
 
-    public enum BustupType { Adrien, Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky }
+    public enum BustupType { Adrien, Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky,
+        makomeri, jvcl24, Arizno, Clover, Revolvea, Sodasorbet, Kaia
+    }
+    // oh my god so many
 
     [Description("The animation played occasionally when attacking weaknesses or hitting criticals.")]
     [Category("2D Options")]
@@ -65,7 +68,9 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private LevelUpType _LevelUpTrue = LevelUpType.Adrien;
 
-    public enum LevelUpType { Adrien, Esa, Ely, shiosakana, ElyAlt, AngieDaGorl, samythecoolkid }
+    public enum LevelUpType { Adrien, Esa, Ely, shiosakana, ElyAlt, AngieDaGorl, samythecoolkid,
+        Arizno
+    }
 
     [Description("The character icon on the right when dungeon crawling or in combat.")]
     [Category("2D Options")]
@@ -81,7 +86,9 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private ShardType _ShardTrue = ShardType.Adrien;
 
-    public enum ShardType { Adrien, Esa, Ely, ElyAlt, Shiosakana, namiweiko, AngieDaGorl, StupidAle, samythecoolkid }
+    public enum ShardType { Adrien, Esa, Ely, ElyAlt, Shiosakana, namiweiko, AngieDaGorl, StupidAle, samythecoolkid,
+        Arizno
+    }
 
     // --- 3D Options ---
     [Description("Choose from a few animations.")]
@@ -177,6 +184,16 @@ public partial class FemcModConfig : ObservableObject
     [DefaultValue(false)]
     [ObservableProperty]
     private bool restlessNom = false;
+
+    [Category("Battle Music - Normal")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool rayIsEpicNorm = false;
+
+    [Category("Battle Music - Normal")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool rayIsEpicNormInst = false;
 
     [Category("Battle Music - Normal")]
     [DefaultValue(false)]
@@ -405,6 +422,11 @@ public partial class FemcModConfig : ObservableObject
     private bool testiclesEventsDorm = true;
 
     // --- UI Components ---
+
+    [Category("Fun Stuff")]
+    [DefaultValue(false)]
+    [ObservableProperty]
+    private bool _EnableSunsetTitleScreen = false;
 
     [Category("UI Components")]
     [DefaultValue(true)]
@@ -1187,6 +1209,34 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CmmuRankUpSparkles4 = new ConfigColor(0xFF, 0x00, 0x55, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuRankUpSparkleTrails = new ConfigColor(0xFF, 0x5A, 0x83, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuRankUpMovingSparkles = new ConfigColor(0xFF, 0x66, 0x6E, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleBgCloud1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleBgCloud2 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleBgMoonAge = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleBgMoonGlow = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapFilterColor1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapFogColor1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapBGFogColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapLightColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapGlowColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapMoonShadowColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapSunColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapHorizonColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapZenithColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapCloudColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorA_1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorB_1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorA_2 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorB_2 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorA_3 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorB_3 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorB_4 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleFillColorB_5 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapBgLevelColor1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapBgLevelColor2 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleBgCloudColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleBgOverallColor = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _StupidMatTitleColor1 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] private ConfigColor _StupidMatTitleColor2 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
     [ObservableProperty] private ConfigColor _TownMapLogosColor = new ConfigColor(0xFF, 0xAD, 0xC0, 0xFF);
     [ObservableProperty] private ConfigColor _TownMapNamesColor = new ConfigColor(0xFF, 0xAD, 0xC0, 0xFF);
     [ObservableProperty] private ConfigColor _TownMapSLRankUpCard1 = new ConfigColor(0xFF, 0x5E, 0x82, 0xFF);
