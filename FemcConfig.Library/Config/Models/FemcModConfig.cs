@@ -1209,6 +1209,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _CmmuRankUpSparkles4 = new ConfigColor(0xFF, 0x00, 0x55, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuRankUpSparkleTrails = new ConfigColor(0xFF, 0x5A, 0x83, 0xFF);
     [ObservableProperty] private ConfigColor _CmmuRankUpMovingSparkles = new ConfigColor(0xFF, 0x66, 0x6E, 0xFF);
+    /*
     [ObservableProperty] private ConfigColor _TitleBgCloud1 = new ConfigColor(0xFF, 0xA9, 0x75, 0xFF);
     [ObservableProperty] private ConfigColor _TitleBgCloud2 = new ConfigColor(0xEC, 0x74, 0x4C, 0xFF);
     [ObservableProperty] private ConfigColor _TitleBgMoonAge = new ConfigColor(0xFF, 0xCF, 0x38, 0xFF);
@@ -1222,7 +1223,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _TitleMapSunColor = new ConfigColor(0xFF, 0xC1, 0x1F, 0xFF);
     [ObservableProperty] private ConfigColor _TitleMapHorizonColor = new ConfigColor(0xFF, 0x30, 0xA6, 0xFF);
     [ObservableProperty] private ConfigColor _TitleMapZenithColor = new ConfigColor(0xFF, 0x1F, 0x89, 0xFF);
-    [ObservableProperty] private ConfigColor _TitleMapCloudColor = new ConfigColor(0xFF, 0xA5, 0x75, 0xFF);
+    [ObservableProperty] private ConfigColor _TitleMapCloudColor = new ConfigColor(0xFF, 0xA5, 0x75, 0xFF); */
     [ObservableProperty] private ConfigColor _TitleFillColorA_1 = new ConfigColor(0xB9, 0x27, 0x6B, 0xFF);
     [ObservableProperty] private ConfigColor _TitleFillColorB_1 = new ConfigColor(0xFF, 0x4D, 0x85, 0xFF);
     [ObservableProperty] private ConfigColor _TitleFillColorA_2 = new ConfigColor(0x30, 0x13, 0x42, 0xFF);
@@ -1231,12 +1232,13 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _TitleFillColorB_3 = new ConfigColor(0x44, 0x1E, 0x58, 0xFF);
     [ObservableProperty] private ConfigColor _TitleFillColorB_4 = new ConfigColor(0x65, 0x2F, 0x72, 0xFF);
     [ObservableProperty] private ConfigColor _TitleFillColorB_5 = new ConfigColor(0x65, 0x2F, 0x72, 0xFF);
+    /*
     [ObservableProperty] private ConfigColor _TitleMapBgLevelColor1 = new ConfigColor(0xFF, 0xCC, 0x75, 0xFF);
     [ObservableProperty] private ConfigColor _TitleMapBgLevelColor2 = new ConfigColor(0xFF, 0xCF, 0x7E, 0xFF);
     [ObservableProperty] private ConfigColor _TitleBgCloudColor = new ConfigColor(0xFF, 0xCA, 0x3D, 0xFF);
     [ObservableProperty] private ConfigColor _TitleBgOverallColor = new ConfigColor(0xFF, 0x9B, 0xDA, 0xFF);
     [ObservableProperty] private ConfigColor _StupidMatTitleColor1 = new ConfigColor(0xFF, 0xC0, 0xC8, 0xFF);
-    [ObservableProperty] private ConfigColor _StupidMatTitleColor2 = new ConfigColor(0xFF, 0xB5, 0xA7, 0xFF);
+    [ObservableProperty] private ConfigColor _StupidMatTitleColor2 = new ConfigColor(0xFF, 0xB5, 0xA7, 0xFF); */
     [ObservableProperty] private ConfigColor _TownMapLogosColor = new ConfigColor(0xFF, 0xAD, 0xC0, 0xFF);
     [ObservableProperty] private ConfigColor _TownMapNamesColor = new ConfigColor(0xFF, 0xAD, 0xC0, 0xFF);
     [ObservableProperty] private ConfigColor _TownMapSLRankUpCard1 = new ConfigColor(0xFF, 0x5E, 0x82, 0xFF);
