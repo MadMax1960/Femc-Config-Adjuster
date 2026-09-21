@@ -66,6 +66,13 @@ public class LevelUpSection : ISection
                 Authors = [Author.samythecoolkid],
                 Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.samythecoolkid,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.samythecoolkid,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "level_arizno",
+                Authors = [Author.Arizno],
+                Enable = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue = Models.FemcModConfig.LevelUpType.Arizno,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.LevelUpTrue == Models.FemcModConfig.LevelUpType.Arizno,
             }
         ];
     }

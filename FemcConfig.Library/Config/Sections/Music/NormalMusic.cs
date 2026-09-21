@@ -129,6 +129,32 @@ public class NormalMusicSection : ISection
 
                 // Simpler than enums, just get the current bool value.
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.EidNom,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_rayisepic_wao",
+                Name = "Wiping All Out (RayIsEpic1's Remix)",
+                Authors = [Author.RayIsEpic],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.RayIsEpicNorm = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.RayIsEpicNorm = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.RayIsEpicNorm,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "music_rayisepic_waoinst",
+                Name = "Wiping All Out (RayIsEpic1's Instrumental Remix)",
+                Authors = [Author.RayIsEpic],
+
+                // When option is enabled set the bool setting to true.
+                Enable = (ctx) => ctx.FemcConfig.Settings.RayIsEpicNormInst = true,
+                Disable = (ctx) => ctx.FemcConfig.Settings.RayIsEpicNormInst = false,
+
+                // Simpler than enums, just get the current bool value.
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.RayIsEpicNormInst,
             }
         ];
     }
