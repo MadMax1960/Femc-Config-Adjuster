@@ -340,6 +340,13 @@ public class BustupSection : ISection
                 Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.Kaia,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.Kaia,
             },
+            new ModOption(ctx)
+            {
+                InternalName = "bustup_AlmondFireflies",
+                Authors = [Author.AlmondFireflies],
+                Enable = (ctx) => ctx.FemcConfig.Settings.BustupTrue = Models.FemcModConfig.BustupType.AlmondFireflies,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.BustupTrue == Models.FemcModConfig.BustupType.AlmondFireflies,
+            },
         ];
     }
 }

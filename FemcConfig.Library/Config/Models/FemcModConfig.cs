@@ -34,7 +34,7 @@ public partial class FemcModConfig : ObservableObject
     private BustupType _BustupTrue = BustupType.Adrien;
 
     public enum BustupType { Adrien, Neptune, Ely, Esa, Betina, Anniversary, JustBlue, Sav, Doodled, RonaldReagan, ElyAlt, Yuunagi, cielbell, axolotl, ghostedtoast, Strelko, gackt, Jackie, Lisa, BetaFemcByMae, crezzstar, crezzstarAlt, AngieDaGorl, namiweiko, chitu, shiosakana, samythecoolkid, Mixi_xiMi, StupidAle, Kiara, Autumn, p3pYuha, Maru, purpleoctogamer, purpleoctogamerAlt, Anonymousfluffi, woodwhite, Milky,
-        makomeri, jvcl24, Arizno, Clover, Revolvea, Sodasorbet, Kaia
+        makomeri, jvcl24, Arizno, Clover, Revolvea, Sodasorbet, Kaia, AlmondFireflies
     }
     // oh my god so many
 
