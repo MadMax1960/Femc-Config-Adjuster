@@ -85,4 +85,5 @@ public record Author(string Name, string? Description = null, string? Url = null
     public static readonly Author Kaia = new("Kaia", Url: "https://steamcommunity.com/profiles/76561199107821666");
     public static readonly Author jvcl24 = new("jvcl24", Url: "https://www.reddit.com/user/jvcl24/");
     public static readonly Author RayIsEpic = new("rayisepic1", Url: "https://gamebanana.com/members/2131817");
+    public static readonly Author AlmondFireflies = new("AlmondFireflies");
 };
