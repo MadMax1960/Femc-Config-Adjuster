@@ -120,7 +120,7 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty]
     private VoiceType _VoiceTrue = VoiceType.Mellodi;
 
-    public enum VoiceType { Mellodi, MellodiSilly, Lantana, Japanese }
+    public enum VoiceType { Mellodi, MellodiSilly, Lantana, Apri, Japanese }
 
     [Category("Voice")]
     [Description("Uses custom voice lines to refer to FEMC with she/her pronouns where applicable.")]

@@ -26,7 +26,7 @@ public class KotoneVoice : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "audio_mellodi_silly",
+                InternalName = "voice_mellodi_silly",
                 Name = "Mellodi (Silly)",
                 Authors = [Author.Mellodi],
                 Enable = (ctx) => ctx.FemcConfig.Settings.VoiceTrue = Models.FemcModConfig.VoiceType.MellodiSilly,
@@ -39,6 +39,14 @@ public class KotoneVoice : ISection
                 Authors = [Author.Lantana],
                 Enable = (ctx) => ctx.FemcConfig.Settings.VoiceTrue = Models.FemcModConfig.VoiceType.Lantana,
                 IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.VoiceTrue == Models.FemcModConfig.VoiceType.Lantana,
+            },
+            new ModOption(ctx)
+            {
+                InternalName = "voice_Apri",
+                Name = "Apri",
+                Authors = [Author.Apri],
+                Enable = (ctx) => ctx.FemcConfig.Settings.VoiceTrue = Models.FemcModConfig.VoiceType.Apri,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.VoiceTrue == Models.FemcModConfig.VoiceType.Apri,
             },
             new ModOption(ctx)
             {
