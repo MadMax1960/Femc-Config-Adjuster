@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FemcConfig.Library.Config.Sections.Misc
+namespace FemcConfig.Library.Config.Sections.ThreeD
 {
     public class AnimSection : ISection
     {
@@ -17,7 +17,7 @@ namespace FemcConfig.Library.Config.Sections.Misc
             ? Localisation.LocalisationResources.Resources.ResourceManager.GetString("AnimationsDesc", System.Globalization.CultureInfo.InvariantCulture) ?? string.Empty
             : Localisation.LocalisationResources.Resources.AnimationsDesc;
 
-        public SectionCategory Category { get; } = SectionCategory.Misc;
+        public SectionCategory Category { get; } = SectionCategory.ThreeD;
 
         public ModOption[] Options { get; }
 
@@ -38,7 +38,7 @@ namespace FemcConfig.Library.Config.Sections.Misc
                 new ModOption(ctx)
                 {
                     InternalName = "anim_custom",
-                    Name = "Custom Animations",
+                    Name = "WIP Custom Animations",
                     Authors = [Author.Femc],
                     Enable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.CustomAnims,
                     Disable = (ctx) => ctx.FemcConfig.Settings.AnimTrue = Models.FemcModConfig.AnimType.CustomAnims,

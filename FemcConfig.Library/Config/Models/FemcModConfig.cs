@@ -107,12 +107,6 @@ public partial class FemcModConfig : ObservableObject
 
     public enum HairType { MudkipsHair, KotoneBeanHair }
 
-    [Description("Changes FEMC's weapons from 1h swords to naginatas.")]
-    [Category("3D Options")]
-    [DefaultValue(true)]
-    [ObservableProperty]
-    private bool _NagiWeap = true;
-
     // --- Voice ---
     [Description("The voice used ingame for FEMC.")]
     [Category("Voice")]
