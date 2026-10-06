@@ -50,11 +50,19 @@ public class KotoneVoice : ISection
             },
             new ModOption(ctx)
             {
-                InternalName = "audio_japanese",
-                Name = "Japanese Kotone",
-                Authors = [Author.Femc], // oml who is the jpn va i cant find it anywhere
-                Enable = (ctx) => ctx.FemcConfig.Settings.VoiceTrue = Models.FemcModConfig.VoiceType.Japanese,
-                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.VoiceTrue == Models.FemcModConfig.VoiceType.Japanese,
+                InternalName = "voice_Apri_JP",
+                Name = "Apri (Japanese)",
+                Authors = [Author.Apri], 
+                Enable = (ctx) => ctx.FemcConfig.Settings.VoiceTrue = Models.FemcModConfig.VoiceType.ApriJP,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.VoiceTrue == Models.FemcModConfig.VoiceType.ApriJP,
+            },
+             new ModOption(ctx)
+            {
+                InternalName = "voice_Marina_Inoue",
+                Name = "Marina Inoue (OG Japanese VA)",
+                Authors = [Author.MarinaInoue], 
+                Enable = (ctx) => ctx.FemcConfig.Settings.VoiceTrue = Models.FemcModConfig.VoiceType.MarinaInoue,
+                IsEnabledFunc = (ctx) => ctx.FemcConfig.Settings.VoiceTrue == Models.FemcModConfig.VoiceType.MarinaInoue,
             },
         ];
     }
