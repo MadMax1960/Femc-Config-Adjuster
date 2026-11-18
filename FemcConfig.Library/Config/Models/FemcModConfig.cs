@@ -1240,8 +1240,17 @@ public partial class FemcModConfig : ObservableObject
     [ObservableProperty] private ConfigColor _TownMapSLRankUpGlow = new ConfigColor(0xFF, 0x00, 0x55, 0xFF);
     [ObservableProperty] public ConfigColor _BtlStrategyTopCircleColor = new ConfigColor(0xB3, 0x49, 0x72, 0xFF);
 
-    [ObservableProperty] public ConfigColor _CampPersonaLightColor = new ConfigColor(0xFF, 0x42, 0x8a, 0xFF);
-    [ObservableProperty] public ConfigColor _CampPersonaShadowColor = new ConfigColor(0xE6, 0x43, 0x80, 0xFF);
-    [ObservableProperty] public ConfigColor _CampPersonaHiLightColor = new ConfigColor(0xFF, 0x97, 0xB1, 0xFF);
+    [ObservableProperty] public ConfigColor _CampPersonaLightColor = new ConfigColor(0xF1, 0x6D, 0xD6, 0xFF);
+    [ObservableProperty] public ConfigColor _CampPersonaShadowColor = new ConfigColor(0xF3, 0x71, 0xC3, 0xFF);
+    [ObservableProperty] public ConfigColor _CampPersonaHiLightColor = new ConfigColor(0xFF, 0x97, 0xDF, 0xFF);
     [ObservableProperty] public ConfigColor _CampPersonaRimLightColor = new ConfigColor(0xFF, 0xE0, 0x50, 0xFF);
+    /*
+    [ObservableProperty] public ConfigColor _AlloutBG1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] public ConfigColor _AlloutBG2 = new ConfigColor(0xFF, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] public ConfigColor _AlloutBG3 = new ConfigColor(0xFF, 0x00, 0xFF, 0xFF);
+    [ObservableProperty] public ConfigColor _AlloutCol1 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] public ConfigColor _AlloutCol2 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] public ConfigColor _AlloutCol3 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    [ObservableProperty] public ConfigColor _AlloutCol4 = new ConfigColor(0x00, 0xFF, 0x00, 0xFF);
+    */
 }
